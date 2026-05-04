@@ -1,0 +1,2626 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta http-equiv="content-type"
+          content="text/html; charset=UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title> Research & Related Budget - Version 1.4 </title>
+    <link href="./share/css/bootstrap2.css"
+          rel="stylesheet" />
+    <link href="./share/css/font-awesome/css/font-awesome.min.css"
+          rel="stylesheet" />
+    <link href="./share/css/toastr/toastr.css"
+          rel="stylesheet" />
+    <link href="./share/css/bootstrap-multiselect.css"
+          rel="stylesheet" />
+    <link href="./share/css/loading-animation.css"
+          rel="stylesheet" />
+    <link href="./share/css/site.css"
+          rel="stylesheet" />
+    <link href="./share/css/datepicker.css"
+          rel="stylesheet" />
+    <link href="./share/css/gg-forms.css"
+          rel="stylesheet" />
+    <link href=" https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/base/jquery-ui.css"
+          rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.js"></script>
+    <script src="./share/lib/modernizr-2.6.2.js"></script>
+    <script src="./share/lib/jquery.blockUI.min.js"></script>
+    <script src="./share/lib/log4javascript.js"></script>
+    <script src="./share/lib/knockout-3.2.0.js"></script>
+    <script src="./share/lib/knockout.validation.min.js"></script>
+    <script src="./share/lib/knockout.mapping-latest.js"></script>
+    <script src="./share/lib/toastr.js"></script>
+    <script src="./share/lib/bootstrap.min.js"></script>
+    <script src="./share/lib/bootstrap-multiselect.js"></script>
+    <script src="./share/lib/bootstrap-datepicker.js"></script>
+    <script src="./share/lib/bootstrap.file-input.js"></script>
+    <script src="./share/lib/jef-browser.js"></script>
+    <script src="./share/lib/validation.js"></script>
+    <script src="./share/lib/knockout-file-bind.js"></script>
+    <script src="./share/lib/characterValidation.js"></script>
+    <script src="./share/lib/dateFormat.js"></script>
+    <script src="./share/lib/configure.js"></script>
+    <script src="./share/lib/collapsibleLists.js"></script>
+    <script src="./share/lib/runOnLoad.js"></script>
+    <script src="./share/lib/attachment.js"></script>
+    <script src="./RR_Budget_3_0_V3_0/RR_Budget_3_0_V3_0.js"></script>
+    <script type="text/javascript">runOnLoad(function () { CollapsibleLists.apply(); });</script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var viewModel = new RR_Budget_3_0_V3_0_ViewModel();
+            initPage(viewModel, false, false);
+
+            $('input[type=file]').bootstrapFileInput();
+            $('.file-inputs').bootstrapFileInput();
+        });
+
+        //calendar controls
+        $(document).on('focus', "#budgetPeriodStartDate1", function () {
+            $(this).datepicker('show');
+            $('#budgetPeriodEndDate1').datepicker('hide');
+        });
+
+        $(document).on('focus', "#budgetPeriodStartDate2", function () {
+            $(this).datepicker('show');
+            $('#budgetPeriodEndDate2').datepicker('hide');
+        });
+
+        $(document).on('focus', "#deletePeriod2", function () {
+            $('#budgetPeriodStartDate2').datepicker('hide');
+        });
+
+        $(document).on('focus', "#budgetPeriodStartDate3", function () {
+            $(this).datepicker('show');
+        });
+
+        $(document).on('focus', "#deletePeriod3", function () {
+            $('#budgetPeriodStartDate3').datepicker('hide');
+        });
+
+        $(document).on('focus', "#budgetPeriodStartDate4", function () {
+            $(this).datepicker('show');
+        });
+
+        $(document).on('focus', "#deletePeriod4", function () {
+            $('#budgetPeriodStartDate4').datepicker('hide');
+        });
+
+        $(document).on('focus', "#budgetPeriodStartDate5", function () {
+            $(this).datepicker('show');
+        });
+
+        $(document).on('focus', "#deletePeriod5", function () {
+            $('#budgetPeriodStartDate5').datepicker('hide');
+        });
+
+        $(document).on('focus', "#budgetPeriodEndDate1", function () {
+            $(this).datepicker('show');
+            $('#budgetPeriodStartDate1').datepicker('hide');
+        });
+
+        $(document).on('focus', "#totalAttachFundsRequestedA1", function () {
+            $('#budgetPeriodEndDate1').datepicker('hide');
+        });
+
+        $(document).on('focus', "#project", function () {
+            $('#budgetPeriodEndDate1').datepicker('hide');
+        });
+
+        $(document).on('focus', "#subaward", function () {
+            $('#budgetPeriodEndDate1').datepicker('hide');
+        });
+
+        $(document).on('focus', "#deletePeriod1", function () {
+            $('#budgetPeriodEndDate1').datepicker('hide');
+        });
+
+        $(document).on('focus', "#editSeniorkeyperson1_1", function () {
+            $('#budgetPeriodEndDate1').datepicker('hide');
+        });
+
+        $(document).on('focus', "#deleteSeniorkeyperson1_1", function () {
+            $('#budgetPeriodEndDate1').datepicker('hide');
+        });
+
+        $(document).on('focus', "#budgetPeriodEndDate2", function () {
+            $(this).datepicker('show');
+            $('#budgetPeriodStartDate2').datepicker('hide');
+        });
+
+        $(document).on('focus', "#totalAttachFundsRequestedA2", function () {
+            $('#budgetPeriodEndDate2').datepicker('hide');
+        });
+
+        $(document).on('focus', "#editSeniorkeyperson2_1", function () {
+            $('#budgetPeriodEndDate2').datepicker('hide');
+        });
+
+        $(document).on('focus', "#deleteSeniorkeyperson2_1", function () {
+            $('#budgetPeriodEndDate2').datepicker('hide');
+        });
+
+        $(document).on('focus', "#budgetPeriodEndDate3", function () {
+            $(this).datepicker('show');
+            $('#budgetPeriodStartDate3').datepicker('hide');
+        });
+
+        $(document).on('focus', "#totalAttachFundsRequestedA3", function () {
+            $('#budgetPeriodEndDate3').datepicker('hide');
+        });
+
+        $(document).on('focus', "#editSeniorkeyperson3_1", function () {
+            $('#budgetPeriodEndDate3').datepicker('hide');
+        });
+
+        $(document).on('focus', "#deleteSeniorkeyperson3_1", function () {
+            $('#budgetPeriodEndDate3').datepicker('hide');
+        });
+
+        $(document).on('focus', "#budgetPeriodEndDate4", function () {
+            $(this).datepicker('show');
+            $('#budgetPeriodStartDate4').datepicker('hide');
+        });
+
+        $(document).on('focus', "#totalAttachFundsRequestedA4", function () {
+            $('#budgetPeriodEndDate4').datepicker('hide');
+        });
+
+        $(document).on('focus', "#editSeniorkeyperson4_1", function () {
+            $('#budgetPeriodEndDate4').datepicker('hide');
+        });
+
+        $(document).on('focus', "#deleteSeniorkeyperson4_1", function () {
+            $('#budgetPeriodEndDate4').datepicker('hide');
+        });
+
+        $(document).on('focus', "#budgetPeriodEndDate5", function () {
+            $(this).datepicker('show');
+            $('#budgetPeriodStartDate5').datepicker('hide');
+        });
+
+        $(document).on('focus', "#totalAttachFundsRequestedA5", function () {
+            $('#budgetPeriodEndDate5').datepicker('hide');
+        });
+
+        $(document).on('focus', "#editSeniorkeyperson5_1", function () {
+            $('#budgetPeriodEndDate5').datepicker('hide');
+        });
+
+        $(document).on('focus', "#deleteSeniorkeyperson5_1", function () {
+            $('#budgetPeriodEndDate5').datepicker('hide');
+        });
+
+        $(document).on('focus', "#budgetPeriodEndDate6", function () {
+            $(this).datepicker('show');
+            $('#budgetPeriodStartDate6').datepicker('hide');
+        });
+
+        $(document).on('focus', "#totalAttachFundsRequestedA6", function () {
+            $('#budgetPeriodEndDate6').datepicker('hide');
+        });
+
+        $(document).on('focus', "#editSeniorkeyperson6_1", function () {
+            $('#budgetPeriodEndDate6').datepicker('hide');
+        });
+
+        $(document).on('focus', "#deleteSeniorkeyperson6_1", function () {
+            $('#budgetPeriodEndDate6').datepicker('hide');
+        });
+
+        $(document).on('focus', "#budgetPeriodEndDate7", function () {
+            $(this).datepicker('show');
+            $('#budgetPeriodStartDate7').datepicker('hide');
+        });
+
+        $(document).on('focus', "#totalAttachFundsRequestedA7", function () {
+            $('#budgetPeriodEndDate7').datepicker('hide');
+        });
+
+        $(document).on('focus', "#editSeniorkeyperson7_1", function () {
+            $('#budgetPeriodEndDate7').datepicker('hide');
+        });
+
+        $(document).on('focus', "#deleteSeniorkeyperson7_1", function () {
+            $('#budgetPeriodEndDate7').datepicker('hide');
+        });
+
+        $(document).on('focus', "#budgetPeriodEndDate8", function () {
+            $(this).datepicker('show');
+            $('#budgetPeriodStartDate8').datepicker('hide');
+        });
+
+        $(document).on('focus', "#totalAttachFundsRequestedA8", function () {
+            $('#budgetPeriodEndDate8').datepicker('hide');
+        });
+
+        $(document).on('focus', "#editSeniorkeyperson8_1", function () {
+            $('#budgetPeriodEndDate8').datepicker('hide');
+        });
+
+        $(document).on('focus', "#deleteSeniorkeyperson8_1", function () {
+            $('#budgetPeriodEndDate8').datepicker('hide');
+        });
+
+        $(document).on('focus', "#budgetPeriodEndDate9", function () {
+            $(this).datepicker('show');
+            $('#budgetPeriodStartDate9').datepicker('hide');
+        });
+
+        $(document).on('focus', "#totalAttachFundsRequestedA9", function () {
+            $('#budgetPeriodEndDate9').datepicker('hide');
+        });
+
+        $(document).on('focus', "#editSeniorkeyperson9_1", function () {
+            $('#budgetPeriodEndDate9').datepicker('hide');
+        });
+
+        $(document).on('focus', "#deleteSeniorkeyperson9_1", function () {
+            $('#budgetPeriodEndDate9').datepicker('hide');
+        });
+
+        $(document).on('focus', "#budgetPeriodEndDate10", function () {
+            $(this).datepicker('show');
+            $('#budgetPeriodStartDate10').datepicker('hide');
+        });
+
+        $(document).on('focus', "#totalAttachFundsRequestedA10", function () {
+            $('#budgetPeriodEndDate10').datepicker('hide');
+        });
+
+        $(document).on('focus', "#editSeniorkeyperson10_1", function () {
+            $('#budgetPeriodEndDate10').datepicker('hide');
+        });
+
+        $(document).on('focus', "#deleteSeniorkeyperson10_1", function () {
+            $('#budgetPeriodEndDate10').datepicker('hide');
+        });
+
+        $(document).on('keyup', 'input', 'textarea', function (e) {
+            if (e.keyCode == 13 && e.target.type !== 'submit') {
+                var inputs = $(e.target).parents("form").eq(0).find(":input:visible"),
+                    idx = inputs.index(e.target);
+                if (idx == inputs.length - 1) {
+                    inputs[0].select()
+                } else {
+                    inputs[idx + 1].focus();
+                    inputs[idx + 1].select();
+                }
+            }
+
+        });
+    </script>
+
+    <style>
+        main {
+            padding-bottom: 150px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="processing"
+         class="overlay">
+        <div id="loading-img"
+             class="loadImage"></div>
+    </div>
+
+    <div style="background-color:white; display:none">
+        <div id="DeletePeriod-dialog-confirm">
+            <p>
+                Deleting a Budget Period removes all data entered for that Period, and new Budget Periods are always added after
+                the last Period displayed.
+            <p>If you want to Delete this Budget Period, click OK.</p>
+        </div>
+    </div>
+
+    <form id="onlineContentForm">
+        <header id="header"
+                role="banner"></header>
+
+        <nav role="navigation">
+            <h3>SECTIONS:</h3>
+            <ol class="collapsibleList">
+                <li><a href="#itemO">Organization</a></li>
+                <li id="Budgets">
+                    <a id="linkslist"
+                       href="#item0"
+                       tabindex="-1">Budget Period(s)</a>
+                    <ol id="budgetList"
+                        class="collapsibleList"
+                        data-bind="foreach: listBudgetPeriod">
+                        <li data-bind="attr:{id: 'Li_Budget_Period_' + ($index() + 1)}">
+                            <a data-bind="attr: { href: '#item' + ($index() + 1) }, html: 'Budget Period ' + ($index() + 1)"></a>
+                            <ol class="collapsibleList"
+                                data-bind="attr:{id: 'Ul_Budget_Period_' + ($index() + 1)}">
+                                <li><a data-bind="attr: { href: '#item' + ($index() + 1) + '-a' }">A. Senior/Key Person</a></li>
+                                <li><a data-bind="attr: { href: '#item' + ($index() + 1) + '-b' }">B. Other Personnel</a></li>
+                                <li><a data-bind="attr: { href: '#item' + ($index() + 1) + '-c' }">C. Equipment Description</a></li>
+                                <li><a data-bind="attr: { href: '#item' + ($index() + 1) + '-d' }">D. Travel</a></li>
+                                <li><a data-bind="attr: { href: '#item' + ($index() + 1) + '-e' }">E. Participant/Trainee Support Costs</a></li>
+                                <li><a data-bind="attr: { href: '#item' + ($index() + 1) + '-f' }">F. Other Direct Costs</a></li>
+                                <li><a data-bind="attr: { href: '#item' + ($index() + 1) + '-g' }">G. Direct Costs</a></li>
+                                <li><a data-bind="attr: { href: '#item' + ($index() + 1) + '-h' }">H. Indirect Costs</a></li>
+                                <li><a data-bind="attr: { href: '#item' + ($index() + 1) + '-i' }">I. Total Direct and Indirect Costs</a></li>
+                                <li><a data-bind="attr: { href: '#item' + ($index() + 1) + '-j' }">J. Fee</a></li>
+                                <li><a data-bind="attr: { href: '#item' + ($index() + 1) + '-k' }">K. Total Costs and Fee</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li><a href="#item-budget-justification">Budget Justification</a></li>
+                <li><a href="#item-cumulative-budget">Cumulative Budget</a></li>
+            </ol>
+        </nav>
+
+        <main role="main">
+            <div id="formheader">
+            </div>
+            <div id="formbody">
+                <input id="targetXML"
+                       type="hidden"
+                       data-bind="value:formMetaData" />
+                <div id="errors"
+                     class="errormessage"
+                     data-bind="visible: errInfo().length > 0">
+                </div>
+
+                <div id="seniorKeyPersonDetail"
+                     class="modal fade"
+                     tabindex="-1"
+                     role="dialog"
+                     data-keyboard="false"
+                     data-backdrop="static">
+                    <div class="modal-dialog modal-lg"
+                         style="width:1300px">
+                        <div class="modal-content">
+                            <div class="modal-header"
+                                 style="background-color: #375a7f; color: white"><i class="fa fa-list-ol "></i> &nbsp;&nbsp; Senior Key Person</div>
+                            <div class="modal-body">
+                                <div class="form-horizontal">
+                                    <div class="form-group-sm">
+                                        <span class="col-sm-12 control-label text-left"></span>
+                                    </div>
+                                    <div class="form-group-sm"
+                                         data-bind="attr: { id: prefixLink }">
+                                        <label class="col-sm-2 control-label text-left"
+                                               for="prefix">Prefix:</label>
+                                        <div class="col-sm-10">
+                                            <select id="prefix"
+                                                    class="form-control text-font-md select-border"
+                                                    data-bind="enable: seniorKeyPersonId() != 1, css: prefixCSS, attr: { title: prefixToolTip }, options: prefixList, value: prefix, optionsText: 'Name'"></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group-sm"
+                                         data-bind="attr: { id: otherPrefixLink }, visible: namePrefix() == 'Other (Specify)'">
+                                        <label class="col-sm-2 control-label text-left"
+                                               for="otherPrefix">Other (Specify):</label>
+                                        <div class="col-sm-10">
+                                            <input type="text"
+                                                   maxlength="10"
+                                                   id="otherPrefix"
+                                                   class="form-control text-font-md"
+                                                   data-bind="enable: seniorKeyPersonId() != 1, css: otherPrefixCSS, attr: { title: otherPrefixToolTip }, value: otherPrefix" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group-sm"
+                                         data-bind="attr: { id: firstNameLink }">
+                                        <label class="col-sm-2 control-label text-left"
+                                               for="firstName">First Name:</label>
+                                        <div class="col-sm-10">
+                                            <input type="text"
+                                                   maxlength="35"
+                                                   id="firstName"
+                                                   class="form-control text-font-md"
+                                                   data-bind="enable: seniorKeyPersonId() != 1, css: firstNameCSS, attr: { title: firstNameToolTip }, value: firstName" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group-sm"
+                                         data-bind="attr: { id: middleNameLink }">
+                                        <label class="col-sm-2 control-label text-left"
+                                               for="middleName">Middle Name:</label>
+                                        <div class="col-sm-10">
+                                            <input type="text"
+                                                   maxlength="25"
+                                                   id="middleName"
+                                                   class="form-control text-font-md"
+                                                   data-bind="enable: seniorKeyPersonId() != 1, css: middleNameCSS, attr: { title: middleNameToolTip }, value: middleName" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group-sm"
+                                         data-bind="attr: { id: lastNameLink }">
+                                        <label class="col-sm-2 control-label text-left"
+                                               for="lastName">Last Name:</label>
+                                        <div class="col-sm-10">
+                                            <input type="text"
+                                                   maxlength="60"
+                                                   id="lastName"
+                                                   class="form-control text-font-md"
+                                                   data-bind="enable: seniorKeyPersonId() != 1, css: lastNameCSS, attr: { title: lastNameToolTip }, value: lastName" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group-sm"
+                                         data-bind="attr: { id: suffixLink }">
+                                        <label class="col-sm-2 control-label text-left"
+                                               for="suffix">Suffix:</label>
+                                        <div class="col-sm-10">
+                                            <select id="suffix"
+                                                    class="form-control text-font-md  select-border"
+                                                    data-bind="enable: seniorKeyPersonId() != 1, css: suffixCSS, attr: { title: suffixToolTip }, options: suffixList, value: suffix, optionsText: 'Name'"></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group-sm"
+                                         data-bind="attr: { id: otherSuffixLink }, visible: nameSuffix() == 'Other (Specify)'">
+                                        <label class="col-sm-2 control-label text-left"
+                                               for="otherSuffix">Other (Specify):</label>
+                                        <div class="col-sm-10">
+                                            <input type="text"
+                                                   maxlength="10"
+                                                   id="otherSuffix"
+                                                   class="form-control text-font-md"
+                                                   data-bind="enable: seniorKeyPersonId() != 1, css: otherSuffixCSS, attr: { title: otherSuffixToolTip }, value: otherSuffix" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group-sm">
+                                        <label for="projectRole"
+                                               class="col-sm-2 control-label text-left">Project Role:</label>
+                                        <div class="col-sm-10">
+                                            <input type="text"
+                                                   maxlength="100"
+                                                   class="form-control text-font-md"
+                                                   id="projectRole"
+                                                   data-bind="css: projectRoleACSS, attr: { title: projectRoleAToolTip }, value: projectRole" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group-sm">
+                                        <label for="baseSalary"
+                                               class="col-sm-2 control-label text-left">Base Salary ($):</label>
+                                        <div class="col-sm-10">
+                                            <input type="text"
+                                                   maxlength="18"
+                                                   onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                   class="form-control text-font-md"
+                                                   id="baseSalary"
+                                                   data-bind="css: baseSalaryCSS, attr: { title: baseSalaryToolTip }, value: baseSalary" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group-sm">
+                                        <label for="calendarMonths"
+                                               class="col-sm-2 control-label text-left">Calendar Months:</label>
+                                        <div class="col-sm-10">
+                                            <input type="text"
+                                                   maxlength="8"
+                                                   onkeypress="return IsCurrencyNoMinus(event, this, 0, 99.99);"
+                                                   class="form-control"
+                                                   id="calendarMonths"
+                                                   data-bind="css: calendarMonthsACSS, attr: { title: calendarMonthsAToolTip }, value: calendarMonths" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group-sm">
+                                        <label for="academicMonths"
+                                               class="col-sm-2 control-label text-left">Academic Months:</label>
+                                        <div class="col-sm-10">
+                                            <input type="text"
+                                                   maxlength="8"
+                                                   onkeypress="return IsCurrencyNoMinus(event, this, 0, 99.99);"
+                                                   class="form-control text-font-md"
+                                                   id="academicMonths"
+                                                   data-bind="css: academicMonthsACSS, attr: { title: academicMonthsAToolTip }, value: academicMonths" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group-sm">
+                                        <label for="summerMonths"
+                                               class="col-sm-2 control-label text-left">Summer Months:</label>
+                                        <div class="col-sm-10">
+                                            <input type="text"
+                                                   maxlength="8"
+                                                   onkeypress="return IsCurrencyNoMinus(event, this, 0, 99.99);"
+                                                   class="form-control text-font-md"
+                                                   id="summerMonths"
+                                                   data-bind="css: summerMonthsACSS, attr: { title: summerMonthsAToolTip }, value: summerMonths" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group-sm">
+                                        <label for="requestedSalary"
+                                               class="col-sm-2 control-label text-left">Requested Salary ($):</label>
+                                        <div class="col-sm-10">
+                                            <input type="text"
+                                                   maxlength="18"
+                                                   onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                   class="form-control text-font-md"
+                                                   id="requestedSalary"
+                                                   data-bind="css: requestedSalaryACSS, attr: { title: requestedSalaryAToolTip }, value: requestedSalary" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group-sm">
+                                        <label for="fringeBenefits"
+                                               class="col-sm-2 control-label text-left">Fringe Benefits ($):</label>
+                                        <div class="col-sm-10">
+                                            <input type="text"
+                                                   maxlength="18"
+                                                   onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                   class="form-control text-font-md"
+                                                   id="fringeBenefits"
+                                                   data-bind="css: fringeBenefitsACSS, attr: { title: fringeBenefitsAToolTip }, value: fringeBenefits" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group-sm">
+                                        <label for="fundsRequested"
+                                               class="col-sm-2 control-label text-left">Funds Requested ($):</label>
+                                        <div class="col-sm-10">
+                                            <input type="text"
+                                                   readonly="readonly"
+                                                   disabled="disabled"
+                                                   class="form-control text-font-md"
+                                                   id="fundsRequested"
+                                                   data-bind="css: fundsRequestedACSS, attr: { title: fundsRequestedAToolTip }, value: fundsRequested" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button"
+                                        class="btn btn-primary"
+                                        data-bind="click: updateSeniorKeyPersonDetail.bind($root)">Save</button>
+                                <button type="button"
+                                        class="btn btn-default"
+                                        data-bind="click: sendCommand.bind($root,'RESET')"
+                                        data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="itemO"
+                    style="font-weight:bold; margin-left:5px">Organization</h2>
+                <fieldset style="margin-top:0px">
+                    <legend data-bind="text: organizationLegend, attr: { id: 'organization' }"></legend>
+                    <div class="form-horizontal"
+                         style="margin-top:0px"
+                         data-bind="attr: { id: sAMUEILink }">
+                        <div class="form-group-sm">
+                            <label class="col-sm-4 control-label text-left"
+                                   for="sAMUEI">UEI:</label>
+                            <div class="col-sm-3">
+                                <input type="text"
+                                       readonly="readonly"
+                                       disabled="disabled"
+                                       maxlength="12"
+                                       id="sAMUEI"
+                                       class="form-control text-font-md"
+                                       data-bind="event: {focusout: checkLostFocus.bind($root, $data, 'sAMUEI')}, attr: {title: sAMUEIToolTip}, css: sAMUEICSS, value: sAMUEI" />
+                            </div>
+                        </div>
+                        <div class="form-group-sm">
+                            <label class="col-sm-4 control-label text-left"
+                                   for="organizationName">Enter name of Organization:</label>
+                            <div class="col-sm-7">
+                                <input type="text"
+                                       readonly="readonly"
+                                       disabled="disabled"
+                                       maxlength="60"
+                                       id="organizationName"
+                                       class="form-control text-font-md"
+                                       data-bind="attr: {title: organizationNameToolTip}, css: organizationNameCSS, value: organizationName" />
+                            </div>
+                        </div>
+                        <div class="form-group-sm">
+                            <span class="col-sm-4"><strong>Budget Type:</strong></span>
+                            <div class="col-sm-4 checkboxcluster"
+                                 data-bind="css: budgetTypeCSS"
+                                 style="margin-left:15px">
+                                <div class="form-group-sm"
+                                     data-bind="attr: {title: projectToolTip}">
+                                    <label class="radio-label"
+                                           for="project"
+                                           style="font-weight:normal">
+                                        <input id="project"
+                                               name="budgetType"
+                                               type="radio"
+                                               class="radio-inline"
+                                               value="Project"
+                                               data-bind="checked: budgetType" />
+                                        Project
+                                    </label>
+                                </div>
+                                <div class="form-group-sm"
+                                     data-bind="attr: {title: subawardToolTip}">
+                                    <label class="radio-label"
+                                           for="subaward"
+                                           style="font-weight:normal">
+                                        <input id="subaward"
+                                               name="budgetType"
+                                               type="radio"
+                                               class="radio-inline"
+                                               value="Subaward/Consortium"
+                                               data-bind="checked: budgetType" />
+                                        Subaward/Consortium
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <span class="col-sm-12 space-holder"></span>
+                <span class="col-sm-12 space-holder"></span>
+                <h2 id="item0"
+                    style="font-weight:bold; margin-left:5px">Budget Period(s)</h2>
+                <div data-bind="foreach: { data: listBudgetPeriod, as: 'listBudgetPeriod' }">
+                    <div data-bind="visible: show, attr: { id:  'BudgetPeriod' + ($index() + 1) }">
+                        <div data-bind="visible: $index() > 0">
+                            <span class="col-sm-12 space-holder"></span>
+                            <span class="col-sm-12 space-holder"></span>
+                        </div>
+                        <a data-bind="attr: { id:  'item' + ($index() + 1) }"></a>
+                        <div class="sectionheader"
+                             style="margin-left:5px; margin-top:0px">
+                            <div>
+                                <h3 style="font-weight:bold"
+                                    data-bind="text: 'Budget Period ' + ($index() + 1)"></h3>
+                            </div>
+                            <div>
+                                <button sstyle="align:right"
+                                        type="button"
+                                        class="btn-xs sectionbuttonbar"
+                                        data-bind="click: $root.removeBudgetYear.bind($root, ($index() + 1)), attr: { id: 'deletePeriod'  + ($index() + 1),  title: $root.deletePeriodToolTip }, enable: $root.listCount($root.listBudgetPeriod) > 1">Delete
+                                    Period</button>
+                            </div>
+                        </div>
+
+                        <fieldset>
+                            <legend data-bind="text: $root.budgetPeriodDateLegend, attr: { id: 'budgetPeriodDate'  + ($index() + 1)}"></legend>
+                            <div class="form-horizontal"
+                                 style="margin-top:0px">
+                                <div class="form-group-sm">
+                                    <label class="col-sm-4 control-label text-left"
+                                           data-bind="attr: { for: 'budgetPeriodStartDate'  + ($index() + 1)}">Start Date:</label>
+                                    <div class="col-sm-2">
+                                        <input type="text"
+                                               class="form-control text-font-md"
+                                               data-bind="css: budgetPeriodStartDateCSS, attr: { id: 'budgetPeriodStartDate'  + ($index() + 1), title: budgetPeriodStartDateToolTip }, event: { blur: $root.formatBudgetDate.bind($root, $data, budgetPeriodStartDate, 'budgetPeriodStartDate') }, value: budgetPeriodStartDate, enable: ($index() > 0)" />
+                                    </div>
+                                </div>
+                                <div class="form-group-sm"
+                                     data-bind="attr: { id: $root.budgetPeriodEndDateLink }">
+                                    <label class="col-sm-4 control-label text-left"
+                                           data-bind="attr: { for: 'budgetPeriodEndDate'  + ($index() + 1)}">End Date:</label>
+                                    <div class="col-sm-2">
+                                        <input type="text"
+                                               class="form-control text-font-md"
+                                               data-bind="css: $root.budgetPeriodEndDateCSS, attr: { id: 'budgetPeriodEndDate'  + ($index() + 1), title: $root.budgetPeriodEndDateToolTip2 }, event: { blur: $root.formatBudgetDate.bind($root, $data, budgetPeriodEndDate, 'budgetPeriodEndDate') }, value: budgetPeriodEndDate" />
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend data-bind="text: $root.seniorKeyPersonLegend, attr: { id: 'item'  + ($index() + 1) + '-a'}"></legend>
+                            <div style="width:100%; height:100%; overflow-x: auto; overflow-y: hidden">
+                                <table class="table table-striped"
+                                       style="margin-top:25px">
+                                    <thead>
+                                        <tr style="color:navy">
+                                            <td style="width:36px"></td>
+                                            <td style="width:36px"></td>
+                                            <th><span class="text">Senior Key Person, Project Role</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Base Salary ($)</span></th>
+                                            <th style="text-align:center; width:55px"><span class="text">Calendar Months</span></th>
+                                            <th style="text-align:center; width:55px"><span class="text">Academic Months</span></th>
+                                            <th style="text-align:center; width:55px"><span class="text">Summer Months</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Requested Salary ($)</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Fringe Benefits ($)</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Funds Requested ($)</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody data-bind="foreach: listA">
+                                        <tr data-bind="visible: show">
+                                            <td>
+                                                <button type="button"
+                                                        class="btn-xs btn-danger"
+                                                        data-bind="click: $root.removeSeniorKeyPersonDetail.bind($root, $data, listBudgetPeriod.listA), attr: { title: $root.deleteSeniorKeyPersonToolTip, id: 'deleteSeniorkeyperson' + listBudgetPeriod.id() + '_' + ($index() + 1) }, event: { focus: $root.hideCalendar.bind($root, 'budgetPeriodEndDate1') }, enable: buttonEnable "><i
+                                                       class="fa fa-times"></i><span class="hide-label">Delete</span></button>
+                                            </td>
+                                            <td>
+                                                <button type="button"
+                                                        class="btn-xs btn-info"
+                                                        style="margin-left:-15px"
+                                                        data-bind="click: $root.getSeniorKeyPersonDetail.bind($root, false, $data, listBudgetPeriod.id()), attr: { title: $root.editSeniorKeyPersonToolTip, id: 'editSeniorkeyperson' + listBudgetPeriod.id() + '_' + ($index() + 1) }"><i
+                                                       class="fa fa-edit"></i><span class="hide-label">Edit</span></button>
+                                            </td>
+                                            <td>
+                                                <span class="control-label"
+                                                      data-bind="text: fullNameandProjectRole"></span>
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'baseSalaryA' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'A' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="18"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                       style="text-align:right; width:160px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: $root.baseSalaryCSS, attr: { id: 'baseSalaryA' + listBudgetPeriod.id() + '_' + ($index() + 1),  title: $root.baseSalaryToolTip }, event: { blur: $root.formatAmount.bind($root, baseSalary, $data, 'A', 0, 999999999999.99) }, value: baseSalary" />
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'calendarMonthsA' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'calendarMonthsA' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="8"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 99.99);"
+                                                       style="text-align:right; width:55px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: $root.calendarMonthsACSS, attr: { id: 'calendarMonthsA' + listBudgetPeriod.id() + '_' + ($index() + 1), title: $root.calendarMonthsAToolTip }, event: { blur: $root.formatAmount.bind($root, calendarMonths, $data, 'A', 0, 99.99) }, value: calendarMonths" />
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'academicMonthsA' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'academicMonthsA' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="8"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 99.99);"
+                                                       style="text-align:right; width:55px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: $root.academicMonthsACSS, attr: { id: 'academicMonthsA' + listBudgetPeriod.id() + '_' + ($index() + 1),  title: $root.academicMonthsAToolTip }, event: { blur: $root.formatAmount.bind($root, academicMonths, $data, 'A', 0, 99.99) }, value: academicMonths" />
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'summerMonthsA' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'summerMonthsA' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="8"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 99.99);"
+                                                       style="text-align:right; width:55px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: $root.summerMonthsACSS, attr: { id: 'summerMonthsA' + listBudgetPeriod.id() + '_' + ($index() + 1),  title: $root.summerMonthsAToolTip }, event: { blur: $root.formatAmount.bind($root, summerMonths, $data, 'A', 0, 99.99) }, value: summerMonths" />
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'requestedSalaryA' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'requestedSalaryA' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="18"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                       style="text-align:right; width:160px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: requestedSalaryCSS, attr: { id: 'requestedSalaryA' + listBudgetPeriod.id() + '_' + ($index() + 1), title: $root.requestedSalaryAToolTip }, event: { blur: $root.formatAmount.bind($root, requestedSalary, $data, 'A', 0, 999999999999.99) }, value: requestedSalary" />
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'fringeBenefitsA' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'fringeBenefitsA' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="18"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                       style="text-align:right; width:160px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: fringeBenefitsCSS, attr: { id: 'fringeBenefitsA' + listBudgetPeriod.id() + '_' + ($index() + 1), title: $root.fringeBenefitsAToolTip }, event: { blur: $root.formatAmount.bind($root, fringeBenefits, $data, 'A', 0, 999999999999.99) }, value: fringeBenefits" />
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'fundsRequestedA' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'fundsRequestedA' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       readonly="readonly"
+                                                       disabled="disabled"
+                                                       style="text-align:right; width:160px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: fundsRequestedCSS, attr: { id: 'fundsRequestedA' + listBudgetPeriod.id() + '_' + ($index() + 1), title: $root.fundsRequestedAToolTip }, value: fundsRequested" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table"
+                                       style="margin-top:-20px">
+                                    <thead style="display: none">
+                                        <tr style="color:navy">
+                                            <th><span class="text">H1</span></th>
+                                            <th><span class="text">H2</span></th>
+                                            <th><span class="text">H3</span></th>
+                                            <th><span class="text">H4</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="width:36px"></td>
+                                            <td style="width:36px"></td>
+                                            <td style="text-align:left; width: 50%">
+                                                <button type="button"
+                                                        class="btn-xs"
+                                                        data-bind="click: $root.getSeniorKeyPersonDetail.bind($root, true, '', ($index() + 1)), enable: $root.listCount(listBudgetPeriod.listA) < 8,  attr: { id: 'keyPersonAdd' + ($index() + 1), title: $root.addAdditionalSeniorKeyPersonToolTip } ">(+)
+                                                    Add Additional Key Person</button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td style="text-align:right">
+                                                <label class="control-label"
+                                                       style="text-align:right"
+                                                       data-bind="attr: { for: 'totalAttachFundsRequestedA'  + ($index() + 1)}">Total Funds requested
+                                                    for all Senior Key Persons in the attached file:</label>&nbsp;&nbsp;
+                                                <input type="text"
+                                                       maxlength="15"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                       class="form-control"
+                                                       style="text-align:right; width:160px"
+                                                       data-bind="css: {requiredfield: attachAdditionalSeniorKeyPersonCSS, errorfield: totalAttachFundsRequestedACSS }, attr: { id: 'totalAttachFundsRequestedA' + ($index() + 1), title: $root.totalAttachFundsRequestedAToolTip }, event: { blur: $root.checkTotalAttachFundsRequestedA.bind($root, $data) }, value: totalAttachFundsRequestedA" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td style="text-align:right">
+                                                <label class="control-label"
+                                                       style="text-align:right"
+                                                       data-bind="attr: { for: 'totalFundsRequestedA'  + ($index() + 1)}">Total Senior / Key
+                                                    Person:</label>&nbsp;&nbsp;
+                                                <input type="text"
+                                                       readonly="readonly"
+                                                       disabled="disabled"
+                                                       class="form-control text-font-md"
+                                                       style="text-align:right; width:160px"
+                                                       data-bind="css: $root.totalFundsRequestedACSS, attr: { id: 'totalFundsRequestedA'  + ($index() + 1),  title: $root.totalFundsRequestedAToolTip }, value: $root.totalFundsRequestedA(listBudgetPeriod.listA, totalAttachFundsRequestedA, $index()+1)" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="form-group-sm">
+                                    <div style="display: none">
+                                        <label style="display: none"
+                                               data-bind="attr: { for: 'seniorKeyPersonFile'  + ($index() + 1)}">senior Key Person File</label>
+                                        <input type="file"
+                                               data-bind="file: {data: seniorKeyPersonFileInput, name: seniorKeyPersonFileName, reader: seniorKeyPersonReader}, event: {change:  onFileChange.bind($root, 'seniorKeyPersonFile' + ($index() + 1), isSeniorKeyPersonFileLocal, seniorKeyPersonFileName)}, attr:{ id: 'seniorKeyPersonFile'  + ($index() + 1), att_href: seniorKeyPersonFileHref}">
+                                    </div>
+                                    <label class="col-sm-2 control-label text-left"
+                                           style="margin-top:10px"
+                                           data-bind="attr: { for: 'seniorKeyPersonFileName'  + ($index() + 1)}">Additional Senior Key
+                                        Persons:</label>
+                                    <div class="col-sm-10">
+                                        <div class="form-inline">
+                                            <input name="input"
+                                                   class="form-control text-font-md"
+                                                   type="text"
+                                                   value=""
+                                                   style="width:40%"
+                                                   readonly="readonly"
+                                                   disabled="disabled"
+                                                   data-bind="attr: { id: 'seniorKeyPersonFileName'  + ($index() + 1), title: $root.attachAdditionalSeniorKeyPersonToolTip }, css: {requiredfield: attachAdditionalSeniorKeyPersonCSS}, value: seniorKeyPersonFileName" />
+                                            <button type="button"
+                                                    class="btn-xs"
+                                                    data-bind="click: $root.fileAttach.bind($root, $data, 'seniorKeyPersonFile' + ($index() + 1), isSeniorKeyPersonFileLocal), attr: { title: $root.browseAdditionalSeniorKeyPersonToolTip }">Add
+                                                Attachment</button>
+                                            <button type="button"
+                                                    class="btn-xs"
+                                                    data-bind="click: $root.fileDelete.bind($root, $data, 'seniorKeyPersonFile' + ($index() + 1), seniorKeyPersonFileName(), seniorKeyPersonFileName, seniorKeyPersonFileInput,  seniorKeyPersonFileType,  seniorKeyPersonFileHref), attr: { title: $root.deleteAdditionalSeniorKeyPersonToolTip }, enable: seniorKeyPersonFileName() != '' & seniorKeyPersonFileName() != undefined">Delete
+                                                Attachment</button>
+                                            <button type="button"
+                                                    class="btn-xs"
+                                                    data-bind="click: $root.fileViewDyn.bind($root, seniorKeyPersonFileName(), seniorKeyPersonFileInput(), isSeniorKeyPersonFileLocal(), seniorKeyPersonFileType(), seniorKeyPersonFileHref(), isSeniorKeyPersonFileSave(), seniorKeyPersonServerFileName()), attr: { title: $root.viewAdditionalSeniorKeyPersonToolTip }, enable: seniorKeyPersonFileName() != '' & seniorKeyPersonFileName() != undefined">View
+                                                Attachment</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend data-bind="text: $root.otherPersonnelLegend, attr: { id: 'item'  + ($index() + 1) + '-b'}"></legend>
+                            <div style="width:100%; height:100%; overflow-x: auto; overflow-y: hidden">
+                                <table class="table table-striped"
+                                       style="margin-top:25px">
+                                    <thead>
+                                        <tr style="color:navy">
+                                            <td style="width:40px"></td>
+                                            <th style="text-align:center; width:50px"><span class="text">Number of Personnel</span></th>
+                                            <th><span class="text">Project Role</span></th>
+                                            <th style="text-align:center; width:25px"><span class="text">Calendar Months</span></th>
+                                            <th style="text-align:center; width:25px"><span class="text">Academic Months</span></th>
+                                            <th style="text-align:center; width:25px"><span class="text">Summer Months</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Requested Salary ($)</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Fringe Benefits ($)</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Funds Requested ($)</span></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody data-bind="foreach: listB">
+                                        <tr data-bind="visible: show">
+                                            <td>
+                                                <button type="button"
+                                                        class="btn-xs btn-danger"
+                                                        data-bind="click: $root.removeOtherPersonnel.bind($root, $data, listBudgetPeriod.listB), attr: { title: $root.deleteOtherPersonnelToolTip }, visible: buttonVisible, enable: buttonEnable"><i
+                                                       class="fa fa-times"></i><span class="hide-label">Delete</span></button>
+                                            </td>
+                                            <td>
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'numberOfPersonnel' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'numberOfPersonnel' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="3"
+                                                       onkeypress="return IsNumeric(event);"
+                                                       style="text-align:right; width:55px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: numberOfPersonnelCSS(), attr: { id: 'numberOfPersonnel' + listBudgetPeriod.id() + '_' + ($index() + 1), title: numberOfPersonnelToolTip() }, event: { blur: $root.formatInteger.bind($root, numberOfPersonnel, $data, 'B', 0, 999) }, value: numberOfPersonnel" />
+                                            </td>
+                                            <td>
+                                                <div data-bind="if: buttonVisible() == false">
+                                                    <label class="control-label"
+                                                           style="font-weight:normal"
+                                                           data-bind="text: projectRole, visible: buttonVisible() == false, attr: {for: 'listB' + listBudgetPeriod.id() + '_' + id}"></label>
+                                                </div>
+                                                <div data-bind="if: buttonVisible">
+                                                    <label style="display: none"
+                                                           data-bind="text: 'listB1'+id, visible: buttonVisible() == false , attr: {for: 'listB' + listBudgetPeriod.id() + '_' + id} "></label>
+                                                </div>
+                                                <textarea maxlength="100"
+                                                          style="width:100%;border:solid 1px black !important; "
+                                                          class="form-control text-font-md"
+                                                          data-bind="css: projectRoleCSS, attr: { title: $root.projectRoleBToolTip, id:  'listB' + listBudgetPeriod.id() + '_' + id}, event: { blur: $root.checkB.bind($root, $data) }, value: projectRole, visible: buttonVisible"></textarea>
+                                                <!--<input type="text" maxlength="100" style="width:100%" class="form-control text-font-md" data-bind="css: projectRoleCSS, attr: { title: $root.projectRoleBToolTip, id:  'listB' + listBudgetPeriod.id() + '_' + id}, event: { blur: $root.checkB.bind($root, $data) }, value: projectRole, visible: buttonVisible"
+                                                />-->
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'calendarMonthsB' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'calendarMonthsB' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="8"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999.99);"
+                                                       style="text-align:right; width:55px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: $root.calendarMonthsBCSS, attr: { id: 'calendarMonthsB' + listBudgetPeriod.id() + '_' + ($index() + 1),  title: $root.calendarMonthsBToolTip }, event: { blur: $root.formatAmount.bind($root, calendarMonths, $data, 'B', 0, 999.99) }, value: calendarMonths" />
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'academicMonthsB' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'academicMonthsB' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="8"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999.99);"
+                                                       style="text-align:right; width:55px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: $root.academicMonthsBCSS, attr: { id: 'academicMonthsB' + listBudgetPeriod.id() + '_' + ($index() + 1), title: $root.academicMonthsBToolTip }, event: { blur: $root.formatAmount.bind($root, academicMonths, $data, 'B', 0, 999.99) }, value: academicMonths" />
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'summerMonthsB' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'summerMonthsB' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="8"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999.99);"
+                                                       style="text-align:right; width:55px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: $root.summerMonthsBCSS, attr: { id: 'summerMonthsB' + listBudgetPeriod.id() + '_' + ($index() + 1),  title: $root.summerMonthsBToolTip }, event: { blur: $root.formatAmount.bind($root, summerMonths, $data, 'B', 0, 999.99) }, value: summerMonths" />
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'requestedSalaryB' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'requestedSalaryB' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="18"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                       style="text-align:right; width:160px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: requestedSalaryCSS, attr: { id: 'requestedSalaryB' + listBudgetPeriod.id() + '_' + ($index() + 1), title: $root.requestedSalaryBToolTip }, event: { blur: $root.formatAmount.bind($root, requestedSalary, $data, 'B', 0, 999999999999.99) }, value: requestedSalary" />
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'fringeBenefitsB' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'fringeBenefitsB' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="18"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                       style="text-align:right; width:160px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: fringeBenefitsCSS, attr: { id: 'fringeBenefitsB' + listBudgetPeriod.id() + '_' + ($index() + 1), title: $root.fringeBenefitsBToolTip }, event: { blur: $root.formatAmount.bind($root, fringeBenefits, $data, 'B', 0, 999999999999.99) }, value: fringeBenefits" />
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'fundsRequestedB' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'fundsRequestedB' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       readonly="readonly"
+                                                       disabled="disabled"
+                                                       style="text-align:right; width:160px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: fundsRequestedCSS, attr: { id: 'fundsRequestedB' + listBudgetPeriod.id() + '_' + ($index() + 1), title: $root.fundsRequestedBToolTip }, value: fundsRequested" />
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table">
+                                    <thead style="display: none">
+                                        <tr style="color:navy">
+                                            <th><span class="text">H1</span></th>
+                                            <th><span class="text">H2</span></th>
+                                            <th><span class="text">H3</span></th>
+                                            <th><span class="text">H4</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="width:40px"></td>
+                                            <td style="width:50px">
+                                                <input type="text"
+                                                       readonly="readonly"
+                                                       disabled="disabled"
+                                                       style="text-align:right; width:55px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: $root.totalNumberOtherPersonnelCSS, attr: { id: 'totalNumberOtherPersonnel'  + ($index() + 1), title: $root.totalNumberOtherPersonnelToolTip }, value: $root.totalNumberOtherPersonnel(listBudgetPeriod.listB)" />
+                                            </td>
+                                            <td style="text-align:left; width: 50%">
+                                                <label class="control-label"
+                                                       style="margin-left:10px"
+                                                       data-bind="attr: { for: 'totalNumberOtherPersonnel'  + ($index() + 1)}">Total Number Other
+                                                    Personnel</label>
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label class="control-label"
+                                                       data-bind="attr: { for: 'totalFundsRequestedB'  + ($index() + 1)}"
+                                                       style="text-align:right">Total Other Personnel:</label>&nbsp;&nbsp;
+                                                <input type="text"
+                                                       readonly="readonly"
+                                                       disabled="disabled"
+                                                       style="text-align:right; width:160px"
+                                                       data-bind="css: $root.totalFundsRequestedBCSS, attr: { id: 'totalFundsRequestedB'  + ($index() + 1), title: $root.totalFundsRequestedBToolTip }, value: $root.totalFundsRequestedB(listBudgetPeriod.listB, $index()+1)"
+                                                       class="form-control" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td style="text-align:left">
+                                                <button type="button"
+                                                        class="btn-xs"
+                                                        style="margin-left:10px"
+                                                        data-bind="click: $root.addOtherPersonnel.bind($root, listBudgetPeriod.listB), enable: $root.listCount(listBudgetPeriod.listB) < 10,  attr: { title: $root.addAdditionalOtherPersonnelToolTip } ">(+)
+                                                    Add Additional Other Personnel</button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td style="text-align:right">
+                                                <label class="control-label"
+                                                       data-bind="attr: { for: 'totalFundsRequestedAB'  + ($index() + 1)}"
+                                                       style="text-align:right">Total Salary, Wages and Fringe Benefits (A + B):</label>&nbsp;&nbsp
+                                                <input type="text"
+                                                       readonly="readonly"
+                                                       disabled="disabled"
+                                                       style="text-align:right; width:160px"
+                                                       data-bind="css:  $root.totalFundsRequestedABCSS, attr: { id: 'totalFundsRequestedAB'  + ($index() + 1), title: $root.totalFundsRequestedABToolTip }, value: $root.totalFundsRequestedAB(listBudgetPeriod.listA, totalAttachFundsRequestedA, listBudgetPeriod.listB, $index()+1)"
+                                                       class="form-control" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend data-bind="text: $root.equipmentDescriptionLegend, attr: { id: 'item'  + ($index() + 1) + '-c'}"></legend>
+                            <p style="margin-top:35px; font-weight: bold">List items and dollar amount for each item exceeding $5,000</p>
+                            <div style="width:100%; height:100%; overflow-x: auto; overflow-y: hidden">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr style="color:navy">
+                                            <td style="width:40px"></td>
+                                            <th><span class="text">Equipment Item</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Funds Requested ($)</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody data-bind="foreach: listC">
+                                        <tr data-bind="visible: show">
+                                            <td>
+                                                <button type="button"
+                                                        class="btn-xs btn-danger"
+                                                        data-bind="click: $root.removeEquipment.bind($root, $data, listBudgetPeriod.listC), attr: { title: $root.deleteEquipmentToolTip }, enable: buttonEnable"
+                                                        value="X">
+                                                    <i class="fa fa-times"></i><span class="hide-label">Delete</span>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'equipmentItem' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'equipmentItem' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="64"
+                                                       style="width:80%"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: equipmentItemCSS, attr: { id: 'equipmentItem' + listBudgetPeriod.id() + '_' + ($index() + 1), title: $root.equipmentItemToolTip }, event: { blur: $root.checkC.bind($root, $data) }, value: equipmentItem" />
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'fundsRequestedC' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'fundsRequestedC' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="18"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                       style="text-align:right; width:160px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: fundsRequestedCSS, attr: { id: 'fundsRequestedC' + listBudgetPeriod.id() + '_' + ($index() + 1), title: $root.fundsRequestedCToolTip }, event: { blur: $root.formatAmount.bind($root, fundsRequested, $data, 'C', 0, 999999999999.99) }, value: fundsRequested" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table"
+                                       style="margin-top:-20px">
+                                    <thead style="display: none">
+                                        <tr style="color:navy">
+                                            <th><span class="text">H1</span></th>
+                                            <th><span class="text">H2</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="width:40px"></td>
+                                            <td>
+                                                <button type="button"
+                                                        class="btn-xs pull-left"
+                                                        data-bind="click: $root.addEquipment.bind($root, listC), enable: $root.listCount(listBudgetPeriod.listC) < 10,  attr: { title: $root.addAdditionalEquipmentToolTip } ">(+)
+                                                    Add Additional Equipment</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td style="text-align:right">
+                                                <label class="control-label"
+                                                       data-bind="attr: { for: 'totalAttachFundsRequestedC' + ($index() + 1)}"
+                                                       style="text-align:right">Total funds requested for all equipment listed in the attached
+                                                    file:</label>&nbsp;&nbsp;
+                                                <input type="text"
+                                                       maxlength="18"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                       style="text-align:right; width:160px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: {requiredfield: attachAdditionalEquipmentCSS, errorfield: totalAttachFundsRequestedCCSS}, attr: { id: 'totalAttachFundsRequestedC' + ($index() + 1), title: $root.totalAttachFundsRequestedCToolTip }, event: { blur: $root.checkTotalAttachFundsRequestedC.bind($root, $data) }, value: totalAttachFundsRequestedC" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td style="text-align:right">
+                                                <label class="control-label"
+                                                       data-bind="attr: { for: 'totalEquipment' + ($index() + 1)}"
+                                                       style="text-align:right">Total Equipment:</label>&nbsp;&nbsp;
+                                                <input type="text"
+                                                       readonly="readonly"
+                                                       disabled="disabled"
+                                                       style="text-align:right; width:160px"
+                                                       data-bind="css: $root.totalFundsRequestedCCSS, attr: { id: 'totalEquipment' + ($index() + 1), title: $root.totalFundsRequestedCToolTip }, value: $root.totalFundsRequestedC(listBudgetPeriod.listC, totalAttachFundsRequestedC, $index()+1)"
+                                                       class="form-control" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="form-group-sm">
+                                <div style="display: none">
+                                    <label style="display: none"
+                                           data-bind="attr: { for: 'equipmentFile' + ($index() + 1)}">equipment File1</label>
+                                    <input type="file"
+                                           data-bind="file: {data: equipmentFileInput, name: equipmentFileName, reader: equipmentReader}, event: {change:  onFileChange.bind($root, 'equipmentFile' + ($index() + 1), isEquipmentFileLocal, equipmentFileName)}, attr:{ id: 'equipmentFile' + ($index() + 1), att_href: equipmentFileHref}">
+                                </div>
+                                <label class="col-sm-2 control-label text-left"
+                                       style="margin-top:10px"
+                                       data-bind="attr: { for: 'equipmentFileName' + ($index() + 1)}">Additional Equipment:</label>
+                                <div class="col-sm-10">
+                                    <div class="form-inline">
+                                        <input name="input"
+                                               class="form-control text-font-md"
+                                               type="text"
+                                               value=""
+                                               style="width:40%"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               data-bind="attr: { id: 'equipmentFileName'  + ($index() + 1), title: $root.attachAdditionalEquipmentToolTip }, css: {requiredfield: attachAdditionalEquipmentCSS}, value: equipmentFileName" />
+                                        <button type="button"
+                                                class="btn-xs"
+                                                data-bind="click: $root.fileAttach.bind($root, $data, 'equipmentFile' + ($index() + 1), isEquipmentFileLocal), attr: { title: $root.browseAdditionalEquipmentToolTip }">Add
+                                            Attachment</button>
+                                        <button type="button"
+                                                class="btn-xs"
+                                                data-bind="click: $root.fileDelete.bind($root, $data, 'equipmentFile' + ($index() + 1), equipmentFileName(), equipmentFileName, equipmentFileInput,  equipmentFileType,  equipmentFileHref), attr: { title: $root.deleteAdditionalEquipmentToolTip }, enable: equipmentFileName() != '' & equipmentFileName() != undefined">Delete
+                                            Attachment</button>
+                                        <button type="button"
+                                                class="btn-xs"
+                                                data-bind="click: $root.fileViewDyn.bind($root, equipmentFileName(), equipmentFileInput(), isEquipmentFileLocal(), equipmentFileType(), equipmentFileHref(), isEquipmentFileSave(), equipmentServerFileName()), attr: { title: $root.viewAdditionalEquipmentToolTip }, enable: equipmentFileName() != '' & equipmentFileName() != undefined">View
+                                            Attachment</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend data-bind="text: $root.travelLegend, attr: { id: 'item'  + ($index() + 1) + '-d'}"></legend>
+                            <div style="width:100%; height:100%; overflow-x: auto; overflow-y: hidden">
+                                <table class="table table-striped"
+                                       style="margin-top:25px">
+                                    <thead>
+                                        <tr style="color:navy">
+                                            <td style="width:20px"><span class="text"></span></td>
+                                            <th><span class="text">Item</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Funds Requested ($)</span></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody data-bind="foreach: listD">
+                                        <tr>
+                                            <td>
+                                                <span class="control-label"
+                                                      style="font-weight:bold"
+                                                      data-bind="text: id + '.'"></span>&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <label class="control-label"
+                                                       style="font-weight:normal"
+                                                       data-bind="text: item, attr: {for: 'listD'+ listBudgetPeriod.id() + '_' + id} "></label>
+                                            </td>
+                                            <td style="text-align:right">
+                                                <input type="text"
+                                                       maxlength="15"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                       style="text-align:right; width:160px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: $root.fundsRequestedDCSS(), attr: {  id: 'listD'+ listBudgetPeriod.id() + '_' + id, title: fundsRequestedToolTip() }, event: { blur: $root.formatAmount.bind($root, fundsRequested, $data, 'D', 0, 999999999999.99) }, value: fundsRequested" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div style="width:100%; height:100%; overflow-x: auto; overflow-y: hidden">
+                                <table class="table">
+                                    <thead style="display: none">
+                                        <tr style="color:navy">
+                                            <th style="text-align:right;"><span class="text">Header 1</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align:right">
+                                                <label class="control-label"
+                                                       data-bind="attr: { for: 'totalFundsRequestedD' + ($index() + 1)}"
+                                                       style="text-align:right">Total Travel Cost:</label>&nbsp;&nbsp;
+                                                <input type="text"
+                                                       readonly="readonly"
+                                                       disabled="disabled"
+                                                       style="text-align:right; width:160px"
+                                                       data-bind="css: $root.totalFundsRequestedDCSS, attr: { id: 'totalFundsRequestedD' + ($index() + 1), title: $root.totalFundsRequestedDToolTip }, value: $root.totalFundsRequestedD(listBudgetPeriod.listD)"
+                                                       class="form-control" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend data-bind="text: $root.participantSupportCostsLegend, attr: { id: 'item' + ($index() + 1) + '-e'}"></legend>
+                            <div style="width:100%; height:100%; overflow-x: auto; overflow-y: hidden">
+                                <table class="table table-striped"
+                                       style="margin-top:25px">
+                                    <thead>
+                                        <tr style="color:navy">
+                                            <td style="width:20px"><span class="text"></span></td>
+                                            <th style="width:100%"><span class="text">Item</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Funds Requested ($)</span></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody data-bind="foreach: listE">
+                                        <tr>
+                                            <td>
+                                                <div class="control-label"
+                                                     style="font-weight:bold"
+                                                     data-bind="text: id + '.'"></div>&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <label style="display:block; float:left; font-weight:normal"
+                                                       class="control-label"
+                                                       data-bind="text: item, attr: {for: 'listE'+ listBudgetPeriod.id() + '_' + id}"></label>
+                                                <span style="display:block; float:left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                                <textarea maxlength="100"
+                                                          style="width:80% !important;border:solid 1px black !important;text-align:left"
+                                                          class="form-control text-font-md"
+                                                          data-bind="css: otherItemCSS, attr: { id: 'listE'+ listBudgetPeriod.id() + '_' + id, title: $root.otherItemToolTip}, event: { blur: $root.checkE.bind($root, $data, listBudgetPeriod) }, value: otherItem, visible: textboxVisible"></textarea>
+                                                <!--<input type="text" maxlength="100" style="text-align:left; width:80%" class="form-control text-font-md" data-bind="css: otherItemCSS, attr: { id: 'listE'+ listBudgetPeriod.id() + '_' + id, title: $root.otherItemToolTip}, event: { blur: $root.checkE.bind($root, $data, listBudgetPeriod) }, value: otherItem, visible: textboxVisible "/>-->
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'fundsRequestedE' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'fundsRequestedE' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="18"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                       style="text-align:right; width:160px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: fundsRequestedCSS(), attr: { id: 'fundsRequestedE' + listBudgetPeriod.id() + '_' + ($index() + 1), title: fundsRequestedToolTip() }, event: { blur: $root.formatAmount2.bind($root, fundsRequested, $data, listBudgetPeriod, 'E', 0, 999999999999.99) }, value: fundsRequested" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div style="width:100%; height:100%; overflow-x: auto; overflow-y: hidden">
+                                <table class="table">
+                                    <thead style="display: none">
+                                        <tr style="color:navy">
+                                            <th style="text-align:right;"><span class="text">Header 1</span></th>
+                                            <th style="text-align:right;"><span class="text">Header 2</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="text"
+                                                       maxlength="4"
+                                                       onkeypress="return IsNumeric(event);"
+                                                       style="text-align:right; width:50px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: numberOfParticipantsCSS(), attr: { id: 'numberOfParticipants'  + ($index() + 1), title: $root.numberOfParticipantsToolTip() }, event: { blur: $root.formatInteger.bind($root, numberOfParticipants, $data, 'ET', 0, 9999) }, value: numberOfParticipants" />
+                                                &nbsp;&nbsp;
+                                                <label class="control-label"
+                                                       data-bind="attr: { for: 'numberOfParticipants' + ($index() + 1)}"
+                                                       style="text-align:right">Number of Participants / Trainees</label>
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label class="control-label"
+                                                       data-bind="attr: { for: 'totalFundsRequestedE' + ($index() + 1)}"
+                                                       style="text-align:right">Total Participant / Trainee Support Costs:</label>&nbsp;&nbsp;
+                                                <input type="text"
+                                                       readonly="readonly"
+                                                       disabled="disabled"
+                                                       style="text-align:right; width:160px"
+                                                       data-bind="css: totalFundsRequestedECSS, attr: { id: 'totalFundsRequestedE'  + ($index() + 1), title: $root.totalFundsRequestedEToolTip }, value: $root.totalFundsRequestedE(listBudgetPeriod.listE)"
+                                                       class="form-control" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend data-bind="text: $root.otherDirectCostsLegend, attr: { id: 'item'  + ($index() + 1) + '-f'}"></legend>
+                            <div style="width:100%; height:100%; overflow-x: auto; overflow-y: hidden">
+                                <table class="table table-striped"
+                                       style="margin-top:25px">
+                                    <thead>
+                                        <tr style="color:navy">
+                                            <td style="width:20px"><span class="text"></span></td>
+                                            <th><span class="text">Item</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Funds Requested ($)</span></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody data-bind="foreach: listF">
+                                        <tr>
+                                            <td>
+                                                <div class="control-label"
+                                                     style="font-weight:bold"
+                                                     data-bind="text: id + '.'"></div>&nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                                <div data-bind="if: textboxVisible() == false">
+                                                    <label class="control-label"
+                                                           style="font-weight:normal"
+                                                           data-bind="text: item, visible: textboxVisible() == false , attr: {for: 'listF'+ listBudgetPeriod.id() + '_' + id} "></label>
+                                                </div>
+                                                <div data-bind="if: textboxVisible">
+                                                    <label style="display: none"
+                                                           data-bind="text: 'listF'+ listBudgetPeriod.id() + '_' + id, visible: textboxVisible() == false , attr: {for: 'listF'+ listBudgetPeriod.id() + '_' + id} "></label>
+                                                </div>
+                                                <input type="text"
+                                                       maxlength="120"
+                                                       style="width: 95%"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: itemCSS, attr: { title: $root.otherDirectCostToolTip, id: 'listF'+ listBudgetPeriod.id() + '_' + id} , event: { blur: $root.checkF.bind($root, $data, listBudgetPeriod) }, value: item, visible: textboxVisible, enable:$data.enableMe" />
+
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'fundsRequestedF' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'fundsRequestedF' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="18"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                       style="text-align:right; width:160px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: fundsRequestedCSS(), attr: { id: 'fundsRequestedF' + listBudgetPeriod.id() + '_' + ($index() + 1), title: fundsRequestedToolTip() }, event: { blur: $root.formatAmount2.bind($root, fundsRequested, $data, listBudgetPeriod, 'F', 0, 999999999999.99) }, value: fundsRequested, enable: $data.enableMe" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div style="width:100%; height:100%; overflow-x: auto; overflow-y: hidden">
+                                <table class="table">
+                                    <thead style="display: none">
+                                        <tr style="color:navy">
+                                            <th style="text-align:right;"><span class="text">Header 1</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align:right">
+                                                <label class="control-label"
+                                                       data-bind="attr: { for: 'totalFundsRequestedF'  + ($index() + 1)}"
+                                                       style="text-align:right">Total Other Direct Costs:</label>&nbsp;&nbsp;
+                                                <input type="text"
+                                                       readonly="readonly"
+                                                       disabled="disabled"
+                                                       style="text-align:right; width:160px"
+                                                       data-bind="css: $root.totalFundsRequestedFCSS, attr: { id: 'totalFundsRequestedF'  + ($index() + 1), title: $root.totalFundsRequestedFToolTip }, value: $root.totalFundsRequestedF(listBudgetPeriod.listF, $index() + 1)"
+                                                       class="form-control" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend data-bind="text: $root.directCostsLegend, attr: { id: 'item'  + ($index() + 1) + '-g'}"></legend>
+                            <div style="width:100%; height:100%; overflow-x: auto; overflow-y: hidden">
+                                <table class="table"
+                                       style="margin-top:25px">
+                                    <thead>
+                                        <tr style="color:navy">
+                                            <th style="text-align:right; width:100%"><span class="text"
+                                                      style="display:none">Header 1</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Funds Requested ($)</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align:right; width:100%; vertical-align:middle">
+                                                <label class="control-label"
+                                                       data-bind="attr: { for: 'totalFundsRequestedG'  + ($index() + 1)}"
+                                                       style="text-align:right">Total Direct Costs (A thru F):</label>
+                                            </td>
+                                            <td style="text-align:right">
+                                                <input type="text"
+                                                       readonly="readonly"
+                                                       disabled="disabled"
+                                                       style="text-align:right; width:160px"
+                                                       data-bind="css: $root.totalFundsRequestedGCSS, attr: { id: 'totalFundsRequestedG'  + ($index() + 1), title: $root.totalFundsRequestedGToolTip }, value: $root.totalFundsRequestedG(listBudgetPeriod.listA, listBudgetPeriod.totalAttachFundsRequestedA, listBudgetPeriod.listB, listBudgetPeriod.listC, listBudgetPeriod.totalAttachFundsRequestedC, listBudgetPeriod.listD, listBudgetPeriod.listE, listBudgetPeriod.listF, $index()+1)"
+                                                       class="form-control" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend data-bind="text: $root.indirectCostsLegend, attr: { id: 'item'  + ($index() + 1) + '-h'}"></legend>
+                            <div style="width:100%; height:100%; overflow-x: auto; overflow-y: hidden">
+                                <table class="table table-striped"
+                                       style="margin-top:25px">
+                                    <thead>
+                                        <tr style="color:navy">
+                                            <td width="40px"></td>
+                                            <th><span class="text">Indirect Cost Type</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Indirect Cost Rate (%)</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Indirect Cost Base ($)</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Funds Requested ($)</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody data-bind="foreach: listH">
+                                        <tr data-bind="visible: show">
+                                            <td>
+                                                <button type="button"
+                                                        class="btn-xs btn-danger"
+                                                        data-bind="click: $root.removeIndirectCost.bind($root, $data, listBudgetPeriod.listH), attr: { title: $root.deleteIndirectCostToolTip }, enable: buttonEnable"><i
+                                                       class="fa fa-times"></i><span class="hide-label">Delete</span></button>
+                                            </td>
+                                            <td>
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'indirectCostType' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'indirectCostType' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="64"
+                                                       style="width:100%"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: indirectCostTypeCSS, attr: { id: 'indirectCostType' + listBudgetPeriod.id() + '_' + ($index() + 1), title: $root.indirectCostTypeToolTip }, event: { blur: $root.checkH.bind($root, $data) }, value: indirectCostType" />
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'indirectCostRate' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'indirectCostRate' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="6"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999.99);"
+                                                       style="text-align:right; width:160px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: $root.indirectCostRateCSS, attr: { id: 'indirectCostRate' + listBudgetPeriod.id() + '_' + ($index() + 1), title: $root.indirectCostRateToolTip }, event: { blur: $root.formatAmount.bind($root, indirectCostRate, $data, 'H', 0, 999.99) }, value: indirectCostRate" />
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'indirectCostBase' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'indirectCostBase' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="18"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                       style="text-align:right; width:160px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: $root.indirectCostBaseCSS, attr: { id: 'indirectCostBase'  + listBudgetPeriod.id() + '_' + ($index() + 1), title: $root.indirectCostBaseToolTip }, event: { blur: $root.formatAmount.bind($root, indirectCostBase, $data, 'H', 0, 999999999999.99) }, value: indirectCostBase" />
+                                            </td>
+                                            <td style="text-align:right">
+                                                <label style="display: none"
+                                                       data-bind="attr: { for: 'fundsRequestedH' + listBudgetPeriod.id() + '_' + ($index() + 1)}, text: 'fundsRequestedH' + listBudgetPeriod.id() + '_' + ($index() + 1)"></label>
+                                                <input type="text"
+                                                       maxlength="18"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                       style="text-align:right; width:160px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: fundsRequestedCSS, attr: { id: 'fundsRequestedH' + listBudgetPeriod.id() + '_' + ($index() + 1), title: $root.fundsRequestedHToolTip }, event: { blur: $root.formatAmount.bind($root, fundsRequested, $data, 'H', 0, 999999999999.99) }, value: fundsRequested" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table"
+                                       style="margin-top:-20px">
+                                    <thead style="display: none">
+                                        <tr style="color:navy">
+                                            <th><span class="text">H1</span></th>
+                                            <th><span class="text">H2</span></th>
+                                            <th><span class="text">H3</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="width:40px"></td>
+                                            <td style="text-align:left">
+                                                <button type="button"
+                                                        class="btn-xs"
+                                                        data-bind="click: $root.addIndirectCost.bind($root, listBudgetPeriod.listH), enable: $root.listCount(listBudgetPeriod.listH) < 4,  attr: { title: $root.addAdditionalIndirectCostToolTip } ">(+)
+                                                    Add Additional Indirect Cost</button>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td style="text-align:right">
+                                                <label class="control-label"
+                                                       data-bind="attr: { for: 'totalFundsRequestedH'  + ($index() + 1)}"
+                                                       style="text-align:right">Total Indirect Costs:</label>&nbsp;&nbsp;
+                                                <input type="text"
+                                                       readonly="readonly"
+                                                       disabled="disabled"
+                                                       style="text-align:right; width:160px"
+                                                       data-bind="css: $root.totalFundsRequestedHCSS, attr: { id: 'totalFundsRequestedH'  + ($index() + 1), title: $root.totalFundsRequestedHToolTip }, value: $root.totalFundsRequestedH(listBudgetPeriod.listH)"
+                                                       class="form-control" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td style="vertical-align:middle; width:50%">
+                                                <label class="control-label"
+                                                       data-bind="attr: { for: 'cognizantFederalAgency'  + ($index() + 1)}"
+                                                       style="text-align:right; font-weight:normal"><strong>Cognizant Federal Agency</strong> (Agency
+                                                    Name, POC Name, and POC Phone Number):</label>&nbsp;&nbsp;
+                                            </td>
+                                            <td style="text-align:right">
+                                                <textarea maxlength="180"
+                                                          data-bind="css: $root.cognizantFederalAgencyCSS, attr: { id: 'cognizantFederalAgency'  + ($index() + 1), title: $root.cognizantFederalAgencyToolTip }, value: cognizantFederalAgency"></textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend data-bind="text: $root.totalDirectAndIndirectCostsLegend, attr: { id: 'item'  + ($index() + 1) + '-i'}"></legend>
+                            <div style="width:100%; height:100%; overflow-x: auto; overflow-y: hidden">
+                                <table class="table"
+                                       style="margin-top:25px">
+                                    <thead>
+                                        <tr style="color:navy">
+                                            <th style="text-align:right; width:100%"><span class="text"
+                                                      style="display:none">Header 1</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Funds Requested ($)</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align:right; width:100%; vertical-align:middle">
+                                                <label class="control-label"
+                                                       data-bind="attr: { for: 'totalFundsRequestedI'  + ($index() + 1)}"
+                                                       style="text-align:right">Total Direct and Indirect Institutional Costs (G + H):</label>
+                                            </td>
+                                            <td style="text-align:right">
+                                                <input type="text"
+                                                       readonly="readonly"
+                                                       disabled="disabled"
+                                                       style="text-align:right; width:160px"
+                                                       data-bind="css: $root.totalFundsRequestedICSS, attr: { id: 'totalFundsRequestedI'  + ($index() + 1), title: $root.totalFundsRequestedIToolTip }, value: $root.totalFundsRequestedI(listBudgetPeriod.listA, listBudgetPeriod.totalAttachFundsRequestedA, listBudgetPeriod.listB, listBudgetPeriod.listC, listBudgetPeriod.totalAttachFundsRequestedC, listBudgetPeriod.listD, listBudgetPeriod.listE, listBudgetPeriod.listF, listBudgetPeriod.listH, $index()+1)"
+                                                       class="form-control" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend data-bind="text: $root.feeLegend, attr: { id: 'item'  + ($index() + 1) + '-j'}"></legend>
+                            <div style="width:100%; height:100%; overflow-x: auto; overflow-y: hidden">
+                                <table class="table"
+                                       style="margin-top:25px">
+                                    <thead>
+                                        <tr style="color:navy">
+                                            <th style="text-align:right; width:100%"><span class="text"
+                                                      style="display:none">Header 1</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Funds Requested ($)</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align:right; width:100%; vertical-align:middle">
+                                                <label class="control-label"
+                                                       data-bind="attr: { for: 'totalFundsRequestedJ'  + ($index() + 1)}"
+                                                       style="text-align:right">Fee:</label>
+                                            </td>
+                                            <td style="text-align:right">
+                                                <input type="text"
+                                                       maxlength="18"
+                                                       onkeypress="return IsCurrencyNoMinus(event, this, 0, 999999999999.99);"
+                                                       style="text-align:right; width:160px"
+                                                       class="form-control text-font-md"
+                                                       data-bind="css: $root.totalFundsRequestedJCSS, attr: { id: 'totalFundsRequestedJ'  + ($index() + 1), title: $root.totalFundsRequestedJToolTip }, event: { blur: $root.formatAmount.bind($root, totalFundsRequestedJ, $data, '', 0, 999999999999.99) }, value: totalFundsRequestedJ" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend data-bind="text: $root.totalCostsFeeLegend, attr: { id: 'item'  + ($index() + 1) + '-k'}"></legend>
+                            <div style="width:100%; height:100%; overflow-x: auto; overflow-y: hidden">
+                                <table class="table"
+                                       style="margin-top:25px">
+                                    <thead>
+                                        <tr style="color:navy">
+                                            <th style="text-align:right; width:100%"><span class="text"
+                                                      style="display:none">Header 1</span></th>
+                                            <th style="text-align:center; width:160px"><span class="text">Funds Requested ($)</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align:right; width:100%; vertical-align:middle">
+                                                <label class="control-label"
+                                                       data-bind="attr: { for: 'totalFundsRequestedK'  + ($index() + 1)}"
+                                                       style="text-align:right">Total Costs and Fee (I + J):</label>
+                                            </td>
+                                            <td style="text-align:right">
+                                                <input type="text"
+                                                       readonly="readonly"
+                                                       disabled="disabled"
+                                                       style="text-align:right; width:160px"
+                                                       data-bind="css: $root.totalFundsRequestedKCSS, attr: { id: 'totalFundsRequestedK'  + ($index() + 1), title: $root.totalFundsRequestedKToolTip }, value: $root.totalFundsRequestedK(listBudgetPeriod.listA, listBudgetPeriod.totalAttachFundsRequestedA, listBudgetPeriod.listB, listBudgetPeriod.listC, listBudgetPeriod.totalAttachFundsRequestedC, listBudgetPeriod.listD, listBudgetPeriod.listE, listBudgetPeriod.listF, listBudgetPeriod.listH, listBudgetPeriod.totalFundsRequestedJ, $index()+1)"
+                                                       class="form-control" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div id="addBudgetPeriod"
+                     class="sectionheader"
+                     data-bind=" visible: getBudgetPeriodCount() < 5"
+                     style="margin-left:5px">
+                    <div>
+                        <h3 style="font-weight:bold"
+                            data-bind="text: bugetPeriod"></h3>
+                    </div>
+                    <div>
+                        <button type="button"
+                                class="btn-xs"
+                                data-bind="click: addBudgetPeriod.bind($root), attr: { title: addPeriodToolTip }, visible: getBudgetPeriodCount() < 5">Add
+                            Period</button>
+                    </div>
+                </div>
+
+                <span class="col-sm-12 space-holder"></span>
+                <span class="col-sm-12 space-holder"></span>
+                <h2 id="item-budget-justification"
+                    style="font-weight:bold; margin-left:5px">Budget Justification</h2>
+                <fieldset style="margin-top:0px">
+                    <legend data-bind="text: budgetJustificationLegend"></legend>
+                    <div class="form-group-sm">
+                        <div style="display: none">
+                            <label style="display: none"
+                                   for="budgetJustificationFile">budget Justification File</label>
+                            <input id="budgetJustificationFile"
+                                   type="file"
+                                   data-bind="file: {data: budgetJustificationFileInput, name: budgetJustificationFileName, reader: budgetJustificationReader}, event: {change: onFileChange.bind($root, 'budgetJustificationFile', isBudgetJustificationFileLocal, budgetJustificationFileName)}, attr:{ att_href: budgetJustificationFileHref}">
+                        </div>
+                        <label class="col-sm-2 control-label text-left"
+                               style="margin-top:10px"
+                               for="budgetJustificationFileName">Only attach one file:</label>
+                        <div class="col-sm-10">
+                            <div class="form-inline">
+                                <input name="input"
+                                       class="form-control text-font-md"
+                                       type="text"
+                                       id="budgetJustificationFileName"
+                                       value=""
+                                       style="width:40%"
+                                       readonly="readonly"
+                                       disabled="disabled"
+                                       data-bind="css: attachAdditionalBudgetJustificationCSS, attr: { title: attachAdditionalBudgetJustificationToolTip }, value: budgetJustificationFileName" />
+                                <button type="button"
+                                        class="btn-xs"
+                                        data-bind="click: fileAttach.bind($root, $data, 'budgetJustificationFile', isBudgetJustificationFileLocal), attr: { title: browseAdditionalBudgetJustificationToolTip }">Add
+                                    Attachment</button>
+                                <button type="button"
+                                        class="btn-xs"
+                                        data-bind="click: fileDelete.bind($root, $data, 'budgetJustificationFile', budgetJustificationFileName(), budgetJustificationFileName, budgetJustificationFileInput, budgetJustificationFileType, budgetJustificationFileHref), attr: { title: deleteAdditionalBudgetJustificationToolTip }, enable: budgetJustificationFileName() != '' & budgetJustificationFileName() != undefined">Delete
+                                    Attachment</button>
+                                <button type="button"
+                                        class="btn-xs"
+                                        data-bind="click: fileView.bind($root, budgetJustificationFileName(), budgetJustificationFileInput(), isBudgetJustificationFileLocal(), budgetJustificationFileType(), budgetJustificationFileHref()), attr: { title: viewAdditionalBudgetJustificationToolTip }, enable: budgetJustificationFileName() != '' & budgetJustificationFileName() != undefined">View
+                                    Attachment</button>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <span class="col-sm-12 space-holder"></span>
+                <span class="col-sm-12 space-holder"></span>
+                <h2 id="item-cumulative-budget"
+                    style="font-weight:bold; margin-left:5px">Cumulative Budget</h2>
+                <fieldset style="margin-top:0px">
+                    <legend></legend>
+                    <div style="width:100%; height:100%; overflow-x: auto; overflow-y: hidden">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr style="color:navy">
+                                    <th><span class="text">Item</span></th>
+                                    <th style="text-align:center; width:360px"><span class="text">Totals ($)</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionA">Section A, Senior/Key Person</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionA"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionAToolTip }, value: totalSectionA"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionB">Section B, Other Personnel</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionB"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionBToolTip }, value: totalSectionB"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               style="font-weight:normal"
+                                               for="totalSectionNumberOtherPersonnel">Total Number Other Personnel</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionNumberOtherPersonnel"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionNumberOtherPersonnelToolTip }, value: totalSectionNumberOtherPersonnel"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionNumberOtherPersonnel_1">totalSectionNumberOtherPersonnel</label>
+                                        <input type="text"
+                                               id="totalSectionNumberOtherPersonnel_1"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionNumberOtherPersonnelToolTip }, value: totalSectionNumberOtherPersonnel"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionAB">Total Salary, Wages and Fringe Benefits (A + B)</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionAB"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionABToolTip }, value: totalSectionAB"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionC">Section C, Equipment</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionC"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionCToolTip }, value: totalSectionC"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionD">Section D, Travel</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionD"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionDToolTip }, value: totalSectionD"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionD1"
+                                               style="font-weight:normal"><strong>1.</strong> Domestic</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionD1"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionD1ToolTip }, value: totalSectionD1"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionD1_2">total Section D1</label>
+                                        <input type="text"
+                                               id="totalSectionD1_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionD1ToolTip }, value: totalSectionD1"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionD2"
+                                               style="font-weight:normal"><strong>2.</strong> Foreign</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionD2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionD2ToolTip }, value: totalSectionD2"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionD2_2">total Section D2</label>
+                                        <input type="text"
+                                               id="totalSectionD2_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionD2ToolTip }, value: totalSectionD2"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionE">Section E, Participant/Trainee Support Costs</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionE"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionEToolTip }, value: totalSectionE"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionE1"
+                                               style="font-weight:normal"><strong>1.</strong> Tuition/Fees/Health Insurance</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionE1"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionE1ToolTip }, value: totalSectionE1"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionE1_2">total Section E1</label>
+                                        <input type="text"
+                                               id="totalSectionE1_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionE1ToolTip }, value: totalSectionE1"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionE2"
+                                               style="font-weight:normal"><strong>2.</strong> Stipends</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionE2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionE2ToolTip }, value: totalSectionE2"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionE2_2">total Section E2</label>
+                                        <input type="text"
+                                               id="totalSectionE2_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionE2ToolTip }, value: totalSectionE2"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionE3"
+                                               style="font-weight:normal"><strong>3.</strong> Travel</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionE3"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionE3ToolTip }, value: totalSectionE3"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionE3_2">total Section E3</label>
+                                        <input type="text"
+                                               id="totalSectionE3_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionE3ToolTip }, value: totalSectionE3"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionE4"
+                                               style="font-weight:normal"><strong>4.</strong> Subsistence</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionE4"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionE4ToolTip }, value: totalSectionE4"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionE4_2">total Section E4</label>
+                                        <input type="text"
+                                               id="totalSectionE4_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionE4ToolTip }, value: totalSectionE4"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionE5"
+                                               style="font-weight:normal"><strong>5.</strong> Other</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionE5"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionE5ToolTip }, value: totalSectionE5"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionE5_2">total Section E5</label>
+                                        <input type="text"
+                                               id="totalSectionE5_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionE5ToolTip }, value: totalSectionE5"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionE6"
+                                               style="font-weight:normal"><strong>6.</strong> Number of Participants/Trainees</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionE6"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionE6ToolTip }, value: totalSectionE6"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionE6_2">total Section E6</label>
+                                        <input type="text"
+                                               id="totalSectionE6_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionE6ToolTip }, value: totalSectionE6"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF">Section F, Other Direct Costs</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind=" attr: { title: totalSectionFToolTip }, value: totalSectionF"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF1"
+                                               style="font-weight:normal"><strong>1.</strong> Materials and Supplies</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF1"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF1ToolTip }, value: totalSectionF1"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF1_2">total Section F1</label>
+                                        <input type="text"
+                                               id="totalSectionF1_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF1ToolTip }, value: totalSectionF1"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF2"
+                                               style="font-weight:normal"><strong>2.</strong> Publication Costs</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF2ToolTip }, value: totalSectionF2"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF2_2">total Section F2</label>
+                                        <input type="text"
+                                               id="totalSectionF2_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF2ToolTip }, value: totalSectionF2"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF3"
+                                               style="font-weight:normal"><strong>3.</strong> Consultant Services</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF3"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF3ToolTip }, value: totalSectionF3"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF3_2">total Section F3</label>
+                                        <input type="text"
+                                               id="totalSectionF3_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF3ToolTip }, value: totalSectionF3"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF4"
+                                               style="font-weight:normal"><strong>4.</strong> ADP/Computer Services</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF4"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF4ToolTip }, value: totalSectionF4"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF4_2">total Section F4</label>
+                                        <input type="text"
+                                               id="totalSectionF4_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF4ToolTip }, value: totalSectionF4"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF5"
+                                               style="font-weight:normal"><strong>5.</strong> Subawards/Consortium/Contractual Costs</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF5"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF5ToolTip }, value: totalSectionF5"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF5_2">total Section F5</label>
+                                        <input type="text"
+                                               id="totalSectionF5_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF5ToolTip }, value: totalSectionF5"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF6"
+                                               style="font-weight:normal"><strong>6.</strong> Equipment or Facility Rental/User Fees</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF6"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF6ToolTip }, value: totalSectionF6"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF6_2">total Section F6</label>
+                                        <input type="text"
+                                               id="totalSectionF6_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF6ToolTip }, value: totalSectionF6"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF7"
+                                               style="font-weight:normal"><strong>7.</strong> Alterations and Renovations</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF7"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF7ToolTip }, value: totalSectionF7"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF7_2">total Section F7</label>
+                                        <input type="text"
+                                               id="totalSectionF7_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF7ToolTip }, value: totalSectionF7"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF8"
+                                               style="font-weight:normal"><strong>8.</strong> Other 1</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF8"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF8ToolTip }, value: totalSectionF8"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF8_2">total Section F8</label>
+                                        <input type="text"
+                                               id="totalSectionF8_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF8ToolTip }, value: totalSectionF8"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF9"
+                                               style="font-weight:normal"><strong>9.</strong> Other 2</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF9"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF9ToolTip }, value: totalSectionF9"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF9_2">total Section F9</label>
+                                        <input type="text"
+                                               id="totalSectionF9_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF9ToolTip }, value: totalSectionF9"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF10"
+                                               style="font-weight:normal"><strong>10.</strong> Other 3</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF10"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF10ToolTip }, value: totalSectionF10"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF10_2">total Section F10</label>
+                                        <input type="text"
+                                               id="totalSectionF10_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF10ToolTip }, value: totalSectionF10"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF11"
+                                               style="font-weight:normal"><strong>11.</strong> Other 4</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF11"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF11ToolTip }, value: totalSectionF11"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF11_2">total Section F11</label>
+                                        <input type="text"
+                                               id="totalSectionF11_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF11ToolTip }, value: totalSectionF11"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF12"
+                                               style="font-weight:normal"><strong>12.</strong> Other 5</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF12"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF12ToolTip }, value: totalSectionF12"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF12_2">total Section F12</label>
+                                        <input type="text"
+                                               id="totalSectionF12_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF12ToolTip }, value: totalSectionF12"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF13"
+                                               style="font-weight:normal"><strong>13.</strong> Other 6</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF13"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF13ToolTip }, value: totalSectionF13"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF13_2">total Section F13</label>
+                                        <input type="text"
+                                               id="totalSectionF13_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF13ToolTip }, value: totalSectionF13"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF14"
+                                               style="font-weight:normal"><strong>14.</strong> Other 7</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF14"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF14ToolTip }, value: totalSectionF14"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF14_2">total Section F14</label>
+                                        <input type="text"
+                                               id="totalSectionF14_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF14ToolTip }, value: totalSectionF14"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF15"
+                                               style="font-weight:normal"><strong>15.</strong> Other 8</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF15"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF15ToolTip }, value: totalSectionF15"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF15_2">total Section F15</label>
+                                        <input type="text"
+                                               id="totalSectionF15_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF15ToolTip }, value: totalSectionF15"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF16"
+                                               style="font-weight:normal"><strong>16.</strong> Other 9</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF16"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF16ToolTip }, value: totalSectionF16"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF16_2">total Section F16</label>
+                                        <input type="text"
+                                               id="totalSectionF16_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF16ToolTip }, value: totalSectionF16"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionF17"
+                                               style="font-weight:normal"><strong>17.</strong> Other 10</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionF17"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionF17ToolTip }, value: totalSectionF17"
+                                               class="form-control text-font-md" />
+                                        <label style="display: none"
+                                               for="totalSectionF17_2">total Section F17</label>
+                                        <input type="text"
+                                               id="totalSectionF17_2"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px; visibility:hidden"
+                                               data-bind="attr: { title: totalSectionF17ToolTip }, value: totalSectionF17"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionG">Section G, Direct Costs (A thru F)</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionG"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionGToolTip }, value: totalSectionG"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionH">Section H, Indirect Costs</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionH"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionHToolTip }, value: totalSectionH"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionI">Section I, Total Direct and Indirect Costs (G + H)</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionI"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionIToolTip }, value: totalSectionI"
+                                               class=" form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionJ">Section J, Fee</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionJ"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionJToolTip }, value: totalSectionJ"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label"
+                                               for="totalSectionK">Section K, Total Costs and Fee (I + J)</label>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <input type="text"
+                                               id="totalSectionK"
+                                               readonly="readonly"
+                                               disabled="disabled"
+                                               style="text-align:right; width:170px"
+                                               data-bind="attr: { title: totalSectionKToolTip }, value: totalSectionK"
+                                               class="form-control text-font-md" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </fieldset>
+            </div>
+            <div id="formfooter">
+            </div>
+        </main>
+        <footer id="footer"></footer>
+
+    </form>
+</body>
+<!-- InstanceEnd -->
+
+</html>

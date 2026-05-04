@@ -1,0 +1,356 @@
+{
+  "TitleForCBQAuditor": {
+    "message": "Chwilio am Ran Gwe CBQ"
+  },
+  "DescriptionForCBQAuditor": {
+    "message": "Argymell defnyddio Rhan Gwe Cynnwys drwy Chwilio yn hytrach na Rhan Gwe Cynnwys drwy Ymholiad."
+  },
+  "PassedTitleForCDNAuditor": {
+    "message": "Mae'r dudalen hon yn defnyddio Rhwydweithiau Cyflwyno Cynnwys (CDNs)"
+  },
+  "FailedTitleForCDNAuditor": {
+    "message": "Nid yw rhai asedau yn defnyddio CDN"
+  },
+  "PublicAndPrivateCDNNotEnabledTitle": {
+    "message": "Dydy’r CDN cyhoeddus a phreifat ddim wedi’u galluogi"
+  },
+  "CDNNotEnabledActionMessage": {
+    "message": "Mae angen galluogi CDN cyhoeddus a phreifat gyda'r ffurfweddiad diofyn. Gweithiwch gyda Gweinyddwr SharePoint i alluogi'r ddau CDN a defnyddio'r lleoliadau CDN diofyn neu gofynnwch Weinyddwr SharePoint i ychwanegu lleoliadau personol."
+  },
+  "PrivateCDNNotEnabledTitle": {
+    "message": "Dydy’r CDN preifat ddim wedi’i alluogi"
+  },
+  "PublicCDNNotEnabledTitle": {
+    "message": "Dydy’r CDN cyhoeddus ddim wedi’i alluogi"
+  },
+  "PublicAndPrivateCDNEnbledActionMessage": {
+    "message": "Mae CDN preifat a chyhoeddus wedi’u galluogi. Defnyddiwch y lleoliadau CDN diofyn neu gofynnwch Weinyddwr SharePoint i ychwanegu lleoliadau personol."
+  },
+  "DescriptionForCDNAuditor": {
+    "message": "Mae CDNs yn gwella perfformiad drwy gadw asedau statig yn agosach i'r porwyr sy'n gofyn amdanynt. Gweithio mewn partneriaeth â Gweinyddwr SharePoint i osod a ffurfweddu CDNs i storio asedau tudalennau statig."
+  },
+  "Url": {
+    "message": "Url"
+  },
+  "NameAndId": {
+    "message": "Enw ac ID"
+  },
+  "Total": {
+    "message": "Cyfanswm"
+  },
+  "ModuleLoad": {
+    "message": "Llwytho Modiwl"
+  },
+  "Init": {
+    "message": "Init"
+  },
+  "FailedTitleForIFrameAuditor": {
+    "message": "Tri neu fwy o rannau gwe sy'n defnyddio iFrames"
+  },
+  "WarningTitleForIFrameAuditor": {
+    "message": "Un neu fwy o rannau gwe sy'n defnyddio iFrames"
+  },
+  "PassedTitleForIFrameAuditor": {
+    "message": "Does dim unrhyw rhannau gwe sy’n defnyddio iFrames"
+  },
+  "DescriptionForIFrameAuditor": {
+    "message": "Mae defnyddio iFrames yn arafu perfformiad y dudalen gan fod y cynnwys yn llwytho o dudalen allanol. Defnyddiwch ddelweddau yn lle iFrames, ond os oes rhaid defnyddio iFrames, lleihewch y nifer a/neu eu symud allan o’r porth gweld."
+  },
+  "PassedTitleForImageSizeAuditor": {
+    "message": "Mae pob delwedd ar y dudalen yn llai na {0} kb yr un"
+  },
+  "FailedTitleForImageSizeAuditorOfSingleImage": {
+    "message": "Mae’r dudalen hon yn cynnwys 1 delwedd mawr"
+  },
+  "FailedTitleForImageSizeAuditorOfMultipleImages": {
+    "message": "Mae’r dudalen hon yn cynnwys {0} delwedd mawr"
+  },
+  "DescriptionForImageSizeAuditor": {
+    "message": "Mae’r delweddau ar y dudalen hon yn rhy fawr y perfformiad tudalen orau. Lleihewch yr holl ddelweddau ar y dudalen hon i lai na {0} yr un."
+  },
+  "DescriptionForImageSizeAuditorMb": {
+    "message": "Mae'r delweddau ar y dudalen hon yn rhy fawr ar gyfer y perfformiad tudalen orau. Lleihewch yr holl ddelweddau ar y dudalen hon i lai na {0} mb yr un."
+  },
+  "FailedTitleForPageWeightAuditor": {
+    "message": "Pwysau’r dudalen yw {0} kb"
+  },
+  "PassedTitleForPageWeightAuditor": {
+    "message": "Mae pwysau’r dudalen yn llai na 1000 kb"
+  },
+  "DescriptionForPageWeightAuditor": {
+    "message": "Mae cynnwys tudalennau fel delweddau, fideo, a thestun yn amharu ar berfformiad tudalen. Lleihewch nifer y rhannau gwe, defnyddiwch Rwydweithiau Cyflwyno Cynnwys (CDNs), a chyfyngu ar gynnwys tudalennau."
+  },
+  "FailedTitleForPermissionAuditor": {
+    "message": "Profwch berfformiad y dudalen gyda chyfrif defnyddiwr"
+  },
+  "PassedTitleForPermissionAuditor": {
+    "message": "Cafodd perfformiad y dudalen ei brofi gyda chyfrif defnyddiwr"
+  },
+  "DescriptionForPermissionAuditor": {
+    "message": "Pan fyddwch yn profi perfformiad pan fyddwch wedi mewngofnodi fel gweinyddwr, caiff canlyniadau eu heffeithio arnynt gan draffig uwch a achosir gan grwpiau diogelwch."
+  },
+  "PassedTitleForRequestsToSearchAuditor": {
+    "message": "Mae llai na {0} o geisiadau chwilio"
+  },
+  "FailedTitleForRequestsToSearchAuditor": {
+    "message": "Mae gan y dudalen hon {0} o alwadau i chwilio"
+  },
+  "DescriptionForRequestsToSearchAuditor": {
+    "message": "Mae'r dudalen hon yn fwy na'r lefel sylfaenol o alwadau a argymhellir i Chwilio. Cyfyngu ceisiadau i lai na {0} o geisiadau Chwilio ar gyfer pob tudalen."
+  },
+  "PassedTitleForSearchPropertyAuditor": {
+    "message": "Mae StartRow o geisiadau chwilio yn is na’r terfyn"
+  },
+  "FailedTitleForSearchPropertyAuditor": {
+    "message": "Mae StartRow o geisiadau chwilio yn fwy na’r terfyn o {0}"
+  },
+  "DescriptionForSearchPropertyAuditor": {
+    "message": "Er mwyn darparu profiad chwilio sy’n defnyddio perfformiad uchel, rydym yn cyfyngu ar werth mwyaf a gefnogir StartRow i {0}."
+  },
+  "PassedTitleForRequestsToListItemFetchAuditor": {
+    "message": "Mae llai na {0} o geisiadau Nôl Eitem Rhestr"
+  },
+  "FailedTitleForRequestsToListItemFetchAuditor": {
+    "message": "Mae gan y dudalen hon {0} o alwadau i Nôl Eitem Rhestr"
+  },
+  "DescriptionForRequestsToListItemFetchAuditor": {
+    "message": "Mae'r dudalen hon yn fwy na'r lefel sylfaenol o alwadau a argymhellir i Nôl Eitem Rhestr gyda phennyn storfa allan. Cyfyngu ceisiadau i lai na {0} o geisiadau Nôl Eitem Rhestr ar gyfer pob tudalen."
+  },
+  "PassedTitleForRequestsToSPOAuditor": {
+    "message": "Mae yna llai na {0} o geisiadau SharePoint"
+  },
+  "FailedTitleForRequestsToSPOAuditor": {
+    "message": "Mae gan y dudalen hon {0} o alwadau i SharePoint"
+  },
+  "DescriptionForRequestsToSPOAuditor": {
+    "message": "Mae’r dudalen hon yn fwy na’r lefel sylfaenol o alwadau a argymhellir i SharePoint. Cyfyngwch geisiadau i lai na {0} o geisiadau SharePoint ar gyfer pob tudalen {1}."
+  },
+  "ClassicPageType": {
+    "message": "clasurol"
+  },
+  "ModernPageType": {
+    "message": "modern"
+  },
+  "PassedTitleForSlowWebPartAuditor": {
+    "message": "Does dim rhan gwe yn cymryd yn hirach na {0} ms i redeg"
+  },
+  "FailedTitleForSlowWebPartAuditor": {
+    "message": "Mae rhannau gwe yn effeithio ar amser llwytho'r dudalen"
+  },
+  "WarningTitleForSlowWebPartAuditor": {
+    "message": "Mae rhannau gwe Microsoft yn effeithio ar yr amser llwytho"
+  },
+  "ErrorDescriptionForSlowWebPartAuditor": {
+    "message": "Mae unrhyw ran gwe personol sy’n cymryd mwy na 2000 ms i lwytho yn y porth gweld neu'n cymryd mwy na 4000 mis i lwytho y tu allan i'r porth gweld, yn effeithio ar berfformiad tudalennau."
+  },
+  "WarningDescriptionForSlowWebPartAuditor": {
+    "message": "Mae unrhyw ran gwe Microsoft sy'n cymryd mwy na 2000 ms i lwytho yn y porth gweld neu'n cymryd mwy na 4000 ms i lwytho y tu allan i'r porth gweld, yn effeithio ar berfformiad tudalennau."
+  },
+  "Microsoft": {
+    "message": "Microsoft"
+  },
+  "Custom": {
+    "message": "Personol"
+  },
+  "MadeBy": {
+    "message": "MadeBy"
+  },
+  "LazyLoadingTime": {
+    "message": "Llwyth Diog"
+  },
+  "RenderTime": {
+    "message": "Rendro"
+  },
+  "FailedTitleForStructuralNavAuditor": {
+    "message": "Nid yw storio llywio strwythurol wedi’i alluogi"
+  },
+  "PassedTitleForStructuralNavAuditor": {
+    "message": "Dim llywio strwythurol wedi’i ganfod"
+  },
+  "DescriptionForStructuralNavAuditor": {
+    "message": "Mae llywio strwythurol nad yw wedi'i storio yn arafu perfformiad y safle. Ail-gynlluniwch llywio eich safle drwy ddefnyddio llywio a reolir neu a reolir gan chwilio."
+  },
+  "FailedTitleForExtensionCountAuditor": {
+    "message": "Defnyddiwyd gormod o estyniadau"
+  },
+  "PassedTitleForExtensionCountAuditor": {
+    "message": "Defnyddir llai na 5 estyniad"
+  },
+  "YellowSectionDescriptionForExtensionCountAuditor": {
+    "message": "Mae 5 neu fwy o estyniadau."
+  },
+  "RedSectionDescriptionForExtensionCountAuditor": {
+    "message": "Mae 7 neu fwy o estyniadau."
+  },
+  "FailedTitleForExtensionAuditor": {
+    "message": "Mae'n bosibl bod estyniadau yn effeithio ar yr amser llwytho"
+  },
+  "PassedTitleForExtensionAuditor": {
+    "message": "Does dim estyniadau’n cymryd yn hirach na {0} ms i’w llwytho"
+  },
+  "DescriptionForSingleExtensionAuditor": {
+    "message": "Mae 1 estyniad yn cymryd mwy na {0} ms i'w lwytho ac mae hyn yn effeithio ar berfformiad y dudalen."
+  },
+  "DescriptionForMultiExtensionAuditor": {
+    "message": "Mae {0} estyniad yn cymryd mwy na {1} ms i'w llwytho ac mae hyn yn effeithio ar berfformiad y dudalen."
+  },
+  "DescriptionForExtensionAuditor": {
+    "message": "Mae un neu fwy o estyniadau'n cymryd hirach na 1000 ms i'w rendro. "
+  },
+  "AppName": {
+    "message": "Dadansoddi tudalennau ar gyfer SharePoint"
+  },
+  "AppDescription": {
+    "message": "Dadansoddi perfformiad tudalennau eich safle a chael argymhellion ar gyfer optimeiddio."
+  },
+  "DetectPageType": {
+    "message": "Canfod y math o dudalen..."
+  },
+  "HelpLinksCategoryName": {
+    "message": "Adnoddau ychwanegol"
+  },
+  "HowToUseLinkName": {
+    "message": "Offer Diagnosteg Tudalennau ar gyfer SharePoint Online"
+  },
+  "HowToUseInstruction": {
+    "message": "Dysgu mwy am yr offer yma a sut mae'n gweithio yn"
+  },
+  "TunePerformanceLinkName": {
+    "message": "Mireinio perfformiad SharePoint Online"
+  },
+  "TunePerformanceInstruction": {
+    "message": "Dod o hyd i ragor o wybodaeth am wella perfformiad a'r amseroedd i lwytho tudalennau i lawr yn"
+  },
+  "FeedbackCategoryName": {
+    "message": "Rhoi adborth"
+  },
+  "FeedbackInstruction": {
+    "message": "Oes gennych chi awgrymiadau neu gwestiynau? Postiwch nhw ar "
+  },
+  "UserVoice": {
+    "message": "Llais Defnyddiwr"
+  },
+  "VersionLabel": {
+    "message": "Fersiwn"
+  },
+  "RunningPageTypeChecker": {
+    "message": "Wrthi'n gwirio math o dudalen"
+  },
+  "PageTypeDataReady": {
+    "message": "Wedi gorffen gwirio math o dudalen"
+  },
+  "RunningCollectors": {
+    "message": "Wrthi'n casglu data... gallai hyn gymryd munud neu ddwy"
+  },
+  "CollectorsDataReady": {
+    "message": "Wedi gorffen casglu data"
+  },
+  "RunningAuditors": {
+    "message": "Wrthi'n dilysu data..."
+  },
+  "AuditorsDataReady": {
+    "message": "Wedi gorffen dilysu data"
+  },
+  "CorrelationIdLabel": {
+    "message": "ID Cydberthyniad"
+  },
+  "SPRequestDurationLabel": {
+    "message": "SPRequestDuration"
+  },
+  "SPIISLatencyLabel": {
+    "message": "SPIISLatency"
+  },
+  "PageLoadTimeLabel": {
+    "message": "Amser llwytho'r dudalen"
+  },
+  "PageUrlLabel": {
+    "message": "URL Tudalen"
+  },
+  "Start": {
+    "message": "Cychwyn"
+  },
+  "Stop": {
+    "message": "Stopio"
+  },
+  "DiagnosticTests": {
+    "message": "Profion diagnostig"
+  },
+  "NetworkTrace": {
+    "message": "Olrhain rhwydwaith"
+  },
+  "DurationGreaterThanThreshold": {
+    "message": "Mae'r hyd yn fwy na {0}ms"
+  },
+  "DurationWithinWarningThreshold": {
+    "message": "Mae'r hyd o fewn y trothwy o {0}ms"
+  },
+  "AttentionRequired": {
+    "message": "Angen sylw"
+  },
+  "NoActionRequired": {
+    "message": "Dim angen gweithredu"
+  },
+  "Warning": {
+    "message": "Cyfleoedd i wella"
+  },
+  "NotSupportedPage": {
+    "message": "Does dim modd rhedeg diagnosteg tudalen ar y dudalen hon. Defnyddiwch yr offeryn hwn ar gyfer tudalennau safle SharePoint yn unig."
+  },
+  "NotSupportedPageInEdit": {
+    "message": "Does dim modd rhedeg diagnosteg tra bod y dudalen yn y modd golygu. Ar eich tudalen, dewiswch Cadw ar ffurf drafft neu Gwaredu'r newidiadau a rhoi cynnig arall arni."
+  },
+  "OnPremPageNotSupportedMessage": {
+    "message": "Rydych chi'n ceisio defnyddio'r offeryn Diagnosteg Tudalennau gyda fersiwn ar y safle o SharePoint. Mae'r offeryn hwn yn gweithio gyda SharePoint Online yn unig."
+  },
+  "HomePageNotSupportedMessage": {
+    "message": "Does dim modd rhedeg diagnosteg ar dudalennau'r system fel tudalen cychwyn SharePoint. Defnyddiwch yr offeryn hwn ar gyfer tudalennau safle SharePoint yn unig."
+  },
+  "LearnMore": {
+    "message": "Dysgu mwy"
+  },
+  "About": {
+    "message": "Manylion"
+  },
+  "TimeoutMessage": {
+    "message": "Mae'r offer diagnosteg tudalennau wedi rhedeg allan o amser. Rhowch gynnig arall arni."
+  },
+  "ThirdPartyNotice": {
+    "message": "Hysbysiad Trydydd Parti"
+  },
+  "EnableDevDashboardCheckBoxLabel": {
+    "message": "Galluogi logio cymorth (gallai hyn effeithio ar berfformiad; defnyddiwch ar gyfer datrys problemau gyda chymorth Microsoft)"
+  },
+  "EnableDevDashboardWarningMessage": {
+    "message": "Wedi galluogi logio cymorth"
+  },
+  "EnableHarPreviewCheckBoxLabel": {
+    "message": "Galluogi allgludo i'r Archif HTTP (HAR)"
+  },
+  "ErrorMessage": {
+    "message": "Gwall wrth redeg Diagnosteg Tudalen. Rhowch gynnig arall arni rywbryd eto. Os yw'r gwall yn parhau i ddigwydd, cysylltwch"
+  },
+  "MicrosoftSupport": {
+    "message": "Cymorth Microsoft."
+  },
+  "ExportToJson": {
+    "message": "Allgludo i JSON"
+  },
+  "ExportToJsonHover": {
+    "message": "Allgludo i nodiant gwrthrych JavaScript (JSON)"
+  },
+  "ExportToHar": {
+    "message": "Allgludo i HAR"
+  },
+  "ExportToHarHover": {
+    "message": "Allgludo i'r Archif HTTP (HAR)"
+  },
+  "Description": {
+    "message": "Offeryn i ganfod problemau perfformiad tudalen yn SharePoint Online"
+  },
+  "UrlDescription": {
+    "message": "Wedi canfod {0} URL"
+  },
+  "UrlsDescription": {
+    "message": "Wedi canfod {0} URL"
+  }
+}

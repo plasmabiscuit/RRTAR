@@ -1,0 +1,27 @@
+{
+  "default": {
+    "PD/PI": "PD/PI",
+    "Co-PD/PI": "Co-PD/PI",
+    "Faculty": "Faculty",
+    "Post Doctoral": "Post Doctoral",
+    "Post Doctoral Associate": "Post Doctoral Associate",
+    "Post Doctoral Scholar": "Post Doctoral Scholar",
+    "Other Professional": "Other Professional",
+    "Graduate Student": "Graduate Student",
+    "Undergraduate Student": "Undergraduate Student",
+    "Technician": "Technician",
+    "Consultant": "Consultant",
+    "Co-Investigator": "Co-Investigator",
+    "Other (Specify)": "Other (Specify)"
+  },
+  "NIH_PHS": {
+    "Co-PD/PI": {
+      "map_to": "PD/PI",
+      "warning": "NIH/PHS multiple PD/PIs should use PD/PI, not Co-PD/PI."
+    },
+    "Other Significant Contributor": {
+      "map_to": "Other (Specify)",
+      "other_project_role_category": "Other Significant Contributor"
+    }
+  }
+}

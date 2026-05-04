@@ -1,0 +1,852 @@
+{
+   "PopUpFeedBackStore": {
+      "description": "",
+      "message": "저희를 행복하게 해주세요!"
+   },
+   "PopUpfeedBackHeading": {
+      "description": "",
+      "message": "PureVPN에 대해 어떻게 평가하세요?"
+   },
+   "PopUpfeedBackHeading2": {
+      "description": "",
+      "message": "크롬 스토어에 좋은 평가를 남겨주시면 저희 개발자들이 정말 행복할 거예요!"
+   },
+   "PopUpfeedBackHeading3": {
+      "description": "",
+      "message": "피드백을 주셔서 감사합니다!"
+   },
+   "PopUpfeedBackSubmit": {
+      "description": "",
+      "message": "보내기"
+   },
+   "ProxySignupWindowCloseError": {
+      "description": "",
+      "message": "인증 실패"
+   },
+   "ProxyTxtMigration": {
+      "description": "",
+      "message": "이메일 주소로 PureVPN 프록시 익스텐션에 로그인하기 전에 몇 가지 단계를 완료해야 합니다."
+   },
+   "ProxyUpdateAccountTxtCTA1": {
+      "description": "",
+      "message": "지금 프리미엄 신청하기"
+   },
+   "ProxyUpdateAccountTxtCTA2": {
+      "description": "",
+      "message": "프리미엄 플랜 신청"
+   },
+   "ProxyUpdateAccountTxtCTA3": {
+      "description": "",
+      "message": "지금 구매"
+   },
+   "ProxyUpdateAccountTxtParagraph1": {
+      "description": "",
+      "message": "PureVPN으로 어디서나 미국 Netflix에 액세스하세요!"
+   },
+   "ProxyUpdateAccountTxtParagraph2": {
+      "description": "",
+      "message": "어디서나 미국 Netflix를 즉시 스트리밍하고 즐기세요!"
+   },
+   "ProxyUpdateAccountTxtParagraph3": {
+      "description": "",
+      "message": "PureVPN으로 미국 Netflix, Hulu, Amazon 및 기타 여러 채널에 액세스하세요!"
+   },
+   "accountDetailsBillingCycleTitle": {
+      "description": "",
+      "message": "결제주기"
+   },
+   "accountDetailsBtnSwitchUserTxt": {
+      "description": "",
+      "message": "사용자 전환"
+   },
+   "accountDetailsEmailTitle": {
+      "description": "",
+      "message": "이메일"
+   },
+   "accountDetailsExpireOnTitle": {
+      "description": "",
+      "message": "만료일"
+   },
+   "accountDetailsPlanTypeTitle": {
+      "description": "",
+      "message": "플랜 유형"
+   },
+   "accountDetailsSubscriptionStatusTitle": {
+      "description": "",
+      "message": "구독 상태"
+   },
+   "accountDetailsSubscriptionTypeTitle": {
+      "description": "",
+      "message": "계정 유형"
+   },
+   "accountDetailsVpnUsernameTitle": {
+      "description": "",
+      "message": "VPN 사용자 이름"
+   },
+   "accountTxtSelectAccount": {
+      "description": "",
+      "message": "계정 선택"
+   },
+   "adblockMenuSettings": {
+      "description": "",
+      "message": "설정"
+   },
+   "addonText": {
+      "description": "",
+      "message": "애드온 받기"
+   },
+   "alreadyAccntTxt": {
+      "description": "",
+      "message": "이미 계정이 있습니다"
+   },
+   "alreadyPureVpnAccntTxt": {
+      "description": "",
+      "message": "이미 PureVPN 계정이 있습니다!"
+   },
+   "appVersion": {
+      "description": "",
+      "message": "버전"
+   },
+   "autoLoginFailedMsg": {
+      "description": "",
+      "message": "이메일에서 로그인 정보를 확인하세요"
+   },
+   "bypassProxyHeaderTxt": {
+      "description": "",
+      "message": "바이패스 목록에서 프록시 비활성화"
+   },
+   "channelsTxtCountries": {
+      "description": "",
+      "message": "인기 웹사이트"
+   },
+   "channelsTxtFavourites": {
+      "description": "",
+      "message": "즐겨찾기"
+   },
+   "channelsTxtFavouritesHelpText": {
+      "description": "",
+      "message": "즐겨찾는 웹사이트가 여기에 표시됩니다"
+   },
+   "channelsTxtInfo": {
+      "description": "",
+      "message": "즐겨찾는 채널을 표시하려면 별을 클릭하세요."
+   },
+   "channelsTxtSearch": {
+      "description": "",
+      "message": "웹사이트 검색"
+   },
+   "channelsTxtSelectStream": {
+      "description": "",
+      "message": "웹사이트 선택"
+   },
+   "characterZero": {
+      "description": "",
+      "message": "0"
+   },
+   "citiesTxtFavouritesHelpText": {
+      "description": "",
+      "message": "좋아하는 도시가 여기에 표시됩니다."
+   },
+   "connectWithDedIpCta": {
+      "description": "",
+      "message": "전용 서버 얻기"
+   },
+   "connectWithDedIpHeading": {
+      "description": "",
+      "message": "전용 서버"
+   },
+   "connectWithDedIpText": {
+      "description": "",
+      "message": "정적 IP를 활성화하려면 전용 서버 애드온을 구매해야 합니다."
+   },
+   "connectWithDedServer": {
+      "description": "",
+      "message": "전용 서버"
+   },
+   "connectWithTeamServer": {
+      "description": "",
+      "message": "팀 서버"
+   },
+   "countriesTxtChangeCountry": {
+      "description": "",
+      "message": "국가 선택"
+   },
+   "countriesTxtCountries": {
+      "description": "",
+      "message": "국가"
+   },
+   "countriesTxtFavourites": {
+      "description": "",
+      "message": "즐겨찾기"
+   },
+   "countriesTxtFavouritesHelpText": {
+      "description": "",
+      "message": "즐겨찾는 국가가 여기에 표시됩니다"
+   },
+   "countriesTxtInfo": {
+      "description": "",
+      "message": "즐겨찾는 국가를 표시하려면 별을 클릭하세요."
+   },
+   "countriesTxtMarkFavourites": {
+      "description": "",
+      "message": "즐겨찾기로 표시"
+   },
+   "countriesTxtSearch": {
+      "description": "",
+      "message": "국가 검색"
+   },
+   "countriesTxtSelectCountry": {
+      "description": "",
+      "message": "국가 선택"
+   },
+   "countriesTxtUnmarkFavourites": {
+      "description": "",
+      "message": "즐겨찾기에서 삭제"
+   },
+   "darkWebText": {
+      "description": "",
+      "message": "다크 웹 모니터링"
+   },
+   "doConnectionQualityText": {
+      "description": "",
+      "message": "연결 품질은 어떻습니까?"
+   },
+   "doCopyLinkText": {
+      "description": "",
+      "message": "링크 복사"
+   },
+   "doEnjoyPureVPNText": {
+      "description": "",
+      "message": "PureVPN을 즐겁게 이용하고 계신가요?"
+   },
+   "doFrequentDisconnectionText": {
+      "description": "",
+      "message": "잦은 연결 끊김"
+   },
+   "doLeaveUsReviewText": {
+      "description": "",
+      "message": "리뷰를 남겨주세요"
+   },
+   "doNoText": {
+      "description": "",
+      "message": "아니요"
+   },
+   "doOtherIssueText": {
+      "description": "",
+      "message": "기타 문제"
+   },
+   "doOutcomeText": {
+      "description": "",
+      "message": "PureVPN 확장이 당신을 위해 작동합니까?"
+   },
+   "doProblemPara": {
+      "description": "",
+      "message": "문제가 무엇인가요?"
+   },
+   "doProblemText": {
+      "description": "",
+      "message": "문제가 무엇인지 알려주세요. 귀하의 피드백을 듣고 싶습니다."
+   },
+   "doProvideDetailsText": {
+      "description": "",
+      "message": "여기에 문제에 대한 세부정보를 제공하세요."
+   },
+   "doRateUsText": {
+      "description": "",
+      "message": "평가"
+   },
+   "doReferAFriendMainText": {
+      "description": "",
+      "message": "월간 무료 PUREVPN 계정을 친구 및 가족과 공유하세요!"
+   },
+   "doReferAFriendText": {
+      "description": "",
+      "message": "친구 추천"
+   },
+   "doRemindLaterText": {
+      "description": "",
+      "message": "나중에 알림"
+   },
+   "doSkipText": {
+      "description": "",
+      "message": "건너뛰기"
+   },
+   "doSlowSpeedText": {
+      "description": "",
+      "message": "느린 속도"
+   },
+   "doSubmitText": {
+      "description": "",
+      "message": "제출"
+   },
+   "doThankYouMessage": {
+      "description": "",
+      "message": "피드백을 주셔서 감사합니다!"
+   },
+   "doUnableToAccessText": {
+      "description": "",
+      "message": "콘텐츠에 액세스할 수 없음"
+   },
+   "doUnableToConnectText": {
+      "description": "",
+      "message": "연결할 수 없음"
+   },
+   "doYesText": {
+      "description": "",
+      "message": "예"
+   },
+   "errorRateLimited": {
+      "description": "",
+      "message": "시도 가능 횟수를 초과했습니다.\u003Cbr/>15분 후에 다시 시도하세요"
+   },
+   "expiredAccountAlert": {
+      "description": "",
+      "message": "사용자님, 계정이 만료되었습니다! \u003Ca target='_blank' href='https://www.purevpn.com/order'>지금 갱신하기\u003C/a>"
+   },
+   "extAuthorName": {
+      "description": "extension author name.",
+      "message": "GZ systems Ltd."
+   },
+   "extDescription": {
+      "message": "사용자의 개인정보를 숨기고 제한된 콘텐츠에 액세스하며 빠른 속도로 인터넷을 검색할 수 있도록 해주는 VPN 확장 프로그램입니다."
+   },
+   "extName": {
+      "description": "extension name.",
+      "message": "PureVPN 프록시 - 최고의 Chrome용 VPN"
+   },
+   "extNotification": {
+      "description": "extension short name.",
+      "message": "경고"
+   },
+   "extShortName": {
+      "description": "extension short name.",
+      "message": "PureVPN"
+   },
+   "extTagLine": {
+      "description": "extension tagline.",
+      "message": "사용자의 개인정보를 숨기고 제한된 콘텐츠에 액세스하며 빠른 속도로 인터넷을 검색할 수 있도록 해주는 VPN 확장 프로그램입니다."
+   },
+   "extTitleConnected": {
+      "description": "",
+      "message": "PureVPN | $1에 연결"
+   },
+   "extTitleConnectedChannel": {
+      "description": "",
+      "message": "PureVPN | $1에 액세스"
+   },
+   "extTxtNoConnection": {
+      "description": "",
+      "message": "인터넷에 연결되지 않음"
+   },
+   "extTxtServiceUnavailable": {
+      "message": "브라우저가 요청을 해결하지 못했습니다.\u003Cbr />오류 코드: \u003Ca target='_blank' href='https://support.purevpn.com/chrome-error-err_spdy_protocol_error'>'ERR_SPDY_PROTOCOL_ERROR'\u003C/a>"
+   },
+   "fastSecureHeading": {
+      "description": "",
+      "message": "더 빠르고 안전한 연결이 필요하십니까?"
+   },
+   "fastSecurePara": {
+      "description": "",
+      "message": "전용 서버로 협업을 강화하여 원활한 연결을 제공"
+   },
+   "feedBackPageTitle": {
+      "description": "",
+      "message": "PureVPN | 크롬 익스텐션 피드백 양식"
+   },
+   "feedbackDescriptionPlaceholder": {
+      "description": "",
+      "message": "리뷰를 작성하세요"
+   },
+   "feedbackMinLengthDescription": {
+      "description": "",
+      "message": "리뷰 길이: 10자 이상"
+   },
+   "feedbackMinLengthTitle": {
+      "description": "",
+      "message": "제목 길이: 10자 이상"
+   },
+   "feedbackTitlePlaceholder": {
+      "description": "",
+      "message": "제목을 입력하세요"
+   },
+   "generalText": {
+      "description": "",
+      "message": "일반"
+   },
+   "hostNameTextBoxHeading": {
+      "description": "",
+      "message": "프록시를 우회할 호스트 이름 또는 IP 주소를 입력하세요"
+   },
+   "hostWhitelistChangeNoteTxt": {
+      "description": "",
+      "message": "설정은 다음 연결 때 적용됩니다."
+   },
+   "hostWhitelistExampleTxt1": {
+      "description": "",
+      "message": "www.purevpn.com"
+   },
+   "hostWhitelistExampleTxt2": {
+      "description": "",
+      "message": "192.168.0.1"
+   },
+   "hostWhitelistNoteTxt": {
+      "description": "",
+      "message": "예:"
+   },
+   "invalidloginTxtErrorMsg": {
+      "description": "",
+      "message": "로그인 정보가 잘못되었습니다"
+   },
+   "locationSpoofToggleTxt": {
+      "description": "",
+      "message": "스푸핑 GPS 위치"
+   },
+   "locationsText": {
+      "description": "",
+      "message": "위치"
+   },
+   "loginTxtConfirmPassword": {
+      "description": "",
+      "message": "비밀번호 확인"
+   },
+   "loginTxtConnecting": {
+      "description": "",
+      "message": "로그인..."
+   },
+   "loginTxtErrorMsg": {
+      "description": "",
+      "message": "사용자 이름 또는 비밀번호가 없습니다."
+   },
+   "loginTxtFreeAccount": {
+      "description": "",
+      "message": "익스텐션을 사용하려면 프리미엄 PureVPN 계정을 구독하세요."
+   },
+   "loginTxtFreeAccountCancel": {
+      "description": "",
+      "message": "괜찮습니다"
+   },
+   "loginTxtFreeAccountProceed": {
+      "description": "",
+      "message": "지금 구독하기"
+   },
+   "loginTxtHidePassword": {
+      "description": "",
+      "message": "비밀번호 숨기기"
+   },
+   "loginTxtLogin": {
+      "description": "",
+      "message": "이메일로 로그인"
+   },
+   "loginTxtLoginDetails": {
+      "description": "",
+      "message": "사용자 이름 또는 비밀번호를 잊으셨습니까?"
+   },
+   "loginTxtLoginHere": {
+      "description": "",
+      "message": "여기에 로그인하세요"
+   },
+   "loginTxtNotRegistered": {
+      "description": "",
+      "message": "계정이 없으신가요?"
+   },
+   "loginTxtNotRegisteredGetVpn": {
+      "description": "",
+      "message": "PureVPN 받기"
+   },
+   "loginTxtPassword": {
+      "description": "",
+      "message": "비밀번호"
+   },
+   "loginTxtShowPassword": {
+      "description": "",
+      "message": "비밀번호 표시"
+   },
+   "loginTxtSuccessMsg": {
+      "description": "",
+      "message": "성공적으로 로그인됨"
+   },
+   "loginTxtUserName": {
+      "description": "",
+      "message": "이메일/사용자 이름 입력"
+   },
+   "mainLoginBtnTxt": {
+      "description": "",
+      "message": "계정 만들기"
+   },
+   "mainLoginScreenTxt": {
+      "description": "",
+      "message": "보다 안전한 인터넷을 향한 여정을 시작하세요"
+   },
+   "mainOrTxt": {
+      "description": "",
+      "message": "또는"
+   },
+   "mainSignupBtnLink": {
+      "description": "",
+      "message": "https://www.purevpn.com/trial-vpn/chrome"
+   },
+   "mainSignupBtnTxt": {
+      "description": "",
+      "message": "7일 무료 평가 시작"
+   },
+   "newText": {
+      "description": "",
+      "message": "새로움"
+   },
+   "noSubscriptionTxtErrorMsg": {
+      "description": "",
+      "message": "PureVPN 사용을 시작하려면 구독을 구매해야합니다."
+   },
+   "notAvailableButton": {
+      "description": "",
+      "message": "지금 사용 중지"
+   },
+   "notAvailableHeading": {
+      "description": "",
+      "message": "PureVPN 익스텐션을 사용하려면 아래에 나열된 프록시 서비스를 비활성화하세요."
+   },
+   "notAvailablePara": {
+      "description": "",
+      "message": "PureVPN 익스텐션을 사용하려면\u003Cbr/> 프록시를 비활성화하세요"
+   },
+   "optimizedForStreaming": {
+      "description": "",
+      "message": "인기 웹사이트"
+   },
+   "passwordManagerText": {
+      "description": "",
+      "message": "비밀번호 관리자"
+   },
+   "proxyFastestLocationAfterCnctn": {
+      "description": "",
+      "message": "가장 빠른 위치에 연결됨"
+   },
+   "proxySecureBrowsingAfterCnctn": {
+      "description": "",
+      "message": "브라우저 트래픽 보안"
+   },
+   "proxyTxtChangeCountry": {
+      "description": "",
+      "message": "국가 변경"
+   },
+   "proxyTxtConnect": {
+      "description": "",
+      "message": "연결"
+   },
+   "proxyTxtConnecting": {
+      "description": "",
+      "message": "연결 중..."
+   },
+   "proxyTxtDisconnect": {
+      "description": "",
+      "message": "연결 끊기"
+   },
+   "proxyTxtHiddenIpAfterCnctn": {
+      "description": "",
+      "message": "IP가 성공적으로 숨겨졌습니다"
+   },
+   "proxyTxtLoader": {
+      "description": "",
+      "message": "잠시만 기다리세요. PureVPN 익스텐션을 설정하고 있습니다"
+   },
+   "proxyTxtOnlineSecurity": {
+      "description": "",
+      "message": "온라인 보안"
+   },
+   "proxyTxtRestrictedWebsitesAfterCnctn": {
+      "description": "",
+      "message": "이제 웹에 액세스할 수 있습니다"
+   },
+   "proxyTxtStreaming": {
+      "description": "",
+      "message": "스트리밍"
+   },
+   "proxyTxtUnAuthorized": {
+      "description": "",
+      "message": "익스텐션을 사용하려면, 계정을 \u003Ca href='#' class='upgradeBtn' data-cta='other'>갱신\u003C/a>하세요."
+   },
+   "redirectText": {
+      "description": "",
+      "message": "리디렉션하는 동안 기다려주세요..."
+   },
+   "referFrndAvl": {
+      "description": "",
+      "message": "유효한"
+   },
+   "referFrndBtnCopiedTxt": {
+      "description": "",
+      "message": "클립 보드에 복사 됨"
+   },
+   "referFrndEmptyTokenTxt": {
+      "description": "",
+      "message": "이 기능은 일시적으로 사용할 수 없습니다. 나중에 다시 시도 해주십시오."
+   },
+   "referFrndErrorTxt": {
+      "description": "",
+      "message": "오류"
+   },
+   "referFrndExpiredUsersTxt": {
+      "description": "",
+      "message": "구독이 활성화 된 유료 사용자 만 무료 계정 초대를 공유 할 수 있습니다."
+   },
+   "referFrndHeading": {
+      "description": "",
+      "message": "초대. 벌다. 즐기다"
+   },
+   "referFrndInviteNowTxt": {
+      "description": "",
+      "message": "링크 복사"
+   },
+   "referFrndSent": {
+      "description": "",
+      "message": "보냄"
+   },
+   "referFrndTxt": {
+      "description": "",
+      "message": "친구를 PureVPN에 초대하고 각 초대에 대해 무료 크레딧을 받으십시오."
+   },
+   "removeMyDataText": {
+      "description": "",
+      "message": "내 데이터 삭제"
+   },
+   "requestPlaceholder": {
+      "description": "",
+      "message": "댓글 입력"
+   },
+   "requestPopupText": {
+      "description": "",
+      "message": "위치 요청을합니다."
+   },
+   "requestPopupTextChannel": {
+      "description": "",
+      "message": "웹 사이트 요청을합니다."
+   },
+   "resendLoaderText": {
+      "description": "",
+      "message": "인증 코드를 다시 보내는 중입니다. 기다려주세요."
+   },
+   "searchEmptyBtn": {
+      "description": "",
+      "message": "위치 요청"
+   },
+   "searchEmptyBtnChannel": {
+      "description": "",
+      "message": "웹 사이트 요청"
+   },
+   "searchEmptyTxt": {
+      "description": "",
+      "message": "검색을 조정하거나 다른 옵션을 탐색해 보세요. 필요한 것을 찾도록 도와드리겠습니다."
+   },
+   "searchEmptyTxtChannel": {
+      "description": "",
+      "message": "찾고있는 웹 사이트는 VPN 네트워크의 일부가 아닙니다. 하지만 이에 대해 말씀해 주시면 추가해 드리겠습니다."
+   },
+   "searchEmptyTxtHeading": {
+      "description": "",
+      "message": "결과가 없습니다"
+   },
+   "securityToolsText": {
+      "description": "",
+      "message": "보안 도구"
+   },
+   "selectCityTitle": {
+      "description": "",
+      "message": "도시 선택"
+   },
+   "selectServerHeaderText": {
+      "description": "",
+      "message": "서버 선택"
+   },
+   "settingsTxtAboutUs": {
+      "description": "",
+      "message": "PureVPN 소개"
+   },
+   "settingsTxtAccountInfo": {
+      "description": "",
+      "message": "계정 정보"
+   },
+   "settingsTxtAccountType": {
+      "description": "",
+      "message": "계정 유형:"
+   },
+   "settingsTxtAdBlockerSettings": {
+      "description": "",
+      "message": "일반 설정"
+   },
+   "settingsTxtAdvancedFeatures": {
+      "description": "",
+      "message": "고급 기능"
+   },
+   "settingsTxtButtonBuyNow": {
+      "description": "",
+      "message": "지금 구매"
+   },
+   "settingsTxtCheckingSubscription": {
+      "description": "",
+      "message": "구독을 확인하고 있습니다"
+   },
+   "settingsTxtClientArea": {
+      "description": "",
+      "message": "저희가 개선하도록 도와주세요"
+   },
+   "settingsTxtFAQs": {
+      "description": "",
+      "message": "FAQ"
+   },
+   "settingsTxtFeedback": {
+      "description": "",
+      "message": "피드백"
+   },
+   "settingsTxtLogout": {
+      "description": "",
+      "message": "로그아웃"
+   },
+   "settingsTxtLogoutCancel": {
+      "description": "",
+      "message": "아니요"
+   },
+   "settingsTxtLogoutConfirmation": {
+      "description": "",
+      "message": "정말 로그아웃하시겠습니까?"
+   },
+   "settingsTxtLogoutProceed": {
+      "description": "",
+      "message": "예"
+   },
+   "settingsTxtPasswordLabel": {
+      "description": "",
+      "message": "비밀번호:"
+   },
+   "settingsTxtPleaseWait": {
+      "description": "",
+      "message": "기다려주세요"
+   },
+   "settingsTxtPrivacyPolicy": {
+      "description": "",
+      "message": "개인정보보호정책"
+   },
+   "settingsTxtProxyAutoConnect": {
+      "description": "",
+      "message": "브라우저 시작 시 프록시 자동 시작"
+   },
+   "settingsTxtRate": {
+      "description": "",
+      "message": "평가하기"
+   },
+   "settingsTxtReferFrnd": {
+      "description": "",
+      "message": "친구 추천"
+   },
+   "settingsTxtSettings": {
+      "description": "",
+      "message": "설정"
+   },
+   "settingsTxtSubscription": {
+      "description": "",
+      "message": "구독 상태"
+   },
+   "settingsTxtUsernameLabel": {
+      "description": "",
+      "message": "사용자 이름:"
+   },
+   "settingsTxtWebRtc": {
+      "description": "",
+      "message": "WebRTC 유출 보호"
+   },
+   "settingsTxtWhitelisting": {
+      "description": "",
+      "message": "우회 프록시 활성화"
+   },
+   "settingsWhitelistingHintText": {
+      "description": "",
+      "message": "특정 웹사이트 또는 IP 주소에 대해 VPN을 비활성화하도록 선택합니다."
+   },
+   "signUpEmaiBtnTxt": {
+      "description": "",
+      "message": "이메일로 가입"
+   },
+   "signUpEmaiBtnTxtFree": {
+      "description": "",
+      "message": "7일 무료 평가 시작"
+   },
+   "signUpFieldError": {
+      "description": "",
+      "message": "올바른 이메일 주소를 입력하세요"
+   },
+   "signUpTxtEmail": {
+      "description": "",
+      "message": "이메일 주소를 입력하세요"
+   },
+   "signUpTxtHelp": {
+      "description": "",
+      "message": "이 이메일로 PureVPN 로그인 정보를 받으실 겁니다."
+   },
+   "signupLoaderText": {
+      "description": "",
+      "message": "기다려주세요.\u003Cbr/>등록 중..."
+   },
+   "skipBtn": {
+      "description": "",
+      "message": "건너 뛰기"
+   },
+   "socialLoginTxt": {
+      "description": "",
+      "message": "다음으로 로그인하기"
+   },
+   "spoofGPSHintText": {
+      "description": "",
+      "message": "VPN에 연결되어 있는 동안 해커와 피셔를 속이기 위해 GPS 위치를 조작합니다."
+   },
+   "submitBtn": {
+      "description": "",
+      "message": "제출"
+   },
+   "talkToSupportText": {
+      "description": "",
+      "message": "Would you like to talk to our support?"
+   },
+   "termsConditionPrivacyError": {
+      "description": "",
+      "message": "당사의 이용약관 및 개인정보보호정책을\u003Cbr/>읽고 동의했음을 표시하세요."
+   },
+   "termsandConditionConsent": {
+      "description": "",
+      "message": "본인은 \u003Ca target=\"_blank\" class=\"terms_condition_links\" href=\"https://www.purevpn.com/term.php\">이용약관\u003C/a> 및 \u003Ca target=\"_blank\" class=\"terms_condition_links\" href=\"https://www.purevpn.com/privacy-policy.php\">개인정보보호정책\u003C/a>을 읽고 이해했습니다."
+   },
+   "txtCopyRights": {
+      "description": "copy right text",
+      "message": "2011-2017 PureVPN Ltd."
+   },
+   "txtErrorMsg": {
+      "description": "Footer line 1",
+      "message": "문제가 발생했습니다. 나중에 다시 시도하세요."
+   },
+   "txtFooterLine1": {
+      "description": "Footer line 1",
+      "message": "PureVPN 신청:"
+   },
+   "txtSuccessMsg": {
+      "description": "",
+      "message": "저장됨"
+   },
+   "verificationCodeError": {
+      "description": "",
+      "message": "필드를 비워둘 수 없습니다"
+   },
+   "verificationCodeTxt": {
+      "description": "",
+      "message": "인증 코드를 입력하세요"
+   },
+   "verificationHelpTxt": {
+      "description": "",
+      "message": "이메일에서 인증 코드를 확인하세요.\u003Cbr/>코드를 받지 못했습니까?\u003Ca href='#' class='resendCode'>재전송\u003C/a>"
+   },
+   "verificationLoaderText": {
+      "description": "",
+      "message": "코드를 확인 중입니다."
+   },
+   "webRtcHintText": {
+      "description": "",
+      "message": "웹사이트가 귀하의 정보, 데이터 및 쿠키를 사용하는 것을 방지합니다"
+   }
+}

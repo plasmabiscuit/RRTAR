@@ -1,0 +1,102 @@
+{
+  "form_metadata": {
+    "form_name": "RR_KeyPersonExpanded_4_0",
+    "form_version": "4.0",
+    "omb_number": "4040-0001",
+    "iframe_id": "webformEditIFrame",
+    "iframe_src_pattern": "https://apply07.grants.gov/webforms/RR_KeyPersonExpanded_4_0_V4_0.html",
+    "framework": "Knockout.js",
+    "form_element_id": "onlineContentForm"
+  },
+  "add_profile_button": {
+    "trigger": "click",
+    "knockout_binding": "click: addProfile.bind($root)",
+    "visibility_rule": "getProfileCount() < 99",
+    "container_id": "addProfile",
+    "max_profiles": 99,
+    "selector": "#addProfile button"
+  },
+  "id_pattern": {
+    "description": "All Senior/Key Person fields follow the pattern: 'person{FieldName}{N}' where N is 1-based index. E.g. personFirstName1, personFirstName2, personFirstName3...",
+    "template": "person{FieldName}{N}",
+    "index_start": 1,
+    "knockout_expression": "'person{fieldName}' + ($index() + 1)"
+  },
+  "sections": {
+    "pd_pi_profile": {
+      "description": "Project Director / Principal Investigator — fixed section, not repeated, uses 'pdpi' prefix",
+      "legend_id": "PDPI",
+      "fields": [
+        { "id": "pdpiPrefix",           "label": "Prefix",                              "type": "text",   "required": false },
+        { "id": "pdpiOtherPrefix",       "label": "Other Prefix (Specify)",              "type": "text",   "required": false, "conditional": "prefix == 'Other (Specify)'" },
+        { "id": "pdpiFirstName",         "label": "First Name",                          "type": "text",   "required": true  },
+        { "id": "pdpiMiddleName",        "label": "Middle Name",                         "type": "text",   "required": false },
+        { "id": "pdpiLastName",          "label": "Last Name",                           "type": "text",   "required": true  },
+        { "id": "pdpiSuffix",            "label": "Suffix",                              "type": "text",   "required": false },
+        { "id": "pdpiOtherSuffix",       "label": "Other Suffix (Specify)",              "type": "text",   "required": false, "conditional": "suffix == 'Other (Specify)'" },
+        { "id": "pdpiTitle",             "label": "Position/Title",                      "type": "text",   "required": false },
+        { "id": "pdpiOrganization",      "label": "Organization Name",                   "type": "text",   "required": false },
+        { "id": "pdpiDepartment",        "label": "Department",                          "type": "text",   "required": false },
+        { "id": "pdpiDivision",          "label": "Division",                            "type": "text",   "required": false },
+        { "id": "pdpiStreet1",           "label": "Street1",                             "type": "text",   "required": false },
+        { "id": "pdpiStreet2",           "label": "Street2",                             "type": "text",   "required": false },
+        { "id": "pdpiCity",              "label": "City",                                "type": "text",   "required": false },
+        { "id": "pdpiCounty",            "label": "County / Parish",                     "type": "text",   "required": false },
+        { "id": "pdpiState",             "label": "State",                               "type": "select", "required": false },
+        { "id": "pdpiProvince",          "label": "Province",                            "type": "text",   "required": false },
+        { "id": "pdpiCountry",           "label": "Country",                             "type": "text",   "required": false },
+        { "id": "pdpiZipCode",           "label": "ZIP / Postal Code",                   "type": "text",   "required": false },
+        { "id": "pdpiPhoneNumber",       "label": "Phone Number",                        "type": "text",   "required": false },
+        { "id": "pdpiFaxNumber",         "label": "Fax Number",                          "type": "text",   "required": false },
+        { "id": "pdpiEmail",             "label": "Email",                               "type": "text",   "required": false },
+        { "id": "pdpiCredential",        "label": "Credential / Agency Login",           "type": "text",   "required": false },
+        { "id": "pdpiProjectRole",       "label": "Project Role",                        "type": "select", "required": true,
+          "options": ["", "PD/PI", "Co-PD/PI", "Faculty", "Post Doctoral", "Post Doctoral Associate", "Post Doctoral Scholar",
+                      "Other Professional", "Graduate Student", "Undergraduate Student", "Technician", "Consultant",
+                      "Co-Investigator", "Other (Specify)"] },
+        { "id": "pdpiOtherProjectRole",  "label": "Other Project Role Category",         "type": "text",   "required": false, "conditional": "projectRole == 'Other (Specify)'" },
+        { "id": "pdpiDegreeType",        "label": "Degree Type",                         "type": "text",   "required": false },
+        { "id": "pdpiDegreeYear",        "label": "Degree Year",                         "type": "text",   "required": false },
+        { "id": "pdpiBioSketchsFile",    "label": "Attach Biographical Sketch",          "type": "file",   "required": true  },
+        { "id": "pdpiSupportsFile",      "label": "Attach Current & Pending Support",    "type": "file",   "required": false }
+      ]
+    },
+    "senior_key_person_profile": {
+      "description": "Repeating Senior/Key Person blocks — all field IDs follow person{FieldName}{N} where N is 1-based",
+      "fields": [
+        { "id_template": "personPrefix{N}",            "label": "Prefix",                              "type": "text",   "required": false },
+        { "id_template": "personOtherPrefix{N}",       "label": "Other Prefix (Specify)",              "type": "text",   "required": false, "conditional": "prefix == 'Other (Specify)'" },
+        { "id_template": "personFirstName{N}",         "label": "First Name",                          "type": "text",   "required": true  },
+        { "id_template": "personMiddleName{N}",        "label": "Middle Name",                         "type": "text",   "required": false },
+        { "id_template": "personLastName{N}",          "label": "Last Name",                           "type": "text",   "required": true  },
+        { "id_template": "personSuffix{N}",            "label": "Suffix",                              "type": "text",   "required": false },
+        { "id_template": "personOtherSuffix{N}",       "label": "Other Suffix (Specify)",              "type": "text",   "required": false, "conditional": "suffix == 'Other (Specify)'" },
+        { "id_template": "personTitle{N}",             "label": "Position/Title",                      "type": "text",   "required": false },
+        { "id_template": "personOrganization{N}",      "label": "Organization Name",                   "type": "text",   "required": false },
+        { "id_template": "personDepartment{N}",        "label": "Department",                          "type": "text",   "required": false },
+        { "id_template": "personDivision{N}",          "label": "Division",                            "type": "text",   "required": false },
+        { "id_template": "personStreet1{N}",           "label": "Street1",                             "type": "text",   "required": false },
+        { "id_template": "personStreet2{N}",           "label": "Street2",                             "type": "text",   "required": false },
+        { "id_template": "personCity{N}",              "label": "City",                                "type": "text",   "required": false },
+        { "id_template": "personCounty{N}",            "label": "County / Parish",                     "type": "text",   "required": false },
+        { "id_template": "personState{N}",             "label": "State",                               "type": "select", "required": false },
+        { "id_template": "personProvince{N}",          "label": "Province",                            "type": "text",   "required": false },
+        { "id_template": "personCountry{N}",           "label": "Country",                             "type": "text",   "required": false },
+        { "id_template": "personZipCode{N}",           "label": "ZIP / Postal Code",                   "type": "text",   "required": false },
+        { "id_template": "personPhoneNumber{N}",       "label": "Phone Number",                        "type": "text",   "required": false },
+        { "id_template": "personFaxNumber{N}",         "label": "Fax Number",                          "type": "text",   "required": false },
+        { "id_template": "personEmail{N}",             "label": "Email",                               "type": "text",   "required": false },
+        { "id_template": "personCredential{N}",        "label": "Credential / Agency Login",           "type": "text",   "required": false },
+        { "id_template": "personProjectRole{N}",       "label": "Project Role",                        "type": "select", "required": true,
+          "options": ["", "PD/PI", "Co-PD/PI", "Faculty", "Post Doctoral", "Post Doctoral Associate", "Post Doctoral Scholar",
+                      "Other Professional", "Graduate Student", "Undergraduate Student", "Technician", "Consultant",
+                      "Co-Investigator", "Other (Specify)"] },
+        { "id_template": "personOtherProjectRole{N}",  "label": "Other Project Role Category",         "type": "text",   "required": false, "conditional": "projectRole == 'Other (Specify)'" },
+        { "id_template": "personDegreeType{N}",        "label": "Degree Type",                         "type": "text",   "required": false },
+        { "id_template": "personDegreeYear{N}",        "label": "Degree Year",                         "type": "text",   "required": false },
+        { "id_template": "personBioSketchsFile{N}",    "label": "Attach Biographical Sketch",          "type": "file",   "required": true  },
+        { "id_template": "personSupportsFile{N}",      "label": "Attach Current & Pending Support",    "type": "file",   "required": false }
+      ]
+    }
+  }
+}

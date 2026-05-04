@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "정보"
+   },
+   "AppDescription": {
+      "message": "사이트 페이지의 성능을 분석하고 최적화에 대한 권장 사항을 봅니다."
+   },
+   "AppName": {
+      "message": "SharePoint용 페이지 진단"
+   },
+   "AttentionRequired": {
+      "message": "주의 요망"
+   },
+   "AuditorsDataReady": {
+      "message": "데이터 확인 완료"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "기본 구성을 사용하여 공개 및 비공개 CDN을 모두 사용하도록 설정해야 합니다. SharePoint 관리자와 협력하여 두 CDN을 모두 사용하도록 설정하고 기본 CDN 위치를 사용하거나 SharePoint 관리자에게 사용자 지정 위치를 추가해달라고 요청하세요."
+   },
+   "ClassicPageType": {
+      "message": "클래식"
+   },
+   "CollectorsDataReady": {
+      "message": "데이터 수집 완료"
+   },
+   "CorrelationIdLabel": {
+      "message": "CorrelationID"
+   },
+   "Custom": {
+      "message": "사용자 지정"
+   },
+   "Description": {
+      "message": "SharePoint Online에서 페이지 성능 문제를 확인하는 도구"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "쿼리 웹 파트별 콘텐츠보다 검색 웹 파트별 콘텐츠를 사용하는 것이 좋습니다."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "CDNs는 요청하는 브라우저에 더 가까운 정적 자산을 캐싱하여 성능을 향상시킵니다. 정적 페이지 자산을 저장하도록 CDN을 설정 및 구성하려면 SharePoint 관리자와 협력합니다."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "하나 이상의 확장을 렌더링하는 데 1000밀리초보다 오래 걸립니다."
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "iFrames을 사용하면 콘텐츠가 외부 페이지에서 로드되기 때문에 페이지 성능이 느려집니다. iFrames 대신 이미지를 사용하되 iFrames을 사용해야만 하는 경우 사용개수를 최소화하고 뷰포트 밖으로 이동합니다."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "페이지의 이미지가 너무 커서 페이지 성능을 최적화할 수 없습니다. 페이지에 있는 모든 이미지의 각 용량을 {0}kb 미만으로 줄이십시오."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "페이지의 이미지가 너무 커서 페이지 성능을 최적화할 수 없습니다. 이 페이지에 있는 모든 이미지의 용량을 각각 {0} mb 미만으로 줄이십시오."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0} 확장을 로드하는 데 {1}ms 넘게 시간이 걸리기 때문에 페이지 성능이 저하됩니다."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "이미지, 비디오 및 텍스트 같은 페이지 콘텐츠는 페이지 성능에 영향을 미칩니다. 웹 파트 수를 줄이고, CDN(콘텐츠 배달 네트워크)을 사용하고, 페이지 콘텐츠를 제한하십시오."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "관리자로 로그인한 상태에서 성능을 테스트하는 경우 보안 그룹으로 인해 늘어난 트래픽이 테스트 결과에 영향을 미칩니다."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "이 페이지는 아웃 캐시 헤더가 있는 목록 항목 페치에 대한 권장 호출의 기준 수를 초과합니다. 각 페이지에 대해 요청을 {0} 목록 항목 가져오기 요청 미만으로 제한합니다."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "이 페이지는 SharePoint에 대해 권장되는 기본 호출 수를 초과합니다. 각 {1} 페이지에 대한 SharePoint 요청 건수를 {0} 미만으로 제한하십시오."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "이 페이지는 검색할 권장 호출의 기준 수를 초과합니다. 각 페이지에 대해 요청을 {0} 미만의 검색 요청으로 제한합니다."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "고성능 검색 환경을 제공하기 위해 StartRow의 최대 지원 값을 {0}(으)로 제한합니다."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "1 확장명을 로드하는 데 {0}ms 넘게 시간이 걸리기 때문에 페이지 성능이 저하됩니다."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "캐싱되지 않은 구조적 탐색은 사이트 성능을 저하시킵니다. 관리되거나 검색 기반인 탐색을 사용하여 사이트의 탐색을 다시 디자인합니다."
+   },
+   "DetectPageType": {
+      "message": "페이지 유형 검색 중..."
+   },
+   "DiagnosticTests": {
+      "message": "진단 테스트"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "기간이 {0}ms보다 깁니다"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "기간이 임계값 {0}ms 이내입니다"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "지원 로깅 사용(성능에 영향을 줄 수 있습니다. Microsoft 지원과 함께 문제를 해결하는 데 사용하세요.)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "지원 로깅 사용"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "HTTP Archive(HAR)로 내보내기 사용"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "Viewport 내부에 로드하는 데 2000ms 이상 걸리거나 Viewport 외부에 로드하는 데 4000ms 이상 걸리는 사용자 지정 웹 파트는 페이지 성능에 영향을 미칩니다."
+   },
+   "ErrorMessage": {
+      "message": "페이지 진단을 실행하는 중 오류가 발생했습니다. 나중에 다시 시도하세요. 오류가 계속 발생한다면 문의하세요."
+   },
+   "ExportToHar": {
+      "message": "HAR로 내보내기"
+   },
+   "ExportToHarHover": {
+      "message": "HAR(HTTP Archive)로 내보내기"
+   },
+   "ExportToJson": {
+      "message": "JSON으로 내보내기"
+   },
+   "ExportToJsonHover": {
+      "message": "JSON(JavaScript object notation)으로 내보내기"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "일부 자산은 CDN를 사용하지 않음"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "확장이 로드 시간에 영향을 미칠 수 있습니다."
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "너무 많은 확장이 사용됨"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "iFrames를 사용하는 세 개 이상의 웹 파트"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "이 페이지에는 {0}개의 대용량 이미지가 포함되어 있습니다."
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "이 페이지에는 1개의 대용량 이미지가 포함되어 있습니다."
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "페이지 가중치는 {0}kb입니다."
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "사용자 계정으로 페이지 성능 테스트"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "이 페이지에는 목록 항목 가져오기에 대한 {0} 호출이 있습니다."
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "이 페이지에는 SharePoint에 대한 {0}개의 호출이 있습니다."
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "이 페이지에는 {0}건의 검색 호출이 있습니다."
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "검색 요청의 StartRow가 {0} 제한을 초과합니다."
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "사용자 지정 웹 파트가 페이지 로드 시간에 영향을 미칩니다."
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "구조적 탐색 캐싱을 사용할 수 없음"
+   },
+   "FeedbackCategoryName": {
+      "message": "의견 보내기"
+   },
+   "FeedbackInstruction": {
+      "message": "제안 사항이나 질문이 있으십니까? 다음에 게시하세요. "
+   },
+   "HelpLinksCategoryName": {
+      "message": "추가 리소스"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "SharePoint 시작 페이지와 같은 시스템 페이지에서 진단을 실행할 수 없습니다. 이 도구를 SharePoint 사이트 페이지 전용으로 사용하세요."
+   },
+   "HowToUseInstruction": {
+      "message": "이 도구에 대한 자세한 정보와 사용법"
+   },
+   "HowToUseLinkName": {
+      "message": "SharePoint Online용 페이지 진단 도구"
+   },
+   "Init": {
+      "message": "초기화"
+   },
+   "LazyLoadingTime": {
+      "message": "로드 지연"
+   },
+   "LearnMore": {
+      "message": "자세한 정보"
+   },
+   "MadeBy": {
+      "message": "작성자"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "Microsoft 지원"
+   },
+   "ModernPageType": {
+      "message": "현대식"
+   },
+   "ModuleLoad": {
+      "message": "모듈 로드"
+   },
+   "NameAndId": {
+      "message": "이름 및 ID"
+   },
+   "NetworkTrace": {
+      "message": "네트워크 추적"
+   },
+   "NoActionRequired": {
+      "message": "작업 필요 없음"
+   },
+   "NotSupportedPage": {
+      "message": "이 페이지에서 페이지 진단을 실행할 수 없습니다. SharePoint 사이트 페이지에만이 도구를 사용 합니다."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "페이지가 편집 모드에 있는 동안에는 진단을 실행할 수 없습니다. 페이지에서 초안으로 저장 또는 변경 내용 취소를 선택 하 고 다시 시도 하십시오."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "온-프레미스 버전의 SharePoint에서 페이지 진단 도구를 사용 하려고 합니다. 이 도구는 SharePoint Online 에서만 사용할 수 있습니다."
+   },
+   "PageLoadTimeLabel": {
+      "message": "페이지 로드 시간"
+   },
+   "PageTypeDataReady": {
+      "message": "페이지 유형 확인 완료"
+   },
+   "PageUrlLabel": {
+      "message": "페이지 URL"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "CDN(콘텐츠 배달 네트워크)을 사용한 페이지"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "확장을 로드하는 데 {0}ms 이상 걸리는 확장이 없습니다."
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "사용되는 확장 기능이 5개 미만임"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "iFrames을 사용하는 웹 파트가 없습니다."
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "페이지에 있는 모든 이미지의 각 용량이 {0}kb 미만임"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "페이지 가중치는 1000KB 미만"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "사용자 계정으로 페이지 성능 테스트를 마쳤습니다."
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "목록 항목 가져오기 요청이 {0} 미만입니다."
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "SharePoint 요청 건수가 {0}개 미만입니다."
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "검색 요청 건수가 {0}개 미만입니다."
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "검색 요청의 StartRow가 제한보다 낮습니다."
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "웹 파트를 실행하는 데 {0} ms 이상 걸리는 웹 파트가 없습니다."
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "구조적 탐색이 감지되지 않음"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "비공개 CDN을 사용하지 않음"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "공개 및 비공개 CDN을 사용할 수 있습니다. 기본 CDN 위치를 사용하거나 SharePoint 관리자에게 사용자 지정 위치를 추가하도록 요청하세요."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "공개 및 비공개 CDN을 사용하지 않음"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "공용 CDN을 사용하도록 설정되어 있지 않음"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "7개 혹은 이상의 확장이 있습니다."
+   },
+   "RenderTime": {
+      "message": "렌더링"
+   },
+   "RunningAuditors": {
+      "message": "데이터 확인 중..."
+   },
+   "RunningCollectors": {
+      "message": "데이터 수집 중... 몇 분 정도 걸릴 수 있습니다."
+   },
+   "RunningPageTypeChecker": {
+      "message": "페이지 유형 확인 중"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "시작"
+   },
+   "Stop": {
+      "message": "중지"
+   },
+   "ThirdPartyNotice": {
+      "message": "타사 고지 사항"
+   },
+   "TimeoutMessage": {
+      "message": "페이지 진단 도구의 제한 시간이 초과되었습니다. 다시 시도하세요."
+   },
+   "TitleForCBQAuditor": {
+      "message": "CBQ 웹 파트 확인"
+   },
+   "Total": {
+      "message": "총계"
+   },
+   "TunePerformanceInstruction": {
+      "message": "성능 및 페이지 다운로드 시간 향상에 대한 자세한 내용 찾기"
+   },
+   "TunePerformanceLinkName": {
+      "message": "SharePoint Online 성능 조정"
+   },
+   "Url": {
+      "message": "URL"
+   },
+   "UrlDescription": {
+      "message": "URL {0}개 찾음"
+   },
+   "UrlsDescription": {
+      "message": "URL {0}개 찾음"
+   },
+   "UserVoice": {
+      "message": "사용자 의견"
+   },
+   "VersionLabel": {
+      "message": "버전"
+   },
+   "Warning": {
+      "message": "개선 기회"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "Viewport 내부에 로드하는 데 2000ms 이상 걸리거나 Viewport 외부에 로드하는 데 4000ms 이상 걸리는 내장 Microsoft 웹 파트는 페이지 성능에 영향을 미칩니다."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "iFrames를 사용하는 한 개 이상의 웹 파트"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Microsoft 웹 파트가 로드 시간에 영향을 미칩니다."
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "5개 혹은 이상의 확장이 있습니다."
+   }
+}

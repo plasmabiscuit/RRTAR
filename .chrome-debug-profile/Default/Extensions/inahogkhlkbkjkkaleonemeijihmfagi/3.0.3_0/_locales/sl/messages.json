@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "Vizitka"
+   },
+   "AppDescription": {
+      "message": "Analizirajte učinkovitost delovanja strani spletnega mesta in pridobite priporočila za optimizacijo."
+   },
+   "AppName": {
+      "message": "Diagnostika strani za SharePoint"
+   },
+   "AttentionRequired": {
+      "message": "Potrebna je pozornost"
+   },
+   "AuditorsDataReady": {
+      "message": "Preverjanje veljavnosti podatkov je dokončano"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "Javni in zasebni CDN morate omogočiti s privzeto konfiguracijo. V partnerstvu s skrbnikom SharePointa omogočite oba CDN-ja in uporabite privzete lokacije CDN-jev ali prosite skrbnika SharePointa, da doda lokacije po meri."
+   },
+   "ClassicPageType": {
+      "message": "klasično"
+   },
+   "CollectorsDataReady": {
+      "message": "Zbiranje podatkov je končano"
+   },
+   "CorrelationIdLabel": {
+      "message": "ID korelacije"
+   },
+   "Custom": {
+      "message": "Po meri"
+   },
+   "Description": {
+      "message": "Orodje za prepoznavanje težav z učinkovitostjo delovanja strani v storitvi SharePoint Online"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "Priporočite s spletnim gradnikom Vsebina po iskanju prek spletnega gradnika Vsebina po poizvedbi."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "Omrežja CDN izboljšajo učinkovitost delovanja tako, da statična sredstva predpomnijo bližje brskalnikom, ki jih zahtevajo. Če želite nastaviti in konfigurirati omrežja CDN za shranjevanje statičnih sredstev strani, se obrnite na skrbnika SharePoint."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "Upodobitev ene ali več razširitev traja dlje kot 1000 ms. "
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "Uporaba elementov iFrames upočasni delovanje strani, saj se vsebina nalaga z zunanje strani. Namesto elementov iFrames uporabljajte slike, če morate uporabljati elemente iFrames pa zmanjšajte število in/ali jih premaknite z vidnega polja."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "Slike na tej strani so prevelike za optimizacijo delovanja strani. Zmanjšajte vse slike na tej strani, da bodo manjše od {0} kb."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "Slike na tej strani so prevelike za optimalno delovanje strani. Zmanjšajte vse slike na tej strani, da bodo manjše od {0} mb."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "Za nalaganje toliko razširitev ({0}) je potrebnih več kot {1}, kar vpliva na učinkovitost delovanja strani."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "Vsebina strani, kot so slike, videoposnetki in besedilo vplivajo na učinkovitost delovanja strani. Zmanjšajte število spletnih gradnikov, uporabljajte omrežja za dostavo vsebine (CDN-je) in omejite vsebino strani."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "Ko preskusite učinkovitost delovanja, medtem ko ste prijavljeni kot skrbnik, na rezultate vpliva povečan promet zaradi varnostnih skupin."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "Ta stran presega osnovno število priporočenih klicev za pridobivanje elementa seznama brez glave predpomnilnika. Zahteve za pridobivanje elementov seznama za vsako stran omejite na manj kot {0}."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "Ta stran presega osnovno število priporočenih klicev v SharePoint. Za vsako stran {1} omejite zahteve na največ toliko SharePointovih zahtev: {0}."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "Ta stran presega osnovno število priporočenih klicev za iskanje. Zahteve omejite na manj kot {0} zahtev za iskanje za vsako stran."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "Zaradi zagotavljanja izkušnje iskanja z visoko učinkovitostjo delovanja, je največja dovoljena vrednost vrstice »StartRow« nastavljena na {0}."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "Za nalaganje 1 razširitve je potrebnih več kot {0}, kar vpliva na učinkovitost delovanja strani."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "Strukturno krmarjenje, ki ni predpomnjeno, upočasni učinkovitost delovanja spletnega mesta. Preoblikujte krmarjenje spletnega mesta z uporabo upravljanega krmarjenja ali krmarjenja z iskanjem."
+   },
+   "DetectPageType": {
+      "message": "Zaznavanje vrste strani ..."
+   },
+   "DiagnosticTests": {
+      "message": "Diagnostični preskusi"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "Trajanje je daljše od {0} ms"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "Trajanje je znotraj praga {0} ms"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "Omogočite prijavo podpore (lahko vpliva na učinkovitost delovanja; uporabite za odpravljanje težav z Microsoftovo podporo)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "Prijava podpore je omogočena"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "Omogočite izvoz v arhiv HTTP (HAR)"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "Spletni gradniki po meri, ki se nalagajo dlje kot 2000 ms v vidnem polju oziroma 4000 ms zunaj vidnega polja, vplivajo na učinkovitost delovanja strani."
+   },
+   "ErrorMessage": {
+      "message": "Pri zagonu diagnostike je prišlo do napake. Poskusite znova pozneje. Če bo še naprej prihajalo do težave, se obrnite na"
+   },
+   "ExportToHar": {
+      "message": "Izvozi v HAR"
+   },
+   "ExportToHarHover": {
+      "message": "Izvozi v HTTP Archive (HAR)"
+   },
+   "ExportToJson": {
+      "message": "Izvozi v JSON"
+   },
+   "ExportToJsonHover": {
+      "message": "Izvozi v JavaScript Object Notation (JSON)"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "Nekatera sredstva ne uporabljajo CDN-jev"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "Razširitve morda vplivajo na čas nalaganja"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "Uporabljenih je preveč razširitev"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "Trije spletni gradniki ali več spletnih gradnikov uporablja iFrames"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "Ta stran vsebuje toliko velikih slik: {0}"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "Ta stran vsebuje 1 veliko sliko"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "Teža strani je {0} kb"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "Učinkovitost delovanja strani preizkusite z uporabniškim računom"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Na tej strani so {0} klici za pridobivanje elementa seznama"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "Na tej strani je toliko klicev v SharePoint: {0}"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "Na tej strani je toliko klicev za iskanje: {0}"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "Vrednost zahtev vrstice »StartRow« za iskanje presega omejitev {0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "Spletni gradniki po meri vplivajo na čas nalaganja strani"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "Predpomnjenje strukturnega krmarjenja ni omogočeno"
+   },
+   "FeedbackCategoryName": {
+      "message": "Pošljite povratne informacije"
+   },
+   "FeedbackInstruction": {
+      "message": "Ali imate predloge oziroma vprašanja? Objavite jih na strani "
+   },
+   "HelpLinksCategoryName": {
+      "message": "Dodatni viri"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "Diagnostike ni mogoče zagnati na sistemskih straneh, kot je SharePointova začetna stran. Uporabite to orodje le za strani SharePointovega mesta."
+   },
+   "HowToUseInstruction": {
+      "message": "Več informacij o tem orodju in o tem, kako deluje v"
+   },
+   "HowToUseLinkName": {
+      "message": "Orodje za diagnostiko strani za SharePoint Online"
+   },
+   "Init": {
+      "message": "Inicializacija"
+   },
+   "LazyLoadingTime": {
+      "message": "Počasno nalaganje"
+   },
+   "LearnMore": {
+      "message": "Več informacij"
+   },
+   "MadeBy": {
+      "message": "MadeBy"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "Microsoftova podpora."
+   },
+   "ModernPageType": {
+      "message": "sodobno"
+   },
+   "ModuleLoad": {
+      "message": "Nalaganje modula"
+   },
+   "NameAndId": {
+      "message": "Ime in ID"
+   },
+   "NetworkTrace": {
+      "message": "Sled omrežja"
+   },
+   "NoActionRequired": {
+      "message": "Ni vam treba ukrepati"
+   },
+   "NotSupportedPage": {
+      "message": "Na tej strani ni mogoče zagnati diagnostike strani. Uporabite to orodje za mesta SharePointovih strani."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "Diagnostike ni mogoče zagnati, ko je stran v načinu urejanja. Na strani izberite Shrani kot osnutek ali zavrzite spremembe in poskusite znova."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "Poskušate uporabiti orodje Diagnostika strani z različico SharePointa na mestu uporabe. To orodje lahko uporabljate le s storitvijo SharePoint Online."
+   },
+   "PageLoadTimeLabel": {
+      "message": "Čas nalaganja strani"
+   },
+   "PageTypeDataReady": {
+      "message": "Preverjanje vrste strani je dokončano"
+   },
+   "PageUrlLabel": {
+      "message": "URL strani"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "Ta stran uporablja omrežja za dostavo vsebine (CDN-je)"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "Nalaganje nobene razširitve ne traja dlje od {0} ms"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "Uporabljenih je manj kot 5 razširitev"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "Ni spletnih gradnikov, ki uporabljajo elemente iFrames"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "Vse slike na strani so manjše od {0} kb"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "Teža strani je manjša od 1000 kb"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "Učinkovitost delovanja strani je bila preskušena z uporabniškim računom"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Na voljo je manj kot {0} pridobivanje elementa seznama"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "Na voljo je manj kot toliko SharePointovih zahtev: {0}"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "Na voljo je manj kot toliko zahtev za iskanje: {0}"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "Vrednost zahtev vrstice »StartRow« za iskanje je nižja od omejitve"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "Zagon nobenega spletnega gradnika ne traja dlje od {0} ms"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "Strukturnega krmarjenja ni bilo mogoče zaznati"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "Javni CDN ni omogočen"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "Javni in zasebni CDN sta omogočena. Uporabite privzete lokacije CDN ali prosite skrbnika SharePointa, da doda lokacije po meri."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "Javni in zasebni CDN nista omogočena"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "Javni CDN ni omogočen"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "Na voljo je sedem ali več razširitev."
+   },
+   "RenderTime": {
+      "message": "Upodabljanje"
+   },
+   "RunningAuditors": {
+      "message": "Preverjanje veljavnosti podatkov ..."
+   },
+   "RunningCollectors": {
+      "message": "Zbiranje podatkov ... Ta postopek lahko traja nekaj minut."
+   },
+   "RunningPageTypeChecker": {
+      "message": "Preverjanje vrste strani"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "Začetek"
+   },
+   "Stop": {
+      "message": "Ustavi"
+   },
+   "ThirdPartyNotice": {
+      "message": "Obvestilo neodvisnih ponudnikov"
+   },
+   "TimeoutMessage": {
+      "message": "Orodju za diagnostiko strani je potekla časovna omejitev. Poskusite znova."
+   },
+   "TitleForCBQAuditor": {
+      "message": "Preveri, ali je na voljo spletni gradnik CBQ"
+   },
+   "Total": {
+      "message": "Skupaj"
+   },
+   "TunePerformanceInstruction": {
+      "message": "Več informacij o izboljšanju učinkovitosti delovanja in hitrosti prenosi strani"
+   },
+   "TunePerformanceLinkName": {
+      "message": "Optimizirajte delovanje storitve SharePoint Online"
+   },
+   "Url": {
+      "message": "Url"
+   },
+   "UrlDescription": {
+      "message": "Najden je bil {0} URL"
+   },
+   "UrlsDescription": {
+      "message": "Najdenih je bilo toliko URL-jev: {0}"
+   },
+   "UserVoice": {
+      "message": "User Voice"
+   },
+   "VersionLabel": {
+      "message": "Različica"
+   },
+   "Warning": {
+      "message": "Možnosti za izboljšanje"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "Vgrajeni Microsoftovi spletni gradniki, ki se nalagajo dlje kot 2000 ms v vidne polju oziroma 4000 ms zunaj vidnega polja, vplivajo na učinkovitost delovanja strani."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "En spletni gradnik uporablja iFrames"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Microsoftovi spletni gradniki vplivajo na čas nalaganja"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "Na voljo je pet ali več razširitev."
+   }
+}

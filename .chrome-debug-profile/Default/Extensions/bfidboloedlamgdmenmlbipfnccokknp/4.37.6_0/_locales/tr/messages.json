@@ -1,0 +1,852 @@
+{
+   "PopUpFeedBackStore": {
+      "description": "",
+      "message": "Bizi mutlu edin!"
+   },
+   "PopUpfeedBackHeading": {
+      "description": "",
+      "message": "PureVPN'ye kaç puan verirsiniz?"
+   },
+   "PopUpfeedBackHeading2": {
+      "description": "",
+      "message": "Chrome Mağazasında vereceğiniz iyi bir puan geliştiricilerimizi mutlu edecektir!"
+   },
+   "PopUpfeedBackHeading3": {
+      "description": "",
+      "message": "Geri Bildiriminiz için Teşekkürler!"
+   },
+   "PopUpfeedBackSubmit": {
+      "description": "",
+      "message": "Gönder"
+   },
+   "ProxySignupWindowCloseError": {
+      "description": "",
+      "message": "Doğrulama Başarısız"
+   },
+   "ProxyTxtMigration": {
+      "description": "",
+      "message": "PureVPN Proxy Uzantısına giriş yapmak için e-posta adresinizi kullanmadan önce birkaç adımı tamamlamanız gerekiyor."
+   },
+   "ProxyUpdateAccountTxtCTA1": {
+      "description": "",
+      "message": "Premium'a Şimdi Geçin"
+   },
+   "ProxyUpdateAccountTxtCTA2": {
+      "description": "",
+      "message": "Premium Plan Alın"
+   },
+   "ProxyUpdateAccountTxtCTA3": {
+      "description": "",
+      "message": "Şimdi Satın Alın"
+   },
+   "ProxyUpdateAccountTxtParagraph1": {
+      "description": "",
+      "message": "PureVPN ile ABD Netflix'e İstediğiniz Yerden Anında Erişin!"
+   },
+   "ProxyUpdateAccountTxtParagraph2": {
+      "description": "",
+      "message": "İstediğiniz Yerden Anında ABD Netflix'i İzleyin ve Tadını Çıkarın!"
+   },
+   "ProxyUpdateAccountTxtParagraph3": {
+      "description": "",
+      "message": "PureVPN ile ABD Netflix, Hulu, Amazon ve diğer birçok Kanala erişin!"
+   },
+   "accountDetailsBillingCycleTitle": {
+      "description": "",
+      "message": "Fatura döngüsü"
+   },
+   "accountDetailsBtnSwitchUserTxt": {
+      "description": "",
+      "message": "KULLANICI DEĞİŞTİR"
+   },
+   "accountDetailsEmailTitle": {
+      "description": "",
+      "message": "Eposta"
+   },
+   "accountDetailsExpireOnTitle": {
+      "description": "",
+      "message": "Bitiş Tarihi"
+   },
+   "accountDetailsPlanTypeTitle": {
+      "description": "",
+      "message": "Plan Türü"
+   },
+   "accountDetailsSubscriptionStatusTitle": {
+      "description": "",
+      "message": "Abonelik durumu"
+   },
+   "accountDetailsSubscriptionTypeTitle": {
+      "description": "",
+      "message": "Hesap Türü"
+   },
+   "accountDetailsVpnUsernameTitle": {
+      "description": "",
+      "message": "VPN Kullanıcı Adı"
+   },
+   "accountTxtSelectAccount": {
+      "description": "",
+      "message": "Hesap Seçin"
+   },
+   "adblockMenuSettings": {
+      "description": "",
+      "message": "Ayarlar"
+   },
+   "addonText": {
+      "description": "",
+      "message": "Eklenti al"
+   },
+   "alreadyAccntTxt": {
+      "description": "",
+      "message": "Zaten bir hesabınız var mı"
+   },
+   "alreadyPureVpnAccntTxt": {
+      "description": "",
+      "message": "Zaten bir PureVPN hesabım var!"
+   },
+   "appVersion": {
+      "description": "",
+      "message": "Sürüm"
+   },
+   "autoLoginFailedMsg": {
+      "description": "",
+      "message": "Giriş bilgileri için lütfen e-postanızı kontrol edin"
+   },
+   "bypassProxyHeaderTxt": {
+      "description": "",
+      "message": "Atlama listesinde proxy'yi devre dışı bırak"
+   },
+   "channelsTxtCountries": {
+      "description": "",
+      "message": "POPÜLER WEB SİTELERİ"
+   },
+   "channelsTxtFavourites": {
+      "description": "",
+      "message": "Favoriler"
+   },
+   "channelsTxtFavouritesHelpText": {
+      "description": "",
+      "message": "Favori Web Siteleriniz burada görünecek"
+   },
+   "channelsTxtInfo": {
+      "description": "",
+      "message": "Bir kanalı favori olarak işaretlemek için yıldıza tıklayın."
+   },
+   "channelsTxtSearch": {
+      "description": "",
+      "message": "Bir Web Sitesi arayın"
+   },
+   "channelsTxtSelectStream": {
+      "description": "",
+      "message": "Web Sitesi Seçin"
+   },
+   "characterZero": {
+      "description": "",
+      "message": "0"
+   },
+   "citiesTxtFavouritesHelpText": {
+      "description": "",
+      "message": "Favori şehirleriniz burada görünecek"
+   },
+   "connectWithDedIpCta": {
+      "description": "",
+      "message": "Dedike Sunucu Alın"
+   },
+   "connectWithDedIpHeading": {
+      "description": "",
+      "message": "DEDİKE SUNUCU"
+   },
+   "connectWithDedIpText": {
+      "description": "",
+      "message": "Sabit IP'yi etkinleştirmek için özel sunucu eklentisini satın almanız gerekiyor."
+   },
+   "connectWithDedServer": {
+      "description": "",
+      "message": "Dedike Sunucu"
+   },
+   "connectWithTeamServer": {
+      "description": "",
+      "message": "Takım Sunucusu"
+   },
+   "countriesTxtChangeCountry": {
+      "description": "",
+      "message": "Ülke Seçin"
+   },
+   "countriesTxtCountries": {
+      "description": "",
+      "message": "Ülkeler"
+   },
+   "countriesTxtFavourites": {
+      "description": "",
+      "message": "Favoriler"
+   },
+   "countriesTxtFavouritesHelpText": {
+      "description": "",
+      "message": "Favori Ülkeleriniz burada belirecek"
+   },
+   "countriesTxtInfo": {
+      "description": "",
+      "message": "Bir ülkeyi favori olarak işaretlemek için yıldıza tıklayın."
+   },
+   "countriesTxtMarkFavourites": {
+      "description": "",
+      "message": "Favorilere ekle"
+   },
+   "countriesTxtSearch": {
+      "description": "",
+      "message": "Ülke arayın"
+   },
+   "countriesTxtSelectCountry": {
+      "description": "",
+      "message": "Ülke Seçin"
+   },
+   "countriesTxtUnmarkFavourites": {
+      "description": "",
+      "message": "Favorilerden sil"
+   },
+   "darkWebText": {
+      "description": "",
+      "message": "Karanlık Web İzleme"
+   },
+   "doConnectionQualityText": {
+      "description": "",
+      "message": "Bağlantı kalitesi nasıl?"
+   },
+   "doCopyLinkText": {
+      "description": "",
+      "message": "Bağlantıyı Kopyala"
+   },
+   "doEnjoyPureVPNText": {
+      "description": "",
+      "message": "PureVPN’i beğendiniz mi?"
+   },
+   "doFrequentDisconnectionText": {
+      "description": "",
+      "message": "Sık Bağlantı Kesilmesi"
+   },
+   "doLeaveUsReviewText": {
+      "description": "",
+      "message": "Bizi değerlendirin"
+   },
+   "doNoText": {
+      "description": "",
+      "message": "Hayır"
+   },
+   "doOtherIssueText": {
+      "description": "",
+      "message": "Diğer mesele"
+   },
+   "doOutcomeText": {
+      "description": "",
+      "message": "PureVPN Uzantısı sizin için çalışıyor mu?"
+   },
+   "doProblemPara": {
+      "description": "",
+      "message": "Sorun ne gibi görünüyor?"
+   },
+   "doProblemText": {
+      "description": "",
+      "message": "Lütfen bize bildirin, geri bildiriminizi duymak isteriz."
+   },
+   "doProvideDetailsText": {
+      "description": "",
+      "message": "Lütfen sorununuzun ayrıntılarını burada belirtin"
+   },
+   "doRateUsText": {
+      "description": "",
+      "message": "Bizi değerlendirin"
+   },
+   "doReferAFriendMainText": {
+      "description": "",
+      "message": "Arkadaşlarınız ve ailenizle aylık ücretsiz PUREVPN hesaplarını paylaşın!"
+   },
+   "doReferAFriendText": {
+      "description": "",
+      "message": "Arkadaşına Öner"
+   },
+   "doRemindLaterText": {
+      "description": "",
+      "message": "Daha sonra hatırlat"
+   },
+   "doSkipText": {
+      "description": "",
+      "message": "Atla"
+   },
+   "doSlowSpeedText": {
+      "description": "",
+      "message": "Yavaş hız"
+   },
+   "doSubmitText": {
+      "description": "",
+      "message": "Gönder"
+   },
+   "doThankYouMessage": {
+      "description": "",
+      "message": "Paylaşım için teşekkürler"
+   },
+   "doUnableToAccessText": {
+      "description": "",
+      "message": "İçeriğe Erişilemiyor"
+   },
+   "doUnableToConnectText": {
+      "description": "",
+      "message": "Bağlanılamıyor"
+   },
+   "doYesText": {
+      "description": "",
+      "message": "Evet"
+   },
+   "errorRateLimited": {
+      "description": "",
+      "message": "Oranınız sınırlandırılmış.\u003Cbr/>Lütfen 15 dakika sonra tekrar deneyin"
+   },
+   "expiredAccountAlert": {
+      "description": "",
+      "message": "Sayın Kullanıcı, Hesabınızı süresi doldu! \u003Ca target='_blank' href='https://www.purevpn.com/order'>Şimdi Yenileyin\u003C/a>"
+   },
+   "extAuthorName": {
+      "description": "extension author name.",
+      "message": "GZ systems Ltd."
+   },
+   "extDescription": {
+      "message": "Bilgilerinizi gizlemenize, kısıtlı içeriğe erişmenize ve internette yüksek hızlarda gezinmenize yardımcı olan bir VPN uzantısı."
+   },
+   "extName": {
+      "description": "extension name.",
+      "message": "PureVPN Proxy - Chrome için En İyi VPN"
+   },
+   "extNotification": {
+      "description": "extension short name.",
+      "message": "Alarm"
+   },
+   "extShortName": {
+      "description": "extension short name.",
+      "message": "PureVPN"
+   },
+   "extTagLine": {
+      "description": "extension tagline.",
+      "message": "Bilgilerinizi gizlemenize, kısıtlı içeriğe erişmenize ve internette yüksek hızlarda gezinmenize yardımcı olan bir VPN uzantısı."
+   },
+   "extTitleConnected": {
+      "description": "",
+      "message": "PureVPN | 1$ ile bağlandınız"
+   },
+   "extTitleConnectedChannel": {
+      "description": "",
+      "message": "PureVPN | 1$'a erişiyorsunuz"
+   },
+   "extTxtNoConnection": {
+      "description": "",
+      "message": "İnternet bağlantısı yok"
+   },
+   "extTxtServiceUnavailable": {
+      "message": "Tarayıcı isteğinizi çözemedi.\u003Cbr />Hata Kodu: \u003Ca target='_blank' href='https://support.purevpn.com/chrome-error-err_spdy_protocol_error'>'ERR_SPDY_PROTOCOL_ERROR'\u003C/a>"
+   },
+   "fastSecureHeading": {
+      "description": "",
+      "message": "Daha hızlı ve güvenli bir bağlantıya mı ihtiyacınız var?"
+   },
+   "fastSecurePara": {
+      "description": "",
+      "message": "Kesintisiz bağlantı için özel bir sunucu ile iş birliğini artırın"
+   },
+   "feedBackPageTitle": {
+      "description": "",
+      "message": "PureVPN | Chrome Uzantısı Geri Bildirim Formu"
+   },
+   "feedbackDescriptionPlaceholder": {
+      "description": "",
+      "message": "İçinizden gelenleri söyleyin"
+   },
+   "feedbackMinLengthDescription": {
+      "description": "",
+      "message": "Yorum uzunluğu min. 10 karakter"
+   },
+   "feedbackMinLengthTitle": {
+      "description": "",
+      "message": "Başlık uzunluğu min. 10 karakter"
+   },
+   "feedbackTitlePlaceholder": {
+      "description": "",
+      "message": "Yorumunuza bir başlık verin"
+   },
+   "generalText": {
+      "description": "",
+      "message": "Genel"
+   },
+   "hostNameTextBoxHeading": {
+      "description": "",
+      "message": "Proxy'yi atlamak için ana bilgisayar adını veya ip adresini girin"
+   },
+   "hostWhitelistChangeNoteTxt": {
+      "description": "",
+      "message": "Ayarlar bir sonraki bağlantıda uygulanacak."
+   },
+   "hostWhitelistExampleTxt1": {
+      "description": "",
+      "message": "www.purevpn.com"
+   },
+   "hostWhitelistExampleTxt2": {
+      "description": "",
+      "message": "192.168.0.1"
+   },
+   "hostWhitelistNoteTxt": {
+      "description": "",
+      "message": "Örnek:"
+   },
+   "invalidloginTxtErrorMsg": {
+      "description": "",
+      "message": "Geçersiz giriş bilgisi"
+   },
+   "locationSpoofToggleTxt": {
+      "description": "",
+      "message": "Sahte GPS Konumu"
+   },
+   "locationsText": {
+      "description": "",
+      "message": "Konumlar"
+   },
+   "loginTxtConfirmPassword": {
+      "description": "",
+      "message": "Şifreyi onaylayın"
+   },
+   "loginTxtConnecting": {
+      "description": "",
+      "message": "Oturum açın ..."
+   },
+   "loginTxtErrorMsg": {
+      "description": "",
+      "message": "Kullanıcı Adı veya Şifre eksik."
+   },
+   "loginTxtFreeAccount": {
+      "description": "",
+      "message": "Uzantıyı kullanmak için lütfen premium bir PureVPN hesabına abone olun."
+   },
+   "loginTxtFreeAccountCancel": {
+      "description": "",
+      "message": "Hayır, Teşekkürler"
+   },
+   "loginTxtFreeAccountProceed": {
+      "description": "",
+      "message": "Şimdi Abone Olun"
+   },
+   "loginTxtHidePassword": {
+      "description": "",
+      "message": "Şifreyi gizle"
+   },
+   "loginTxtLogin": {
+      "description": "",
+      "message": "E-posta ile giriş yapın"
+   },
+   "loginTxtLoginDetails": {
+      "description": "",
+      "message": "Kullanıcı adını ya da şifreni mi unuttun?"
+   },
+   "loginTxtLoginHere": {
+      "description": "",
+      "message": "Buradan Giriş Yapın"
+   },
+   "loginTxtNotRegistered": {
+      "description": "",
+      "message": "Hesabınız yok mu?"
+   },
+   "loginTxtNotRegisteredGetVpn": {
+      "description": "",
+      "message": "PureVPN'i Al"
+   },
+   "loginTxtPassword": {
+      "description": "",
+      "message": "Şifre"
+   },
+   "loginTxtShowPassword": {
+      "description": "",
+      "message": "Şifreyi göster"
+   },
+   "loginTxtSuccessMsg": {
+      "description": "",
+      "message": "Başarıyla giriş yapıldı"
+   },
+   "loginTxtUserName": {
+      "description": "",
+      "message": "E-postanızı/Kullanıcı Adınızı girin"
+   },
+   "mainLoginBtnTxt": {
+      "description": "",
+      "message": "Hesap oluştur"
+   },
+   "mainLoginScreenTxt": {
+      "description": "",
+      "message": "Güvenli bir internet yolculuğuna başlayın"
+   },
+   "mainOrTxt": {
+      "description": "",
+      "message": "veya"
+   },
+   "mainSignupBtnLink": {
+      "description": "",
+      "message": "https://www.purevpn.com/trial-vpn/chrome"
+   },
+   "mainSignupBtnTxt": {
+      "description": "",
+      "message": "7 Günlük Ücretsiz Deneme Sürümü Alın"
+   },
+   "newText": {
+      "description": "",
+      "message": "YENİ"
+   },
+   "noSubscriptionTxtErrorMsg": {
+      "description": "",
+      "message": "PureVPN kullanmaya başlamak için bir abonelik satın almanız gerekir."
+   },
+   "notAvailableButton": {
+      "description": "",
+      "message": "Şimdi Devre Dışı Bırak"
+   },
+   "notAvailableHeading": {
+      "description": "",
+      "message": "PureVPN Uzantısını kullanmak için lütfen aşağıda listelenen proxy hizmetini devre dışı bırakın."
+   },
+   "notAvailablePara": {
+      "description": "",
+      "message": "\u003Cbr/>PureVPN Uzantısını kullanmak için lütfen proxy hizmetini devre dışı bırakın"
+   },
+   "optimizedForStreaming": {
+      "description": "",
+      "message": "Popüler Web Siteleri"
+   },
+   "passwordManagerText": {
+      "description": "",
+      "message": "Şifre Yöneticisi"
+   },
+   "proxyFastestLocationAfterCnctn": {
+      "description": "",
+      "message": "En Hızlı Konuma Bağlandı"
+   },
+   "proxySecureBrowsingAfterCnctn": {
+      "description": "",
+      "message": "Tarayıcı Trafiği Güvene Alındı"
+   },
+   "proxyTxtChangeCountry": {
+      "description": "",
+      "message": "Ülke değiştir"
+   },
+   "proxyTxtConnect": {
+      "description": "",
+      "message": "Bağlan"
+   },
+   "proxyTxtConnecting": {
+      "description": "",
+      "message": "Bağlanıyor…"
+   },
+   "proxyTxtDisconnect": {
+      "description": "",
+      "message": "Bağlantıyı Kes"
+   },
+   "proxyTxtHiddenIpAfterCnctn": {
+      "description": "",
+      "message": "IP Başarıyla Gizlendi"
+   },
+   "proxyTxtLoader": {
+      "description": "",
+      "message": "Lütfen bekleyin, PureVPN uzantısı yapılandırılıyor"
+   },
+   "proxyTxtOnlineSecurity": {
+      "description": "",
+      "message": "Çevrimiçi Güvenlik"
+   },
+   "proxyTxtRestrictedWebsitesAfterCnctn": {
+      "description": "",
+      "message": "Web Artık Erişilebilir"
+   },
+   "proxyTxtStreaming": {
+      "description": "",
+      "message": "Yayın Akışı"
+   },
+   "proxyTxtUnAuthorized": {
+      "description": "",
+      "message": "Uzantıyı kullanmak için lütfen hesabınızı \u003Ca href='#' class='upgradeBtn' data-cta='other'>yenileyin\u003C/a>."
+   },
+   "redirectText": {
+      "description": "",
+      "message": "Lütfen yeniden yönlendirirken bekleyin..."
+   },
+   "referFrndAvl": {
+      "description": "",
+      "message": "Mevcut"
+   },
+   "referFrndBtnCopiedTxt": {
+      "description": "",
+      "message": "Panoya kopyalandı"
+   },
+   "referFrndEmptyTokenTxt": {
+      "description": "",
+      "message": "İşlevsellik geçici olarak kullanılamıyor. Lütfen daha sonra tekrar deneyiniz."
+   },
+   "referFrndErrorTxt": {
+      "description": "",
+      "message": "Hata"
+   },
+   "referFrndExpiredUsersTxt": {
+      "description": "",
+      "message": "Yalnızca aktif abonelikleri olan ücretli kullanıcıların ücretsiz hesap davetlerini paylaşmasına izin verilir."
+   },
+   "referFrndHeading": {
+      "description": "",
+      "message": "Davet etmek. Para kazanmak. Zevk almak"
+   },
+   "referFrndInviteNowTxt": {
+      "description": "",
+      "message": "BAĞLANTIYI KOPYALA"
+   },
+   "referFrndSent": {
+      "description": "",
+      "message": "Gönderildi"
+   },
+   "referFrndTxt": {
+      "description": "",
+      "message": "Arkadaşlarınızı PureVPN'ye davet edin ve her davet için ücretsiz kredi kazanın."
+   },
+   "removeMyDataText": {
+      "description": "",
+      "message": "Verilerimi Kaldır"
+   },
+   "requestPlaceholder": {
+      "description": "",
+      "message": "Yorum girin"
+   },
+   "requestPopupText": {
+      "description": "",
+      "message": "Bir konum isteğinde bulunun."
+   },
+   "requestPopupTextChannel": {
+      "description": "",
+      "message": "Bir web sitesi talebinde bulunun."
+   },
+   "resendLoaderText": {
+      "description": "",
+      "message": "Aktivasyon kodu yeniden gönderiliyor. Lütfen bekleyin."
+   },
+   "searchEmptyBtn": {
+      "description": "",
+      "message": "Konum İsteyin"
+   },
+   "searchEmptyBtnChannel": {
+      "description": "",
+      "message": "Web Sitesi Talep Edin"
+   },
+   "searchEmptyTxt": {
+      "description": "",
+      "message": "Aramanızı ayarlamayı deneyin veya diğer seçenekleri keşfedin. İhtiyacınız olanı bulmanıza yardımcı olmaktan mutluluk duyarız."
+   },
+   "searchEmptyTxtChannel": {
+      "description": "",
+      "message": "Aradığınız web sitesi VPN Ağımızın bir parçası değil. Ama bize bundan bahsedebilirsiniz, biz de eklemeye çalışacağız."
+   },
+   "searchEmptyTxtHeading": {
+      "description": "",
+      "message": "Sonuç bulunamadı"
+   },
+   "securityToolsText": {
+      "description": "",
+      "message": "Güvenlik Araçları"
+   },
+   "selectCityTitle": {
+      "description": "",
+      "message": "Şehir seç"
+   },
+   "selectServerHeaderText": {
+      "description": "",
+      "message": "Sunucu seç"
+   },
+   "settingsTxtAboutUs": {
+      "description": "",
+      "message": "PureVPN Hakkında"
+   },
+   "settingsTxtAccountInfo": {
+      "description": "",
+      "message": "Hesap Detayları"
+   },
+   "settingsTxtAccountType": {
+      "description": "",
+      "message": "Hesap Tipi:"
+   },
+   "settingsTxtAdBlockerSettings": {
+      "description": "",
+      "message": "Genel Ayarlar"
+   },
+   "settingsTxtAdvancedFeatures": {
+      "description": "",
+      "message": "Gelişmiş Özellikler"
+   },
+   "settingsTxtButtonBuyNow": {
+      "description": "",
+      "message": "ŞİMDİ SATIN ALIN"
+   },
+   "settingsTxtCheckingSubscription": {
+      "description": "",
+      "message": "Aboneliğiniz kontrol ediliyor"
+   },
+   "settingsTxtClientArea": {
+      "description": "",
+      "message": "Gelişmemize Yardımcı Olun"
+   },
+   "settingsTxtFAQs": {
+      "description": "",
+      "message": "SSS"
+   },
+   "settingsTxtFeedback": {
+      "description": "",
+      "message": "Geri Bildirim"
+   },
+   "settingsTxtLogout": {
+      "description": "",
+      "message": "Çıkış Yap"
+   },
+   "settingsTxtLogoutCancel": {
+      "description": "",
+      "message": "Hayır"
+   },
+   "settingsTxtLogoutConfirmation": {
+      "description": "",
+      "message": "Çıkmak istediğinizden emin misiniz ?"
+   },
+   "settingsTxtLogoutProceed": {
+      "description": "",
+      "message": "Evet"
+   },
+   "settingsTxtPasswordLabel": {
+      "description": "",
+      "message": "Şifre:"
+   },
+   "settingsTxtPleaseWait": {
+      "description": "",
+      "message": "Lütfen Bekleyin"
+   },
+   "settingsTxtPrivacyPolicy": {
+      "description": "",
+      "message": "Gizlilik Politikası"
+   },
+   "settingsTxtProxyAutoConnect": {
+      "description": "",
+      "message": "Tarayıcı başlangıcında proxy'yi otomatik başlat"
+   },
+   "settingsTxtRate": {
+      "description": "",
+      "message": "Bizi Değerlendirin"
+   },
+   "settingsTxtReferFrnd": {
+      "description": "",
+      "message": "Arkadaşa Öner"
+   },
+   "settingsTxtSettings": {
+      "description": "",
+      "message": "Ayarlar"
+   },
+   "settingsTxtSubscription": {
+      "description": "",
+      "message": "Abonelik Durumunuz"
+   },
+   "settingsTxtUsernameLabel": {
+      "description": "",
+      "message": "Kullanıcı Adı:"
+   },
+   "settingsTxtWebRtc": {
+      "description": "",
+      "message": "WebRTC Sızıntı Koruması"
+   },
+   "settingsTxtWhitelisting": {
+      "description": "",
+      "message": "Proxy Atlamayı Etkinleştir"
+   },
+   "settingsWhitelistingHintText": {
+      "description": "",
+      "message": "Belirli web siteleri veya IP adresleri için VPN'i devre dışı bırakmayı seçin."
+   },
+   "signUpEmaiBtnTxt": {
+      "description": "",
+      "message": "E-posta ile Kaydol"
+   },
+   "signUpEmaiBtnTxtFree": {
+      "description": "",
+      "message": "7 Günlük Ücretsiz Deneme Sürümü Alın"
+   },
+   "signUpFieldError": {
+      "description": "",
+      "message": "Lütfen geçerli bir e-posta adresi girin"
+   },
+   "signUpTxtEmail": {
+      "description": "",
+      "message": "E-posta adresinizi girin"
+   },
+   "signUpTxtHelp": {
+      "description": "",
+      "message": "PureVPN giriş bilgilerinizi bu e-posta aracılığıyla alacaksınız."
+   },
+   "signupLoaderText": {
+      "description": "",
+      "message": "Lütfen bekleyin.\u003Cbr/>Kaydoluyor..."
+   },
+   "skipBtn": {
+      "description": "",
+      "message": "ATLA"
+   },
+   "socialLoginTxt": {
+      "description": "",
+      "message": "Şununla Giriş Yapın:"
+   },
+   "spoofGPSHintText": {
+      "description": "",
+      "message": "VPN'e bağlıyken bilgisayar korsanlarını ve kimlik avcılarını yanıltmak için sahte GPS konumu kullanın."
+   },
+   "submitBtn": {
+      "description": "",
+      "message": "SUNMAK"
+   },
+   "talkToSupportText": {
+      "description": "",
+      "message": "Would you like to talk to our support?"
+   },
+   "termsConditionPrivacyError": {
+      "description": "",
+      "message": "Lütfen\u003Cbr/>Hizmet Şartlarımız ile Gizlilik Politikamızı okuduğunuzu ve kabul ettiğinizi belirtin."
+   },
+   "termsandConditionConsent": {
+      "description": "",
+      "message": "\u003Ca target=\"_blank\" class=\"terms_condition_links\" href=\"https://www.purevpn.com/term.php\">Koşullar ve Şartlar\u003C/a> ile \u003Ca target=\"_blank\" class=\"terms_condition_links\" href=\"https://www.purevpn.com/privacy-policy.php\">Gizlilik Politikasını\u003C/a> okuyup anladığımı beyan ederim."
+   },
+   "txtCopyRights": {
+      "description": "copy right text",
+      "message": "2011-2017 PureVPN Ltd."
+   },
+   "txtErrorMsg": {
+      "description": "Footer line 1",
+      "message": "Bir terslik oldu, lütfen daha sonra tekrar deneyin."
+   },
+   "txtFooterLine1": {
+      "description": "Footer line 1",
+      "message": "PureVPN'i Şu Kadara Alın:"
+   },
+   "txtSuccessMsg": {
+      "description": "",
+      "message": "Kaydedilmiş"
+   },
+   "verificationCodeError": {
+      "description": "",
+      "message": "Alan boş bırakılmamalıdır"
+   },
+   "verificationCodeTxt": {
+      "description": "",
+      "message": "Doğrulama kodunuzu girin"
+   },
+   "verificationHelpTxt": {
+      "description": "",
+      "message": "Doğrulama kodu için e-posta adresinizi kontrol edin.\u003Cbr/> Kodu almadınız mı? \u003Ca href='#' class='resendCode'>Yeniden Gönder\u003C/a>"
+   },
+   "verificationLoaderText": {
+      "description": "",
+      "message": "Kod doğrulanıyor."
+   },
+   "webRtcHintText": {
+      "description": "",
+      "message": "Web sitelerinin bilgilerinizi, verilerinizi ve çerezlerinizi kullanmasını engelleyin."
+   }
+}

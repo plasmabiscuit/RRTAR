@@ -1,0 +1,14 @@
+{
+   "description": {
+      "description": "extension description",
+      "message": "Task and UI test automation with Computer Vision/OCR. Ui.Vision combines browser automation and desktop automation."
+   },
+   "name": {
+      "description": "extension name",
+      "message": "Ui.Vision"
+   },
+   "short_name": {
+      "description": "extension short_name",
+      "message": "Ui.Vision"
+   }
+}

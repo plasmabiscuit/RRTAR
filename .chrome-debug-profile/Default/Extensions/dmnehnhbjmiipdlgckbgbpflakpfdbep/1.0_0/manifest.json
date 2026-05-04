@@ -1,0 +1,21 @@
+{
+   "action": {
+      "default_icon": {
+         "48": "icons48.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "content.js", "Readability.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "description": "A Chrome extension to capture  web page to markdown and PDF format",
+   "icons": {
+      "48": "icons48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvvdy7YslXy109/7uTbrp93tNRVEyxLRqgD9VdLPyHBFjClk5zH/kcdTTKwbrG2leKsspgzYC9hwibZwRRhJKanHWR2mAKof5zdnLTdeu2gT1ZYZQFV3wSIOHfyohspjWdsvFPFSipd95P5jy19WskP4KQujUkSguJQPDYi3iiIEJwxSGRvJ2gAOg64aCPzEysPlFeQgVz0RztVtc9712AUsKSl6aG6/19hnyV9unkZm0PlJeBZzcWJ4hjj98m3Ylngsg9E4OV976DG6WjHOSCt/f+D6E9OOSE2CCJvMFV3XwSCi0PUiyivjOLYbyEnTmECb+s1NMQQ0PdGvvS71g+wIDAQAB",
+   "manifest_version": 3,
+   "name": "Webpage to Markdown and PDF",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

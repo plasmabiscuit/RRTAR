@@ -1,0 +1,22 @@
+{
+   "action": {
+      "default_popup": "popup.html"
+   },
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+   },
+   "description": "Easily share content with Vivi.",
+   "icons": {
+      "128": "icon/icon_128.png",
+      "16": "icon/icon_16.png",
+      "32": "icon/icon_32.png",
+      "48": "icon/icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApEaxWWmcjqEVrTT6mQG2iYsL5NoPlRLBneKscjMnsiQWOloQmuJ7gHKFJmYSGcE6uvHTsF2I88wivg9iY9UV7hpybBcqYaFqMuNPXscBU/MVT83f+3ngJXlc+r47axqdP4yvd0WVvwDwoUhhVkE2peyXKdMXWTId+/FJZYzLrZVfR55Jko+XHzTKc6XWoSbCCk5YCLOCT94IFRoop+10ufd0UN4rcojW+QElVb9GJiTFygjvJzZGmbEIQb0c70lSOwQ40/6pyVUU4PHMUN0GjEnxYScDXgcG7ZvRQj/JlWobnkHDxkGNp6zTjfG98b0L0q5v/q9XY7Y05OEJBfumaQIDAQAB",
+   "manifest_version": 3,
+   "name": "Vivi",
+   "permissions": [ "activeTab" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.7",
+   "version_name": "1.0.7"
+}

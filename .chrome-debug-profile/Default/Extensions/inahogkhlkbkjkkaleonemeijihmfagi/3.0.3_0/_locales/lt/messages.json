@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "Apie"
+   },
+   "AppDescription": {
+      "message": "Analizuokite savo svetainės puslapių našumą ir gaukite optimizavimo rekomendacijų."
+   },
+   "AppName": {
+      "message": "„SharePoint“ puslapių diagnostika"
+   },
+   "AttentionRequired": {
+      "message": "Būtinas dėmesys"
+   },
+   "AuditorsDataReady": {
+      "message": "Duomenų tikrinimas baigtas"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "Tiek viešieji, tiek privatūs CDN turi būti įgalinti naudojant numatytąją konfigūraciją. Kreipkitės į „SharePoint“ administratorių ir įgalinkite abu CDN naudodami numatytąsias CDN vietas arba paprašykite „SharePoint“ administratoriaus įtraukti pasirinktines vietas."
+   },
+   "ClassicPageType": {
+      "message": "klasikinis"
+   },
+   "CollectorsDataReady": {
+      "message": "Duomenų rinkimas baigtas"
+   },
+   "CorrelationIdLabel": {
+      "message": "CorrelationID"
+   },
+   "Custom": {
+      "message": "Pasirinktinis"
+   },
+   "Description": {
+      "message": "Įrankis, skirtas „SharePoint Online“ nustatyti puslapio efektyvumo problemas"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "Rekomenduoti naudoti turinį pagal ieškos puslapio dalį, o ne pagal užklausos puslapio dalį."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "CDN pagerina veikimą, statinius išteklius talpykloje kaupdami arčiau naršyklių, kurios pateikia jų užklausas. Bendradarbiaudami su „SharePoint“ administratoriumi, nustatykite ir sukonfigūruokite CDN, kad būtų saugomi statiniai puslapio ištekliai."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "Vienas ar daugiau plėtinių yra ilgesni nei 1000 ms. "
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "„iFrames“ naudojimas sulėtina puslapio veikimą, nes turinys įkeliamas iš išorinio puslapio. Naudokite vaizdus, o ne „iFrames“, tačiau jei „iFrames“ naudoti būtina, maksimaliai sumažinkite kiekį ir (arba) perkelkite juos iš peržiūros srities."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "Šiame puslapyje esantys vaizdai yra per dideli, kad puslapis veiktų optimaliai. Sumažinkite visus šiame puslapyje esančius vaizdus, kad kiekvienas jų būtų mažesnis nei {0} KB."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "Šiame puslapyje esantys vaizdai yra per dideli, kad puslapis veiktų optimaliai. Sumažinkite visus šiame puslapyje esančius vaizdus, kad kiekvienas jų būtų mažesnis nei {0} MB."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0} plėtiniai užtrunka ilgiau nei {1} ms, kad būtų įkelti, o tai daro įtaką puslapio veikimui."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "Puslapio turinys, pvz., vaizdai, vaizdo įrašai ir tekstas, daro įtaką puslapio veikimui. Sumažinkite puslapio dalių skaičių, naudokite turinio pristatymo tinklus (CDN) ir apribokite puslapio turinį."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "Kai išbandote veikimą būdami prisijungę administratoriaus teisėmis, rezultatui turės įtakos dėl saugos grupių padidėjęs srautas."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "Šiame puslapyje viršijamas bazinis rekomenduojamų iškvietimų sąrašo elemento iškvietimų su talpyklos antrašte skaičius. Apribokite užklausas iki mažiau nei {0} kiekvieno puslapio sąrašo elementų gavimo užklausų."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "Šiame puslapyje viršijamas bazinis rekomenduojamų iškvietimų į „SharePoint“ skaičius. Apribokite užklausas iki mažiau nei {0} „SharePoint“ užklausų kiekviename {1}puslapyje."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "Šiame puslapyje viršijamas bazinis rekomenduojamų ieškoti skambučių skaičius. Apribokite užklausas iki mažiau nei {0} kiekvieno puslapio ieškos užklausų."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "Siekdami teikti didelio našumo paiešką, apribojame maksimalią palaikomą „StartRow“ reikšmę iki {0}."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "1 plėtinys trunka ilgiau nei {0} ms, kad būtų įkeltas ir tai turi įtakos puslapio našumui."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "Struktūrinis naršymas, kuris nėra kaupiamas talpykloje, sulėtina svetainės veikimą. Perprojektuokite svetainės naršymą naudodami valdomą arba ieška pagrįstą naršymą."
+   },
+   "DetectPageType": {
+      "message": "Aptinkamas puslapio tipas..."
+   },
+   "DiagnosticTests": {
+      "message": "Diagnostiniai testai"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "Trukmė yra didesnė nei {0} ms"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "Trukmė neviršija {0} ms slenksčio"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "Įgalinti palaikymo registravimą (gali paveikti našumą; naudoti trikčių diagnostikai kartu su „Microsoft“ palaikymu)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "Palaikymo registravimas įgalintas"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "Įgalinti eksportavimą į HTTP archyvą (HAR)"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "Bet kuri pasirinktinė žiniatinklio puslapio dalis, kurios įkėlimas peržiūros srityje užtrunka ilgiau nei 2000 ms, arba ne peržiūros srityje užtrunka ilgiau nei 4000 ms, daro įtaką puslapio našumui."
+   },
+   "ErrorMessage": {
+      "message": "Vykdant puslapio diagnostiką, įvyko klaida. Bandykite dar kartą vėliau. Jei klaida kartojasi, susisiekite:"
+   },
+   "ExportToHar": {
+      "message": "Eksportuoti į HAR"
+   },
+   "ExportToHarHover": {
+      "message": "Eksportuoti į HTTP archyvą (HAR)"
+   },
+   "ExportToJson": {
+      "message": "Eksportuoti į JSON"
+   },
+   "ExportToJsonHover": {
+      "message": "Eksportuoti į „JavaScript Object Notation“ (JSON)"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "Kai kurie ištekliai nenaudoja CDN"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "Plėtiniai gali turėti įtakos įkėlimo laikui"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "Naudojama per daug plėtinių"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "Trys arba daugiau puslapio dalių, naudojančių „iFrames“"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "Šiame puslapyje yra {0} dideli (-ų) vaizdai (-ų)"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "Šiame puslapyje yra 1 didelis vaizdas"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "Puslapio dydis yra {0} KB"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "Išbandykite puslapio veikimą naudodami vartotojo paskyrą"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Šiame puslapyje {0} iškvietimų į sąrašo elementų iškvietimą"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "Šiame puslapyje yra {0} iškvietimai (-ų) į „SharePoint“"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "Šiame puslapyje yra {0} kvietimai (-ų) ieškoti"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "„StartRow“ ieškos užklausų skaičius viršija {0} apribojimą"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "Pasirinktinės puslapio dalys daro poveikį puslapio įkėlimo laikui."
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "Neįgalintas struktūrinio naršymo kaupimas talpykloje"
+   },
+   "FeedbackCategoryName": {
+      "message": "Pateikti atsiliepimą"
+   },
+   "FeedbackInstruction": {
+      "message": "Turite pasiūlymų ar klausimų? Paskelbkite juos "
+   },
+   "HelpLinksCategoryName": {
+      "message": "Papildomi ištekliai"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "Negalima vykdyti diagnostikos tokiuose sistemos puslapiuose, kaip „SharePoint“ pradinis puslapis. „SharePoint“ svetainės puslapiams naudokite tik šį įrankį."
+   },
+   "HowToUseInstruction": {
+      "message": "Sužinokite daugiau apie šį įrankį ir kaip jis veikia"
+   },
+   "HowToUseLinkName": {
+      "message": "„SharePoint Online“ puslapių diagnostikos įrankis"
+   },
+   "Init": {
+      "message": "PRAD"
+   },
+   "LazyLoadingTime": {
+      "message": "Atidėtas įkėlimas"
+   },
+   "LearnMore": {
+      "message": "Sužinokite daugiau"
+   },
+   "MadeBy": {
+      "message": "Sukūrė"
+   },
+   "Microsoft": {
+      "message": "„Microsoft“"
+   },
+   "MicrosoftSupport": {
+      "message": "„Microsoft“ palaikymas."
+   },
+   "ModernPageType": {
+      "message": "modernus"
+   },
+   "ModuleLoad": {
+      "message": "Modulio įkėlimas"
+   },
+   "NameAndId": {
+      "message": "Pavadinimas ir ID"
+   },
+   "NetworkTrace": {
+      "message": "Tinklo sekimas"
+   },
+   "NoActionRequired": {
+      "message": "Nereikia imtis jokių veiksmų"
+   },
+   "NotSupportedPage": {
+      "message": "Negalima vykdyti diagnostikos šiame puslapyje. „SharePoint“ svetainės puslapiams naudokite tik šį įrankį."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "Negalima paleisti diagnostikos, kol puslapis veikia redagavimo režimu. Jūsų puslapyje pasirinkite Įrašyti kaip juodraštį arba atmeskite keitimus ir bandykite dar kartą."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "Bandote naudoti puslapio diagnostikos įrankį su vietine SharePoint versija. Šį įrankį galima naudoti tik su \"SharePoint Online."
+   },
+   "PageLoadTimeLabel": {
+      "message": "Puslapio įkėlimo laikas"
+   },
+   "PageTypeDataReady": {
+      "message": "Puslapio tipo patikra baigta"
+   },
+   "PageUrlLabel": {
+      "message": "Puslapio URL"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "Šiame puslapyje naudojami turinio pristatymo tinklai (CDN)"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "Nėra plėtinių, kurių įkėlimas trunka ilgiau nei {0} ms"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "Naudojama mažiau nei 5 plėtiniai"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "„iFrames“ naudojančių puslapio dalių nerasta"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "Visi puslapyje esantys vaizdai yra mažesni nei po {0} KB"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "Puslapis mažesnis nei 1000 KB"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "Puslapio veikimas išbandytas naudojant vartotojo paskyrą"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Yra mažiau nei {0} sąrašo elementų gavimo užklausų"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "Yra mažiau nei {0}„SharePoint“ užklausos (-ų)"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "Ieškos užklausų yra mažiau nei {0}"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "Ieškos užklausų „StartRow“ yra mažesnis už apribojimą"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "Jokių puslapio dalių vykdymas netrunka ilgiau nei {0} ms"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "Struktūrinio naršymo neaptikta"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "Privatusis CDN neįgalintas"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "Viešasis ir privatusis CDN įgalinti. Naudokite numatytąsias CDN vietas arba paprašykite „SharePoint“ administratoriaus įtraukti pasirinktines vietas."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "Viešasis ir privatusis CDN neįgalinti"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "Viešasis CDN neįgalintas"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "Yra 7 ar daugiau plėtinių."
+   },
+   "RenderTime": {
+      "message": "Atvaizduoti"
+   },
+   "RunningAuditors": {
+      "message": "Tikrinami duomenys..."
+   },
+   "RunningCollectors": {
+      "message": "Renkami duomenys... Tai gali užtrukti kelias minutes."
+   },
+   "RunningPageTypeChecker": {
+      "message": "Tikrinamas puslapio tipas"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "Pradėti"
+   },
+   "Stop": {
+      "message": "Stabdyti"
+   },
+   "ThirdPartyNotice": {
+      "message": "Trečiosios šalies pranešimas"
+   },
+   "TimeoutMessage": {
+      "message": "Baigėsi puslapio diagnostikos įrankio skirtasis laikas. Bandykite dar kartą."
+   },
+   "TitleForCBQAuditor": {
+      "message": "Tikrinti, ar yra CBQ puslapio dalis"
+   },
+   "Total": {
+      "message": "Iš viso"
+   },
+   "TunePerformanceInstruction": {
+      "message": "Raskite daugiau informacijos, kaip pagerinti efektyvumą ir puslapio atsisiuntimo laiką"
+   },
+   "TunePerformanceLinkName": {
+      "message": "„SharePoint Online“ našumo derinimas"
+   },
+   "Url": {
+      "message": "URL"
+   },
+   "UrlDescription": {
+      "message": "Aptiktas {0} URL"
+   },
+   "UrlsDescription": {
+      "message": "Aptikta URL: {0}"
+   },
+   "UserVoice": {
+      "message": "Vartotojo balsas"
+   },
+   "VersionLabel": {
+      "message": "Versija"
+   },
+   "Warning": {
+      "message": "Tobulinimo galimybės"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "Bet kuri „Microsoft“ integruota žiniatinklio puslapio dalis, kurios įkėlimas peržiūros srityje užtrunka ilgiau nei 2000 ms, arba ne peržiūros srityje užtrunka ilgiau nei 4000 ms, daro įtaką puslapio našumui."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "Viena arba daugiau puslapio dalių, naudojančių „iFrames“"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "„Microsoft“ puslapio dalys daro poveikį įkėlimo laikui"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "Yra 5 ar daugiau plėtinių."
+   }
+}

@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "Hakkında"
+   },
+   "AppDescription": {
+      "message": "Site sayfalarınızın performansını analiz edin ve iyileştirme önerileri alın."
+   },
+   "AppName": {
+      "message": "SharePoint için sayfa tanılaması"
+   },
+   "AttentionRequired": {
+      "message": "İlgilenmeniz gerekiyor"
+   },
+   "AuditorsDataReady": {
+      "message": "Veri doğrulama tamamlandı"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "Hem genel hem de özel CDN’nin varsayılan yapılandırmayla etkinleştirilmesi gerekir. Her iki CDN’yi de etkinleştirmek ve varsayılan CDN konumlarını kullanmak için bir SharePoint Yöneticisiyle işbirliği yapın veya SharePoint Yöneticisinden özel konumlar eklemesini isteyin."
+   },
+   "ClassicPageType": {
+      "message": "klasik"
+   },
+   "CollectorsDataReady": {
+      "message": "Veri toplama tamamlandı"
+   },
+   "CorrelationIdLabel": {
+      "message": "Bağıntı Kimliği"
+   },
+   "Custom": {
+      "message": "Özel"
+   },
+   "Description": {
+      "message": "SharePoint Online’da sayfa performansı sorunlarını belirlemeye yarayan bir araç"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "Sorguya Göre İçerik Web Bölümü yerine Aramaya Göre İçerik Web Bölümünü kullanmanızı öneririz."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "CDN’ler statik varlıkları bunları isteyen tarayıcılara yakın konumlarda önbelleğe alarak performansı iyileştirir. Statik sayfa varlıklarını depolamak üzere CDN’leri ayarlamak ve yapılandırmak için bir SharePoint Hizmet Yöneticisi ile işbirliği yapın."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "Bir veya daha fazla uzantının işlenmesi 1000 ms'den uzun sürdü. "
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "İçerik bir dış sayfadan yüklendiğinden iFrames kullanılması sayfa performansını yavaşlatır. iFrames yerine görüntüleri kullanın, ancak iFrames kullanılması gerekiyorsa, sayıyı en aza indirin ve/veya görünüm penceresinin dışında taşıyın."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "Bu sayfadaki görüntüler sayfa performansı en iyi duruma getirilemeyecek kadar büyük. Bu sayfadaki tüm görüntülerin boyutunu her biri {0} KB’tan küçük olacak şekilde azaltın."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "Bu sayfadaki görüntüler en iyi sayfa performansı için çok büyük. Bu sayfadaki tüm görüntülerin boyutunu her biri {0} MB’tan küçük olacak şekilde azaltın."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0} uzantının yüklenmesi {1} ms'den daha uzun sürüyor ve bu durum sayfa performansını etkiliyor."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "Resim, video ve metin gibi sayfa içerikleri sayfa performansını etkiliyor. İçerik Teslim Ağlarını (CDN’ler) kullanan web bölümlerinin sayısını azaltın ve sayfa içeriğini sınırlandırın."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "Yönetici olarak oturum açmışken performansı test ettiğinizde, güvenlik gruplarının neden olduğu trafik artışı sonuçları etkiler."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "Bu sayfa, önbellek başlığı olmayan Liste Öğesi Getirme için önerilen çağrı temel sayısını aşıyor. Liste Öğesi Getirme İstek sayısını her sayfa için {0} istekten daha az olacak şekilde sınırlayın."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "Bu sayfa SharePoint’e giden çağrılar için önerilen temel sayıyı aşıyor. Her {1} sayfası için istek sayısını {0} SharePoint isteğinden daha az bir değerle sınırlandırın."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "Bu sayfa, arama için önerilen çağrıların temel sayısını aşıyor. İstekleri her sayfa için {0} arama isteği sayısından daha az bir değerle sınırlayın."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "Yüksek performanslı arama deneyimi sağlamak için, desteklenen en yüksek StartRow değerini {0} ile sınırlandırdık."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "1 uzantının yüklenmesi {0} ms'den daha uzun sürüyor ve bu durum sayfa performansını etkiliyor."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "Önbelleğe alınmayan yapısal gezinti site performansını yavaşlatır. Yönetilen veya arama temelli gezintiyi kullanarak site gezintisini yeniden tasarlayın."
+   },
+   "DetectPageType": {
+      "message": "Sayfa türü algılanıyor..."
+   },
+   "DiagnosticTests": {
+      "message": "Tanılama testleri"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "Süre {0} ms'den uzun"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "Süre, {0} ms eşik değeri içinde"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "Destek günlüğünü etkinleştir (performansı etkileyebilir; Microsoft desteğiyle sorun gidermek için kullanın)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "Destek günlüğü etkinleştirildi"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "HTTP Arşivine (HAR) aktarmayı etkinleştir"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "Görünüm penceresinde yüklenmesi 2000 ms'den uzun veya görünüm penceresinin dışında yüklenmesi 4000 ms'den uzun süren herhangi bir özel web bölümü, sayfa performansını etkiler."
+   },
+   "ErrorMessage": {
+      "message": "Sayfa tanılama çalıştırılırken bir hata oluştu. Daha sonra yeniden deneyin. Hata oluşmaya devam ederse şuraya başvurun:"
+   },
+   "ExportToHar": {
+      "message": "HAR’ye aktar"
+   },
+   "ExportToHarHover": {
+      "message": "HTTP Arşivine (HAR) aktar"
+   },
+   "ExportToJson": {
+      "message": "JSON'a aktar"
+   },
+   "ExportToJsonHover": {
+      "message": "JavaScript nesne gösterimine (JSON) aktar"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "Bazı varlıklar, CDN kullanmıyor"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "Uzantılar yükleme süresini etkiliyor olabilir"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "Çok fazla uzantı kullanıldı"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "Üç veya daha fazla web bölümü, iFrame kullanıyor"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "Bu sayfa {0} büyük boyutlu görüntü içeriyor"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "Bu sayfa 1 büyük boyutlu görüntü içeriyor"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "Sayfa boyutu {0} KB"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "Sayfa performansını bir kullanıcı hesabıyla test edin"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Bu sayfada liste {0} çağrılar var"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "Bu sayfada {0} SharePoint çağrısı var"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "Bu sayfada aranacak {0} çağrı var"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "Arama isteklerinin StartRow değeri {0} sınırını aşıyor."
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "Özel web bölümleri sayfa yükleme süresini etkiliyor"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "Yapısal gezinti önbelleğe alma özelliği etkin değil"
+   },
+   "FeedbackCategoryName": {
+      "message": "Geri bildirim gönder"
+   },
+   "FeedbackInstruction": {
+      "message": "Öneride bulunmak veya soru sormak mı istiyorsunuz? Şuraya gönderebilirsiniz: "
+   },
+   "HelpLinksCategoryName": {
+      "message": "Ek kaynaklar"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "SharePoint başlangıç sayfası gibi sistem sayfalarında tanılama çalıştırılamaz. Bu aracı yalnızca SharePoint site sayfaları için kullanın."
+   },
+   "HowToUseInstruction": {
+      "message": "Bu araç hakkında bilgi edinin ve şurada nasıl çalıştığını öğrenin:"
+   },
+   "HowToUseLinkName": {
+      "message": "SharePoint Online için Sayfa Tanılama aracı"
+   },
+   "Init": {
+      "message": "Başlat"
+   },
+   "LazyLoadingTime": {
+      "message": "Geç Yükleme"
+   },
+   "LearnMore": {
+      "message": "Daha fazla bilgi edinin"
+   },
+   "MadeBy": {
+      "message": "MadeBy"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "Microsoft desteği."
+   },
+   "ModernPageType": {
+      "message": "modern"
+   },
+   "ModuleLoad": {
+      "message": "Modül Yükü"
+   },
+   "NameAndId": {
+      "message": "Ad ve Kimlik"
+   },
+   "NetworkTrace": {
+      "message": "Ağ izleme"
+   },
+   "NoActionRequired": {
+      "message": "Eylem gerekmiyor"
+   },
+   "NotSupportedPage": {
+      "message": "Bu sayfada sayfa Tanılama çalıştırılamıyor. Bu aracı yalnızca SharePoint site sayfaları için kullanın."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "Sayfa düzenleme modundayken tanılama çalıştırılamaz. Sayfanızda taslak olarak kaydet 'i seçin veya değişiklikleri atıp yeniden deneyin."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "Sayfa Tanılama aracını, SharePoint 'in şirket içi bir sürümüyle kullanmaya çalışıyorsunuz. Bu araç yalnızca SharePoint Online ile birlikte kullanılır."
+   },
+   "PageLoadTimeLabel": {
+      "message": "Sayfa yükleme süresi"
+   },
+   "PageTypeDataReady": {
+      "message": "Sayfa türü denetimi tamamlandı"
+   },
+   "PageUrlLabel": {
+      "message": "Sayfa URL'si"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "Bu sayfa İçerik Teslim Ağlarını (CDN’ler) kullanıyor"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "Hiçbir uzantının yüklenmesi {0} ms’den fazla sürmüyor"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "Kullanılan 5'ten az uzantı var"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "iFrames kullanan hiçbir web bölümü yok"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "Sayfadaki tüm görüntülerin her biri {0} KB’tan küçük"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "Sayfa boyutu 1000 KB’tan küçük"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "Sayfa performansı bir kullanıcı hesabıyla test edildi"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Liste Öğesi Getirme {0} az istek var"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "{0} sayısından daha az SharePoint isteği var"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "Arama isteği {0} sayısından az"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "Arama isteklerinin StartRow değeri sınırın altında."
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "Hiçbir web bölümünün çalışması {0} ms’den fazla sürmüyor"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "Yapısal gezinti algılanmadı"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "Özel CDN etkinleştirilmedi"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "Genel ve özel CDN etkin. Lütfen varsayılan CDN konumlarını kullanın veya SharePoint Yöneticinizden özel konumlar eklemesini isteyin."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "Genel ve Özel CDN etkinleştirilmedi"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "Genel CDN etkin değil"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "7 veya daha fazla uzantı var."
+   },
+   "RenderTime": {
+      "message": "İşle"
+   },
+   "RunningAuditors": {
+      "message": "Veriler doğrulanıyor..."
+   },
+   "RunningCollectors": {
+      "message": "Veriler toplanıyor... Bu işlem birkaç dakika sürebilir"
+   },
+   "RunningPageTypeChecker": {
+      "message": "Sayfa türü denetleniyor"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "Başlangıç"
+   },
+   "Stop": {
+      "message": "Durdur"
+   },
+   "ThirdPartyNotice": {
+      "message": "Üçüncü Taraf Bildirimi"
+   },
+   "TimeoutMessage": {
+      "message": "Sayfa tanılama aracı zaman aşımına uğradı. Lütfen yeniden deneyin."
+   },
+   "TitleForCBQAuditor": {
+      "message": "CBQ Web Bölümünü Denetle"
+   },
+   "Total": {
+      "message": "Toplam"
+   },
+   "TunePerformanceInstruction": {
+      "message": "Performansı ve sayfa indirme sürelerini iyileştirme hakkında daha fazla bilgi edinin:"
+   },
+   "TunePerformanceLinkName": {
+      "message": "SharePoint Online performansını ayarlayın"
+   },
+   "Url": {
+      "message": "Url"
+   },
+   "UrlDescription": {
+      "message": "{0} URL bulundu"
+   },
+   "UrlsDescription": {
+      "message": "{0} URL bulundu"
+   },
+   "UserVoice": {
+      "message": "User Voice"
+   },
+   "VersionLabel": {
+      "message": "Sürüm"
+   },
+   "Warning": {
+      "message": "Geliştirme fırsatları"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "Görünüm penceresinde yüklenmesi 2000 ms'den daha uzun süren veya görünüm penceresinin dışında yüklenmesi 4000 ms'den daha uzun süren herhangi bir yerleşik Microsoft web bölümü, sayfa performansını etkiler."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "Bir veya daha fazla web bölümü, iFrame kullanıyor"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Microsoft web bölümleri yükleme süresini etkiliyor"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "5 veya daha fazla uzantı var."
+   }
+}

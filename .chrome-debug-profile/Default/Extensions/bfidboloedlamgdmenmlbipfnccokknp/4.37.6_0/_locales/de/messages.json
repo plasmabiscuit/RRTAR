@@ -1,0 +1,760 @@
+{
+   "PopUpFeedBackStore": {
+      "description": "",
+      "message": "Machen Sie uns glücklich!"
+   },
+   "PopUpfeedBackHeading": {
+      "description": "",
+      "message": "Wie bewerten Sie PureVPN?"
+   },
+   "PopUpfeedBackHeading2": {
+      "description": "",
+      "message": "Unsere Entwickler würden sich sehr über eine gute Bewertung im Chrome Store freuen!"
+   },
+   "PopUpfeedBackHeading3": {
+      "description": "",
+      "message": "Vielen Dank für Ihr Feedback!"
+   },
+   "PopUpfeedBackSubmit": {
+      "description": "",
+      "message": "Senden"
+   },
+   "ProxySignupWindowCloseError": {
+      "description": "",
+      "message": "Authentifizierung fehlgeschlagen"
+   },
+   "ProxyTxtMigration": {
+      "description": "",
+      "message": "Bevor Sie sich mit Ihrer E-Mail-Adresse bei PureVPN Proxy Extension einloggen, müssen Sie einige Schritte ausführen."
+   },
+   "ProxyUpdateAccountTxtCTA1": {
+      "description": "",
+      "message": "Go Premium Now"
+   },
+   "ProxyUpdateAccountTxtCTA2": {
+      "description": "",
+      "message": "Holen Sie sich Premium-Plan"
+   },
+   "ProxyUpdateAccountTxtCTA3": {
+      "description": "",
+      "message": "Jetzt kaufen"
+   },
+   "ProxyUpdateAccountTxtParagraph1": {
+      "description": "",
+      "message": "Greifen Sie mit PureVPN von überall auf US Netflix zu!"
+   },
+   "ProxyUpdateAccountTxtParagraph2": {
+      "description": "",
+      "message": "Streamen und genießen Sie US Netflix sofort von überall!"
+   },
+   "ProxyUpdateAccountTxtParagraph3": {
+      "description": "",
+      "message": "Greifen Sie mit PureVPN auf US Netflix, Hulu, Amazon und viele andere Kanäle zu!"
+   },
+   "accountDetailsBillingCycleTitle": {
+      "description": "",
+      "message": "Rechnungskreislauf"
+   },
+   "accountDetailsBtnSwitchUserTxt": {
+      "description": "",
+      "message": "BENUTZER WECHSELN"
+   },
+   "accountDetailsEmailTitle": {
+      "description": "",
+      "message": "Email"
+   },
+   "accountDetailsExpireOnTitle": {
+      "description": "",
+      "message": "Läuft ab am"
+   },
+   "accountDetailsPlanTypeTitle": {
+      "description": "",
+      "message": "Plantyp"
+   },
+   "accountDetailsSubscriptionStatusTitle": {
+      "description": "",
+      "message": "Abonnementstatus"
+   },
+   "accountDetailsSubscriptionTypeTitle": {
+      "description": "",
+      "message": "Kontotyp"
+   },
+   "accountDetailsVpnUsernameTitle": {
+      "description": "",
+      "message": "VPN-Benutzername"
+   },
+   "accountTxtSelectAccount": {
+      "description": "",
+      "message": "Konto auswählen"
+   },
+   "adblockMenuSettings": {
+      "description": "",
+      "message": "Einstellungen"
+   },
+   "addonText": {
+      "description": "",
+      "message": "Add-on erhalten"
+   },
+   "alreadyAccntTxt": {
+      "description": "",
+      "message": "Haben Sie bereits ein Konto"
+   },
+   "alreadyPureVpnAccntTxt": {
+      "description": "",
+      "message": "Bereits ein PureVPN-Konto besitzen!"
+   },
+   "appVersion": {
+      "description": "",
+      "message": "Version"
+   },
+   "autoLoginFailedMsg": {
+      "description": "",
+      "message": "Bitte überprüfen Sie Ihre E-Mail-Posteingang für Login-Daten"
+   },
+   "bypassProxyHeaderTxt": {
+      "description": "",
+      "message": "Deaktivieren Sie den Proxy in der Bypass-Liste"
+   },
+   "channelsTxtCountries": {
+      "description": "",
+      "message": "BELIEBTE WEBSITES"
+   },
+   "channelsTxtFavourites": {
+      "description": "",
+      "message": "Favoriten"
+   },
+   "channelsTxtFavouritesHelpText": {
+      "description": "",
+      "message": "Ihre Lieblingswebsites werden hier angezeigt"
+   },
+   "channelsTxtInfo": {
+      "description": "",
+      "message": "Klicken Sie auf den Stern, um einen Kanal zu den Favoriten hinzuzufügen."
+   },
+   "channelsTxtSearch": {
+      "description": "",
+      "message": "Suchen Sie eine Website"
+   },
+   "channelsTxtSelectStream": {
+      "description": "",
+      "message": "Wählen Sie Website"
+   },
+   "characterZero": {
+      "description": "",
+      "message": "0"
+   },
+   "citiesTxtFavouritesHelpText": {
+      "description": "",
+      "message": "Ihre Lieblingsstädte werden hier angezeigt"
+   },
+   "connectWithDedIpCta": {
+      "description": "",
+      "message": "Dedizierten Server erhalten"
+   },
+   "connectWithDedIpHeading": {
+      "description": "",
+      "message": "DEDIZIERTER SERVER"
+   },
+   "connectWithDedIpText": {
+      "description": "",
+      "message": "Um eine statische IP zu aktivieren, müssen Sie das dedizierte Server-Add-On kaufen."
+   },
+   "connectWithDedServer": {
+      "description": "",
+      "message": "Dedizierter Server"
+   },
+   "connectWithTeamServer": {
+      "description": "",
+      "message": "Team-Server"
+   },
+   "countriesTxtChangeCountry": {
+      "description": "",
+      "message": "Land auswählen"
+   },
+   "countriesTxtCountries": {
+      "description": "",
+      "message": "Länder"
+   },
+   "countriesTxtFavourites": {
+      "description": "",
+      "message": "Favoriten"
+   },
+   "countriesTxtFavouritesHelpText": {
+      "description": "",
+      "message": "Ihre bevorzugten Länder werden hier angezeigt"
+   },
+   "countriesTxtInfo": {
+      "description": "",
+      "message": "Klicken Sie auf den Stern, um ein Land in die Favoriten aufzunehmen."
+   },
+   "countriesTxtMarkFavourites": {
+      "description": "",
+      "message": "Als Favorit markieren"
+   },
+   "countriesTxtSearch": {
+      "description": "",
+      "message": "Land suchen"
+   },
+   "countriesTxtSelectCountry": {
+      "description": "",
+      "message": "Land auswählen"
+   },
+   "countriesTxtUnmarkFavourites": {
+      "description": "",
+      "message": "Vom Favoriten abheben"
+   },
+   "darkWebText": {
+      "description": "",
+      "message": "Dark Web Überwachung"
+   },
+   "doProblemPara": {
+      "description": "",
+      "message": "Was scheint das Problem zu sein?"
+   },
+   "doProblemText": {
+      "description": "",
+      "message": "Bitte lassen Sie uns wissen, wir würden gerne Ihr Feedback hören"
+   },
+   "doThankYouMessage": {
+      "description": "",
+      "message": "Vielen Dank für Ihre Rückmeldung!"
+   },
+   "errorRateLimited": {
+      "description": "",
+      "message": "Sie werden als eingeschränkt eingestuft.\u003Cbr/>Bitte versuchen Sie es nach 15 Minuten erneut"
+   },
+   "expiredAccountAlert": {
+      "description": "",
+      "message": "Sehr geehrter Benutzer, Ihr Konto ist abgelaufen! \u003Ca target='_blank' href='https://www.purevpn.com/order'>Jetzt erneuern\u003C/a>"
+   },
+   "extAuthorName": {
+      "description": "extension author name.",
+      "message": "GZ systems Ltd."
+   },
+   "extDescription": {
+      "message": "Eine VPN-Erweiterung, mit der Sie Ihre Informationen verbergen, auf eingeschränkte Inhalte zugreifen und mit hoher Geschwindigkeit im Internet surfen können."
+   },
+   "extName": {
+      "description": "extension name.",
+      "message": "PureVPN Proxy – Bestes VPN für Chrome"
+   },
+   "extNotification": {
+      "description": "extension short name.",
+      "message": "Achtung"
+   },
+   "extShortName": {
+      "description": "extension short name.",
+      "message": "PureVPN"
+   },
+   "extTagLine": {
+      "description": "extension tagline.",
+      "message": "Eine VPN-Erweiterung, mit der Sie Ihre Informationen verbergen, auf eingeschränkte Inhalte zugreifen und mit hoher Geschwindigkeit im Internet surfen können."
+   },
+   "extTitleConnected": {
+      "description": "",
+      "message": "PureVPN | Sie sind mit $1 verbunden."
+   },
+   "extTitleConnectedChannel": {
+      "description": "",
+      "message": "PureVPN | Sie greifen auf $1 zu"
+   },
+   "extTxtNoConnection": {
+      "description": "",
+      "message": "Keine Internetverbindung"
+   },
+   "extTxtServiceUnavailable": {
+      "message": "Der Browser konnte Ihre Anfrage nicht lösen. \u003Cbr/>Fehlercode: \u003Ca target='_blank' href='https://support.purevpn.com/chrome-error-err_spdy_protocol_error'>'ERR_SPDY_PROTOCOL_ERROR'\u003C/a>"
+   },
+   "fastSecureHeading": {
+      "description": "",
+      "message": "Benötigen Sie eine schnellere und sicherere Verbindung?"
+   },
+   "fastSecurePara": {
+      "description": "",
+      "message": "Verbessern Sie die Zusammenarbeit mit einem dedizierten Server für nahtlose Konnektivität"
+   },
+   "feedBackPageTitle": {
+      "description": "",
+      "message": "PureVPN | Feedback-Formular Chrome-Erweiterung"
+   },
+   "feedbackDescriptionPlaceholder": {
+      "description": "",
+      "message": "Sprechen Sie Ihr Herz hier"
+   },
+   "feedbackMinLengthDescription": {
+      "description": "",
+      "message": "Bewertung Länge von mindestens 10 Zeichen"
+   },
+   "feedbackMinLengthTitle": {
+      "description": "",
+      "message": "Titel Länge 10 Zeichen Mindest"
+   },
+   "feedbackTitlePlaceholder": {
+      "description": "",
+      "message": "Geben Sie Ihrer Bewertung einen Titel"
+   },
+   "generalText": {
+      "description": "",
+      "message": "Allgemein"
+   },
+   "hostNameTextBoxHeading": {
+      "description": "",
+      "message": "Geben Sie den Hostnamen oder die IP-Adresse ein, um den Proxy zu umgehen"
+   },
+   "hostWhitelistChangeNoteTxt": {
+      "description": "",
+      "message": "Die Einstellungen werden bei der nächsten Verbindung übernommen."
+   },
+   "hostWhitelistExampleTxt1": {
+      "description": "",
+      "message": "www.purevpn.com"
+   },
+   "hostWhitelistExampleTxt2": {
+      "description": "",
+      "message": "192.168.0.1"
+   },
+   "hostWhitelistNoteTxt": {
+      "description": "",
+      "message": "Beispiel:"
+   },
+   "invalidloginTxtErrorMsg": {
+      "description": "",
+      "message": "Invalid login credentials"
+   },
+   "locationSpoofToggleTxt": {
+      "description": "",
+      "message": "Parodie GPS-Standort"
+   },
+   "locationsText": {
+      "description": "",
+      "message": "Standorte"
+   },
+   "loginTxtConfirmPassword": {
+      "description": "",
+      "message": "Passwort bestätigen"
+   },
+   "loginTxtConnecting": {
+      "description": "",
+      "message": "Einloggen ..."
+   },
+   "loginTxtErrorMsg": {
+      "description": "",
+      "message": "Benutzername oder Passwort fehlt."
+   },
+   "loginTxtFreeAccount": {
+      "description": "",
+      "message": "Bitte abonnieren Sie ein Premium PureVPN-Konto, um die Erweiterung zu nutzen."
+   },
+   "loginTxtFreeAccountCancel": {
+      "description": "",
+      "message": "Nein Danke"
+   },
+   "loginTxtFreeAccountProceed": {
+      "description": "",
+      "message": "Jetzt abonnieren"
+   },
+   "loginTxtHidePassword": {
+      "description": "",
+      "message": "Passwort ausblenden"
+   },
+   "loginTxtLogin": {
+      "description": "",
+      "message": "Login"
+   },
+   "loginTxtLoginDetails": {
+      "description": "",
+      "message": "Benutzername oder Passwort vergessen?"
+   },
+   "loginTxtLoginHere": {
+      "description": "",
+      "message": "Hier einloggen"
+   },
+   "loginTxtNotRegistered": {
+      "description": "",
+      "message": "Haben Sie kein Konto?"
+   },
+   "loginTxtNotRegisteredGetVpn": {
+      "description": "",
+      "message": "PureVPN erhalten"
+   },
+   "loginTxtPassword": {
+      "description": "",
+      "message": "Passwort"
+   },
+   "loginTxtShowPassword": {
+      "description": "",
+      "message": "Passwort anzeigen"
+   },
+   "loginTxtSuccessMsg": {
+      "description": "",
+      "message": "Erfolgreich eingeloggt"
+   },
+   "loginTxtUserName": {
+      "description": "",
+      "message": "Geben Sie Ihre E-Mail/Ihren Benutzernamen ein"
+   },
+   "mainLoginBtnTxt": {
+      "description": "",
+      "message": "Login"
+   },
+   "mainOrTxt": {
+      "description": "",
+      "message": "Oder"
+   },
+   "mainSignupBtnLink": {
+      "description": "",
+      "message": "https://www.purevpn.com/trial-vpn/chrome"
+   },
+   "mainSignupBtnTxt": {
+      "description": "",
+      "message": "Holen Sie sich 7 Tage kostenlose Testversion"
+   },
+   "newText": {
+      "description": "",
+      "message": "NEU"
+   },
+   "noSubscriptionTxtErrorMsg": {
+      "description": "",
+      "message": "Um PureVPN verwenden zu können, müssen Sie ein Abonnement kaufen."
+   },
+   "notAvailableButton": {
+      "description": "",
+      "message": "Jetzt deaktivieren"
+   },
+   "notAvailableHeading": {
+      "description": "",
+      "message": "Bitte deaktivieren Sie den unten aufgeführten Proxy-Service, um die PureVPN-Erweiterung zu verwenden."
+   },
+   "notAvailablePara": {
+      "description": "",
+      "message": "Bitte deaktivieren Sie den Proxy, um die\u003Cbr/>PureVPN-Erweiterung zu verwenden"
+   },
+   "optimizedForStreaming": {
+      "description": "",
+      "message": "Beliebte Websites"
+   },
+   "passwordManagerText": {
+      "description": "",
+      "message": "Passwort-Manager"
+   },
+   "proxyFastestLocationAfterCnctn": {
+      "description": "",
+      "message": "Verbunden mit dem schnellsten Standort"
+   },
+   "proxySecureBrowsingAfterCnctn": {
+      "description": "",
+      "message": "Browserverkehr gesichert"
+   },
+   "proxyTxtChangeCountry": {
+      "description": "",
+      "message": "Land ändern"
+   },
+   "proxyTxtConnect": {
+      "description": "",
+      "message": "Verbinden"
+   },
+   "proxyTxtConnecting": {
+      "description": "",
+      "message": "Verbindung wird hergestellt..."
+   },
+   "proxyTxtDisconnect": {
+      "description": "",
+      "message": "Ausschalten"
+   },
+   "proxyTxtHiddenIpAfterCnctn": {
+      "description": "",
+      "message": "IP erfolgreich versteckt"
+   },
+   "proxyTxtLoader": {
+      "description": "",
+      "message": "Bitte warten Sie, Konfiguration der PureVPN-Erweiterung in Bearbeitung"
+   },
+   "proxyTxtOnlineSecurity": {
+      "description": "",
+      "message": "Online-Sicherheit"
+   },
+   "proxyTxtRestrictedWebsitesAfterCnctn": {
+      "description": "",
+      "message": "Das Web ist jetzt zugänglich"
+   },
+   "proxyTxtStreaming": {
+      "description": "",
+      "message": "Streaming"
+   },
+   "proxyTxtUnAuthorized": {
+      "description": "",
+      "message": "Bitte \u003Ca href='#' class='upgradeBtn' data-cta='other'> Sie Ihr Konto, um die Erweiterung zu nutzen."
+   },
+   "redirectText": {
+      "description": "",
+      "message": "Bitte warten Sie, Es leitet um..."
+   },
+   "referFrndAvl": {
+      "description": "",
+      "message": "Verfügbar"
+   },
+   "referFrndBtnCopiedTxt": {
+      "description": "",
+      "message": "In die Zwischenablage kopiert"
+   },
+   "referFrndEmptyTokenTxt": {
+      "description": "",
+      "message": "Die Funktionalität ist vorübergehend nicht verfügbar. Bitte versuchen Sie es später noch einmal."
+   },
+   "referFrndErrorTxt": {
+      "description": "",
+      "message": "Error"
+   },
+   "referFrndExpiredUsersTxt": {
+      "description": "",
+      "message": "Nur bezahlte Benutzer mit aktiven Abonnements dürfen kostenlose Kontoeinladungen freigeben."
+   },
+   "referFrndHeading": {
+      "description": "",
+      "message": "Einladen. Verdiene. Genießen"
+   },
+   "referFrndInviteNowTxt": {
+      "description": "",
+      "message": "LINK KOPIEREN"
+   },
+   "referFrndSent": {
+      "description": "",
+      "message": "Geschickt"
+   },
+   "referFrndTxt": {
+      "description": "",
+      "message": "Laden Sie Ihre Freunde zu PureVPN ein und verdienen Sie jede Einladung kostenlos."
+   },
+   "removeMyDataText": {
+      "description": "",
+      "message": "Meine Daten entfernen"
+   },
+   "requestPlaceholder": {
+      "description": "",
+      "message": "Kommentar eingeben"
+   },
+   "requestPopupText": {
+      "description": "",
+      "message": "Stellen Sie eine Standortanfrage."
+   },
+   "requestPopupTextChannel": {
+      "description": "",
+      "message": "Stellen Sie eine Website-Anfrage."
+   },
+   "resendLoaderText": {
+      "description": "",
+      "message": "Wir senden den Aktivierungscode erneut. Bitte warten Sie."
+   },
+   "searchEmptyBtn": {
+      "description": "",
+      "message": "Fordern Sie einen Standort an"
+   },
+   "searchEmptyBtnChannel": {
+      "description": "",
+      "message": "Fordern Sie eine Website an"
+   },
+   "searchEmptyTxt": {
+      "description": "",
+      "message": "Versuchen Sie, Ihre Suche anzupassen, oder erkunden Sie andere Optionen. Wir helfen Ihnen gerne, das zu finden, was Sie brauchen."
+   },
+   "searchEmptyTxtChannel": {
+      "description": "",
+      "message": "Die gesuchte Website ist nicht Teil unseres VPN-Netzwerks. Aber Sie können uns davon erzählen, und wir werden versuchen, es hinzuzufügen."
+   },
+   "searchEmptyTxtHeading": {
+      "description": "",
+      "message": "Keine Ergebnisse gefunden"
+   },
+   "securityToolsText": {
+      "description": "",
+      "message": "Sicherheitswerkzeuge"
+   },
+   "selectCityTitle": {
+      "description": "",
+      "message": "Stadt wählen"
+   },
+   "selectServerHeaderText": {
+      "description": "",
+      "message": "Server auswählen"
+   },
+   "settingsTxtAboutUs": {
+      "description": "",
+      "message": "Über PureVPN"
+   },
+   "settingsTxtAccountInfo": {
+      "description": "",
+      "message": "Kontodetails"
+   },
+   "settingsTxtAccountType": {
+      "description": "",
+      "message": "Konto:"
+   },
+   "settingsTxtAdBlockerSettings": {
+      "description": "",
+      "message": "Allgemeine Einstellungen"
+   },
+   "settingsTxtButtonBuyNow": {
+      "description": "",
+      "message": "JETZT KAUFEN"
+   },
+   "settingsTxtCheckingSubscription": {
+      "description": "",
+      "message": "Wir prüfen Ihr Abonnement"
+   },
+   "settingsTxtClientArea": {
+      "description": "",
+      "message": "Helfen Sie uns zu verbessern"
+   },
+   "settingsTxtFAQs": {
+      "description": "",
+      "message": "FAQs"
+   },
+   "settingsTxtFeedback": {
+      "description": "",
+      "message": "Feedback"
+   },
+   "settingsTxtLogout": {
+      "description": "",
+      "message": "Ausloggen"
+   },
+   "settingsTxtLogoutCancel": {
+      "description": "",
+      "message": "Nein Danke"
+   },
+   "settingsTxtLogoutConfirmation": {
+      "description": "",
+      "message": "Möchten Sie sich abmelden?"
+   },
+   "settingsTxtLogoutProceed": {
+      "description": "",
+      "message": "Ja"
+   },
+   "settingsTxtPasswordLabel": {
+      "description": "",
+      "message": "Passwort:"
+   },
+   "settingsTxtPleaseWait": {
+      "description": "",
+      "message": "Bitte warten"
+   },
+   "settingsTxtPrivacyPolicy": {
+      "description": "",
+      "message": "Datenschutz-Bestimmungen"
+   },
+   "settingsTxtProxyAutoConnect": {
+      "description": "",
+      "message": "Autostart-Proxy beim Start des Browsers"
+   },
+   "settingsTxtRate": {
+      "description": "",
+      "message": "Bewerten Sie uns"
+   },
+   "settingsTxtReferFrnd": {
+      "description": "",
+      "message": "Einen Freund empfehlen"
+   },
+   "settingsTxtSettings": {
+      "description": "",
+      "message": "Einstellungen"
+   },
+   "settingsTxtSubscription": {
+      "description": "",
+      "message": "Status Ihres Abonnements"
+   },
+   "settingsTxtUsernameLabel": {
+      "description": "",
+      "message": "Benutzername:"
+   },
+   "settingsTxtWebRtc": {
+      "description": "",
+      "message": "WebRTC-Auslaufschutz"
+   },
+   "settingsTxtWhitelisting": {
+      "description": "",
+      "message": "Proxy umgehen"
+   },
+   "signUpEmaiBtnTxt": {
+      "description": "",
+      "message": "Mit E-mail anmelden"
+   },
+   "signUpEmaiBtnTxtFree": {
+      "description": "",
+      "message": "Erhalten Sie 7 Tage kostenlose Testversion"
+   },
+   "signUpFieldError": {
+      "description": "",
+      "message": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+   },
+   "signUpTxtEmail": {
+      "description": "",
+      "message": "Geben Sie Ihre E-Mail-Adresse ein"
+   },
+   "signUpTxtHelp": {
+      "description": "",
+      "message": "Sie erhalten Ihre PureVPN-Anmeldedaten unter dieser E-Mail-Adresse."
+   },
+   "signupLoaderText": {
+      "description": "",
+      "message": "Bitte warten.\u003Cbr/>Anmelden ..."
+   },
+   "skipBtn": {
+      "description": "",
+      "message": "ÜBERSPRINGEN"
+   },
+   "socialLoginTxt": {
+      "description": "",
+      "message": "Einloggen mit"
+   },
+   "spoofGPSHintText": {
+      "description": "",
+      "message": "Verhindern Sie, dass die HTML5-Geolokalisierung Ihren Standort verliert, während Sie mit dem Proxy verbunden sind"
+   },
+   "submitBtn": {
+      "description": "",
+      "message": "EINREICHEN"
+   },
+   "talkToSupportText": {
+      "description": "",
+      "message": "Would you like to talk to our support?"
+   },
+   "termsConditionPrivacyError": {
+      "description": "",
+      "message": "Bitte geben Sie an, dass Sie unsere\u003Cbr/>Nutzungsbedingungen und Service- und Datenschutzrichtlinien gelesen und diesen zugestimmt haben."
+   },
+   "termsandConditionConsent": {
+      "description": "",
+      "message": "Ich bin damit einverstanden, dass ich die \u003Ca target=\"_blank\" class=\"terms_condition_links\" href=\"https://www.purevpn.com/term.php\">Allgemeinen Geschäftsbedingungen\u003C/a> und die \u003Ca target=\"_blank\" class=\"terms_condition_links\" href=\"https://www.purevpn.com/privacy-policy.php\">Datenschutzbestimmungen gelesen und verstanden habe\u003C/a>."
+   },
+   "txtCopyRights": {
+      "description": "copy right text",
+      "message": "2011-2017 PureVPN Ltd."
+   },
+   "txtErrorMsg": {
+      "description": "Footer line 1",
+      "message": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
+   },
+   "txtFooterLine1": {
+      "description": "Footer line 1",
+      "message": "Erhalten Sie PureVPN für"
+   },
+   "txtSuccessMsg": {
+      "description": "",
+      "message": "Gespeichert"
+   },
+   "verificationCodeError": {
+      "description": "",
+      "message": "Das Feld sollte nicht leer sein"
+   },
+   "verificationCodeTxt": {
+      "description": "",
+      "message": "Geben Sie Ihren Bestätigungs-Code ein"
+   },
+   "verificationHelpTxt": {
+      "description": "",
+      "message": "Überprüfen Sie Ihre E-Mail-Posteingang für Bestätigungs-Code.\u003Cbr/>Haben Sie den Code nicht bekommen? \u003Ca href='#' class='resendCode'>Erneut senden\u003C/a>"
+   },
+   "verificationLoaderText": {
+      "description": "",
+      "message": "Der Code wird überprüft."
+   }
+}

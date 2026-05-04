@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "(इसके) बारे में"
+   },
+   "AppDescription": {
+      "message": "अपने साइट पृष्ठों के निष्पादन का विश्लेषण करें और ऑप्टिमाइज़ेशन के लिए अनुशंसाएँ प्राप्त करें."
+   },
+   "AppName": {
+      "message": "SharePoint के लिए पृष्ठ नैदानिकी "
+   },
+   "AttentionRequired": {
+      "message": "ध्यान देने की आवश्यकता है"
+   },
+   "AuditorsDataReady": {
+      "message": "डेटा सत्यापन पूर्ण"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "सार्वजनिक और निजी दोनों CDN डिफ़ॉल्ट कॉन्फ़िगरेशन के साथ सक्षम करने होंगे. दोनों CDN को सक्षम करने के लिए अपने SharePoint व्यवस्थापक के साथ भागीदारी करें और डिफ़ॉल्ट CDN स्थानों का उपयोग करें या कस्टम स्थानों को जोड़ने के लिए अपने SharePoint व्यवस्थापक से कहें."
+   },
+   "ClassicPageType": {
+      "message": "क्लासिक / उत्कृष्ट"
+   },
+   "CollectorsDataReady": {
+      "message": "डेटा संग्रह पूर्ण"
+   },
+   "CorrelationIdLabel": {
+      "message": "CorrelationID"
+   },
+   "Custom": {
+      "message": "कस्टम"
+   },
+   "Description": {
+      "message": "SharePoint Online में पृष्ठ प्रदर्शन की समस्याओं की पहचान करने के लिए एक उपकरण"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "क्वेरी वेबपार्ट द्वारा सामग्री की जगह खोज वेबपार्ट द्वारा सामग्री के उपयोग की हम अनुशंसा करते हैं."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "CDN स्थिर संपत्तियों को अनुरोध करने वाले ब्राउज़र के करीब कैशिंग करके प्रदर्शन में सुधार करता है. स्थिर पेज एसेट को स्टोर करने के लिए CDN को सेट और कॉन्फ़िगर करने के लिए SharePoint व्यवस्थापक के साथ भागीदारी करें."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "एक या अधिक एक्सटेंशंस को रैंडर करने में 1000 ms से अधिक समय लग रहा है."
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "IFrames का उपयोग करने से पेज का प्रदर्शन धीमा हो जाता है क्योंकि सामग्री किसी बाह्य पेज से लोड होती है. iFrames के बजाय छवियों का उपयोग करें, लेकिन यदि iFrames का उपयोग करना ही पड़ता है, तो संख्या को कम से कम करें और/या उन्हें viewport से बाहर ले जाएँ."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "इस पेज पर छवियाँ इष्टतम पृष्ठ प्रदर्शन के लिए बहुत ही बड़ी हैं. इस पेज पर सभी छवियों को {0} kb प्रति छवि से कम करें."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "इस पेज पर छवियाँ इष्टतम पृष्ठ प्रदर्शन के लिए बहुत ही बड़ी हैं. इस पेज पर सभी छवियों को {0} mb प्रति छवि से कम करें."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0} एक्सटेंशन {1} ms को लोड होने में अधिक समय लेते हैं और इससे पृष्ठ प्रदर्शन प्रभावित हो रहा है."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "छवियों, वीडियो और पाठ जैसी पृष्ठ सामग्रियाँ पृष्ठ प्रदर्शन को प्रभावित कर रही हैं. वेब पार्ट्स की संख्या कम करें, सामग्री वितरण नेटवर्क (CDNs) का उपयोग करें, और पृष्ठ सामग्री को सीमित करें."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "जब आप किसी व्यवस्थापक के रूप में लॉग इन करते हुए प्रदर्शन का परीक्षण करते हैं, तो सुरक्षा समूहों द्वारा हुए अधिक ट्रैफ़िक के कारण परिणामों पर प्रभाव बढ़ता है."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "यह पेज आउट कैश शीर्षलेख के साथ सूची आइटम फ़ेच करने के लिए अनुशंसित कॉल्स की आधार रेखा संख्या से अधिक है. हर पेज के लिए अनुरोधों को {0} सूची आइटम फ़ेच अनुरोधों से कम तक सीमित करें."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "यह पेज SharePoint को की गईं अनुशंसित कॉल्स की आधारभूत संख्या से अधिक है. अनुरोधों को {0} SharePoint अनुरोध प्रति {1} पेज से कम तक सीमित करें."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "यह पृष्ठ खोजने के लिए अनुशंसित कॉल्स की आधार रेखा संख्या से अधिक है. प्रत्येक पृष्ठ के लिए अनुरोधों को {0} खोज अनुरोधों से कम तक सीमित करें."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "उच्च प्रदर्शन के साथ खोज के अनुभव देने करने के लिए, हम StartRow के अधिकतम समर्थित मूल्य को {0} तक सीमित कर देते हैं."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "1 एक्सटेंशन {0} ms को लोड होने में अधिक समय लेते हैं और इससे पृष्ठ प्रदर्शन प्रभावित हो रहा है."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "कैश न किया गया संरचनात्मक नेविगेशन साइट के प्रदर्शन को धीमा करता है. प्रबंधित या खोज-चालित नेविगेशन का उपयोग करके अपनी साइट के नेविगेशन को फिर से डिज़ाइन करें."
+   },
+   "DetectPageType": {
+      "message": "पृष्ठ प्रकार का पता लगा रहे हैं..."
+   },
+   "DiagnosticTests": {
+      "message": "नैदानिक परीक्षण"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "अवधि {0}ms से अधिक है"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "अवधि थ्रेशोल्ड {0}ms के भीतर है"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "लॉगिंग सहायता सक्षम करें (प्रदर्शन को प्रभावित कर सकता है; Microsoft सहायता के साथ समस्या निवारण के लिए उपयोग करें)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "समर्थन लॉगिंग सक्षम की गई"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "HTTP संग्रह (HAR) पर निर्यात करना सक्षम करें"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "कोई भी कस्टम वेब पार्ट जो viewport के अंदर लोड करने के लिए 2000 ms से अधिक समय लेता है या viewport के बाहर लोड करने के लिए 4000 ms से अधिक समय लेता है, पृष्ठ प्रदर्शन को प्रभावित करता है."
+   },
+   "ErrorMessage": {
+      "message": "पृष्ठ निदान चलाने में कोई त्रुटि आई. बाद में पुनः प्रयास करें. यदि त्रुटि जारी रहती है, तो संपर्क करें"
+   },
+   "ExportToHar": {
+      "message": "HAR पर निर्यात करें"
+   },
+   "ExportToHarHover": {
+      "message": "HTTP संग्रह (HAR) पर निर्यात करें"
+   },
+   "ExportToJson": {
+      "message": "JSON पर निर्यात करें"
+   },
+   "ExportToJsonHover": {
+      "message": "JavaScript ऑब्जेक्ट नोटेशन (JSON) पर निर्यात करें"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "कुछ संपत्तियाँ CDN का उपयोग नहीं कर रही हैं"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "एक्सटेंशन, लोड समय को प्रभावित कर सकते हैं"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "अत्यधिक एक्सटेंशंस का उपयोग किया गया"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "तीन या अधिक वेब पार्ट्स iFrames का उपयोग कर रहें हैं"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "इस पेज में {0} बड़े चित्र शामिल हैं"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "इस पेज में 1 बड़ा चित्र शामिल है"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "पेज का भार {0} kb है"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "किसी उपयोगकर्ता खाते के साथ पेज प्रदर्शन का परीक्षण करें"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "इस पेज में सूची आइटम फ़ेच करने के लिए {0} कॉल्स हैं"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "इस पेज में SharePoint को की गईं {0} कॉल्स हैं"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "इस पेज में खोज के लिए {0} कॉल्स हैं"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "खोज अनुरोधों की StartRow सीमा {0} से अधिक है"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "कस्टम वेब पार्ट्स पृष्ठ के लोड होने के समय को प्रभावित कर रहे हैं"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "संरचनात्मक नेविगेशन कैशिंग को सक्षम नहीं किया गया है"
+   },
+   "FeedbackCategoryName": {
+      "message": "प्रतिक्रिया दें"
+   },
+   "FeedbackInstruction": {
+      "message": "सुझाव या प्रश्न हैं? उन्हें इस पर पोस्ट करें "
+   },
+   "HelpLinksCategoryName": {
+      "message": "अतिरिक्त संसाधन"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "सिस्टम पृष्ठों जैसे SharePoint प्रारंभ पृष्ठ पर निदान नहीं चला सकता. केवल SharePoint साइट पृष्ठों के लिए इस उपकरण का उपयोग करें."
+   },
+   "HowToUseInstruction": {
+      "message": "इस उपकरण के बारे में और यह इसमें किस तरह काम करता है, इस बारे में अधिक जानें"
+   },
+   "HowToUseLinkName": {
+      "message": "SharePoint Online के लिए पृष्ठ नैदानिकी उपकरण"
+   },
+   "Init": {
+      "message": "Init"
+   },
+   "LazyLoadingTime": {
+      "message": "लेज़ी लोड / निष्क्रिय भार"
+   },
+   "LearnMore": {
+      "message": "अधिक जानें"
+   },
+   "MadeBy": {
+      "message": "द्वारा निर्मित"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "Microsoft सहायता."
+   },
+   "ModernPageType": {
+      "message": "आधुनिक"
+   },
+   "ModuleLoad": {
+      "message": "मॉड्यूल लोड"
+   },
+   "NameAndId": {
+      "message": "नाम और ID"
+   },
+   "NetworkTrace": {
+      "message": "नेटवर्क ट्रेस"
+   },
+   "NoActionRequired": {
+      "message": "कोई कार्रवाई आवश्यक नहीं है"
+   },
+   "NotSupportedPage": {
+      "message": "इस पृष्ठ पर पृष्ठ निदान नहीं चला सकता. केवल SharePoint साइट पृष्ठों के लिए इस उपकरण का उपयोग करें."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "पृष्ठ संपादन मोड में होने के दौरान निदान नहीं चला सकता. अपने पृष्ठ पर, प्रारूप के रूप में सहेजें का चयन करें या परिवर्तनों को छोड़ें और पुन: प्रयास करें."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "आप SharePoint के ऑन-प्रिमाइसेस संस्करण के साथ पृष्ठ निदान उपकरण का उपयोग करने का प्रयास कर रहे हैं. यह उपकरण केवल SharePoint Online के साथ उपयोग के लिए है."
+   },
+   "PageLoadTimeLabel": {
+      "message": "पृष्ठ लोड का समय"
+   },
+   "PageTypeDataReady": {
+      "message": "पृष्ठ प्रकार जाँच पूर्ण"
+   },
+   "PageUrlLabel": {
+      "message": "पृष्ठ URL"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "यह पेज सामग्री वितरण नेटवर्क (CDNs) का उपयोग कर रहा है"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "कोई भी एक्सटेंशन लोड होने में {0} ms से अधिक समय नहीं लेता"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "5 से कम एक्सटेंशन का उपयोग किया गया"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "iFrames का उपयोग करने वाले कोई वेब पार्ट्स नहीं हैं"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "इस पेज पर सभी छवियाँ {0} kb प्रति छवि से छोटी हैं"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "पृष्ठ का भार 1000 kb से छोटा है"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "पेज प्रदर्शन का परीक्षण किसी उपयोगकर्ता खाते के साथ किया गया था"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "सूची आइटम फ़ेच करने के अनुरोध {0} से कम हैं"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "SharePoint अनुरोध {0} से कम हैं"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "खोज अनुरोध {0} से कम हैं"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "खोज अनुरोधों की StartRow सीमा से कम है"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "कोई भी वेब पार्ट, चलने के लिए {0} ms से अधिक समय नहीं ले रहा है"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "किसी संरचनात्मक नेविगेशन का पता नहीं चला"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "निजी CDN सक्षम नहीं किया गया है"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "सार्वजनिक और निजी CDN सक्षम किए गए हैं. कृपया डिफ़ॉल्ट CDN स्थानों का उपयोग करें या कस्टम स्थानों को जोड़ने के लिए अपने SharePoint व्यवस्थापक से कहें."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "सार्वजनिक और निजी CDN सक्षम नहीं किए गए हैं"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "सार्वजनिक CDN सक्षम नहीं है"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "7 या अधिक एक्सटेंशन्स हैं."
+   },
+   "RenderTime": {
+      "message": "रैंडर"
+   },
+   "RunningAuditors": {
+      "message": "डेटा सत्यापित कर रहे हैं..."
+   },
+   "RunningCollectors": {
+      "message": "डेटा एकत्रित कर रहे हैं... इसमें कुछ मिनट लग सकते हैं"
+   },
+   "RunningPageTypeChecker": {
+      "message": "पृष्ठ प्रकार जाँच रहे हैं"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "प्रारंभ करें"
+   },
+   "Stop": {
+      "message": "रोकें"
+   },
+   "ThirdPartyNotice": {
+      "message": "तृतीय पक्ष के लिए सूचना"
+   },
+   "TimeoutMessage": {
+      "message": "पृष्ठ निदान उपकरण का समय समाप्त हो गया है. कृपया पुनः प्रयास करें."
+   },
+   "TitleForCBQAuditor": {
+      "message": "CBQ वेबपार्ट के लिए जाँच करें"
+   },
+   "Total": {
+      "message": "कुल"
+   },
+   "TunePerformanceInstruction": {
+      "message": "निम्न में प्रदर्शन और पेज डाउनलोड होने में लगने वाले समय में सुधार के बारे में अधिक जानकारी खोजें"
+   },
+   "TunePerformanceLinkName": {
+      "message": "SharePoint Online प्रदर्शन ट्यून करें"
+   },
+   "Url": {
+      "message": "url"
+   },
+   "UrlDescription": {
+      "message": "{0} URL मिला"
+   },
+   "UrlsDescription": {
+      "message": "{0} URL मिले"
+   },
+   "UserVoice": {
+      "message": "उपयोगकर्ता वॉइस"
+   },
+   "VersionLabel": {
+      "message": "संस्करण"
+   },
+   "Warning": {
+      "message": "सुधार के अवसर"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "कोई भी बिल्ट-इन Microsoft वेब पार्ट जो viewport के अंदर लोड करने के लिए 2000 ms से अधिक समय लेता है या viewport के बाहर लोड करने के लिए 4000 ms से अधिक समय लेता है, पृष्ठ प्रदर्शन को प्रभावित करता है."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "एक या अधिक वेब पार्ट्स iFrames का उपयोग कर रहें हैं"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Microsoft वेब पार्ट्स लोड होने के समय को प्रभावित कर रहे हैं"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "5 या अधिक एक्सटेंशन्स हैं."
+   }
+}

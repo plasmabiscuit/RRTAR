@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "Par"
+   },
+   "AppDescription": {
+      "message": "Analizējiet savas vietnes lapu veiktspēju un saņemiet ieteikumus optimizēšanai."
+   },
+   "AppName": {
+      "message": "SharePoint lapu diagnostika"
+   },
+   "AttentionRequired": {
+      "message": "Jāpievērš uzmanība"
+   },
+   "AuditorsDataReady": {
+      "message": "Datu validācija pabeigta"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "Ar noklusējuma konfigurāciju jāiespējo gan publiskais, gan privātais CDN. Sazinieties ar SharePoint administratoru, lai iespējotu abus CDN un izmantotu noklusējuma CDN atrašanās vietas, vai lūdziet SharePoint administratoram pievienot pielāgotas atrašanās vietas."
+   },
+   "ClassicPageType": {
+      "message": "klasisks"
+   },
+   "CollectorsDataReady": {
+      "message": "Datu apkopošana pabeigta"
+   },
+   "CorrelationIdLabel": {
+      "message": "Korelācijas ID"
+   },
+   "Custom": {
+      "message": "Pielāgots"
+   },
+   "Description": {
+      "message": "Rīks, lai identificētu lapas veiktspējas problēmas SharePoint Online"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "Iesakām izmantot pakalpojumu Content by Search WebPart, nevis Content by Query WebPart."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "CDN uzlabo veiktspēju, veicot statisko resursu kešdarbi tuvāk pārlūkprogrammām, kas tos pieprasa. Sadarbojaties ar SharePoint administratoru, lai iestatītu un konfigurētu CDN statisko lapu resursu glabāšanai."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "Viens vai vairāki paplašinājumi ilgst vairāk nekā 1000 ms, lai atveidotu. "
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "iFrames izmantošana palēnina lapas veiktspēju, jo saturs tiek ielādēts no ārējās lapas. iFrames vietā izmantojiet attēlus, bet, ja iFrames ir jāizmanto, samaziniet to skaitu un/vai pārvietojiet tos ārpus skatvietas."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "Attēli šajā ir pārāk lieli optimālai lapas veiktspējai. Samaziniet visu šajā lapā esošo attēlu izmēru, lai katrs no tiem būtu mazāks par {0} kb."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "Attēli šajā ir pārāk lieli optimālai lapas veiktspējai. Samaziniet visu šajā lapā esošo attēlu izmēru, lai katrs no tiem būtu mazāks par {0} mb."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0} paplašinājumu ielāde ilgst vairāk nekā {1} ms, un tas ietekmē lapas veiktspēju."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "Tāds lapas saturs kā attēli, video un teksts ietekmē lapas veiktspēju. Samaziniet tīmekļa daļu skaitu, izmantojiet satura piegādes tīklus (CDN) un ierobežojiet lapas saturu."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "Veicat veiktspējas pārbaudi, piesakoties administratora kontā, rezultātus ietekmē paaugstināta datu plūsma, ko izraisa drošības grupas."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "Šī lapa pārsniedz ieteicamo saraksta vienumu ieneses pieprasījumu pamatskaitu bez kešatmiņas galvenes. Ierobežojiet pieprasījumu skaitu līdz mazāk kā {0} meklēšanas pieprasījumiem katrai lapai."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "Šī lapa pārsniedz SharePoint ieteicamo izsaukumu pamatskaitu. Katrai {1} lapai ierobežojiet SharePoint pieprasījumu skaitu līdz mazākam nekā {0}."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "Šī lapa pārsniedz ieteicamo meklēšanas izsaukumu pamatskaitu. Ierobežojiet pieprasījumu skaitu līdz mazāk kā {0} meklēšanas pieprasījumiem katrai lapai."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "Lai nodrošinātu meklēšanas pieredzi ar augstu veiktspēju, ierobežojam maksimālo atbalstīto StartRow vērtību, lai {0}."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "1 paplašinājuma ielāde ilgst vairāk nekā {0} ms, un tas ietekmē lapas veiktspēju."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "Strukturālā navigācija, kas nav kešatmiņā, palēnina vietnes veiktspēju. Pārveidojiet jūsu vietnes navigāciju, izmantojot pārvaldīto vai meklēšanā balstītu navigāciju."
+   },
+   "DetectPageType": {
+      "message": "Tiek noteikts lapas tips..."
+   },
+   "DiagnosticTests": {
+      "message": "Diagnostikas pārbaudes"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "Ilgums ir lielāks par {0} ms"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "Ilgums ir sliekšņa {0} ms robežās"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "Iespējot reģistrēšanu atbalsta vajadzībām (var ietekmēt veiktspēju; izmantojiet, lai novērstu problēmas kopā ar Microsoft atbalsta dienestu)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "Reģistrēšana atbalsta vajadzībām iespējota"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "Iespējot eksportēšanu HTTP arhīvā (HAR)"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "Jebkura pielāgota tīmekļa daļa, kas aizņem vairāk nekā 2000 ms, lai ielādētu skatvietā vai aizņem vairāk nekā 4000 ms, lai ielādētu ārpus skatvietas, ietekmē lapas veiktspēju."
+   },
+   "ErrorMessage": {
+      "message": "Izpildot lapas diagnostiku, radās kļūda. Vēlāk mēģiniet vēlreiz. Ja kļūda joprojām pastāv, sazinieties ar"
+   },
+   "ExportToHar": {
+      "message": "Eksportēt uz HAR"
+   },
+   "ExportToHarHover": {
+      "message": "Eksportēt uz HTTP arhīvu (HAR)"
+   },
+   "ExportToJson": {
+      "message": "Eksportēt uz JSON"
+   },
+   "ExportToJsonHover": {
+      "message": "Eksportēt uz JavaScript Object Notation (JSON)"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "Daži resursi neizmanto CDNs"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "Paplašinājumi var ietekmēt ielādes laiku"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "Izmantoti pārāk daudzi paplašinājumi."
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "Trīs vai vairākas tīmekļa daļas, izmantojot iFrame"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "Šī lapa satur {0} lielus attēlus"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "Šī lapa satur 1 lielu attēlu"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "Lapas izmērs ir {0} kb"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "Lapas veiktspējas pārbaude ar lietotāja kontu"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Šajā lapā ir {0} izsaukumi uz saraksta elementu ienesi"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "Šajā lapā ir {0} izsaukumi uz SharePoint"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "Šajā lapā ir {0} izsaukumi uz meklēšanu"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "Meklēšanas pieprasījumu StartRow pārsniedz atļauto {0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "Pielāgotas tīmekļa daļas ietekmē lapas ielādes laiku"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "Strukturālās navigācijas kešdarbe nav iespējota"
+   },
+   "FeedbackCategoryName": {
+      "message": "Sniegt atsauksmes"
+   },
+   "FeedbackInstruction": {
+      "message": "Vai jums ir ieteikumi vai jautājumi? Publicējiet tos sadaļā "
+   },
+   "HelpLinksCategoryName": {
+      "message": "Papildu resursi"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "Nevar palaist diagnostiku sistēmas lapām, piemēram, SharePoint sākumlapai. Izmantojiet šo rīku tikai SharePoint vietņu lapām."
+   },
+   "HowToUseInstruction": {
+      "message": "Papildinformācija par šo rīku un to, kā tā darbojas"
+   },
+   "HowToUseLinkName": {
+      "message": "Lapu diagnostikas rīks pakalpojumam SharePoint Online"
+   },
+   "Init": {
+      "message": "Inicializācija"
+   },
+   "LazyLoadingTime": {
+      "message": "Atliktā ielāde"
+   },
+   "LearnMore": {
+      "message": "Papildinformācija"
+   },
+   "MadeBy": {
+      "message": "MadeBy"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "Microsoft atbalsts."
+   },
+   "ModernPageType": {
+      "message": "moderns"
+   },
+   "ModuleLoad": {
+      "message": "Moduļa ielāde"
+   },
+   "NameAndId": {
+      "message": "Nosaukums un ID"
+   },
+   "NetworkTrace": {
+      "message": "Tīkla trasēšana"
+   },
+   "NoActionRequired": {
+      "message": "Nekāda darbība nav nepieciešama"
+   },
+   "NotSupportedPage": {
+      "message": "Šajā lapā nevar palaist lapas diagnostiku. Lietot šo rīku SharePoint vietnes lapām."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "Nevar palaist diagnostiku, kamēr lapa ir rediģēšanas režīmā. Jūsu lapā atlasiet saglabāt kā melnrakstu vai atmetiet izmaiņas un mēģiniet vēlreiz."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "Jūs mēģināt izmantot lapas diagnostikas rīku ar lokālu SharePoint versiju. Šis rīks ir tikai lietošanai ar SharePoint Online."
+   },
+   "PageLoadTimeLabel": {
+      "message": "Lapas ielādes laiks"
+   },
+   "PageTypeDataReady": {
+      "message": "Lapas tipa pārbaude pabeigta"
+   },
+   "PageUrlLabel": {
+      "message": "Lapas URL"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "Šī lapa izmanto satura piegādes tīklus (CDN)"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "Nav pagarinājumu, kuru ielāde ilgst ilgāk par {0} ms"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "Izmantoti mazāk nekā 5 paplašinājumi"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "Nav tīmekļa daļu, kas izmanto iFrames"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "Katrs attēls lapā ir mazāks par {0} kb"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "Lapas izmērs ir mazāks par 1000 kb"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "Lapas veiktspējas pārbaude veikta ar lietotāja kontu"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Saraksta elementu ieneses {0} pieprasījumu skaits"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "Ir mazāk par {0} SharePoint pieprasījumiem"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "Ir mazāk par {0} meklēšanas pieprasījumiem"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "Meklēšanas pieprasījumu StartRow vērtība ir mazāka par ierobežojumu"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "Nav tīmekļa daļu, kuru palaišanai nepieciešams vairāk par {0} ms"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "Strukturālā navigācija nav atrasta"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "Privātais CDN nav iespējots"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "Ir iespējots publiskais un privātais CDN. Lūdzu, izmantojiet noklusējuma CDN atrašanās vietas vai lūdziet SharePoint administratoram pievienot pielāgotas atrašanās vietas."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "Publiskais un privātais CDN nav iespējots"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "Publiskais CDN nav iespējots"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "Ir septiņi vai vairāk paplašinājumu."
+   },
+   "RenderTime": {
+      "message": "Atveide"
+   },
+   "RunningAuditors": {
+      "message": "Notiek datu validācija..."
+   },
+   "RunningCollectors": {
+      "message": "Tiek apkopoti dati... Tas var ilgt dažas minūtes"
+   },
+   "RunningPageTypeChecker": {
+      "message": "Notiek lapas tipa pārbaude"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "Sākt"
+   },
+   "Stop": {
+      "message": "Apturēt"
+   },
+   "ThirdPartyNotice": {
+      "message": "Trešās personas paziņojums"
+   },
+   "TimeoutMessage": {
+      "message": "Iestājies lapu diagnostikas rīka taimauts. Mēģiniet vēlreiz."
+   },
+   "TitleForCBQAuditor": {
+      "message": "Pārbaudīt, vai nav CBQ WebPart"
+   },
+   "Total": {
+      "message": "Kopā"
+   },
+   "TunePerformanceInstruction": {
+      "message": "Atrast papildinformāciju par veiktspējas un lapu lejupielādes laika uzlabošanu"
+   },
+   "TunePerformanceLinkName": {
+      "message": "SharePoint Online veiktspējas regulēšana"
+   },
+   "Url": {
+      "message": "Url"
+   },
+   "UrlDescription": {
+      "message": "Atrasts {0} vietrādis URL"
+   },
+   "UrlsDescription": {
+      "message": "Atrasti {0} vietrāži URL"
+   },
+   "UserVoice": {
+      "message": "Lietotāja balss"
+   },
+   "VersionLabel": {
+      "message": "Versija"
+   },
+   "Warning": {
+      "message": "Uzlabošanas iespējas"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "Jebkura iebūvētā Microsoft tīmekļa daļa, kas aizņem vairāk nekā 2000 ms, lai ielādētu skatvietu, vai aizņem vairāk nekā 4000ms, lai ielādētu ārpus skatvietas, ietekmē lapas veiktspēju."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "Viena vai vairākas tīmekļa daļas, izmantojot iFrame"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Microsoft tīmekļa daļas ietekmē lapas ielādes laiku"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "Ir pieci vai vairāk paplašinājumu."
+   }
+}

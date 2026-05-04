@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "Haqqında"
+   },
+   "AppDescription": {
+      "message": "Sayt səhifələrinizin məhsuldarlığını təhlil edin və optimallaşdırma üçün tövsiyələr alın."
+   },
+   "AppName": {
+      "message": "SharePoint üçün səhifə diaqnostikası"
+   },
+   "AttentionRequired": {
+      "message": "Diqqət tələb olunur"
+   },
+   "AuditorsDataReady": {
+      "message": "Verilənlərin yoxlanması tamamlandı"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "Həm ictimai, həm də özəl CDN standart konfiqurasiya ilə aktiv edilməlidir. Həm CDN-ləri aktiv etmək, həm də standart CDN məkanlarından istifadə etmək, yaxud da SharePoint İnzibatçısından fərdi məkanları əlavə etməsini istəmək üçün SharePoint İnzibatçısı ilə tərəfdaşlıq edin."
+   },
+   "ClassicPageType": {
+      "message": "klassik"
+   },
+   "CollectorsDataReady": {
+      "message": "Verilənlərin toplanması tamamlandı"
+   },
+   "CorrelationIdLabel": {
+      "message": "CorrelationID"
+   },
+   "Custom": {
+      "message": "Fərdi"
+   },
+   "Description": {
+      "message": "SharePoint Online-da səhifə məhsuldarlığı ilə bağlı problemləri müəyyən etmək üçün alət"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "Sorğuya görə Məzmun WebPart-ı üzərindən Axtarışa görə Məzmun WebPart-ı istifadə etməyi tövsiyə edin."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "CDN-lər statik aktivləri brauzerlərin tələb etdiyi səviyyəyə yaxın olaraq keşləməklə məhsuldarlığı artırır. Statik səhifə aktivlərini saxlaması məqsədilə CDN-ləri quraşdırmaq və konfiqurasiya etmək üçün SharePoint İnzibatçısı ilə əməkdaşlıq edin."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "Bir və ya bir neçə genişlənməni vizuallaşdırmaq üçün1000 ms-dən çox vaxt tələb olunur."
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "iFrames-dən istifadə edilməsi səhifə məhsuldarlığını zəiflədir, çünki məzmun xarici səhifədən yüklənir. iFrames əvəzinə şəkillər istifadə edin, lakin iFrames istifadə etmək lazım gələrsə, onun sayını azaldın və/və ya görünüş portundan çıxarın."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "Bu səhifədəki şəkillərin ölçüsü səhifə məhsuldarlığını optimallaşdırmaq üçün çox böyükdür. Səhifədəki şəkillərin hər birinin öçüsünü {0} kb-dan daha kiçik olacaq şəkildə azaldın."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "Bu səhifədəki şəkillərin ölçüsü optimal səhifə məhsuldarlığı üçün çox böyükdür. Səhifədəki şəkillərin hər birinin öçüsünü {0} mb-dan daha kiçik olacaq şəkildə azaldın."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0} genişlənmənin yüklənməsi {1} dəqiqədən daha uzun çəkir və bu, səhifənin performansına təsir göstərir."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "Şəkil, video və mətn kimi səhifə məzmunu səhifənin məhsuldarlığına təsir edir. Veb hissələrin sayını azaltmaq üçün Məzmun Çatdırılma Şəbəkələri (CDN-lər) istifadə edin və səhifə məzmununu məhdudlaşdırın."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "İnzibatçı kimi daxil olarkən məhsuldarlığı yoxladıqda təhlükəsizlik qruplarının səbəb olduğu artmış trafik nəticələrə təsir edir."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "Bu səhifə keş başlığı olmadan Siyahı Elementi Gətirilməsi üçün tövsiyə edilən zənglərin əsas sayını keçir. Sorğuları hər səhifə üçün {0} Siyahı Elementi Gətirilməsi sorğusundan daha azına məhdudlaşdırın."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "Bu səhifə SharePoint üçün tövsiyə olunan minimum zəng sayını keçir. Hər {1} səhifəsi üçün SharePoint sorğu sayını maksimum {0} olaraq məhdudlaşdırın."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "Bu səhifə Axtarış üçün tövsiyə edilən zənglərin əsas sayını keçir. Sorğuları hər səhifə üçün {0} Axtarış sorğusundan daha azına məhdudlaşdırın."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "Yüksək performans ilə axtarış təcrübəsi təmin etmək məqsədilə StartRow-nun maksimum dəstəklənən dəyərini {0} etmək üçün məhdudlaşdırırıq."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "1 genişlənmənin yüklənməsi {0} dəqiqədən daha uzun çəkir və bu, səhifənin performansına təsir göstərir."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "Keşlənməyən struktur naviqasiyası saytın məhsuldarlığını zəiflədir. İdarə edilən və ya axtarışa əsaslanan naviqasiya istifadə edərək saytın naviqasiyasını yenidən tərtib edin."
+   },
+   "DetectPageType": {
+      "message": "Səhifə növü aşkarlanır..."
+   },
+   "DiagnosticTests": {
+      "message": "Diaqnostika testləri"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "Müddəti {0}ms-dən böyükdür"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "Müddət həddi qiyməti {0}ms daxilindədir"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "Dəstək qeydiyyatını aktivləşdirin (performansa təsir edə bilər; Microsoft dəstəyi ilə nasazlıqların aşkarlanması üçün istifadə edin)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "Dəstək qeydiyyatı aktivləşdirildi"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "HTTP Arxivinə (HAR) ixrac etməyi aktivləşdirin"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "Görünüş portu daxilində yüklənməsi 2000 ms-dən çox çəkən və ya görünüş portu xaricində yüklənməsi 4000 ms-dən çox çəkən istənilən fərdi veb hissə səhifənin məhsuldarlığına təsir edir."
+   },
+   "ErrorMessage": {
+      "message": "Səhifə diaqnostikasını icra edərkən səhv baş verib. Yenidən cəhd edin. Əgər səhv baş verməyə davam edərsə, əlaqə saxlayın"
+   },
+   "ExportToHar": {
+      "message": "HAR-a ixrac edin"
+   },
+   "ExportToHarHover": {
+      "message": "HTTP Arxivinə (HAR) ixrac edin"
+   },
+   "ExportToJson": {
+      "message": "JSON-a ixrac edin"
+   },
+   "ExportToJsonHover": {
+      "message": "JavaScript obyekt notasiyasına (JSON) ixrac edin"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "Bəzi aktivlər CDN-lərdən istifadə etmir"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "Genişlənmələr yüklənmə vaxtına təsir göstərə bilər"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "Həddindən çox genişlənmə istifadə edilib"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "iFrames istifadə edən üç və ya daha çox veb hissə"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "Bu səhifədə {0} böyük ölçülü şəkil var"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "Bu səhifədə 1 böyük ölçülü şəkil var"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "Səhifə ölçüsü {0} kb-dır"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "İstifadəçi hesabı ilə səhifə məhsuldarlığını yoxlayın"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Bu səhifədə Siyahı Elementi Gətirilməsi üçün {0} zəng var"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "Bu səhifədə SharePoint-ə edilən {0} zəng var"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "Bu səhifədə axtarış üçün {0} zəng var"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "Axtarış sorğularında StartRow limiti keçir {0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "Fərdi veb-hissələr səhifənin yükləmə vaxtına təsir edir"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "Struktur naviqasiya keşləməsi aktiv deyil"
+   },
+   "FeedbackCategoryName": {
+      "message": "Əks-əlaqə verin"
+   },
+   "FeedbackInstruction": {
+      "message": "Təklif və ya suallarınız var? Onları dərc edin "
+   },
+   "HelpLinksCategoryName": {
+      "message": "Əlavə resurslar"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "SharePoint başlama səhifəsi kimi sistem səhifələrində diaqnostika icra etmək mümkün deyil. Bu alətdən yalnız SharePoint sayt səhifələri üçün istifadə edin."
+   },
+   "HowToUseInstruction": {
+      "message": "Bu alət və onun necə işlədiyi haqqında ətraflı öyrənin"
+   },
+   "HowToUseLinkName": {
+      "message": "SharePoint Online üçün Səhifə Diaqnostikası aləti"
+   },
+   "Init": {
+      "message": "İçində"
+   },
+   "LazyLoadingTime": {
+      "message": "Gec Yüklənmə"
+   },
+   "LearnMore": {
+      "message": "Ətraflı öyrənin"
+   },
+   "MadeBy": {
+      "message": "MadeBy"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "Microsoft dəstəyi."
+   },
+   "ModernPageType": {
+      "message": "müasir"
+   },
+   "ModuleLoad": {
+      "message": "Modul Yükləməsi"
+   },
+   "NameAndId": {
+      "message": "Ad və identifikator"
+   },
+   "NetworkTrace": {
+      "message": "Şəbəkə izi"
+   },
+   "NoActionRequired": {
+      "message": "Əməliyyat tələb olunmur"
+   },
+   "NotSupportedPage": {
+      "message": "Bu səhifədə səhifə diaqnostikasını icra etmək mümkün deyil. Bu aləti yalnız SharePoint sayt səhifələri üçün istifadə edin."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "Səhifə redaktə rejimində olarkən diaqnostika icra etmək mümkün deyil. Səhifənizdə Qaralama kimi saxla və ya Dəyişiklikləri ləğv et seçin və yenidən cəhd edin."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "SharePoint-in iş sahəsində versiyası ilə Səhifə Diaqnostikası alətindən istifadə etməyə cəhd edirsiniz. Bu alət yalnız SharePoint Online ilə istifadə üçün nəzərdə tutulub."
+   },
+   "PageLoadTimeLabel": {
+      "message": "Səhifənin yükləmə vaxtı"
+   },
+   "PageTypeDataReady": {
+      "message": "Səhifə növünün yoxlanması tamamlandı"
+   },
+   "PageUrlLabel": {
+      "message": "Səhifə URL-i"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "Bu səhifə Məzmun Çatdırılması Şəbəkələrindən (CDN-lər) istifadə edir"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "Genişlənmələrin yüklənmə müddəti {0} dəqiqədən çox çəkmir"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "5-dən az genişlənmə istifadə edilib"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "iFrames istifadə edən veb hissə yoxdur"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "Səhifədəki şəkillərin hər biri {0} kb-dan kiçikdir"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "Səhifənin çəkisi 1000 kb-dan kiçikdir"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "Səhifə məhsuldarlığı istifadəçi hesabı ilə yoxlanıldı"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Siyahı Elementi Gətirilməsi sayı {0} daha azdır"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "SharePoint sorğularının sayı {0} sorğudan azdır"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "Axtarış sorğusunun sayı {0} daha azdır"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "StartRow axtarış sorğuları limitdən aşağıdır"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "Veb hissənin icrası {0} ms-dən çox çəkmir"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "Struktur naviqasiyası aşkarlanmadı"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "Özəl CDN aktiv edilməyib"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "İctimai və özəl CDN aktiv edilib. Standart CDN məkanlarından istifadə edin və ya SharePoint İnzibatçısından fərdi məkanlar əlavə etməsini istəyin."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "İctimai və özəl CDN aktivləşdirilməyib"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "Ümumi CDN aktiv edilməyib"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "Burada 7 və daha çox genişlənmə var."
+   },
+   "RenderTime": {
+      "message": "Əks etdir"
+   },
+   "RunningAuditors": {
+      "message": "Verilənlər yoxlanılır..."
+   },
+   "RunningCollectors": {
+      "message": "Verilənlər toplanır... bu, bir neçə dəqiqə çəkə bilər"
+   },
+   "RunningPageTypeChecker": {
+      "message": "Səhifənin növü yoxlanır"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "Başlayın"
+   },
+   "Stop": {
+      "message": "Dayandır"
+   },
+   "ThirdPartyNotice": {
+      "message": "Üçüncü Tərəf Bildirişi"
+   },
+   "TimeoutMessage": {
+      "message": "Səhifə diaqnostikası alətinin vaxtı bitib. Yenidən cəhd edin."
+   },
+   "TitleForCBQAuditor": {
+      "message": "CBQ WebPart üçün yoxlama"
+   },
+   "Total": {
+      "message": "Ümumi"
+   },
+   "TunePerformanceInstruction": {
+      "message": "Məhsuldarlığın təkmilləşdirilməsi və səhifə yükləmə vaxtları üzrə ətraflı məlumat tapın"
+   },
+   "TunePerformanceLinkName": {
+      "message": "SharePoint Online-ın performansını sazlayın"
+   },
+   "Url": {
+      "message": "Url"
+   },
+   "UrlDescription": {
+      "message": "{0} URL tapıldı"
+   },
+   "UrlsDescription": {
+      "message": "{0} URL tapıldı"
+   },
+   "UserVoice": {
+      "message": "İstifadəçi Səsi"
+   },
+   "VersionLabel": {
+      "message": "Versiya"
+   },
+   "Warning": {
+      "message": "Təkmilləşdirmə imkanları"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "Görünüş portu daxilində yüklənməsi 2000 ms-dən çox çəkən və ya görünüş portu xaricində yüklənməsi 4000 ms-dən çox çəkən istənilən daxildə qurulmuş Microsoft veb hissə səhifənin məhsuldarlığına təsir edir."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "iFrames istifadə edən bir və ya daha çox veb hissə"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Microsoft veb-hissələr yüklənmə vaxtına təsir edir"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "Burada 5 və daha çox genişlənmə var."
+   }
+}

@@ -1,0 +1,79 @@
+{
+  "form_metadata": {
+    "form_name": "RR_Budget_3_0",
+    "form_version": "3.0",
+    "iframe_src_pattern": "RR_Budget_3_0_V3_0",
+    "framework": "Knockout.js"
+  },
+  "id_patterns": {
+    "note": "All per-period fields use P = 1-based period index. Per-row fields also use N = 1-based row index.",
+    "period_start_date":        "budgetPeriodStartDate{P}",
+    "period_end_date":          "budgetPeriodEndDate{P}",
+    "section_a_add_button":     "keyPersonAdd{P}",
+    "section_a_edit_button":    "editSeniorkeyperson{P}_{N}",
+    "section_a_base_salary":    "baseSalaryA{P}_{N}",
+    "section_a_cal_months":     "calendarMonthsA{P}_{N}",
+    "section_a_acad_months":    "academicMonthsA{P}_{N}",
+    "section_a_sum_months":     "summerMonthsA{P}_{N}",
+    "section_a_req_salary":     "requestedSalaryA{P}_{N}",
+    "section_a_fringe":         "fringeBenefitsA{P}_{N}",
+    "section_a_funds":          "fundsRequestedA{P}_{N}",
+    "section_a_attach_total":   "totalAttachFundsRequestedA{P}",
+    "section_b_num_personnel":  "numberOfPersonnel{P}_{N}",
+    "section_b_cal_months":     "calendarMonthsB{P}_{N}",
+    "section_b_acad_months":    "academicMonthsB{P}_{N}",
+    "section_b_sum_months":     "summerMonthsB{P}_{N}",
+    "section_b_req_salary":     "requestedSalaryB{P}_{N}",
+    "section_b_fringe":         "fringeBenefitsB{P}_{N}",
+    "section_b_add_button":     "(+) Add Additional Other Personnel button",
+    "section_c_item":           "equipmentItem{P}_{N}",
+    "section_c_funds":          "fundsRequestedC{P}_{N}",
+    "section_c_add_button":     "(+) Add Additional Equipment button",
+    "section_f_funds":          "fundsRequestedF{P}_{N}",
+    "section_f_row1_note":      "Row 1 = Materials & Supplies",
+    "section_h_type":           "indirectCostType{P}_{N}",
+    "section_h_rate":           "indirectCostRate{P}_{N}",
+    "section_h_base":           "indirectCostBase{P}_{N}",
+    "section_h_funds":          "fundsRequestedH{P}_{N}",
+    "section_h_add_button":     "(+) Add Additional Indirect Cost button",
+    "section_j_fee":            "totalFundsRequestedJ{P}",
+    "budget_justification_file": "budgetJustificationFile"
+  },
+  "section_a_modal": {
+    "modal_id":    "seniorKeyPersonDetail",
+    "fields": {
+      "prefix":          "#prefix",
+      "first_name":      "#firstName",
+      "middle_name":     "#middleName",
+      "last_name":       "#lastName",
+      "suffix":          "#suffix",
+      "project_role":    "#projectRole",
+      "base_salary":     "#baseSalary",
+      "calendar_months": "#calendarMonths",
+      "academic_months": "#academicMonths",
+      "summer_months":   "#summerMonths",
+      "requested_salary":"#requestedSalary",
+      "fringe_benefits": "#fringeBenefits"
+    },
+    "save_button": ".modal-footer .btn-primary"
+  },
+  "section_b_predefined_row_order": {
+    "note": "These standard roles always appear in this positional order in listB",
+    "1": "Post Doctoral Associates",
+    "2": "Graduate Students (Research Assistants)",
+    "3": "Undergraduate Students",
+    "4": "Secretarial / Clerical",
+    "5+": "Other (dynamically added)"
+  },
+  "section_f_predefined_row_order": {
+    "note": "Fixed-label rows in Section F (Other Direct Costs)",
+    "1": "Materials and Supplies",
+    "2": "Publication Costs / Page Charges",
+    "3": "Consultant Services",
+    "4": "ADP / Computer Services",
+    "5": "Subawards / Consortium Contracts",
+    "6": "Equipment or Facility Rental / User Fees",
+    "7": "Alterations and Renovations",
+    "8-17": "Other 1-10 (user-defined descriptions)"
+  }
+}

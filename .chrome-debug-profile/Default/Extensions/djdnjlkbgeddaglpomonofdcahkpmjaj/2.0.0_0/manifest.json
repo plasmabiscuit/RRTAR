@@ -1,0 +1,17 @@
+{
+   "action": {
+      "default_popup": "editor.html"
+   },
+   "description": "Easily inject CSS into a webpage for testing",
+   "devtools_page": "devtools.html",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "icon128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAj6ogVIHJU6fhJ1oZorQX748ocLpbacgxQTf6qIHGQAvUdYEYJhslIIVNej93czc0HDGdnXgo9VW+zRt6mLviemoY5yg0LK72ZBJ6M+BsfC5iLNBe8ITV3fV2vRnyc77kgK13VQ5Gkf4kL99Q6iqhafYAGcVwPebioQjvbNamnRcn4qJ5LqhWhXm8s7HqO9VD/L+4hxV2f03z0f9bAEjSzufjWPtG4qvbdigonNLHZ6l4Jox6uGzzJ2UnDSCDNPuERYbmVvOJkVp/FRjATMF1StEvJ9F9hvsh8RhlQCVQo5es1PtwHakLoG9HVZHE/YoEb8LxE0upwv+m75vQlJLYBQIDAQAB",
+   "manifest_version": 3,
+   "name": "Live CSS Tester",
+   "permissions": [ "storage", "scripting" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0.0"
+}

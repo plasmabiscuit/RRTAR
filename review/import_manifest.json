@@ -1,0 +1,232 @@
+[
+  {
+    "source_pdf": "Kalyanapu_DOE_cv-2389506",
+    "source_element": "AttachmentFallback",
+    "source_index": 0,
+    "target_action": "add_as_key_person",
+    "exclude": false,
+    "person": {
+      "prefix": "",
+      "first_name": "Alfred",
+      "middle_name": "",
+      "last_name": "Kalyanapu",
+      "suffix": "",
+      "title": "Professor",
+      "organization_name": "Tennessee Technological University, Civil and",
+      "department": "Civil and Environmental Engineering",
+      "division": "College of Engineering",
+      "credential": "",
+      "project_role": "Other Professional",
+      "other_project_role_category": "",
+      "degree_type": "",
+      "degree_year": "",
+      "address": {
+        "street1": "1 William L. Jones Dr",
+        "street2": "Campus Box 5015",
+        "city": "",
+        "county": "",
+        "state": "",
+        "province": "",
+        "country": "",
+        "postal_code": ""
+      },
+      "phone": "931-372-3561",
+      "fax": "",
+      "email": "akalyanapu@tntech.edu"
+    },
+    "attachments": {
+      "biosketch": {
+        "required": true,
+        "source": "input-pdfs",
+        "path": "input-pdfs/Kalyanapu_DOE_cv-2389506.pdf",
+        "sha1_base64": "AdgZ+azNFfBmSf7VhukWwSd+hr4="
+      },
+      "current_pending_support": {
+        "required": false,
+        "source": "input-pdfs",
+        "path": "input-pdfs/Kalyanapu_cpos-2399635.pdf",
+        "sha1_base64": "IgEgh2UwNJ5KcIEJRUM2Hac0aZ0="
+      }
+    },
+    "validation": {
+      "schema_valid": true,
+      "business_rules_valid": true,
+      "warnings": [
+        "Generated from standalone biosketch/current-pending PDF(s); review role and contact fields.",
+        "Missing fields enriched from data/contacts.json matched by full name."
+      ]
+    }
+  },
+  {
+    "source_pdf": "cpos-2464927-doe-genesis-for-TNTECH-18B-skjellum-PI",
+    "source_element": "AttachmentFallback",
+    "source_index": 0,
+    "target_action": "add_as_key_person",
+    "exclude": false,
+    "person": {
+      "prefix": "",
+      "first_name": "Anthony",
+      "middle_name": "null",
+      "last_name": "Skjellum",
+      "suffix": "",
+      "title": "Professor",
+      "organization_name": "Tennessee Technological University, Cookevile, Tennessee,",
+      "department": "Computer Science",
+      "division": "College of Engineering",
+      "credential": "",
+      "project_role": "Other Professional",
+      "other_project_role_category": "",
+      "degree_type": "",
+      "degree_year": "",
+      "address": {
+        "street1": "1 William L. Jones Dr",
+        "street2": "Campus Box 5101",
+        "city": "",
+        "county": "",
+        "state": "",
+        "province": "",
+        "country": "",
+        "postal_code": ""
+      },
+      "phone": "931-372-6484",
+      "fax": "",
+      "email": "askjellum@tntech.edu"
+    },
+    "attachments": {
+      "biosketch": {
+        "required": true,
+        "source": "input-pdfs",
+        "path": "input-pdfs/cv-2384196-skjellum-for-genesis-2026.pdf",
+        "sha1_base64": "cECw/5wlBZ77qI5gRfKhyKd69Ew="
+      },
+      "current_pending_support": {
+        "required": false,
+        "source": "input-pdfs",
+        "path": "input-pdfs/cpos-2464927-doe-genesis-for-TNTECH-18B-skjellum-PI.pdf",
+        "sha1_base64": "wDWgdUMycIMBzkJxC+kXoifw2GE="
+      }
+    },
+    "validation": {
+      "schema_valid": true,
+      "business_rules_valid": true,
+      "warnings": [
+        "Generated from standalone biosketch/current-pending PDF(s); review role and contact fields.",
+        "Missing fields enriched from data/contacts.json matched by first+last name."
+      ]
+    }
+  },
+  {
+    "source_pdf": "cpos-Roberts-Updated",
+    "source_element": "AttachmentFallback",
+    "source_index": 0,
+    "target_action": "add_as_key_person",
+    "exclude": false,
+    "person": {
+      "prefix": "",
+      "first_name": "Jesse",
+      "middle_name": "",
+      "last_name": "Roberts",
+      "suffix": "",
+      "title": "Assistant Professor",
+      "organization_name": "Tennessee Technological University, Cookeville, Tennessee,",
+      "department": "",
+      "division": "",
+      "credential": "",
+      "project_role": "Other Professional",
+      "other_project_role_category": "",
+      "degree_type": "",
+      "degree_year": "",
+      "address": {
+        "street1": "",
+        "street2": "",
+        "city": "",
+        "county": "",
+        "state": "",
+        "province": "",
+        "country": "",
+        "postal_code": ""
+      },
+      "phone": "",
+      "fax": "",
+      "email": ""
+    },
+    "attachments": {
+      "biosketch": {
+        "required": true,
+        "source": "input-pdfs",
+        "path": "input-pdfs/cv-Roberts.pdf",
+        "sha1_base64": "jQ73g7z1eEVU2KdYNbi8/4poHDI="
+      },
+      "current_pending_support": {
+        "required": false,
+        "source": "input-pdfs",
+        "path": "input-pdfs/cpos-Roberts-Updated.pdf",
+        "sha1_base64": "M5JGKa+1DVbNUBfeA569tzB9Zco="
+      }
+    },
+    "validation": {
+      "schema_valid": true,
+      "business_rules_valid": true,
+      "warnings": [
+        "Generated from standalone biosketch/current-pending PDF(s); review role and contact fields."
+      ]
+    }
+  },
+  {
+    "source_pdf": "contacts.json",
+    "source_element": "ContactDirectory",
+    "source_index": 0,
+    "target_action": "add_as_key_person",
+    "exclude": false,
+    "person": {
+      "prefix": "",
+      "first_name": "Ali",
+      "middle_name": "",
+      "last_name": "Alouani",
+      "suffix": "",
+      "title": "Professor",
+      "organization_name": "Tennessee Technological University",
+      "department": "Electrical and Computer Engineering",
+      "division": "College of Engineering",
+      "credential": "",
+      "project_role": "",
+      "other_project_role_category": "",
+      "degree_type": "",
+      "degree_year": "",
+      "address": {
+        "street1": "1 William L. Jones Dr",
+        "street2": "Campus Box 5004",
+        "city": "",
+        "county": "",
+        "state": "",
+        "province": "",
+        "country": "",
+        "postal_code": ""
+      },
+      "phone": "931-372-3383",
+      "fax": "",
+      "email": "AAlouani@tntech.edu"
+    },
+    "attachments": {
+      "biosketch": {
+        "required": true,
+        "source": "contacts-directory",
+        "path": "",
+        "sha1_base64": null
+      },
+      "current_pending_support": {
+        "required": false,
+        "source": "contacts-directory",
+        "path": "",
+        "sha1_base64": null
+      }
+    },
+    "validation": {
+      "schema_valid": true,
+      "business_rules_valid": false,
+      "warnings": [
+        "Added from contacts.json; review role, email, and attachments before automate."
+      ]
+    }
+  }
+]

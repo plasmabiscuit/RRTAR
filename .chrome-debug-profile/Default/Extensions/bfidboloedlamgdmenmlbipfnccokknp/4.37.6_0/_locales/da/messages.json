@@ -1,0 +1,852 @@
+{
+   "PopUpFeedBackStore": {
+      "description": "",
+      "message": "Make us happy!"
+   },
+   "PopUpfeedBackHeading": {
+      "description": "",
+      "message": "What's your rating of PureVPN?"
+   },
+   "PopUpfeedBackHeading2": {
+      "description": "",
+      "message": "A good rating on the Chrome Store will make our developers happy!"
+   },
+   "PopUpfeedBackHeading3": {
+      "description": "",
+      "message": "Thank You for your Feedback!"
+   },
+   "PopUpfeedBackSubmit": {
+      "description": "",
+      "message": "Indsend"
+   },
+   "ProxySignupWindowCloseError": {
+      "description": "",
+      "message": "Authentication Failed"
+   },
+   "ProxyTxtMigration": {
+      "description": "",
+      "message": "Before you start using your email address to login into PureVPN Proxy Extension, we need you to complete a few steps."
+   },
+   "ProxyUpdateAccountTxtCTA1": {
+      "description": "",
+      "message": "Go Premium Now"
+   },
+   "ProxyUpdateAccountTxtCTA2": {
+      "description": "",
+      "message": "Get Premium Plan"
+   },
+   "ProxyUpdateAccountTxtCTA3": {
+      "description": "",
+      "message": "Buy Now"
+   },
+   "ProxyUpdateAccountTxtParagraph1": {
+      "description": "",
+      "message": "Access US Netflix Instantly from Anywhere with PureVPN!"
+   },
+   "ProxyUpdateAccountTxtParagraph2": {
+      "description": "",
+      "message": "Stream & Enjoy US Netflix Instantly from Anywhere!"
+   },
+   "ProxyUpdateAccountTxtParagraph3": {
+      "description": "",
+      "message": "Access US Netflix, Hulu, Amazon and many other Channels with PureVPN!"
+   },
+   "accountDetailsBillingCycleTitle": {
+      "description": "",
+      "message": "faktureringsperiode"
+   },
+   "accountDetailsBtnSwitchUserTxt": {
+      "description": "",
+      "message": "skift bruger"
+   },
+   "accountDetailsEmailTitle": {
+      "description": "",
+      "message": "Email"
+   },
+   "accountDetailsExpireOnTitle": {
+      "description": "",
+      "message": "Udløber den"
+   },
+   "accountDetailsPlanTypeTitle": {
+      "description": "",
+      "message": "Plantype"
+   },
+   "accountDetailsSubscriptionStatusTitle": {
+      "description": "",
+      "message": "abonnementstatus"
+   },
+   "accountDetailsSubscriptionTypeTitle": {
+      "description": "",
+      "message": "Kontotype"
+   },
+   "accountDetailsVpnUsernameTitle": {
+      "description": "",
+      "message": "VPN Username"
+   },
+   "accountTxtSelectAccount": {
+      "description": "",
+      "message": "vælg konto"
+   },
+   "adblockMenuSettings": {
+      "description": "",
+      "message": "Settings"
+   },
+   "addonText": {
+      "description": "",
+      "message": "Få tilføjelse"
+   },
+   "alreadyAccntTxt": {
+      "description": "",
+      "message": "Har allerede en konto"
+   },
+   "alreadyPureVpnAccntTxt": {
+      "description": "",
+      "message": "Already have a PureVPN account!"
+   },
+   "appVersion": {
+      "description": "",
+      "message": "Version"
+   },
+   "autoLoginFailedMsg": {
+      "description": "",
+      "message": "Please check your email for login credentials"
+   },
+   "bypassProxyHeaderTxt": {
+      "description": "",
+      "message": "Aktivér Bypass Proxy"
+   },
+   "channelsTxtCountries": {
+      "description": "",
+      "message": "POPULÆRE WEBSTEDER"
+   },
+   "channelsTxtFavourites": {
+      "description": "",
+      "message": "FAVORITTER"
+   },
+   "channelsTxtFavouritesHelpText": {
+      "description": "",
+      "message": "Dine yndlingswebsteder vises her"
+   },
+   "channelsTxtInfo": {
+      "description": "",
+      "message": "Click the star to mark a channel favourites."
+   },
+   "channelsTxtSearch": {
+      "description": "",
+      "message": "Søg efter et websted"
+   },
+   "channelsTxtSelectStream": {
+      "description": "",
+      "message": "Vælg websteder"
+   },
+   "characterZero": {
+      "description": "",
+      "message": "0"
+   },
+   "citiesTxtFavouritesHelpText": {
+      "description": "",
+      "message": "Your favourite Cities will appear here"
+   },
+   "connectWithDedIpCta": {
+      "description": "",
+      "message": "Få en dedikeret server"
+   },
+   "connectWithDedIpHeading": {
+      "description": "",
+      "message": "DEDIKERET SERVER"
+   },
+   "connectWithDedIpText": {
+      "description": "",
+      "message": "For at aktivere en statisk IP skal du købe tilføjelsen til dedikeret server."
+   },
+   "connectWithDedServer": {
+      "description": "",
+      "message": "Dedikeret Server"
+   },
+   "connectWithTeamServer": {
+      "description": "",
+      "message": "Teamserver"
+   },
+   "countriesTxtChangeCountry": {
+      "description": "",
+      "message": "Vælg land"
+   },
+   "countriesTxtCountries": {
+      "description": "",
+      "message": "LANDE"
+   },
+   "countriesTxtFavourites": {
+      "description": "",
+      "message": "FAVORITTER"
+   },
+   "countriesTxtFavouritesHelpText": {
+      "description": "",
+      "message": "Dine yndlingslande vises her"
+   },
+   "countriesTxtInfo": {
+      "description": "",
+      "message": "Click the star to mark a country favourites."
+   },
+   "countriesTxtMarkFavourites": {
+      "description": "",
+      "message": "Mark as favourite"
+   },
+   "countriesTxtSearch": {
+      "description": "",
+      "message": "Søg efter et land"
+   },
+   "countriesTxtSelectCountry": {
+      "description": "",
+      "message": "Vælg land"
+   },
+   "countriesTxtUnmarkFavourites": {
+      "description": "",
+      "message": "Unmark from favourite"
+   },
+   "darkWebText": {
+      "description": "",
+      "message": "Dark Web Overvågning"
+   },
+   "doConnectionQualityText": {
+      "description": "",
+      "message": "Hvordan er forbindelsens kvalitet?"
+   },
+   "doCopyLinkText": {
+      "description": "",
+      "message": "Kopiér link"
+   },
+   "doEnjoyPureVPNText": {
+      "description": "",
+      "message": "Nyder du PureVPN?"
+   },
+   "doFrequentDisconnectionText": {
+      "description": "",
+      "message": "Hyppig afbrydelse"
+   },
+   "doLeaveUsReviewText": {
+      "description": "",
+      "message": "Giv os en anmeldelse."
+   },
+   "doNoText": {
+      "description": "",
+      "message": "Nej"
+   },
+   "doOtherIssueText": {
+      "description": "",
+      "message": "Andet problem"
+   },
+   "doOutcomeText": {
+      "description": "",
+      "message": "Virker PureVPN-udvidelsen for dig?"
+   },
+   "doProblemPara": {
+      "description": "",
+      "message": "Hvad ser ud til at være problemet?"
+   },
+   "doProblemText": {
+      "description": "",
+      "message": "Lad os vide det, vi vil gerne høre din feedback"
+   },
+   "doProvideDetailsText": {
+      "description": "",
+      "message": "Giv oplysninger om dit problem her"
+   },
+   "doRateUsText": {
+      "description": "",
+      "message": "Giv os en bedømmelse"
+   },
+   "doReferAFriendMainText": {
+      "description": "",
+      "message": "Share free monthly PUREVPN accounts with your friends and family!"
+   },
+   "doReferAFriendText": {
+      "description": "",
+      "message": "Henvis en ven"
+   },
+   "doRemindLaterText": {
+      "description": "",
+      "message": "Mind mig om det senere"
+   },
+   "doSkipText": {
+      "description": "",
+      "message": "Spring over"
+   },
+   "doSlowSpeedText": {
+      "description": "",
+      "message": "Lav hastighed"
+   },
+   "doSubmitText": {
+      "description": "",
+      "message": "Indsend"
+   },
+   "doThankYouMessage": {
+      "description": "",
+      "message": "Tak for din feedback."
+   },
+   "doUnableToAccessText": {
+      "description": "",
+      "message": "Kan ikke få adgang til indhold"
+   },
+   "doUnableToConnectText": {
+      "description": "",
+      "message": "Kan ikke oprette forbindelse"
+   },
+   "doYesText": {
+      "description": "",
+      "message": "Ja"
+   },
+   "errorRateLimited": {
+      "description": "",
+      "message": "You are being rate limited.\u003Cbr/>Please try again after 15 minutes"
+   },
+   "expiredAccountAlert": {
+      "description": "",
+      "message": "Dear User, Your account is expired! \u003Ca target='_blank' href='https://www.purevpn.com/order'>Renew Now\u003C/a>"
+   },
+   "extAuthorName": {
+      "description": "extension author name.",
+      "message": "GZ systems Ltd."
+   },
+   "extDescription": {
+      "message": "En VPN-udvidelse der hjælper dig med at skjule dine oplysninger, få adgang til begrænset indhold og surfe på internettet ved hurtige hastigheder."
+   },
+   "extName": {
+      "description": "extension name.",
+      "message": "PureVPN Proxy - bedste VPN til Chrome"
+   },
+   "extNotification": {
+      "description": "extension short name.",
+      "message": "Alert"
+   },
+   "extShortName": {
+      "description": "extension short name.",
+      "message": "PureVPN"
+   },
+   "extTagLine": {
+      "description": "extension tagline.",
+      "message": "En VPN-udvidelse der hjælper dig med at skjule dine oplysninger, få adgang til begrænset indhold og surfe på internettet ved hurtige hastigheder."
+   },
+   "extTitleConnected": {
+      "description": "",
+      "message": "PureVPN | You are connected to $1"
+   },
+   "extTitleConnectedChannel": {
+      "description": "",
+      "message": "PureVPN | You are accessing $1"
+   },
+   "extTxtNoConnection": {
+      "description": "",
+      "message": "No internet connection"
+   },
+   "extTxtServiceUnavailable": {
+      "message": "The browser failed to resolve your request.\u003Cbr />Error Code: \u003Ca target='_blank' href='https://support.purevpn.com/chrome-error-err_spdy_protocol_error'>'ERR_SPDY_PROTOCOL_ERROR'\u003C/a>"
+   },
+   "fastSecureHeading": {
+      "description": "",
+      "message": "Brug for en hurtigere og mere sikker forbindelse?"
+   },
+   "fastSecurePara": {
+      "description": "",
+      "message": "Forbedr samarbejdet med en dedikeret server for problemfri tilslutning"
+   },
+   "feedBackPageTitle": {
+      "description": "",
+      "message": "PureVPN | Feedback Form Chrome Extension"
+   },
+   "feedbackDescriptionPlaceholder": {
+      "description": "",
+      "message": "Speak your heart here"
+   },
+   "feedbackMinLengthDescription": {
+      "description": "",
+      "message": "Review length 10 characters min"
+   },
+   "feedbackMinLengthTitle": {
+      "description": "",
+      "message": "Title length 10 characters min"
+   },
+   "feedbackTitlePlaceholder": {
+      "description": "",
+      "message": "Give your review a title"
+   },
+   "generalText": {
+      "description": "",
+      "message": "Generelt"
+   },
+   "hostNameTextBoxHeading": {
+      "description": "",
+      "message": "Enter hostname or ip address to bypass proxy"
+   },
+   "hostWhitelistChangeNoteTxt": {
+      "description": "",
+      "message": "The settings will applied in next connection."
+   },
+   "hostWhitelistExampleTxt1": {
+      "description": "",
+      "message": "www.purevpn.com"
+   },
+   "hostWhitelistExampleTxt2": {
+      "description": "",
+      "message": "192.168.0.1"
+   },
+   "hostWhitelistNoteTxt": {
+      "description": "",
+      "message": "Example:"
+   },
+   "invalidloginTxtErrorMsg": {
+      "description": "",
+      "message": "Invalid login credentials"
+   },
+   "locationSpoofToggleTxt": {
+      "description": "",
+      "message": "Falsk GPS-placering"
+   },
+   "locationsText": {
+      "description": "",
+      "message": "Placeringer"
+   },
+   "loginTxtConfirmPassword": {
+      "description": "",
+      "message": "Confirm password"
+   },
+   "loginTxtConnecting": {
+      "description": "",
+      "message": "Log in ..."
+   },
+   "loginTxtErrorMsg": {
+      "description": "",
+      "message": "Username or Password missing."
+   },
+   "loginTxtFreeAccount": {
+      "description": "",
+      "message": "Please subscribe to a premium PureVPN account to use the extension."
+   },
+   "loginTxtFreeAccountCancel": {
+      "description": "",
+      "message": "No Thanks"
+   },
+   "loginTxtFreeAccountProceed": {
+      "description": "",
+      "message": "Subscribe Now"
+   },
+   "loginTxtHidePassword": {
+      "description": "",
+      "message": "Hide password"
+   },
+   "loginTxtLogin": {
+      "description": "",
+      "message": "Log ind"
+   },
+   "loginTxtLoginDetails": {
+      "description": "",
+      "message": "Glemt adgangskode"
+   },
+   "loginTxtLoginHere": {
+      "description": "",
+      "message": "Login Here"
+   },
+   "loginTxtNotRegistered": {
+      "description": "",
+      "message": "Har du ikke en konto?"
+   },
+   "loginTxtNotRegisteredGetVpn": {
+      "description": "",
+      "message": "Få PureVPN"
+   },
+   "loginTxtPassword": {
+      "description": "",
+      "message": "Adgangskode"
+   },
+   "loginTxtShowPassword": {
+      "description": "",
+      "message": "Show password"
+   },
+   "loginTxtSuccessMsg": {
+      "description": "",
+      "message": "Logged in successfully"
+   },
+   "loginTxtUserName": {
+      "description": "",
+      "message": "Indtast din e-mail/brugernavn"
+   },
+   "mainLoginBtnTxt": {
+      "description": "",
+      "message": "Log ind"
+   },
+   "mainLoginScreenTxt": {
+      "description": "",
+      "message": "Start din rejse mod et sikrere internet"
+   },
+   "mainOrTxt": {
+      "description": "",
+      "message": "or"
+   },
+   "mainSignupBtnLink": {
+      "description": "",
+      "message": "https://www.purevpn.com/trial-vpn/chrome"
+   },
+   "mainSignupBtnTxt": {
+      "description": "",
+      "message": "Opret konto"
+   },
+   "newText": {
+      "description": "",
+      "message": "NYT"
+   },
+   "noSubscriptionTxtErrorMsg": {
+      "description": "",
+      "message": "For at begynde at bruge PureVPN skal du købe et abonnement."
+   },
+   "notAvailableButton": {
+      "description": "",
+      "message": "Disable Now"
+   },
+   "notAvailableHeading": {
+      "description": "",
+      "message": "Please disable the proxy service listed below to use PureVPN Extension."
+   },
+   "notAvailablePara": {
+      "description": "",
+      "message": "Please disable the proxy to use\u003Cbr/>PureVPN Extension"
+   },
+   "optimizedForStreaming": {
+      "description": "",
+      "message": "POPULÆRE WEBSTEDER"
+   },
+   "passwordManagerText": {
+      "description": "",
+      "message": "Adgangskodehåndtering"
+   },
+   "proxyFastestLocationAfterCnctn": {
+      "description": "",
+      "message": "Connected to Fastest Location"
+   },
+   "proxySecureBrowsingAfterCnctn": {
+      "description": "",
+      "message": "Browser Traffic Secured"
+   },
+   "proxyTxtChangeCountry": {
+      "description": "",
+      "message": "Change country"
+   },
+   "proxyTxtConnect": {
+      "description": "",
+      "message": "opret forbindelse"
+   },
+   "proxyTxtConnecting": {
+      "description": "",
+      "message": "opretter forbindelse..."
+   },
+   "proxyTxtDisconnect": {
+      "description": "",
+      "message": "afbryd forbindelse"
+   },
+   "proxyTxtHiddenIpAfterCnctn": {
+      "description": "",
+      "message": "IP Successfully Hidden"
+   },
+   "proxyTxtLoader": {
+      "description": "",
+      "message": "Please wait, configuring PureVPN extension"
+   },
+   "proxyTxtOnlineSecurity": {
+      "description": "",
+      "message": "Online Security"
+   },
+   "proxyTxtRestrictedWebsitesAfterCnctn": {
+      "description": "",
+      "message": "The Web is Now Accessible"
+   },
+   "proxyTxtStreaming": {
+      "description": "",
+      "message": "Streaming"
+   },
+   "proxyTxtUnAuthorized": {
+      "description": "",
+      "message": "Please \u003Ca href='#' class='upgradeBtn' data-cta='other'>renew\u003C/a> your account to use the extension."
+   },
+   "redirectText": {
+      "description": "",
+      "message": "Please wait while redirecting..."
+   },
+   "referFrndAvl": {
+      "description": "",
+      "message": "Available"
+   },
+   "referFrndBtnCopiedTxt": {
+      "description": "",
+      "message": "Copied to clipboard"
+   },
+   "referFrndEmptyTokenTxt": {
+      "description": "",
+      "message": "The functionality is temporarily unavailable. Please try again later."
+   },
+   "referFrndErrorTxt": {
+      "description": "",
+      "message": "Error"
+   },
+   "referFrndExpiredUsersTxt": {
+      "description": "",
+      "message": "Only paid users with active subscriptions are allowed to share free account invites."
+   },
+   "referFrndHeading": {
+      "description": "",
+      "message": "Invitere. Tjen. god fornøjelse"
+   },
+   "referFrndInviteNowTxt": {
+      "description": "",
+      "message": "Kopiér link"
+   },
+   "referFrndSent": {
+      "description": "",
+      "message": "Sent"
+   },
+   "referFrndTxt": {
+      "description": "",
+      "message": "Inviter dine venner til PureVPN og tjene gratis kredit på hver invitation."
+   },
+   "removeMyDataText": {
+      "description": "",
+      "message": "Fjern Mine Data"
+   },
+   "requestPlaceholder": {
+      "description": "",
+      "message": "Enter comment"
+   },
+   "requestPopupText": {
+      "description": "",
+      "message": "Make a location request."
+   },
+   "requestPopupTextChannel": {
+      "description": "",
+      "message": "Make a website request."
+   },
+   "resendLoaderText": {
+      "description": "",
+      "message": "Resending the activation code. Please wait."
+   },
+   "searchEmptyBtn": {
+      "description": "",
+      "message": "Anmod om en placering"
+   },
+   "searchEmptyBtnChannel": {
+      "description": "",
+      "message": "Anmod om et websted"
+   },
+   "searchEmptyTxt": {
+      "description": "",
+      "message": "Prøv at justere din søgning eller udforsk andre muligheder. Vi er her for at hjælpe dig med at finde det, du har brug for."
+   },
+   "searchEmptyTxtChannel": {
+      "description": "",
+      "message": "Det websted, du leder efter, er ikke en del af vores VPN-netværk. Men du kan fortælle os om det, og så vi vil forsøge at tilføje det."
+   },
+   "searchEmptyTxtHeading": {
+      "description": "",
+      "message": "Ingen resultater fundet"
+   },
+   "securityToolsText": {
+      "description": "",
+      "message": "Sikkerhedsværktøjer"
+   },
+   "selectCityTitle": {
+      "description": "",
+      "message": "Vælg by"
+   },
+   "selectServerHeaderText": {
+      "description": "",
+      "message": "vælg server"
+   },
+   "settingsTxtAboutUs": {
+      "description": "",
+      "message": "About PureVPN"
+   },
+   "settingsTxtAccountInfo": {
+      "description": "",
+      "message": "Kontooplysninger"
+   },
+   "settingsTxtAccountType": {
+      "description": "",
+      "message": "Account Type:&nbsp;"
+   },
+   "settingsTxtAdBlockerSettings": {
+      "description": "",
+      "message": "General Settings"
+   },
+   "settingsTxtAdvancedFeatures": {
+      "description": "",
+      "message": "Avancerede funktioner"
+   },
+   "settingsTxtButtonBuyNow": {
+      "description": "",
+      "message": "BUY NOW"
+   },
+   "settingsTxtCheckingSubscription": {
+      "description": "",
+      "message": "Checking your subscription"
+   },
+   "settingsTxtClientArea": {
+      "description": "",
+      "message": "hjælp os til at blive bedre"
+   },
+   "settingsTxtFAQs": {
+      "description": "",
+      "message": "FAQs"
+   },
+   "settingsTxtFeedback": {
+      "description": "",
+      "message": "Feedback"
+   },
+   "settingsTxtLogout": {
+      "description": "",
+      "message": "Log ud"
+   },
+   "settingsTxtLogoutCancel": {
+      "description": "",
+      "message": "Nej"
+   },
+   "settingsTxtLogoutConfirmation": {
+      "description": "",
+      "message": "Are you sure you want to logout ?"
+   },
+   "settingsTxtLogoutProceed": {
+      "description": "",
+      "message": "Yes"
+   },
+   "settingsTxtPasswordLabel": {
+      "description": "",
+      "message": "Password:&nbsp;"
+   },
+   "settingsTxtPleaseWait": {
+      "description": "",
+      "message": "Please Wait"
+   },
+   "settingsTxtPrivacyPolicy": {
+      "description": "",
+      "message": "privatlivspolitikker"
+   },
+   "settingsTxtProxyAutoConnect": {
+      "description": "",
+      "message": "Autostart proxy on browser start"
+   },
+   "settingsTxtRate": {
+      "description": "",
+      "message": "Giv os en bedømmelse"
+   },
+   "settingsTxtReferFrnd": {
+      "description": "",
+      "message": "Henvis en ven"
+   },
+   "settingsTxtSettings": {
+      "description": "",
+      "message": "Settings"
+   },
+   "settingsTxtSubscription": {
+      "description": "",
+      "message": "Your Subscription Status"
+   },
+   "settingsTxtUsernameLabel": {
+      "description": "",
+      "message": "Username:&nbsp;"
+   },
+   "settingsTxtWebRtc": {
+      "description": "",
+      "message": "WebRTC-lækagebeskyttelse"
+   },
+   "settingsTxtWhitelisting": {
+      "description": "",
+      "message": "Bypass Proxy"
+   },
+   "settingsWhitelistingHintText": {
+      "description": "",
+      "message": "Vælg at deaktivere proxy for bestemte websteder, selv i den tilsluttede tilstand"
+   },
+   "signUpEmaiBtnTxt": {
+      "description": "",
+      "message": "Sign Up with Email"
+   },
+   "signUpEmaiBtnTxtFree": {
+      "description": "",
+      "message": "Get 7 Days Free Trial"
+   },
+   "signUpFieldError": {
+      "description": "",
+      "message": "Please enter a valid email address"
+   },
+   "signUpTxtEmail": {
+      "description": "",
+      "message": "Enter your email address"
+   },
+   "signUpTxtHelp": {
+      "description": "",
+      "message": " You will receive your PureVPN login details on this email."
+   },
+   "signupLoaderText": {
+      "description": "",
+      "message": "Please wait.\u003Cbr/>Signing Up..."
+   },
+   "skipBtn": {
+      "description": "",
+      "message": "CANCEL"
+   },
+   "socialLoginTxt": {
+      "description": "",
+      "message": "Login With"
+   },
+   "spoofGPSHintText": {
+      "description": "",
+      "message": "Forfalsk din GPS-placering for at manipulere hackere og phishere, mens du har forbindelse til VPN."
+   },
+   "submitBtn": {
+      "description": "",
+      "message": "Indsend"
+   },
+   "talkToSupportText": {
+      "description": "",
+      "message": "Vil du tale med vores support?"
+   },
+   "termsConditionPrivacyError": {
+      "description": "",
+      "message": "Please indicate that you have read and agreed to our\u003Cbr/>Terms and Service & Privacy Policy."
+   },
+   "termsandConditionConsent": {
+      "description": "",
+      "message": "I agree that I have read and understood the \u003Ca target=\"_blank\" class=\"terms_condition_links\" href=\"https://www.purevpn.com/term.php\">Terms & Conditions\u003C/a> and the \u003Ca target=\"_blank\" class=\"terms_condition_links\" href=\"https://www.purevpn.com/privacy-policy.php\">Privacy Policy\u003C/a>."
+   },
+   "txtCopyRights": {
+      "description": "copy right text",
+      "message": "&copy; 2011-2017 PureVPN Ltd."
+   },
+   "txtErrorMsg": {
+      "description": "Footer line 1",
+      "message": "Something went wrong, please try again later."
+   },
+   "txtFooterLine1": {
+      "description": "Footer line 1",
+      "message": "Få PureVPN til"
+   },
+   "txtSuccessMsg": {
+      "description": "",
+      "message": "Saved"
+   },
+   "verificationCodeError": {
+      "description": "",
+      "message": "Field should not be blank"
+   },
+   "verificationCodeTxt": {
+      "description": "",
+      "message": "Enter your verification code"
+   },
+   "verificationHelpTxt": {
+      "description": "",
+      "message": "Check your email for the verification code.\u003Cbr/> Didn't get the code? \u003Ca href='#' class='resendCode'>Resend\u003C/a>"
+   },
+   "verificationLoaderText": {
+      "description": "",
+      "message": "The code is being verified."
+   },
+   "webRtcHintText": {
+      "description": "",
+      "message": "Forhindr hjemmesider i at bruge dine IP-adresser og andre følsomme oplysninger."
+   }
+}

@@ -1,0 +1,34 @@
+{
+   "action": {
+      "default_popup": "./popup.html"
+   },
+   "author": "Microsoft",
+   "background": {
+      "service_worker": "sp-page-diagnostics-background.js",
+      "type": "module"
+   },
+   "content_scripts": [ {
+      "js": [ "sp-page-diagnostics-content-script-entry.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_Description__",
+   "host_permissions": [ "https://*/*" ],
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "32": "images/icon32.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs52lE9XT4MDjcpeJOlsQ7fNhtGKW8/0E7oKCAM2Hn+lhFYEzKqfue/WXKK1uV9x5EX5mfL01FPMw9aVPmmanbdJAkA6WO/ZSaV34VtClUjxBwMZGbdVOaWqZ4lhQG0hzX63b8QHJW6fk5PleDB0wwYUMiFsE5nnq1z89lHlUs8vqggfvAdlcyxhik6wzyDHz9Dd8YXGy4fU2uoQZqrkzJgZwDY/6Gl/kObum38C1EBlqmARX9K8pFZQLv/18ciWvxcQksrKVeqeqh98G3lIdtca8iGWAoFYSRITjfXpyXY3RSOs1tmA2ACPgKruDX9mH7ICUjMvumysCLqYjYZropQIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_AppName__",
+   "permissions": [ "webNavigation", "downloads", "tabs", "activeTab", "alarms", "debugger", "scripting", "webRequest", "storage", "declarativeNetRequestWithHostAccess" ],
+   "short_name": "SPPageDiag",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.0.3",
+   "web_accessible_resources": [ {
+      "matches": [ "https://*/*" ],
+      "resources": [ "classic/contentScript/pageNetwork.js", "classic/contentScript/registerListener.js", "classic/jquery/jquery.min.js", "modern-injected-script.js", "classic-injected-script.js", "sp-page-diagnostics-content-script-entry.js", "sp-page-diagnostics-content-script-core.js" ]
+   } ]
+}

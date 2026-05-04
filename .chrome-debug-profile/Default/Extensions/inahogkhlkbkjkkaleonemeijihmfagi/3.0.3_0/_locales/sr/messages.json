@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "Основни подаци"
+   },
+   "AppDescription": {
+      "message": "Analizirajte performanse stranica veb lokacije i dobijte preporuke za optimizaciju."
+   },
+   "AppName": {
+      "message": "Dijagnostika stranica za SharePoint"
+   },
+   "AttentionRequired": {
+      "message": "Потребна је пажња"
+   },
+   "AuditorsDataReady": {
+      "message": "Валидација података је довршена"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "I javni i privatni CDN treba da budu omogućeni uz podrazumevanu konfiguraciju. Sarađujte sa SharePoint administratorom da biste omogućili oba CDN-a i koristite podrazumevane CDN lokacije ili se obratite SharePoint administratoru da biste dodali prilagođene lokacije."
+   },
+   "ClassicPageType": {
+      "message": "klasično"
+   },
+   "CollectorsDataReady": {
+      "message": "Прикупљање података је довршено"
+   },
+   "CorrelationIdLabel": {
+      "message": "ID корелације"
+   },
+   "Custom": {
+      "message": "Prilagođeno"
+   },
+   "Description": {
+      "message": "Алатка за идентификацију проблема са перформансама странице у услузи SharePoint Online"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "Preporučite korišćenje veb segmenta „Sadržaj po pretrazi“ umesto veb segmenta „Sadržaj po upitu“."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "CDN poboljšava performanse keširanjem statičkih sredstava bliže pregledačima koji ih traže. U saradnji sa SharePoint administratorom postavite i konfigurišite CDN za čuvanje statičkih stranica."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "Prikazivanje jedne ili više ekstenzija traje duže od 1000 ms. "
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "Korišćenje funkcija iFrames usporava performanse stranice zato što se sadržaj učitava sa spoljne stranice. Koristite slike umesto funkcije iFrames, ali ako se iFrames mora koristiti, umanjite broj i/ili ih premestite iz oblasti prikaza."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "Slike na ovoj stranici su prevelike za optimalne performanse stranice. Smanjite sve slike na ovoj stranici na manje od {0} kd."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "Slike na ovoj stranici su prevelike za optimalne performanse stranice. Smanjite sve slike na ovoj stranici na manje od {0} mb."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0} proširenja se učitava duže od {1} ms, a to utiče na performanse stranice."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "Sadržaj stranice kao što su slike, video i tekst utiču na performanse stranice. Smanjite broj veb segmenata, koristite mreže za isporuku sadržaja (CDN) i ograničite sadržaj stranice."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "Kada testirate performanse dok ste prijavljeni kao administrator, na rezultate utiče povećani saobraćaj koji izazivaju bezbednosne grupe."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "Ova stranica premašuje osnovni broj preporučenih poziva za dobavljanje stavki liste bez zaglavlja van keša. Ograničite zahteve na manje od {0} zahteva za dobavljanje stavki liste za svaku stranicu."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "Ova stranica premašuje osnovni broj preporučenih poziva u sistemu SharePoint. Ograničite zahteve za manje od {0} SharePoint zahteva za svaku {1} stranicu."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "Ova stranica premašuje osnovni broj preporučenih poziva za pretragu. Ograničite zahteve za manje od {0} zahteva za pretragu za svaku stranicu."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "Da bismo obezbedili iskustvo pretrage sa visokim performansama, ograničavamo maksimalnu podržanu vrednost za parametar „StartRow“ na {0}."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "1 proširenje se učitava duže od {0} ms, a to utiče na performanse stranice."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "Strukturna navigacija koja nije keširana usporava performanse lokacije. Ponovno dizajnirajte navigaciju lokacije pomoću upravljane navigacije ili pretrage."
+   },
+   "DetectPageType": {
+      "message": "Otkrivanje tipa stranice..."
+   },
+   "DiagnosticTests": {
+      "message": "Дијагностички тестови"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "Трајање је веће од {0}мс"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "Трајање је унутар граничне вредности {0}мс"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "Омогући евидентирање за подршку (може да утиче на перформансе; користите за решавање проблема помоћу Microsoft подршке)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "Евидентирање за подршку је омогућено"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "Омогући извоз у HTTP архиву (HAR)"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "Svaki prilagođeni veb segment čije učitavanje unutar prikaza traje duže od 2000 ms ili duže od 4000 ms izvan prikaza utiče na performanse stranice."
+   },
+   "ErrorMessage": {
+      "message": "Дошло је до грешке приликом покретања дијагностике странице. Покушајте поново касније. Ако поново дође до грешке, обратите се"
+   },
+   "ExportToHar": {
+      "message": "Извези у HAR"
+   },
+   "ExportToHarHover": {
+      "message": "Извези у HTTP архиву (HAR)"
+   },
+   "ExportToJson": {
+      "message": "Извези у JSON"
+   },
+   "ExportToJsonHover": {
+      "message": "Извези у JavaScript Object Notation (JSON)"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "Neki resursi ne koriste CDN-ove"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "Proširenja mogu da utiču na vreme učitavanja"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "Koristi se previše proširenja"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "Tri ili više segmenata koriste iFrames"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "Ova stranica sadrži ovoliko velikih slika: {0}"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "Ova stranica sadrži 1 veliku sliku"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "Stepen važnosti stranice je {0} kB"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "Testiranje performansi stranice pomoću korisničkog naloga"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Ova stranica ima ovoliko poziva za dobavljanje stavki sa liste: {0}"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "Ova stranica ima ovoliko poziva za SharePoint: {0}"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "Ova stranica ima ovoliko poziva za pretragu: {0}"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "„StartRow“ parametar zahteva za pretragu premašuje ograničenje {0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "Prilagođeni veb segmenti utiču na vreme učitavanja stranice"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "Keširanje strukturne navigacije nije omogućeno"
+   },
+   "FeedbackCategoryName": {
+      "message": "Pošaljite povratne informacije"
+   },
+   "FeedbackInstruction": {
+      "message": "Imate predloge ili pitanja? Objavite ih u "
+   },
+   "HelpLinksCategoryName": {
+      "message": "Dodatni resursi"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "Није могуће покренути дијагностику на системским страницама, као што је SharePoint почетна страница. Користите ову алатку само за странице SharePoint сајтова."
+   },
+   "HowToUseInstruction": {
+      "message": "Saznajte više o ovoj alatki i načinu na koji funkcioniše u članku"
+   },
+   "HowToUseLinkName": {
+      "message": "Alatka za dijagnostiku stranice za SharePoint Online"
+   },
+   "Init": {
+      "message": "Poč"
+   },
+   "LazyLoadingTime": {
+      "message": "Neaktivno učitavanje"
+   },
+   "LearnMore": {
+      "message": "Сазнајте више"
+   },
+   "MadeBy": {
+      "message": "Napravio"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "Microsoft подршци."
+   },
+   "ModernPageType": {
+      "message": "moderno"
+   },
+   "ModuleLoad": {
+      "message": "Učitavanje modula"
+   },
+   "NameAndId": {
+      "message": "Ime i ID"
+   },
+   "NetworkTrace": {
+      "message": "Праћење мреже"
+   },
+   "NoActionRequired": {
+      "message": "Није потребно извршити ниједну радњу"
+   },
+   "NotSupportedPage": {
+      "message": "Није могуће покренути дијагностику странице на овој страници. Користите ову алатку само за странице SharePoint сајтова."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "Није могуће покренути дијагностику док је страница у режиму уређивања. На страници изаберите ставку „Сачувај као радну верзију“ или „Одбаци промене“ и покушајте поново."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "Покушавате да користите алатку „Дијагностика странице“ помоћу локалне верзије система SharePoint. Ова алатка се користи само уз SharePoint Online."
+   },
+   "PageLoadTimeLabel": {
+      "message": "Време учитавања странице"
+   },
+   "PageTypeDataReady": {
+      "message": "Провера типа странице је довршена"
+   },
+   "PageUrlLabel": {
+      "message": "URL адреса странице"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "Ova stranica koristi Mreže za isporuku sadržaja (CDNs)"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "Učitavanje nijednog proširenja ne traje duže od {0} ms"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "Koristi se manje od 5 proširenja"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "Nijedan veb segment ne koristi IFrames"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "Sve slike na stranici su pojedinačno manje od {0} KB"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "Stepen važnosti stranice je manji od 1000 kb"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "Performanse stranice su testirane pomoću korisničkog naloga"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Ima manje od {0} zahteva za dobavljanje stavki liste"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "Postoje manje od {0} SharePoint zahteva"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "Ima manje od ovoliko zahteva za pretragu: {0}"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "„StartRow“ parametar zahteva za pretragu je niži od ograničenja"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "Pokretanje nijednog web segmenta ne traje duže od {0} ms"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "Strukturna navigacija nije otkrivena"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "Javni CDN nije omogućen"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "Javni i privatni CDN su omogućeni. Koristite podrazumevane CDN lokacije ili zatražite od SharePoint administratora da doda prilagođene lokacije."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "Javni i privatni CDN nisu omogućeni"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "Javni CDN nije omogućen"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "Postoji 7 ili više proširenja."
+   },
+   "RenderTime": {
+      "message": "Vizuelizacija"
+   },
+   "RunningAuditors": {
+      "message": "Провера ваљаности података..."
+   },
+   "RunningCollectors": {
+      "message": "Прикупљање података... ово може потрајати неколико минута"
+   },
+   "RunningPageTypeChecker": {
+      "message": "Провера типа странице"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "Започни"
+   },
+   "Stop": {
+      "message": "Заустави"
+   },
+   "ThirdPartyNotice": {
+      "message": "Обавештење независног произвођача"
+   },
+   "TimeoutMessage": {
+      "message": "Истекло је временско ограничење алатке за дијагностику странице. Покушајте поново."
+   },
+   "TitleForCBQAuditor": {
+      "message": "Proveri da li postoji CBQ veb segment"
+   },
+   "Total": {
+      "message": "Ukupno"
+   },
+   "TunePerformanceInstruction": {
+      "message": "Pronađite više informacija o poboljšanju performansi i vremenima za preuzimanje stranica u"
+   },
+   "TunePerformanceLinkName": {
+      "message": "Podesite SharePoint Online performanse"
+   },
+   "Url": {
+      "message": "URL adresa"
+   },
+   "UrlDescription": {
+      "message": "Пронађена је {0} URL адреса"
+   },
+   "UrlsDescription": {
+      "message": "Пронађено је оволико URL адреса: {0}"
+   },
+   "UserVoice": {
+      "message": "User Voice"
+   },
+   "VersionLabel": {
+      "message": "Верзија"
+   },
+   "Warning": {
+      "message": "Могућности за побољшање"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "Svaki ugrađeni Microsoft veb segment čije učitavanje unutar prikaza traje duže od 2000 ms ili duže od 4000 ms izvan prikaza utiče na performanse stranice."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "Jedan ili više segmenata koriste iFrames"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Microsoft veb segmenti utiču na vreme učitavanja"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "Postoji 5 ili više proširenja."
+   }
+}

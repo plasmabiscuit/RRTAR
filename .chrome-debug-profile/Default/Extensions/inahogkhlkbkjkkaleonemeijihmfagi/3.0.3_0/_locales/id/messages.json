@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "Tentang"
+   },
+   "AppDescription": {
+      "message": "Analisis kinerja halaman situs Anda dan dapatkan rekomendasi untuk pengoptimalan."
+   },
+   "AppName": {
+      "message": "Diagnostik halaman untuk SharePoint"
+   },
+   "AttentionRequired": {
+      "message": "Perlu perhatian"
+   },
+   "AuditorsDataReady": {
+      "message": "Validasi data selesai"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "CDN publik dan privat harus diaktifkan dengan konfigurasi default. Bermitralah dengan Administrator SharePoint untuk mengaktifkan kedua CDN dan menggunakan lokasi CDN default, atau minta Administrator SharePoint untuk menambahkan lokasi kustom."
+   },
+   "ClassicPageType": {
+      "message": "klasik"
+   },
+   "CollectorsDataReady": {
+      "message": "Pengumpulan data selesai"
+   },
+   "CorrelationIdLabel": {
+      "message": "CorrelationID"
+   },
+   "Custom": {
+      "message": "Kustom"
+   },
+   "Description": {
+      "message": "Alat untuk mengidentifikasi masalah performa halaman di SharePoint Online"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "Sarankan menggunakan Konten dengan Mencari komponen web melalui Komponen Web Konten menurut Kueri."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "CDN meningkatkan performa dengan penembolokan aset statis lebih dekat ke browser yang memintanya. Lakukan kerja sama dengan Administrator SharePoint untuk menyiapkan dan mengonfigurasi CDN guna menyimpan aset halaman statis."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "Proses render pada satu atau beberapa ekstensi memakan waktu lebih dari 1000 md. "
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "Penggunaan iFrame memperlambat kinerja halaman karena konten memuat dari halaman eksternal. Gunakan gambar, bukan iFrame, tetapi jika harus menggunakan iFrame, minimalkan jumlahnya dan/atau pindahkan semuanya dari viewport."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "Gambar di halaman ini terlalu besar untuk mengoptimalkan kinerja halaman. Kurangi semua gambar di halaman ini hingga masing-masing lebih kecil dari {0} kb."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "Gambar di halaman ini terlalu besar untuk kinerja halaman yang optimal. Kurangi semua gambar di halaman ini hingga masing-masing lebih kecil dari {0} mb."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0} ekstensi memakan waktu lebih lama dari {1} ms untuk dimuat dan memengaruhi kinerja halaman."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "Konten halaman seperti gambar, video, dan teks memengaruhi kinerja halaman. Kurangi jumlah komponen Web, gunakan Jaringan Pengiriman Konten (CDN), dan batasi konten halaman."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "Jika Anda menguji kinerja saat masuk sebagai administrator, hasilnya dipengaruhi oleh peningkatan lalu lintas yang disebabkan oleh grup keamanan."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "Halaman ini melebihi jumlah acuan dasar panggilan yang disarankan ke Pengambilan Item Daftar dengan header singgahan keluar. Batasi permintaan kurang dari {0} permintaan Pengambilan Item Daftar untuk setiap halaman."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "Halaman ini melampaui jumlah acuan dasar panggilan yang disarankan untuk SharePoint. Batasi permintaan hingga kurang dari {0} permintaan SharePoint untuk setiap {1} halaman."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "Halaman ini melebihi jumlah acuan dasar panggilan yang disarankan untuk dicari. Batasi permintaan hingga kurang dari {0} permintaan pencarian untuk setiap halaman."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "Untuk memberikan pengalaman pencarian dengan performa tinggi, kami membatasi nilai maksimum StartRow yang didukung menjadi {0}."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "1 ekstensi memerlukan waktu lebih lama dari {0} ms untuk dimuat dan memengaruhi kinerja halaman."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "Navigasi struktural yang tanpa cache memperlambat kinerja situs. Desain ulang navigasi situs Anda menggunakan navigasi terkelola atau berdasarkan pencarian."
+   },
+   "DetectPageType": {
+      "message": "Mendeteksi tipe halaman..."
+   },
+   "DiagnosticTests": {
+      "message": "Tes diagnostik"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "Durasi lebih dari {0}ms"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "Durasi berada dalam ambang {0}mdtk"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "Aktifkan pembuatan log dukungan (dapat memengaruhi kinerja; gunakan untuk memecahkan masalah dengan dukungan Microsoft)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "Pembuatan log dukungan diaktifkan"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "Aktifkan pengeksporan ke Arsip HTTP (HAR)"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "Setiap komponen web kustom dengan waktu muat lebih lama dari 2000 MS di dalam viewport atau dengan waktu muat lebih lama dari 4000 MS di luar viewport, akan memengaruhi kinerja halaman."
+   },
+   "ErrorMessage": {
+      "message": "Terjadi kesalahan saat menjalankan diagnostik Halaman. Coba lagi nanti. Jika kesalahan terus terjadi, hubungi"
+   },
+   "ExportToHar": {
+      "message": "Ekspor ke HAR"
+   },
+   "ExportToHarHover": {
+      "message": "Ekspor ke Arsip HTTP (HAR)"
+   },
+   "ExportToJson": {
+      "message": "Ekspor ke JSON"
+   },
+   "ExportToJsonHover": {
+      "message": "Ekspor ke notasi objek JavaScript (JSON)"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "Beberapa aset tidak menggunakan CDN"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "Ekstensi mungkin memengaruhi waktu memuat"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "Terlalu banyak ekstensi digunakan"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "Tiga komponen web atau lebih menggunakan iFrame"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "Halaman ini berisi {0} gambar berukuran besar"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "Halaman ini berisi 1 gambar berukuran besar"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "Ukuran file halaman adalah {0} kb"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "Uji kinerja halaman dengan akun pengguna"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Halaman ini memiliki panggilan {0} ke Pengambilan Item Daftar"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "Halaman ini memiliki {0} panggilan ke SharePoint"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "Halaman ini memiliki {0} panggilan ke pencarian"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "StartRow permintaan pencarian melebihi batasan {0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "Komponen Web kustom mempengaruhi waktu pemuatan halaman"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "Pembuatan cache navigasi struktural tidak diaktifkan"
+   },
+   "FeedbackCategoryName": {
+      "message": "Berikan umpan balik"
+   },
+   "FeedbackInstruction": {
+      "message": "Punya saran atau pertanyaan? Kirimkan di "
+   },
+   "HelpLinksCategoryName": {
+      "message": "Sumber daya tambahan"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "Tidak dapat menjalankan diagnostik pada halaman sistem seperti halaman mulai SharePoint. Gunakan alat ini hanya untuk halaman situs SharePoint."
+   },
+   "HowToUseInstruction": {
+      "message": "Pelajari lebih lanjut alat ini dan cara kerjanya"
+   },
+   "HowToUseLinkName": {
+      "message": "Alat Diagnostik Halaman untuk SharePoint Online"
+   },
+   "Init": {
+      "message": "Init"
+   },
+   "LazyLoadingTime": {
+      "message": "Muatan Malas"
+   },
+   "LearnMore": {
+      "message": "Pelajari selengkapnya"
+   },
+   "MadeBy": {
+      "message": "DibuatOleh"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "Dukungan Microsoft."
+   },
+   "ModernPageType": {
+      "message": "modern"
+   },
+   "ModuleLoad": {
+      "message": "Muatan Modul"
+   },
+   "NameAndId": {
+      "message": "Nama dan ID"
+   },
+   "NetworkTrace": {
+      "message": "Jejak jaringan"
+   },
+   "NoActionRequired": {
+      "message": "Tidak ada tindakan yang diperlukan"
+   },
+   "NotSupportedPage": {
+      "message": "Tidak dapat menjalankan diagnostik halaman pada Halaman ini. Gunakan alat ini untuk halaman situs SharePoint saja."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "Tidak dapat menjalankan diagnostik saat halaman berada dalam mode edit. Pada halaman Anda, pilih Simpan sebagai draf atau buang perubahan dan coba lagi."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "Anda sedang mencoba menggunakan alat diagnostik halaman dengan versi lokal SharePoint. Alat ini hanya untuk digunakan dengan SharePoint online."
+   },
+   "PageLoadTimeLabel": {
+      "message": "Waktu muat halaman"
+   },
+   "PageTypeDataReady": {
+      "message": "Pemeriksaan tipe halaman selesai"
+   },
+   "PageUrlLabel": {
+      "message": "URL halaman"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "Halaman ini menggunakan Jaringan Pengiriman Konten (CDN)"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "Tidak ada ekstensi yang memerlukan waktu muat lebih lama dari {0} ms"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "Terdapat kurang dari 5 ekstensi yang digunakan"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "Tidak ada komponen web yang menggunakan iFrame"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "Semua gambar di halaman ini masing-masing lebih kecil dari {0} kb"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "Ukuran halaman kurang dari 1000 kb"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "Kinerja halaman diuji dengan akun pengguna"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Ada kurang dari {0} permintaan Pengambilan Item Daftar"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "Terdapat kurang dari {0} permintaan SharePoint"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "Terdapat kurang dari {0} permintaan pencarian"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "StartRow permintaan pencarian lebih rendah dari batasan"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "Tidak ada komponen web yang memakan waktu lebih lama dari {0} ms untuk dijalankan"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "Navigasi struktural tidak terdeteksi"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "CDN privat tidak diaktifkan"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "CDN publik dan privat diaktifkan. Gunakan lokasi CDN default atau minta Administrator SharePoint untuk menambahkan lokasi kustom."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "CDN publik dan privat tidak diaktifkan"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "CDN publik tidak diaktifkan"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "Ada 7 ekstensi atau lebih."
+   },
+   "RenderTime": {
+      "message": "Render"
+   },
+   "RunningAuditors": {
+      "message": "Memvalidasi data..."
+   },
+   "RunningCollectors": {
+      "message": "Mengumpulkan data... ini mungkin memerlukan waktu beberapa menit"
+   },
+   "RunningPageTypeChecker": {
+      "message": "Memeriksa tipe halaman"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "Mulai"
+   },
+   "Stop": {
+      "message": "Berhenti"
+   },
+   "ThirdPartyNotice": {
+      "message": "Pemberitahuan Pihak Ketiga"
+   },
+   "TimeoutMessage": {
+      "message": "Batas waktu alat diagnostik Halaman telah berakhir. Silakan coba lagi."
+   },
+   "TitleForCBQAuditor": {
+      "message": "Periksa Komponen Web CBQ"
+   },
+   "Total": {
+      "message": "Total"
+   },
+   "TunePerformanceInstruction": {
+      "message": "Temukan informasi selengkapnya tentang peningkatan performa dan waktu pengunduhan halaman"
+   },
+   "TunePerformanceLinkName": {
+      "message": "Setel performa SharePoint Online"
+   },
+   "Url": {
+      "message": "Url"
+   },
+   "UrlDescription": {
+      "message": "Ditemukan {0} URL"
+   },
+   "UrlsDescription": {
+      "message": "Ditemukan {0} URL"
+   },
+   "UserVoice": {
+      "message": "Suara Pengguna"
+   },
+   "VersionLabel": {
+      "message": "Versi"
+   },
+   "Warning": {
+      "message": "Peluang peningkatan"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "Setiap komponen web Microsoft bawaan dengan waktu muat lebih lama dari 2000 MS di dalam viewport atau dengan waktu muat lebih lama dari 4000 MS di luar viewport, akan memengaruhi kinerja halaman."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "Satu atau beberapa komponen web menggunakan iFrame"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Komponen web Microsoft memengaruhi waktu muat halaman"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "Ada 5 ekstensi atau lebih."
+   }
+}

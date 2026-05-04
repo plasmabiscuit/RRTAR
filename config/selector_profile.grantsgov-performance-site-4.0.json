@@ -1,0 +1,40 @@
+{
+  "form_metadata": {
+    "form_name": "PerformanceSite_4_0",
+    "form_version": "4.0",
+    "iframe_src_pattern": "PerformanceSite_4_0",
+    "framework": "Knockout.js"
+  },
+  "id_patterns": {
+    "primary": {
+      "individual": "primaryIndividual",
+      "organization_name": "primaryOrganization",
+      "uei": "primaryUEI",
+      "street1": "primaryStreet1",
+      "street2": "primaryStreet2",
+      "city": "primaryCity",
+      "county": "primaryCounty",
+      "state": "primaryState",
+      "province": "primaryProvince",
+      "country": "primaryCountry",
+      "zip_postal_code": "primaryZipCode",
+      "congressional_district": "primaryCongressionalDistrict"
+    },
+    "other": {
+      "individual": "otherIndividual{N}",
+      "organization_name": "otherOrganization{N}",
+      "uei": "otherUEI{N}",
+      "street1": "otherStreet1{N}",
+      "street2": "otherStreet2{N}",
+      "city": "otherCity{N}",
+      "county": "otherCounty{N}",
+      "state": "otherState{N}",
+      "province": "otherProvince{N}",
+      "country": "otherCountry{N}",
+      "zip_postal_code": "otherZipCode{N}",
+      "congressional_district": "otherCongressionalDistrict{N}"
+    },
+    "additional_sites_file": "additionalSiteFile",
+    "save_button": "footerSaveUpload"
+  }
+}

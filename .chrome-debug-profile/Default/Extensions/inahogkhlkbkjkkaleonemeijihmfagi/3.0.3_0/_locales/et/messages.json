@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "Teave"
+   },
+   "AppDescription": {
+      "message": "Saate analüüsida oma saidilehtede jõudlust ja saate soovitusi optimeerimiseks."
+   },
+   "AppName": {
+      "message": "SharePointi lehediagnostika"
+   },
+   "AttentionRequired": {
+      "message": "Tähelepanu!"
+   },
+   "AuditorsDataReady": {
+      "message": "Andmed on valideeritud"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "Nii avalik kui ka privaatne sisuedastusvõrk (CDN) peavad olema lubatud vaikekonfiguratsiooniga. Lubage koostöös SharePointi administraatoriga mõlemad CDN-id ja kasutage CDN-i vaikeasukohti või paluge SharePointi administraatoril lisada kohandatud asukohad."
+   },
+   "ClassicPageType": {
+      "message": "klassikaline"
+   },
+   "CollectorsDataReady": {
+      "message": "Andmed on kogutud"
+   },
+   "CorrelationIdLabel": {
+      "message": "Korrelatsiooni ID"
+   },
+   "Custom": {
+      "message": "Kohandatud"
+   },
+   "Description": {
+      "message": "Tööriist SharePoint Online’is lehejõudlusega seotud probleemide tuvastamiseks"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "Soovitage kasutada päringupõhise sisu veebiosa asemel otsingupõhise sisu veebiosa."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "Sisuedastusvõrgud parendavad jõudlust, salvestades staatilised varad vahemällu, kus need asuvad nende jaoks päringuid saatvatele brauseritele lähemal. Häälestage ja konfigureerige koostöös SharePointi administraatoriga staatiliste lehevarade talletamiseks sisuedastusvõrgud."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "Vähemalt ühe laienduse renderdamiseks kulub kauem kui 1000 ms. "
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "iFrame’ide kasutamine muudab lehtede laadimise aeglasemaks, kuna sisu laaditakse väliselt lehelt. Kui võimalik, kasutage iFrame’ide asemel pilte; kui iFrame’ide kasutamist ei saa vältida, hoidke nende arv võimalikult väike ja/või teisaldage need vaateavast välja."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "Selle lehe pildid on lehe jõudluse optimeerimiseks liiga suured. Muutke piltide suurust nii, et iga selle lehe pildi maht jääks alla {0} kB."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "Selle lehe pildid on lehe optimaalse jõudluse tagamiseks liiga suured. Muutke piltide suurust nii, et iga selle lehe pildi maht jääks alla {0} MB."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0} laienduse laadimiseks kulub üle {1} ms ja see mõjutab lehe jõudlust."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "Lehe sisu (nt pildid, videod ja tekst) mõjutab lehe laadimise kiirust. Vähendage veebiosade arvu, kasutage sisuedastusvõrke ja piirake lehe sisu."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "Kui testite jõudlust administraatorina sisse logituna, mõjutab tulemusi ka turberühmade põhjustatud suurem liiklus."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "See leht ületab soovitatavate vahemälu päiseta loendiüksuste toomise kutsete võrdlusaluse arvu. Piirake taotlused alla {0} loendiüksuse toomise taotlusele iga lehe kohta."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "Sellel lehel on soovitatavast rohkem SharePointi kutseid. Piirake päringute arvu; see ei tohiks olla üle {0} SharePointi päringu iga {1}-tüüpi lehe kohta."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "Sellel lehel on soovitatavast rohkem otsingukutseid. Piirake päringute arv iga lehe puhul vähem kui {0} otsingupäringuid."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "Suure jõudlusega otsingukogemuse pakkumiseks piirame StartRow maksimaalse toetatud väärtuse väärtuseks {0}."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "Ühe laienduse laadimiseks kulub üle {0} ms ja see mõjutab lehe jõudlust."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "Kui struktuurnavigeerimine pole salvestatud vahemällu, muudab see lehe aeglaseks. Kujundage saidi navigeerimine ümber, kasutades hallatavat või otsingupõhist navigeerimist."
+   },
+   "DetectPageType": {
+      "message": "Lehe tüübi tuvastamine..."
+   },
+   "DiagnosticTests": {
+      "message": "Diagnostikatestid"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "Kestus on suurem kui {0} ms"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "Kestus on {0} ms läve piires"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "Luba logimine tugiteenuste jaoks (võib mõjutada jõudlust; kasutatakse Microsofti kasutajatoega koos tõrkeotsingu tegemiseks)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "Logimine tugiteenuste jaoks on lubatud"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "Luba eksportimine HTTP-arhiivi (HAR)"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "Iga kohandatud veebiosa, mille laadimiseks vaateavas kulub üle 2000 ms või väljaspool vaateava üle 4000 ms, mõjutab lehe jõudlust."
+   },
+   "ErrorMessage": {
+      "message": "Lehediagnostika käitamisel ilmnes tõrge. Proovige hiljem uuesti. Kui tõrge ei lahene, võtke ühendust"
+   },
+   "ExportToHar": {
+      "message": "Ekspordi HAR-faili"
+   },
+   "ExportToHarHover": {
+      "message": "Ekspordi HTTP-arhiivi (HAR)"
+   },
+   "ExportToJson": {
+      "message": "Ekspordi JSON-faili"
+   },
+   "ExportToJsonHover": {
+      "message": "Ekspordi JavaScripti objektide notatsiooni vormingusse (JSON)"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "Mõni vara ei kasuta sisuedastusvõrke"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "Laiendused võivad laadimisaega mõjutada"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "Kasutatud on liiga palju laiendusi"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "Kolm või rohkem iFrame-paneele kasutavat veebiosa"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "Sellel lehel on {0} suurt pilti"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "Sellel lehel on üks suur pilt"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "Lehe kaal on {0} kB"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "Testige lehe jõudlust kasutajakontoga"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Sellel lehel on {0} loendiüksuse toomise kutset"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "Sellel lehel on {0} SharePointi kutset"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "Sellel lehel on {0} otsingukutset"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "Otsingupäringute StartRow ületab piirangu {0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "Kohandatud veebiosad mõjutavad lehe laadimise aega"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "Struktuurnavigeerimise salvestamine vahemällu pole lubatud"
+   },
+   "FeedbackCategoryName": {
+      "message": "Tagasiside"
+   },
+   "FeedbackInstruction": {
+      "message": "Kas teil on ettepanekuid või küsimusi? Postitage need siin: "
+   },
+   "HelpLinksCategoryName": {
+      "message": "Lisaressursid"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "Süsteemilehtedel (nt SharePointi avalehel) ei saa diagnostikat käitada. Kasutage seda tööriista ainult SharePointi saidilehtedel."
+   },
+   "HowToUseInstruction": {
+      "message": "Lugege lisateavet selle tööriista ja selle kohta, kuidas see töötab:"
+   },
+   "HowToUseLinkName": {
+      "message": "SharePoint Online’i lehediagnostika tööriist"
+   },
+   "Init": {
+      "message": "Init"
+   },
+   "LazyLoadingTime": {
+      "message": "Loid laadimine"
+   },
+   "LearnMore": {
+      "message": "Lisateave"
+   },
+   "MadeBy": {
+      "message": "Tootja"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "Microsofti kasutajatoega"
+   },
+   "ModernPageType": {
+      "message": "uudne"
+   },
+   "ModuleLoad": {
+      "message": "Mooduli laadimine"
+   },
+   "NameAndId": {
+      "message": "Nimi ja ID"
+   },
+   "NetworkTrace": {
+      "message": "Võrgujälitus"
+   },
+   "NoActionRequired": {
+      "message": "Midagi pole vaja teha"
+   },
+   "NotSupportedPage": {
+      "message": "Lehediagnostikat ei saa sellel lehel käitada. Kasutage seda tööriista ainult SharePointi saidilehtedel."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "Diagnostika ei saa käivitada, kui leht on redigeerimisrežiimis. Valige lehel Salvesta mustandina või hüljake muudatused ja proovige uuesti."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "Proovite kasutada lehe diagnostika tööriista, mis on SharePointi kohapealses versioonis. See tööriist on kasutamiseks ainult SharePoint Online ' iga."
+   },
+   "PageLoadTimeLabel": {
+      "message": "Lehe laadimise aeg"
+   },
+   "PageTypeDataReady": {
+      "message": "Lehe tüüp on kontrollitud"
+   },
+   "PageUrlLabel": {
+      "message": "Lehe URL"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "See leht kasutab sisuedastusvõrke"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "Ühegi laienduse laadimiseks ei kulu üle {0} ms"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "Kasutatud on vähem kui viis laiendust"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "iFrame’i kasutavaid veebiosi ei ole"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "Kõik lehel olevad pildid on väiksemad kui {0} kB"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "Lehe kaal on alla 1000 kB"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "Lehe jõudlust testiti kasutajakontoga"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Loendiüksuste toomise taotlusi on vähem kui {0}"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "SharePointi päringuid on vähem kui {0}"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "Otsingupäringuid on vähem kui {0}"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "Otsingupäringute StartRow on piirangust väiksem"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "Ühegi veebiosa käitamine ei võta üle {0} ms"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "Struktuurnavigeerimist ei tuvastatud"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "Privaatne CDN pole lubatud"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "Avalik ja privaatne sisuedastusvõrk on lubatud. Kasutage sisuedastusvõrgu vaikeasukohti või paluge SharePointi administraatoril lisada kohandatud asukohad."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "Avalik ja privaatne CDN pole lubatud"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "Avalik CDN pole lubatud"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "Laiendusi on vähemalt 7."
+   },
+   "RenderTime": {
+      "message": "Renderdamine"
+   },
+   "RunningAuditors": {
+      "message": "Andmete valideerimine..."
+   },
+   "RunningCollectors": {
+      "message": "Andmete kogumine... Selleks võib kuluda mõni minut"
+   },
+   "RunningPageTypeChecker": {
+      "message": "Lehe tüübi kontrollimine"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "Alusta"
+   },
+   "Stop": {
+      "message": "Peata"
+   },
+   "ThirdPartyNotice": {
+      "message": "Kolmanda osapoole märkus"
+   },
+   "TimeoutMessage": {
+      "message": "Lehediagnostika tööriistas ilmnes ajalõpp. Proovige uuesti."
+   },
+   "TitleForCBQAuditor": {
+      "message": "CBQ veebiosa kontroll"
+   },
+   "Total": {
+      "message": "Kokku"
+   },
+   "TunePerformanceInstruction": {
+      "message": "Lisateavet jõudluse parendamise kohta ja lehtede kiiremaks allalaadimiseks leiate siit:"
+   },
+   "TunePerformanceLinkName": {
+      "message": "SharePoint Online’i jõudluse häälestamine"
+   },
+   "Url": {
+      "message": "URL"
+   },
+   "UrlDescription": {
+      "message": "Leiti {0} URL"
+   },
+   "UrlsDescription": {
+      "message": "Leiti {0} URL-i"
+   },
+   "UserVoice": {
+      "message": "Kasutaja arvamus"
+   },
+   "VersionLabel": {
+      "message": "Versioon"
+   },
+   "Warning": {
+      "message": "Parendusvõimalused"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "Iga Microsofti valmisveebiosa, mille laadimiseks vaateavas kulub üle 2000 ms või väljaspool vaateava üle 4000 ms, mõjutab lehe jõudlust."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "Üks või mitu iFrame-paneele kasutavat veebiosa"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Microsofti veebiosad mõjutavad lehe laadimise aega"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "Laiendusi on vähemalt 5."
+   }
+}

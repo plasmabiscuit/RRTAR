@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "Informace"
+   },
+   "AppDescription": {
+      "message": "Analyzujte výkon stránek webu a nechte si zobrazovat doporučení k optimalizaci."
+   },
+   "AppName": {
+      "message": "Diagnostika stránek pro SharePoint"
+   },
+   "AttentionRequired": {
+      "message": "Vyžaduje se pozornost."
+   },
+   "AuditorsDataReady": {
+      "message": "Ověřování dat se dokončilo."
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "Ve výchozí konfiguraci je třeba povolit veřejnou i soukromou síť CDN. Ve spolupráci se správcem SharePointu povolte obě sítě CDN a použijte výchozí umístění CDN nebo požádejte správce SharePointu o přidání vlastních umístění."
+   },
+   "ClassicPageType": {
+      "message": "klasická"
+   },
+   "CollectorsDataReady": {
+      "message": "Shromažďování dat se dokončilo"
+   },
+   "CorrelationIdLabel": {
+      "message": "ID korelace"
+   },
+   "Custom": {
+      "message": "Vlastní"
+   },
+   "Description": {
+      "message": "Nástroj pro identifikování problémů s výkonem stránky na SharePointu Online"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "Doporučujeme používat obsah na základě vyhledávání webových částí, ne na základě dotazování se na ně."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "Sítě CDN zlepšují výkon tím, že do mezipaměti ukládají statický materiály blíže k žádajícím prohlížečům. Ve spolupráci se správcem SharePointu nastavte a nakonfigurujte sítě CDN pro ukládání statických materiálů na stránkách."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "Minimálně jedno rozšíření se vykresluje déle než 1000 ms. "
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "Používání rámců iFrame zpomaluje výkon stránky, protože obsah se načítá z externí stránky. Místo rámců iFrame používejte obrázky. Pokud je ale potřeba použít rámce iFrame, minimalizujte jejich počet nebo je odeberte ze zobrazení."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "Obrázky na této stránce jsou moc velké pro zajištění optimálního výkonu stránky. Zmenšete je všechny na méně než {0} kB."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "Obrázky na této stránce jsou moc velké pro zajištění optimálního výkonu stránky. Zmenšete je všechny na méně než {0} MB."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "Načítání {0} rozšíření trvá déle než {1} ms a to má vliv na výkon stránky."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "Na výkon stránky bude mít vliv jejich obsah, jako jsou obrázky, videa a text. Snižte počet webových částí, využívejte sítě pro doručování obsahu (CDN) a omezte obsah stránek."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "Pokud jste při testování výkonu přihlášeni jako správce, budou výsledky ovlivněny zvýšeným provozem způsobeným skupinami zabezpečení."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "Tato stránka překračuje základní počet doporučených volání načtení položky seznamu s hlavičkou odchozí mezipaměti. Omezte požadavky na méně než {0} žádostí o načtení položky seznamu pro každou stránku."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "Tato stránka překračuje referenční číslo doporučených volání na SharePoint. Omezte žádosti na SharePoint na míň než {0} pro každou stránku typu {1}."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "Tato stránka překračuje referenční číslo doporučených volání vyhledávání. Omezte žádosti o vyhledávání na míň než {0} pro každou stránku."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "Abychom mohli vyhledávání poskytovat s vysokým výkonem, omezujeme maximální podporovanou hodnotu StartRow na {0}."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "Načítání 1 rozšíření trvá déle než {0} ms a to má vliv na výkon stránky."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "Výkon webu zpomaluje strukturovaná navigace, která není v mezipaměti. Řešení navigace změňte na základě spravované nebo hledáním řízené navigace."
+   },
+   "DetectPageType": {
+      "message": "Zjišťování typu stránky…"
+   },
+   "DiagnosticTests": {
+      "message": "Diagnostické testy"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "Doba trvání je větší než {0}ms"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "Doba trvání je v mezích hodnoty {0}ms"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "Povolit protokolování pro podporu (může ovlivnit výkon; používá se při řešení problémů s podporou Microsoftu)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "Protokolování pro podporu povoleno"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "Povolit export do archivu HTTP (HAR)"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "Na výkon stránky má dopad jakákoliv vlastní webová část, jejíž načtení do zobrazení trvá déle než 2 000 ms nebo jejíž načtení mimo zobrazení trvá déle než 4 000 ms."
+   },
+   "ErrorMessage": {
+      "message": "Při spouštění diagnostiky stránky došlo k chybě. Zkuste to znovu později. Pokud se chyba opakuje, kontaktujte"
+   },
+   "ExportToHar": {
+      "message": "Exportovat do HAR"
+   },
+   "ExportToHarHover": {
+      "message": "Exportovat do archivu HTTP (HAR)"
+   },
+   "ExportToJson": {
+      "message": "Exportovat do JSON"
+   },
+   "ExportToJsonHover": {
+      "message": "Exportovat do JSON (JavaScript Object Notation)"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "Některé prostředky nepoužívají sítě CDN"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "Rozšíření můžou ovlivňovat dobu načítání."
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "Používá se příliš mnoho rozšíření."
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "Tři nebo více webových částí používajících rámce iFrame"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "Tato stránka obsahuje velké obrázky (počet: {0})."
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "Tato stránka obsahuje 1 velký obrázek."
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "Zatížení stránky je {0} kB."
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "Otestujte výkon stránek s použitím uživatelského účtu."
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Tato stránka má {0} volání načtení položky seznamu."
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "Tato stránka obsahuje {0} volání na SharePoint."
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "Tato stránka obsahuje {0} volání vyhledávání."
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "Hodnota StartRow vyhledávacích požadavků překračuje omezení {0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "Vlastní webové části ovlivňují dobu načítání stránky"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "Není povolena mezipaměť pro strukturovanou navigaci."
+   },
+   "FeedbackCategoryName": {
+      "message": "Váš názor"
+   },
+   "FeedbackInstruction": {
+      "message": "Máte návrhy nebo otázky? Publikujte je na webu "
+   },
+   "HelpLinksCategoryName": {
+      "message": "Další zdroje"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "Diagnostiku nejde spustit u systémových stránek, jako je například úvodní stránka SharePointu. Používejte tento nástroj jen u stránek sharepointového webu."
+   },
+   "HowToUseInstruction": {
+      "message": "Další informace o tomto nástroji a jeho fungování se dozvíte v"
+   },
+   "HowToUseLinkName": {
+      "message": "Nástroj Diagnostika stránek pro SharePoint Online"
+   },
+   "Init": {
+      "message": "Inicializace"
+   },
+   "LazyLoadingTime": {
+      "message": "Zpožděné načítání"
+   },
+   "LearnMore": {
+      "message": "Další informace"
+   },
+   "MadeBy": {
+      "message": "MadeBy"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "podporu Microsoftu."
+   },
+   "ModernPageType": {
+      "message": "moderní"
+   },
+   "ModuleLoad": {
+      "message": "Načtení modulu"
+   },
+   "NameAndId": {
+      "message": "Název a ID"
+   },
+   "NetworkTrace": {
+      "message": "Trasa v síti"
+   },
+   "NoActionRequired": {
+      "message": "Není nutná žádná akce."
+   },
+   "NotSupportedPage": {
+      "message": "Na této stránce nejde spustit diagnostiku stránky. Používejte tento nástroj jen u stránek sharepointového webu."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "Diagnostiku nejde spustit, když je stránka v režimu úprav. Na stránce vyberte Uložit jako koncept nebo zahoďte změny a zkuste to znovu."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "Pokoušíte se použít nástroj Diagnostika stránek u místní verze SharePointu. Tento nástroj je možné použít jen u SharePointu Online."
+   },
+   "PageLoadTimeLabel": {
+      "message": "Doba načtení stránky"
+   },
+   "PageTypeDataReady": {
+      "message": "Kontrola typu stránky se dokončila"
+   },
+   "PageUrlLabel": {
+      "message": "Adresa URL stránky"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "Tato stránka používá sítě pro doručování obsahu (CDN)"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "U žádných rozšíření netrvá načtení déle než {0} ms"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "Používá se méně než 5 rozšíření."
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "Nebyly zjištěny žádné webové části, které by používaly rámce iFrame"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "Všechny obrázky na stránce jsou menší než {0} kB."
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "Zatížení stránky je menší než 1000 kB"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "Výkon stránek byl testován s použitím uživatelského účtu"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Existuje méně než {0} žádostí o načtení položek seznamu."
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "Bylo zjištěno méně než tento počet žádostí na SharePoint: {0}"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "Existuje méně než tolik žádostí o vyhledávání: {0}"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "Hodnota StartRow požadavků hledání je nižší než omezení."
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "U žádné webové části netrvá spuštění déle než {0} ms"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "Nezjištěna žádná strukturovaná navigace"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "Privátní síť CDN není povolená."
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "Veřejná a privátní síť CDN je povolená. Použijte prosím výchozí umístění CDN nebo požádejte správce SharePointu, aby přidal vlastní umístění."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "Veřejná a privátní síť CDN není povolená."
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "Veřejná síť CDN není povolená."
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "Existuje 7 nebo více rozšíření."
+   },
+   "RenderTime": {
+      "message": "Vykreslit"
+   },
+   "RunningAuditors": {
+      "message": "Data se ověřují…"
+   },
+   "RunningCollectors": {
+      "message": "Data se shromažďují... může to trvat několik minut"
+   },
+   "RunningPageTypeChecker": {
+      "message": "Kontroluje se typ stránky"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "Spustit"
+   },
+   "Stop": {
+      "message": "Zastavit"
+   },
+   "ThirdPartyNotice": {
+      "message": "Oznámení třetích stran"
+   },
+   "TimeoutMessage": {
+      "message": "Vypršel časový limit nástroje pro diagnostiku stránky. Zkuste to prosím znovu."
+   },
+   "TitleForCBQAuditor": {
+      "message": "Kontrola webové části CBQ"
+   },
+   "Total": {
+      "message": "Celkem"
+   },
+   "TunePerformanceInstruction": {
+      "message": "Další informace o vylepšování výkonu a rychlosti stahování stránek se dozvíte v"
+   },
+   "TunePerformanceLinkName": {
+      "message": "Vyladit výkon SharePointu Online"
+   },
+   "Url": {
+      "message": "Adresa URL"
+   },
+   "UrlDescription": {
+      "message": "Počet nalezených adres URL: {0}"
+   },
+   "UrlsDescription": {
+      "message": "Počet nalezených adres URL: {0}"
+   },
+   "UserVoice": {
+      "message": "Služba User Voice"
+   },
+   "VersionLabel": {
+      "message": "Verze"
+   },
+   "Warning": {
+      "message": "Příležitosti ke zlepšení"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "Na výkon stránky má dopad jakákoliv vestavěná webová část Microsoft, jejíž načtení do zobrazení trvá déle než 2000 ms nebo jejíž načtení mimo zobrazení trvá déle než 4000 ms."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "Jedna nebo více webových částí používajících rámce iFrame"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Webové části Microsoft ovlivňují dobu načítání stránky"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "Existuje 5 nebo více rozšíření."
+   }
+}

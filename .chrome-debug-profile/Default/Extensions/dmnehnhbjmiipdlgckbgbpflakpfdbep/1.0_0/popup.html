@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        width: 800px;
+        height: 400px;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+      }
+    </style>
+    <script src="turndown.js"></script>
+    <script src="html2pdf.bundle.min.js"></script>
+  </head>
+  <body>
+    <button id="exportMD">Export To Markdown</button>
+    <button id="exportPDF">Export To PDF</button>
+    <h1>The content</h1>
+    <div id="content"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>

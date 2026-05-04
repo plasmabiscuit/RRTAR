@@ -1,0 +1,852 @@
+{
+   "PopUpFeedBackStore": {
+      "description": "",
+      "message": "Make us happy!"
+   },
+   "PopUpfeedBackHeading": {
+      "description": "",
+      "message": "What's your rating of PureVPN?"
+   },
+   "PopUpfeedBackHeading2": {
+      "description": "",
+      "message": "A good rating on the Chrome Store will make our developers happy!"
+   },
+   "PopUpfeedBackHeading3": {
+      "description": "",
+      "message": "Thank You for your Feedback!"
+   },
+   "PopUpfeedBackSubmit": {
+      "description": "",
+      "message": "Kirim"
+   },
+   "ProxySignupWindowCloseError": {
+      "description": "",
+      "message": "Authentication Failed"
+   },
+   "ProxyTxtMigration": {
+      "description": "",
+      "message": "Before you start using your email address to login into PureVPN Proxy Extension, we need you to complete a few steps."
+   },
+   "ProxyUpdateAccountTxtCTA1": {
+      "description": "",
+      "message": "Go Premium Now"
+   },
+   "ProxyUpdateAccountTxtCTA2": {
+      "description": "",
+      "message": "Get Premium Plan"
+   },
+   "ProxyUpdateAccountTxtCTA3": {
+      "description": "",
+      "message": "Buy Now"
+   },
+   "ProxyUpdateAccountTxtParagraph1": {
+      "description": "",
+      "message": "Access US Netflix Instantly from Anywhere with PureVPN!"
+   },
+   "ProxyUpdateAccountTxtParagraph2": {
+      "description": "",
+      "message": "Stream & Enjoy US Netflix Instantly from Anywhere!"
+   },
+   "ProxyUpdateAccountTxtParagraph3": {
+      "description": "",
+      "message": "Access US Netflix, Hulu, Amazon and many other Channels with PureVPN!"
+   },
+   "accountDetailsBillingCycleTitle": {
+      "description": "",
+      "message": "siklus penagihan"
+   },
+   "accountDetailsBtnSwitchUserTxt": {
+      "description": "",
+      "message": "beralih pengguna"
+   },
+   "accountDetailsEmailTitle": {
+      "description": "",
+      "message": "Email"
+   },
+   "accountDetailsExpireOnTitle": {
+      "description": "",
+      "message": "Berakhir pada"
+   },
+   "accountDetailsPlanTypeTitle": {
+      "description": "",
+      "message": "Jenis Paket"
+   },
+   "accountDetailsSubscriptionStatusTitle": {
+      "description": "",
+      "message": "status berlangganan"
+   },
+   "accountDetailsSubscriptionTypeTitle": {
+      "description": "",
+      "message": "Jenis Akun"
+   },
+   "accountDetailsVpnUsernameTitle": {
+      "description": "",
+      "message": "VPN Username"
+   },
+   "accountTxtSelectAccount": {
+      "description": "",
+      "message": "pilih akun"
+   },
+   "adblockMenuSettings": {
+      "description": "",
+      "message": "Settings"
+   },
+   "addonText": {
+      "description": "",
+      "message": "Dapatkan add-on"
+   },
+   "alreadyAccntTxt": {
+      "description": "",
+      "message": "Sudah memiliki akun"
+   },
+   "alreadyPureVpnAccntTxt": {
+      "description": "",
+      "message": "Already have a PureVPN account!"
+   },
+   "appVersion": {
+      "description": "",
+      "message": "Versi"
+   },
+   "autoLoginFailedMsg": {
+      "description": "",
+      "message": "Please check your email for login credentials"
+   },
+   "bypassProxyHeaderTxt": {
+      "description": "",
+      "message": "Aktifkan Bypass Proxy"
+   },
+   "channelsTxtCountries": {
+      "description": "",
+      "message": "SITUS WEB POPULER"
+   },
+   "channelsTxtFavourites": {
+      "description": "",
+      "message": "FAVORIT"
+   },
+   "channelsTxtFavouritesHelpText": {
+      "description": "",
+      "message": "Situs Web favorit Anda akan muncul di sini"
+   },
+   "channelsTxtInfo": {
+      "description": "",
+      "message": "Click the star to mark a channel favourites."
+   },
+   "channelsTxtSearch": {
+      "description": "",
+      "message": "Cari Situs Web"
+   },
+   "channelsTxtSelectStream": {
+      "description": "",
+      "message": "Pilih Situs Web"
+   },
+   "characterZero": {
+      "description": "",
+      "message": "0"
+   },
+   "citiesTxtFavouritesHelpText": {
+      "description": "",
+      "message": "Your favourite Cities will appear here"
+   },
+   "connectWithDedIpCta": {
+      "description": "",
+      "message": "Dapatkan Server Khusus"
+   },
+   "connectWithDedIpHeading": {
+      "description": "",
+      "message": "SERVER KHUSUS"
+   },
+   "connectWithDedIpText": {
+      "description": "",
+      "message": "Untuk mengaktifkan IP statis, Anda perlu membeli tambahan server khusus."
+   },
+   "connectWithDedServer": {
+      "description": "",
+      "message": "Server Khusus"
+   },
+   "connectWithTeamServer": {
+      "description": "",
+      "message": "Server Tim"
+   },
+   "countriesTxtChangeCountry": {
+      "description": "",
+      "message": "Pilih Negara"
+   },
+   "countriesTxtCountries": {
+      "description": "",
+      "message": "NEGARA"
+   },
+   "countriesTxtFavourites": {
+      "description": "",
+      "message": "FAVORIT"
+   },
+   "countriesTxtFavouritesHelpText": {
+      "description": "",
+      "message": "Negara favorit Anda akan muncul di sini"
+   },
+   "countriesTxtInfo": {
+      "description": "",
+      "message": "Click the star to mark a country favourites."
+   },
+   "countriesTxtMarkFavourites": {
+      "description": "",
+      "message": "Mark as favourite"
+   },
+   "countriesTxtSearch": {
+      "description": "",
+      "message": "Cari Negara"
+   },
+   "countriesTxtSelectCountry": {
+      "description": "",
+      "message": "Pilih Negara"
+   },
+   "countriesTxtUnmarkFavourites": {
+      "description": "",
+      "message": "Unmark from favourite"
+   },
+   "darkWebText": {
+      "description": "",
+      "message": "Pemantauan Dark Web"
+   },
+   "doConnectionQualityText": {
+      "description": "",
+      "message": "Bagaimana kualitas koneksinya?"
+   },
+   "doCopyLinkText": {
+      "description": "",
+      "message": "Salin Tautan"
+   },
+   "doEnjoyPureVPNText": {
+      "description": "",
+      "message": "Senang dengan PureVPN?"
+   },
+   "doFrequentDisconnectionText": {
+      "description": "",
+      "message": "Koneksi Sering Terputus"
+   },
+   "doLeaveUsReviewText": {
+      "description": "",
+      "message": "Beri ulasan"
+   },
+   "doNoText": {
+      "description": "",
+      "message": "Tidak"
+   },
+   "doOtherIssueText": {
+      "description": "",
+      "message": "Masalah Lain"
+   },
+   "doOutcomeText": {
+      "description": "",
+      "message": "Apakah Ekstensi PureVPN cocok untuk Anda?"
+   },
+   "doProblemPara": {
+      "description": "",
+      "message": "Apa yang tampaknya menjadi masalah?"
+   },
+   "doProblemText": {
+      "description": "",
+      "message": "Tolong beri tahu kami, kami ingin mendengar umpan balik Anda"
+   },
+   "doProvideDetailsText": {
+      "description": "",
+      "message": "Berikan detail masalah Anda di sini"
+   },
+   "doRateUsText": {
+      "description": "",
+      "message": "Beri kami nilai"
+   },
+   "doReferAFriendMainText": {
+      "description": "",
+      "message": "Share free monthly PUREVPN accounts with your friends and family!"
+   },
+   "doReferAFriendText": {
+      "description": "",
+      "message": "Referensikan teman"
+   },
+   "doRemindLaterText": {
+      "description": "",
+      "message": "Ingatkan Nanti"
+   },
+   "doSkipText": {
+      "description": "",
+      "message": "Lewati"
+   },
+   "doSlowSpeedText": {
+      "description": "",
+      "message": "Lambat"
+   },
+   "doSubmitText": {
+      "description": "",
+      "message": "Kirim"
+   },
+   "doThankYouMessage": {
+      "description": "",
+      "message": "Terima kasih atas umpan balik Anda!"
+   },
+   "doUnableToAccessText": {
+      "description": "",
+      "message": "Tidak Dapat Mengakses Konten"
+   },
+   "doUnableToConnectText": {
+      "description": "",
+      "message": "Tak Bisa Terhubung"
+   },
+   "doYesText": {
+      "description": "",
+      "message": "Ya"
+   },
+   "errorRateLimited": {
+      "description": "",
+      "message": "You are being rate limited.\u003Cbr/>Please try again after 15 minutes"
+   },
+   "expiredAccountAlert": {
+      "description": "",
+      "message": "Dear User, Your account is expired! \u003Ca target='_blank' href='https://www.purevpn.com/order'>Renew Now\u003C/a>"
+   },
+   "extAuthorName": {
+      "description": "extension author name.",
+      "message": "GZ systems Ltd."
+   },
+   "extDescription": {
+      "message": "Download PureVPN - #1 Proxy Extension for Fast Speeds, Complete Online Privacy and Accessibility."
+   },
+   "extName": {
+      "description": "extension name.",
+      "message": "PureVPN: #1 Proxy Extension for Chrome"
+   },
+   "extNotification": {
+      "description": "extension short name.",
+      "message": "Alert"
+   },
+   "extShortName": {
+      "description": "extension short name.",
+      "message": "PureVPN"
+   },
+   "extTagLine": {
+      "description": "extension tagline.",
+      "message": "Download PureVPN - #1 Proxy Extension for Fast Speeds, Complete Online Privacy and Accessibility."
+   },
+   "extTitleConnected": {
+      "description": "",
+      "message": "PureVPN | You are connected to $1"
+   },
+   "extTitleConnectedChannel": {
+      "description": "",
+      "message": "PureVPN | You are accessing $1"
+   },
+   "extTxtNoConnection": {
+      "description": "",
+      "message": "No internet connection"
+   },
+   "extTxtServiceUnavailable": {
+      "message": "The browser failed to resolve your request.\u003Cbr />Error Code: \u003Ca target='_blank' href='https://support.purevpn.com/chrome-error-err_spdy_protocol_error'>'ERR_SPDY_PROTOCOL_ERROR'\u003C/a>"
+   },
+   "fastSecureHeading": {
+      "description": "",
+      "message": "Butuh koneksi yang lebih cepat dan aman?"
+   },
+   "fastSecurePara": {
+      "description": "",
+      "message": "Tingkatkan kolaborasi dengan server khusus untuk konektivitas yang lancar"
+   },
+   "feedBackPageTitle": {
+      "description": "",
+      "message": "PureVPN | Feedback Form Chrome Extension"
+   },
+   "feedbackDescriptionPlaceholder": {
+      "description": "",
+      "message": "Speak your heart here"
+   },
+   "feedbackMinLengthDescription": {
+      "description": "",
+      "message": "Review length 10 characters min"
+   },
+   "feedbackMinLengthTitle": {
+      "description": "",
+      "message": "Title length 10 characters min"
+   },
+   "feedbackTitlePlaceholder": {
+      "description": "",
+      "message": "Give your review a title"
+   },
+   "generalText": {
+      "description": "",
+      "message": "Umum"
+   },
+   "hostNameTextBoxHeading": {
+      "description": "",
+      "message": "Enter hostname or ip address to bypass proxy"
+   },
+   "hostWhitelistChangeNoteTxt": {
+      "description": "",
+      "message": "The settings will applied in next connection."
+   },
+   "hostWhitelistExampleTxt1": {
+      "description": "",
+      "message": "www.purevpn.com"
+   },
+   "hostWhitelistExampleTxt2": {
+      "description": "",
+      "message": "192.168.0.1"
+   },
+   "hostWhitelistNoteTxt": {
+      "description": "",
+      "message": "Example:"
+   },
+   "invalidloginTxtErrorMsg": {
+      "description": "",
+      "message": "Invalid login credentials"
+   },
+   "locationSpoofToggleTxt": {
+      "description": "",
+      "message": "Sembunyikan Lokasi GPS"
+   },
+   "locationsText": {
+      "description": "",
+      "message": "Lokasi"
+   },
+   "loginTxtConfirmPassword": {
+      "description": "",
+      "message": "Confirm password"
+   },
+   "loginTxtConnecting": {
+      "description": "",
+      "message": "Log in ..."
+   },
+   "loginTxtErrorMsg": {
+      "description": "",
+      "message": "Username or Password missing."
+   },
+   "loginTxtFreeAccount": {
+      "description": "",
+      "message": "Please subscribe to a premium PureVPN account to use the extension."
+   },
+   "loginTxtFreeAccountCancel": {
+      "description": "",
+      "message": "No Thanks"
+   },
+   "loginTxtFreeAccountProceed": {
+      "description": "",
+      "message": "Subscribe Now"
+   },
+   "loginTxtHidePassword": {
+      "description": "",
+      "message": "Hide password"
+   },
+   "loginTxtLogin": {
+      "description": "",
+      "message": "Masuk"
+   },
+   "loginTxtLoginDetails": {
+      "description": "",
+      "message": "Lupa Kata Sandi?"
+   },
+   "loginTxtLoginHere": {
+      "description": "",
+      "message": "Login Here"
+   },
+   "loginTxtNotRegistered": {
+      "description": "",
+      "message": "Belum punya akun?"
+   },
+   "loginTxtNotRegisteredGetVpn": {
+      "description": "",
+      "message": "Dapatkan PureVPN"
+   },
+   "loginTxtPassword": {
+      "description": "",
+      "message": "Kata Sandi"
+   },
+   "loginTxtShowPassword": {
+      "description": "",
+      "message": "Show password"
+   },
+   "loginTxtSuccessMsg": {
+      "description": "",
+      "message": "Logged in successfully"
+   },
+   "loginTxtUserName": {
+      "description": "",
+      "message": "Masukkan Email/Nama Pengguna Anda"
+   },
+   "mainLoginBtnTxt": {
+      "description": "",
+      "message": "Masuk"
+   },
+   "mainLoginScreenTxt": {
+      "description": "",
+      "message": "Mulailah perjalanan Anda menuju internet yang lebih aman"
+   },
+   "mainOrTxt": {
+      "description": "",
+      "message": "or"
+   },
+   "mainSignupBtnLink": {
+      "description": "",
+      "message": "https://www.purevpn.com/trial-vpn/chrome"
+   },
+   "mainSignupBtnTxt": {
+      "description": "",
+      "message": "Buat Akun"
+   },
+   "newText": {
+      "description": "",
+      "message": "BARU"
+   },
+   "noSubscriptionTxtErrorMsg": {
+      "description": "",
+      "message": "Untuk mulai menggunakan PUREVPN, Anda perlu membeli langganan."
+   },
+   "notAvailableButton": {
+      "description": "",
+      "message": "Disable Now"
+   },
+   "notAvailableHeading": {
+      "description": "",
+      "message": "Please disable the proxy service listed below to use PureVPN Extension."
+   },
+   "notAvailablePara": {
+      "description": "",
+      "message": "Please disable the proxy to use\u003Cbr/>PureVPN Extension"
+   },
+   "optimizedForStreaming": {
+      "description": "",
+      "message": "SITUS WEB POPULER"
+   },
+   "passwordManagerText": {
+      "description": "",
+      "message": "Manajer Kata Sandi"
+   },
+   "proxyFastestLocationAfterCnctn": {
+      "description": "",
+      "message": "Connected to Fastest Location"
+   },
+   "proxySecureBrowsingAfterCnctn": {
+      "description": "",
+      "message": "Browser Traffic Secured"
+   },
+   "proxyTxtChangeCountry": {
+      "description": "",
+      "message": "Change country"
+   },
+   "proxyTxtConnect": {
+      "description": "",
+      "message": "hubungkan"
+   },
+   "proxyTxtConnecting": {
+      "description": "",
+      "message": "menghubungkan..."
+   },
+   "proxyTxtDisconnect": {
+      "description": "",
+      "message": "putuskan koneksi"
+   },
+   "proxyTxtHiddenIpAfterCnctn": {
+      "description": "",
+      "message": "IP Successfully Hidden"
+   },
+   "proxyTxtLoader": {
+      "description": "",
+      "message": "Please wait, configuring PureVPN extension"
+   },
+   "proxyTxtOnlineSecurity": {
+      "description": "",
+      "message": "Online Security"
+   },
+   "proxyTxtRestrictedWebsitesAfterCnctn": {
+      "description": "",
+      "message": "The Web is Now Accessible"
+   },
+   "proxyTxtStreaming": {
+      "description": "",
+      "message": "Streaming"
+   },
+   "proxyTxtUnAuthorized": {
+      "description": "",
+      "message": "Please \u003Ca href='#' class='upgradeBtn' data-cta='other'>renew\u003C/a> your account to use the extension."
+   },
+   "redirectText": {
+      "description": "",
+      "message": "Please wait while redirecting..."
+   },
+   "referFrndAvl": {
+      "description": "",
+      "message": "Available"
+   },
+   "referFrndBtnCopiedTxt": {
+      "description": "",
+      "message": "Copied to clipboard"
+   },
+   "referFrndEmptyTokenTxt": {
+      "description": "",
+      "message": "The functionality is temporarily unavailable. Please try again later."
+   },
+   "referFrndErrorTxt": {
+      "description": "",
+      "message": "Error"
+   },
+   "referFrndExpiredUsersTxt": {
+      "description": "",
+      "message": "Only paid users with active subscriptions are allowed to share free account invites."
+   },
+   "referFrndHeading": {
+      "description": "",
+      "message": "Mengundang. Menghasilkan. Menikmati"
+   },
+   "referFrndInviteNowTxt": {
+      "description": "",
+      "message": "Salin Tautan"
+   },
+   "referFrndSent": {
+      "description": "",
+      "message": "Sent"
+   },
+   "referFrndTxt": {
+      "description": "",
+      "message": "Undang teman Anda ke PureVPN dan dapatkan kredit gratis untuk setiap undangan."
+   },
+   "removeMyDataText": {
+      "description": "",
+      "message": "Hapus Data Saya"
+   },
+   "requestPlaceholder": {
+      "description": "",
+      "message": "Enter comment"
+   },
+   "requestPopupText": {
+      "description": "",
+      "message": "Make a location request."
+   },
+   "requestPopupTextChannel": {
+      "description": "",
+      "message": "Make a website request."
+   },
+   "resendLoaderText": {
+      "description": "",
+      "message": "Resending the activation code. Please wait."
+   },
+   "searchEmptyBtn": {
+      "description": "",
+      "message": "Minta lokasi"
+   },
+   "searchEmptyBtnChannel": {
+      "description": "",
+      "message": "Minta situs web"
+   },
+   "searchEmptyTxt": {
+      "description": "",
+      "message": "Cobalah menyesuaikan pencarian Anda atau jelajahi opsi lainnya. Kami di sini untuk membantu Anda menemukan apa yang Anda butuhkan."
+   },
+   "searchEmptyTxtChannel": {
+      "description": "",
+      "message": "Situs web yang Anda cari bukan bagian dari Jaringan VPN kami. Namun, Anda dapat memberi tahu kami, dan kami akan mencoba menambahkannya."
+   },
+   "searchEmptyTxtHeading": {
+      "description": "",
+      "message": "Tidak ada hasil ditemukan"
+   },
+   "securityToolsText": {
+      "description": "",
+      "message": "Alat Keamanan"
+   },
+   "selectCityTitle": {
+      "description": "",
+      "message": "Pilih kota"
+   },
+   "selectServerHeaderText": {
+      "description": "",
+      "message": "pilih server"
+   },
+   "settingsTxtAboutUs": {
+      "description": "",
+      "message": "About PureVPN"
+   },
+   "settingsTxtAccountInfo": {
+      "description": "",
+      "message": "Detail Akun"
+   },
+   "settingsTxtAccountType": {
+      "description": "",
+      "message": "Account Type:&nbsp;"
+   },
+   "settingsTxtAdBlockerSettings": {
+      "description": "",
+      "message": "General Settings"
+   },
+   "settingsTxtAdvancedFeatures": {
+      "description": "",
+      "message": "Fitur lanjutan"
+   },
+   "settingsTxtButtonBuyNow": {
+      "description": "",
+      "message": "BUY NOW"
+   },
+   "settingsTxtCheckingSubscription": {
+      "description": "",
+      "message": "Checking your subscription"
+   },
+   "settingsTxtClientArea": {
+      "description": "",
+      "message": "bantu kami melakukan peningkatan"
+   },
+   "settingsTxtFAQs": {
+      "description": "",
+      "message": "FAQs"
+   },
+   "settingsTxtFeedback": {
+      "description": "",
+      "message": "Feedback"
+   },
+   "settingsTxtLogout": {
+      "description": "",
+      "message": "Keluar"
+   },
+   "settingsTxtLogoutCancel": {
+      "description": "",
+      "message": "Tidak"
+   },
+   "settingsTxtLogoutConfirmation": {
+      "description": "",
+      "message": "Are you sure you want to logout ?"
+   },
+   "settingsTxtLogoutProceed": {
+      "description": "",
+      "message": "Ya"
+   },
+   "settingsTxtPasswordLabel": {
+      "description": "",
+      "message": "Password:&nbsp;"
+   },
+   "settingsTxtPleaseWait": {
+      "description": "",
+      "message": "Please Wait"
+   },
+   "settingsTxtPrivacyPolicy": {
+      "description": "",
+      "message": "kebijakan privasi"
+   },
+   "settingsTxtProxyAutoConnect": {
+      "description": "",
+      "message": "Autostart proxy on browser start"
+   },
+   "settingsTxtRate": {
+      "description": "",
+      "message": "Beri kami nilai"
+   },
+   "settingsTxtReferFrnd": {
+      "description": "",
+      "message": "Referensikan teman"
+   },
+   "settingsTxtSettings": {
+      "description": "",
+      "message": "Settings"
+   },
+   "settingsTxtSubscription": {
+      "description": "",
+      "message": "Your Subscription Status"
+   },
+   "settingsTxtUsernameLabel": {
+      "description": "",
+      "message": "Username:&nbsp;"
+   },
+   "settingsTxtWebRtc": {
+      "description": "",
+      "message": "Perlindungan terhadap Kebocoran WebRTC"
+   },
+   "settingsTxtWhitelisting": {
+      "description": "",
+      "message": "Bypass Proxy"
+   },
+   "settingsWhitelistingHintText": {
+      "description": "",
+      "message": "Pilih untuk menonaktifkan proxy untuk situs web tertentu, bahkan dalam keadaan terkoneksi"
+   },
+   "signUpEmaiBtnTxt": {
+      "description": "",
+      "message": "Sign Up with Email"
+   },
+   "signUpEmaiBtnTxtFree": {
+      "description": "",
+      "message": "Get 7 Days Free Trial"
+   },
+   "signUpFieldError": {
+      "description": "",
+      "message": "Please enter a valid email address"
+   },
+   "signUpTxtEmail": {
+      "description": "",
+      "message": "Enter your email address"
+   },
+   "signUpTxtHelp": {
+      "description": "",
+      "message": " You will receive your PureVPN login details on this email."
+   },
+   "signupLoaderText": {
+      "description": "",
+      "message": "Please wait.\u003Cbr/>Signing Up..."
+   },
+   "skipBtn": {
+      "description": "",
+      "message": "CANCEL"
+   },
+   "socialLoginTxt": {
+      "description": "",
+      "message": "Login With"
+   },
+   "spoofGPSHintText": {
+      "description": "",
+      "message": "Sembunyikan lokasi GPS Anda untuk memanipulasi peretas dan phisher saat terhubung ke VPN."
+   },
+   "submitBtn": {
+      "description": "",
+      "message": "Kirim"
+   },
+   "talkToSupportText": {
+      "description": "",
+      "message": "Anda ingin berbicara dengan layanan Dukungan kami?"
+   },
+   "termsConditionPrivacyError": {
+      "description": "",
+      "message": "Please indicate that you have read and agreed to our\u003Cbr/>Terms and Service & Privacy Policy."
+   },
+   "termsandConditionConsent": {
+      "description": "",
+      "message": "I agree that I have read and understood the \u003Ca target=\"_blank\" class=\"terms_condition_links\" href=\"https://www.purevpn.com/term.php\">Terms & Conditions\u003C/a> and the \u003Ca target=\"_blank\" class=\"terms_condition_links\" href=\"https://www.purevpn.com/privacy-policy.php\">Privacy Policy\u003C/a>."
+   },
+   "txtCopyRights": {
+      "description": "copy right text",
+      "message": "&copy; 2011-2017 PureVPN Ltd."
+   },
+   "txtErrorMsg": {
+      "description": "Footer line 1",
+      "message": "Something went wrong, please try again later."
+   },
+   "txtFooterLine1": {
+      "description": "Footer line 1",
+      "message": "Dapatkan PureVPN seharga"
+   },
+   "txtSuccessMsg": {
+      "description": "",
+      "message": "Saved"
+   },
+   "verificationCodeError": {
+      "description": "",
+      "message": "Field should not be blank"
+   },
+   "verificationCodeTxt": {
+      "description": "",
+      "message": "Enter your verification code"
+   },
+   "verificationHelpTxt": {
+      "description": "",
+      "message": "Check your email for the verification code.\u003Cbr/> Didn't get the code? \u003Ca href='#' class='resendCode'>Resend\u003C/a>"
+   },
+   "verificationLoaderText": {
+      "description": "",
+      "message": "The code is being verified."
+   },
+   "webRtcHintText": {
+      "description": "",
+      "message": "Cegah situs web menggunakan alamat IP Anda dan informasi sensitif lainnya."
+   }
+}

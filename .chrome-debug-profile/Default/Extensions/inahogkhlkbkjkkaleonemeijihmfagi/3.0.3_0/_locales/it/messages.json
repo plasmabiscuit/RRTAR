@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "Informazioni"
+   },
+   "AppDescription": {
+      "message": "Analizza le prestazioni delle pagine del sito e ottiene consigli per l'ottimizzazione."
+   },
+   "AppName": {
+      "message": "Diagnostica pagine per SharePoint"
+   },
+   "AttentionRequired": {
+      "message": "È richiesto l'intervento dell'utente"
+   },
+   "AuditorsDataReady": {
+      "message": "Convalida dei dati completata"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "È necessario abilitare entrambi le reti CDN pubbliche e private con la configurazione predefinita. Collaborare con l’amministratore di SharePoint per abilitare entrambe le reti CDN e usare le posizioni CDN predefinite o chiedere all’amministratore di SharePoint di aggiungere posizioni personalizzate."
+   },
+   "ClassicPageType": {
+      "message": "classico"
+   },
+   "CollectorsDataReady": {
+      "message": "Raccolta dei dati completata"
+   },
+   "CorrelationIdLabel": {
+      "message": "CorrelationID"
+   },
+   "Custom": {
+      "message": "Personalizzate"
+   },
+   "Description": {
+      "message": "Uno strumento per identificare i problemi relativi alle prestazioni delle pagine in SharePoint Online"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "Consigliare l'uso della Web part Contenuto da ricerca invece della Web part Contenuto query."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "Le CDN migliorano le prestazioni memorizzando nella cache le risorse statiche più vicine ai browser che le richiedono. Collaborare con un amministratore di SharePoint per impostare e configurare i CDN per memorizzare le risorse statiche delle pagine."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "Una o più estensioni stanno richiedendo più di 1000 ms per eseguire il rendering. "
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "L'utilizzo di iFrame rallenta le prestazioni della pagina perché il contenuto viene caricato da una pagina esterna. Usare immagini al posto di iFrame, ma se è necessario usare iFrame, ridurne al minimo il numero e/o allontanarli dal riquadro di visualizzazione."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "Le immagini in questa pagina sono troppo grandi per ottenere una prestazione ottimale. Ridurre tutte le immagini presenti in questa pagina a dimensioni inferiori a {0} KB ciascuna."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "Le immagini in questa pagina sono troppo grandi per ottenere una prestazione ottimale. Ridurre tutte le immagini presenti in questa pagina a dimensioni inferiori a {0} MB ciascuna."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0} estensioni richiedono più di {1} ms per il caricamento e ciò influisce sulle prestazioni delle pagine."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "I contenuti pagina come immagini, video e testi influiscono sulla performance della pagina. Ridurre il numero di Web part, usare reti per la distribuzione di contenuti (CDN) e limitare il contenuto pagina."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "Quando si verificano le prestazioni durante l'accesso come amministratore, i risultati sono influenzati da un aumento del traffico causato dai gruppi di sicurezza."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "Questa pagina supera il numero previsto di chiamate consigliate a Recupero elementi elenco con l'intestazione della cache in uscita. Limita le richieste a meno di {0} richieste di recupero elementi elenco per ogni pagina."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "Questa pagina supera il numero previsto di chiamate consigliate a SharePoint. Limitare le richieste a meno di {0} richieste di SharePoint per ogni pagina di {1}."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "Questa pagina supera il numero previsto di chiamate consigliate per la ricerca. Limita le richieste a meno di {0} richieste di ricerca per ogni pagina."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "Per offrire un'esperienza di ricerca con prestazioni elevate, il valore massimo supportato di StartRow deve essere {0}."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "1 estensione richiede più di {0} ms per il caricamento e ciò influisce sulle prestazioni delle pagine."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "Lo spostamento strutturale non memorizzato nella cache rallenta la performance del sito. Riprogettare l'esplorazione del sito utilizzando l'esplorazione gestita o guidata dalla ricerca."
+   },
+   "DetectPageType": {
+      "message": "Rilevamento del tipo di pagina in corso..."
+   },
+   "DiagnosticTests": {
+      "message": "Test diagnostici"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "La durata è superiore a {0} ms"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "La durata è entro la soglia di {0} ms"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "Abilitare la creazione di log di supporto (può influire sulle prestazioni; utile per la risoluzione dei problemi con il supporto Microsoft)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "Registrazione del supporto abilitata"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "Abilitare l'esportazione in Archivio HTTP (HAR)"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "Qualsiasi web part personalizzata che richiede più di 2.000 ms per caricare nel riquadro di visualizzazione o più di 4.000 ms per caricare all'esterno del riquadro di visualizzazione influisce sulle prestazioni della pagina."
+   },
+   "ErrorMessage": {
+      "message": "An error has occurred running Page diagnostics. Try again later. If the error continues to occur, contact"
+   },
+   "ExportToHar": {
+      "message": "Esportare in HAR"
+   },
+   "ExportToHarHover": {
+      "message": "Esportare in Archivio HTTP (HAR)"
+   },
+   "ExportToJson": {
+      "message": "Esportare in JSON"
+   },
+   "ExportToJsonHover": {
+      "message": "Esportare in JavaScript Object Notation (JSON)"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "Alcune risorse non usano CDN"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "Le estensioni potrebbero influire sul tempo di caricamento"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "Sono utilizzate troppe estensioni"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "Tre o più Web part usano iFrame"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "Questa pagina contiene {0} immagini di grandi dimensioni"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "Questa pagina contiene 1 immagine di grandi dimensioni"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "Il peso della pagina è {0} KB."
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "Verificare le prestazioni della pagina con un account utente"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Questa pagina ha {0} chiamate a Recupero elementi elenco"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "Questa pagina contiene {0} chiamate a SharePoint"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "Questa pagina contiene {0} chiamate alla ricerca"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "StartRow delle richieste di ricerca supera il limite {0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "Le web part personalizzate influiscono sul tempo di caricamento della pagina"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "La memorizzazione nella cache dello spostamento strutturale non è abilitata"
+   },
+   "FeedbackCategoryName": {
+      "message": "Invia feedback"
+   },
+   "FeedbackInstruction": {
+      "message": "In caso di eventuali suggerimenti o domande, puoi pubblicarli in "
+   },
+   "HelpLinksCategoryName": {
+      "message": "Risorse aggiuntive"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "Can't run diagnostics on system pages such as the SharePoint start page. Use this tool for SharePoint site pages only."
+   },
+   "HowToUseInstruction": {
+      "message": "Altre informazioni sullo strumento e su come funziona"
+   },
+   "HowToUseLinkName": {
+      "message": "Strumento Diagnostica pagine per SharePoint Online"
+   },
+   "Init": {
+      "message": "Inizializzazione"
+   },
+   "LazyLoadingTime": {
+      "message": "Caricamento lento"
+   },
+   "LearnMore": {
+      "message": "Altre informazioni"
+   },
+   "MadeBy": {
+      "message": "MadeBy"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "Supporto tecnico Microsoft."
+   },
+   "ModernPageType": {
+      "message": "moderno"
+   },
+   "ModuleLoad": {
+      "message": "Caricamento del modulo"
+   },
+   "NameAndId": {
+      "message": "Nome e ID"
+   },
+   "NetworkTrace": {
+      "message": "Traccia della rete"
+   },
+   "NoActionRequired": {
+      "message": "Non è richiesto alcun intervento da parte dell'utente"
+   },
+   "NotSupportedPage": {
+      "message": "Impossibile eseguire la diagnostica della pagina in questa pagina. Utilizzare questo strumento solo per le pagine di sito di SharePoint."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "Impossibile eseguire la diagnostica mentre la pagina è in modalità di modifica. Nella pagina, seleziona Salva come bozza o Rimuovi le modifiche e riprova."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "Si sta tentando di usare lo strumento diagnostica pagine con una versione locale di SharePoint. Questo strumento è utilizzato solo con SharePoint Online."
+   },
+   "PageLoadTimeLabel": {
+      "message": "Tempo di caricamento della pagina"
+   },
+   "PageTypeDataReady": {
+      "message": "Controllo del tipo di pagina completato"
+   },
+   "PageUrlLabel": {
+      "message": "URL pagina"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "Questa pagina utilizza le reti per la distribuzione di contenuti (CDN)"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "Nessuna estensione richiede più di {0} ms per caricarsi"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "Ci sono meno di 5 estensioni utilizzate"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "Non sono disponibili Web part che usano iFrame"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "Tutte le immagini nella pagina sono di dimensioni inferiori a {0} KB ciascuna"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "Il peso della pagina è inferiore a 1.000 KB"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "Le prestazioni della pagina sono state testate con un account utente"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Sono presenti meno di {0} richieste di recupero voci di elenco"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "Ci sono meno di {0} richieste di SharePoint"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "Sono presenti meno di {0} richieste di ricerca"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "Il valore StartRow delle richieste di ricerca è inferiore al limite"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "Nessuna Web part sta impiegando più di {0} ms per essere eseguita"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "Nessuno spostamento strutturale rilevato"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "La rete CDN privata non è abilitata"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "Le reti CDN pubbliche e private sono abilitate. Usare le posizioni delle reti CDN predefinite o chiedere all'amministratore di SharePoint di aggiungere posizioni personalizzate."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "Le reti CDN pubblica e privata non sono abilitate"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "La rete CDN pubblica non è abilitata."
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "Sono presenti almeno 7 estensioni."
+   },
+   "RenderTime": {
+      "message": "Eseguire il rendering"
+   },
+   "RunningAuditors": {
+      "message": "Convalida dei dati in corso..."
+   },
+   "RunningCollectors": {
+      "message": "Raccolta dati in corso. L'operazione potrebbe richiedere alcuni minuti"
+   },
+   "RunningPageTypeChecker": {
+      "message": "Controllo del tipo di pagina in corso"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "Inizio"
+   },
+   "Stop": {
+      "message": "Interrompi"
+   },
+   "ThirdPartyNotice": {
+      "message": "Nota di terze parti"
+   },
+   "TimeoutMessage": {
+      "message": "Lo strumento Diagnostica pagine ha raggiunto il timeout. Riprovare."
+   },
+   "TitleForCBQAuditor": {
+      "message": "Verificare la presenza della Web part CBQ"
+   },
+   "Total": {
+      "message": "Totale"
+   },
+   "TunePerformanceInstruction": {
+      "message": "Trovare altre informazioni su come migliorare le prestazioni e in tempi di download delle pagine in"
+   },
+   "TunePerformanceLinkName": {
+      "message": "Ottimizza le prestazioni di SharePoint Online"
+   },
+   "Url": {
+      "message": "URL"
+   },
+   "UrlDescription": {
+      "message": "Trovato {0} URL"
+   },
+   "UrlsDescription": {
+      "message": "Trovati {0} URL"
+   },
+   "UserVoice": {
+      "message": "Comandi vocali dell'utente"
+   },
+   "VersionLabel": {
+      "message": "Versione"
+   },
+   "Warning": {
+      "message": "Opportunità di miglioramento"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "Qualsiasi web part Microsoft integrata che richiede più di 2.000 ms per caricare all'interno del riquadro di visualizzazione o più di 4.000 ms per caricare all'esterno del riquadro di visualizzazione influisce sulle prestazioni della pagina."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "Una o più Web part usano iFrame"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Le web part Microsoft influiscono sul tempo di caricamento"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "Sono presenti almeno 5 estensioni."
+   }
+}

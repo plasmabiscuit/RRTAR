@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "Info"
+   },
+   "AppDescription": {
+      "message": "Analyseer de prestaties van uw sitepagina's en krijg aanbevelingen voor optimalisatie."
+   },
+   "AppName": {
+      "message": "Paginadiagnose voor SharePoint"
+   },
+   "AttentionRequired": {
+      "message": "Aandacht vereist"
+   },
+   "AuditorsDataReady": {
+      "message": "Valideren van gegevens is voltooid"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "Zowel openbare als persoonlijke CDN's moeten met de standaardconfiguratie worden ingeschakeld. Werk samen met uw SharePoint-beheerder om beide CDN's in te schakelen en de standaard CDN-locaties te gebruiken of vraag uw SharePoint-beheerder om aangepaste locaties toe te voegen."
+   },
+   "ClassicPageType": {
+      "message": "klassiek"
+   },
+   "CollectorsDataReady": {
+      "message": "Verzamelen van gegevens is voltooid"
+   },
+   "CorrelationIdLabel": {
+      "message": "CorrelationID"
+   },
+   "Custom": {
+      "message": "Aangepast"
+   },
+   "Description": {
+      "message": "Een hulpprogramma voor het identificeren van problemen met de prestaties van de pagina in SharePoint Online"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "Raad gebruikers aan om het webonderdeel Inhoud per zoekopdracht te gebruiken in plaats van het webonderdeel Inhoud per query."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "Met CDN's kunt u de prestaties verbeteren door statische assets op te slaan in een cache dichter bij de browsers waarmee ze zijn aangevraagd. Werk samen met een SharePoint-beheerder om CDN's in te stellen en te configureren voor het opslaan van statische pagina-assets."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "Het weergeven van een of meer extensies duurt langer dan 1000 ms. "
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "Met iFrames worden de prestaties van de pagina vertraagd, omdat de inhoud van een externe pagina wordt geladen. U kunt afbeeldingen gebruiken in plaats van iFrames, maar als u toch iFrames moet gebruiken, minimaliseert u de hoeveelheid en/of verplaatst u ze uit de viewport."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "De afbeeldingen op deze pagina zijn te groot voor optimale prestaties. Verklein elke afbeelding op deze pagina tot minder dan {0} kB."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "De afbeeldingen op deze pagina zijn te groot voor optimale prestaties. Verklein elke afbeelding op deze pagina tot minder dan {0} MB."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0}-extensies duren langer dan {1} ms om te laden en dit heeft invloed op de prestaties van de pagina."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "Pagina-inhoud zoals afbeeldingen, video en tekst beïnvloeden de prestaties van pagina's. Verminder het aantal webonderdelen, gebruik Content Delivery Networks (CDN's) en beperk de pagina-inhoud."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "Wanneer u prestaties test terwijl u bent aangemeld als beheerder, worden de resultaten beïnvloed door het extra verkeer van beveiligingsgroepen."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "Deze pagina overschrijdt het aantal aanbevolen aanroepen voor ophalen van lijstitems met uitgaande cacheheader. Aanvragen beperken tot minder dan {0} Ophaalaanvragen voor lijstitems voor elke pagina."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "Deze pagina overschrijdt het aantal aanbevolen aanvragen voor SharePoint. Beperk aanvragen tot minder dan {0} SharePoint-aanvragen voor elke {1} pagina."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "Deze pagina overschrijdt het basislijnaantal aanbevolen aanroepen om te zoeken. Aanvragen beperken tot minder dan {0} zoekaanvragen voor elke pagina."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "Om een buitengewone zoekervaring te bieden, wordt de maximaal ondersteunde waarde van StartRow beperkt tot {0}."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "1 extensie duurt langer dan {0} ms om te laden en dit is van invloed op de prestaties van de pagina."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "Structurele navigatie die niet in de cache is geplaatst, vertraagt de prestaties van de site. Richt uw sitenavigatie opnieuw in met behulp van beheerde of op zoekopdrachten gebaseerde navigatie."
+   },
+   "DetectPageType": {
+      "message": "Paginatype detecteren..."
+   },
+   "DiagnosticTests": {
+      "message": "Diagnostische testen"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "De duur is langer dan {0}ms"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "De duur ligt binnen de drempel van {0} ms"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "Logboekregistratie voor ondersteuning inschakelen (kan invloed hebben op de prestaties; gebruiken voor probleemoplossing met Microsoft ondersteuning)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "Logboekregistratie voor ondersteuning is ingeschakeld"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "Exporteren naar HAR (HTTP-archief) inschakelen"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "Elk aangepast webonderdeel waarvan het laden binnen de viewport langer duurt dan 2000 ms, of waarvan het laden buiten de viewport langer duurt dan 4000 ms, is van invloed op de paginaprestaties."
+   },
+   "ErrorMessage": {
+      "message": "Er is een fout opgetreden bij het uitvoeren van Paginadiagnose. Probeer het later opnieuw. Als de fout blijft optreden, neemt u contact op met"
+   },
+   "ExportToHar": {
+      "message": "Exporteren naar HAR"
+   },
+   "ExportToHarHover": {
+      "message": "Exporteren naar HAR (HTTP-archief)"
+   },
+   "ExportToJson": {
+      "message": "Exporteren naar JSON"
+   },
+   "ExportToJsonHover": {
+      "message": "Exporteren naar JSON (JavaScript Object Notation)"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "Sommige assets maken geen gebruik van CDN's"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "Er zijn extensies die de laadtijd kunnen beïnvloeden"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "Te veel extensies gebruikt"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "Drie of meer webonderdelen die gebruikmaken van iFrames"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "Deze pagina bevat {0} grote afbeeldingen"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "Deze pagina bevat één grote afbeelding"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "Paginagewicht is {0} kB"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "Paginaprestaties testen met een gebruikersaccount"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Deze pagina bevat {0} aanroepen voor het ophalen van lijstitems"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "Deze pagina heeft {0} aanvragen voor SharePoint"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "Deze pagina bevat {0} aanroepen om te zoeken"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "StartRow van zoekaanvragen overschrijdt de limiet {0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "Aangepaste webonderdelen zijn van invloed op de laadtijd van pagina"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "Opslaan in cache voor structurele navigatie is niet ingeschakeld"
+   },
+   "FeedbackCategoryName": {
+      "message": "Feedback geven"
+   },
+   "FeedbackInstruction": {
+      "message": "Hebt u suggesties of vragen? Post ze op"
+   },
+   "HelpLinksCategoryName": {
+      "message": "Extra resources"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "Kan geen diagnostische gegevens uitvoeren op systeempagina's zoals de startpagina van SharePoint. Gebruik dit hulpprogramma alleen voor SharePoint-sitepagina's."
+   },
+   "HowToUseInstruction": {
+      "message": "Meer informatie over dit hulpprogramma en hoe het werkt in"
+   },
+   "HowToUseLinkName": {
+      "message": "Hulpprogramma voor paginadiagnose voor SharePoint Online"
+   },
+   "Init": {
+      "message": "Init"
+   },
+   "LazyLoadingTime": {
+      "message": "Vertraagd laden"
+   },
+   "LearnMore": {
+      "message": "Meer informatie"
+   },
+   "MadeBy": {
+      "message": "MadeBy"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "Microsoft Ondersteuning."
+   },
+   "ModernPageType": {
+      "message": "modern"
+   },
+   "ModuleLoad": {
+      "message": "Module laden"
+   },
+   "NameAndId": {
+      "message": "Naam en id"
+   },
+   "NetworkTrace": {
+      "message": "Netwerktracering"
+   },
+   "NoActionRequired": {
+      "message": "Er is geen actie vereist"
+   },
+   "NotSupportedPage": {
+      "message": "Kan pagina diagnose niet uitvoeren op deze pagina. Gebruik dit hulpprogramma alleen voor pagina's van de SharePoint-site."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "Kan geen diagnostische gegevens uitvoeren terwijl de pagina is geopend in de bewerkingsmodus. Selecteer op uw pagina Opslaan als concept of Wijzigingen negeren, en probeer het opnieuw."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "U probeert het hulpprogramma voor pagina diagnose te gebruiken met een on-premises versie van SharePoint. Dit hulpprogramma is alleen voor gebruik met SharePoint Online."
+   },
+   "PageLoadTimeLabel": {
+      "message": "Laadtijd van pagina"
+   },
+   "PageTypeDataReady": {
+      "message": "Controleren van paginatype is voltooid"
+   },
+   "PageUrlLabel": {
+      "message": "Pagina-URL"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "Op deze pagina worden Content Delivery Networks (CDN's) gebruikt."
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "Er zijn geen uitbreidingen die niet binnen {0} ms worden geladen"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "Er worden minder dan vijf extensies gebruikt"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "Er zijn geen webonderdelen waarvoor iFrames wordt gebruikt"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "Elke afbeelding op de pagina is kleiner dan {0} kB"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "Paginagewicht is kleiner dan 1000 kB"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "Paginaprestaties zijn getest met een gebruikersaccount"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Er zijn minder dan {0} ophaalaanvragen voor lijstitems"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "Er zijn minder dan {0} SharePoint-aanvragen"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "Er zijn minder dan {0} zoekaanvragen"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "StartRow van zoekaanvragen is lager dan de limiet"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "Er is geen webonderdeel dat niet binnen {0} ms wordt uitgevoerd"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "Geen structurele navigatie gedetecteerd"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "Persoonlijke CDN is niet ingeschakeld"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "Zowel openbaar als persoonlijk CDN is ingeschakeld. Gebruik de standaard CDN-locaties of vraag een SharePoint-beheerder om aangepaste locaties toe te voegen."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "Openbare en persoonlijke CDN zijn niet ingeschakeld"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "Openbare CDN is niet ingeschakeld"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "Er zijn 7 of meer uitbreidingen."
+   },
+   "RenderTime": {
+      "message": "Weergeven"
+   },
+   "RunningAuditors": {
+      "message": "Gegevens valideren..."
+   },
+   "RunningCollectors": {
+      "message": "Gegevens verzamelen... Dit kan enkele minuten duren"
+   },
+   "RunningPageTypeChecker": {
+      "message": "Paginatype controleren"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "Start"
+   },
+   "Stop": {
+      "message": "Stoppen"
+   },
+   "ThirdPartyNotice": {
+      "message": "Kennisgeving van derden"
+   },
+   "TimeoutMessage": {
+      "message": "Er is een time-out opgetreden voor het hulpprogramma voor paginadiagnose. Probeer het opnieuw."
+   },
+   "TitleForCBQAuditor": {
+      "message": "Controleren op webonderdeel CBQ"
+   },
+   "Total": {
+      "message": "Totaal"
+   },
+   "TunePerformanceInstruction": {
+      "message": "Meer informatie over het verbeteren van de prestaties en downloadtijden voor pagina's in"
+   },
+   "TunePerformanceLinkName": {
+      "message": "Prestaties van SharePoint Online afstemmen"
+   },
+   "Url": {
+      "message": "URL"
+   },
+   "UrlDescription": {
+      "message": "{0} URL gevonden"
+   },
+   "UrlsDescription": {
+      "message": "{0} URL's gevonden"
+   },
+   "UserVoice": {
+      "message": "User Voice"
+   },
+   "VersionLabel": {
+      "message": "Versie"
+   },
+   "Warning": {
+      "message": "Mogelijkheden voor verbetering"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "Elk geïntegreerd Microsoft-webonderdeel waarvan het laden binnen de viewport langer duurt dan 2000 ms, of waarvan het laden buiten de viewport langer duurt dan 4000 ms, is van invloed op de paginaprestaties."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "Een of meer webonderdelen die gebruikmaken van iFrames"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Microsoft-webonderdelen zijn van invloed op de laadtijd van pagina's"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "Er zijn 5 of meer uitbreidingen."
+   }
+}

@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "حول"
+   },
+   "AppDescription": {
+      "message": "تحليل أداء صفحات الموقع والحصول على توصيات لتحسين الأداء."
+   },
+   "AppName": {
+      "message": "تشخيص الصفحة لـ SharePoint"
+   },
+   "AttentionRequired": {
+      "message": "الانتباه مطلوب"
+   },
+   "AuditorsDataReady": {
+      "message": "اكتمل التحقق من صحة البيانات"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "يجب تمكين كل من شبكة تسليم المحتوى العامة والخاصة بالتكوين الافتراضي. شارك مع مسؤول SharePoint لتمكين كل من شبكات تسليم المحتوى (CDNs) واستخدام مواقع شبكة تسليم المحتوى الافتراضية أو اطلب من مسؤول SharePoint إضافة مواقع مخصصة."
+   },
+   "ClassicPageType": {
+      "message": "كلاسيكية"
+   },
+   "CollectorsDataReady": {
+      "message": "اكتمل تجميع البيانات"
+   },
+   "CorrelationIdLabel": {
+      "message": "CorrelationID"
+   },
+   "Custom": {
+      "message": "مُخصّص"
+   },
+   "Description": {
+      "message": "أداه للتعرف علي مشاكل أداء الصفحة في SharePoint Online"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "يوصى باستخدام المحتوى حسب جزء ويب البحث أكثر من المحتوى حسب جزء ويب الاستعلام."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "تحسن شبكات CDN الأداء عن طريق التخزين المؤقت للأصول الثابتة بالقرب من المستعرضات التي تطلبها. عقد شراكة مع مسؤول SharePoint لإعداد شبكات CDN وتكوينها لتخزين أصول الصفحة الثابتة."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "يستغرق عرض ملحق واحد أو أكثر ما يزيد عن 1000 مللي ثانية. "
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "يعمل استخدام iFrames على إبطاء الأداء نظراً لأنه يتم المحتوى من صفحة خارجية. استخدم الصور بدلاً من iFrames، ولكن إذا كان يجب استخدام iFrames فقم بتقليل عددها أو قم بنقلها من منفذ العرض."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "الصور الموجودة في هذه الصفحة كبيرة جداً للحصول على أداء مثالي للصفحة. قم بتقليل الصور الموجودة في هذه الصفحة بحيث تكون كل منها أقل من {0} كيلوبايت."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "الصور الموجودة في هذه الصفحة كبيرة جداً لأداء الصفحة المثالي. قم بتقليل الصور الموجودة في هذه الصفحة بحيث تكون كل منها أقل من {0} ميغابايت."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "تستغرق {0} من الملحقات وقتاً أطول من {1} مللي ثانية للتحميل وهذا يؤثر على أداء الصفحة."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "تقوم محتويات الصفحة مثل الصور ومقاطع الفيديو والنصوص بالتأثير على أداء الصفحة. قم بتقليل عدد أجزاء الويب، واستخدم شبكات تسليم المحتوي (CDNs)، وحدد محتوى الصفحة."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "عند إجراء اختبار الأداء عند تسجيل الدخول كمسؤول، تتأثر النتائج بزيادة معدل نقل البيانات الناتجة عن مجموعات الأمان."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "تتجاوز هذه الصفحة عدد الاستدعاءات المستحسنة ل \"إحضار عنصر القائمة\" مع رأس ذاكرة التخزين المؤقت الخارجية. تحديد الطلبات بأقل من {0} طلبات إحضار عناصر القائمة لكل صفحة."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "تجاوزت هذه الصفحة العدد المرجعي المستحسن للاستدعاءات لـ SharePoint. قم بتقييد الطلبات بأقل من {0} من طلبات SharePoint لكل صفحة {1}."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "تجاوزت هذه الصفحة عدد خط الأساس للاستدعاءات المستحسنة للبحث. قم بتقييد الطلبات لأقل من {0} من طلبات البحث لكل صفحة."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "من أجل توفير تجربة البحث ذات الأداء العالي، يتم تحديد الحد الأقصى لقيمة StartRow المدعومة لتكون {0}."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "يستغرق ملحق واحد وقتاً أطول من {0} مللي ثانية للتحميل وهذا يؤثر على أداء الصفحة."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "يعمل التنقل البنائي غير المُخزن على إبطاء أداء الموقع. قم بإعادة تصميم تنقل موقعك باستخدام التنقل المدار أو المستند إلى البحث."
+   },
+   "DetectPageType": {
+      "message": "يتم الآن الكشف عن نوع الصفحة..."
+   },
+   "DiagnosticTests": {
+      "message": "اختبارات التشخيص"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "المدة أكبر من {0} مللي ثانية"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "المدة ضمن الحد {0}مللي ثانية"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "تمكين تسجيل الدعم (قد يؤثر على الأداء، ويتم استخدامه لاستكشاف الأخطاء وإصلاحها بواسطة دعم Microsoft)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "تم تمكين تسجيل الدعم"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "تمكين التصدير إلى أرشيف HTTP (HAR)"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "أي جزء ويب مخصص يستغرق أكثر من 2000 مللي ثانية للتحميل داخل منفذ العرض أو أكثر من 4000 مللي ثانية للتحميل خارج منفذ العرض، يؤثر علي أداء الصفحة."
+   },
+   "ErrorMessage": {
+      "message": "حدث خطأ أثناء تشغيل \"تشخيص الصفحة\". حاول مرة أخرى لاحقاً. إذا استمر الخطأ في الظهور، فاتصل بـ"
+   },
+   "ExportToHar": {
+      "message": "تصدير إلى HAR"
+   },
+   "ExportToHarHover": {
+      "message": "التصدير إلى أرشيف HTTP (HAR)"
+   },
+   "ExportToJson": {
+      "message": "تصدير إلى JSON"
+   },
+   "ExportToJsonHover": {
+      "message": "التصدير إلى رمز عنصر JavaScript (JSON)"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "بعض الأصول لا تستخدم شبكات تسليم المحتوى (CDN)"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "الملحقات قد تؤثر على وقت التحميل"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "تم استخدام عدد كبير جدًا من الملحقات"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "iFrames مستخدمة بواسطة ثلاثة أجزاء ويب أو أكثر"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "هذه الصفحة مشتملة على {0} من الصور الكبيرة"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "هذه الصفحة مشتملة على صورة 1 كبيرة"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "حجم الصفحة {0} كيلوبايت"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "اختبار أداء الصفحة باستخدام حساب مستخدم"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "هذه الصفحة متضمنة {0} من الاستدعاءات لإدراج إحضار العنصر في قائمة"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "هذه الصفحة متضمنة {0} من الاستدعاءات لـ SharePoint"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "هذه الصفحة متضمنة {0} من الاستدعاءات للبحث"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "يتجاوز StartRow لطلبات البحث الحد {0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "تؤثر أجزاء الويب المخصصة على زمن تحميل الصفحة"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "التخزين المؤقت للتنقل البنائي غير ممكّن"
+   },
+   "FeedbackCategoryName": {
+      "message": "تقديم ملاحظات"
+   },
+   "FeedbackInstruction": {
+      "message": "هل لديك اقتراحات أو أسئلة؟ انشرها على "
+   },
+   "HelpLinksCategoryName": {
+      "message": "موارد إضافية"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "لا يمكن تشغيل التشخيص في صفحات النظام مثل صفحة بدء SharePoint. استخدم هذه الأداة لصفحات موقع SharePoint فقط."
+   },
+   "HowToUseInstruction": {
+      "message": "تعرّف على المزيد حول هذه الأداة وكيفية عملها في"
+   },
+   "HowToUseLinkName": {
+      "message": "أداة تشخيص الصفحة لـ SharePoint Online"
+   },
+   "Init": {
+      "message": "البدء"
+   },
+   "LazyLoadingTime": {
+      "message": "التحميل البطيء"
+   },
+   "LearnMore": {
+      "message": "تعرّف على المزيد"
+   },
+   "MadeBy": {
+      "message": "تم_الإعداد_بواسطة"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "دعم Microsoft."
+   },
+   "ModernPageType": {
+      "message": "حديثة"
+   },
+   "ModuleLoad": {
+      "message": "تحميل الوحدة النمطية"
+   },
+   "NameAndId": {
+      "message": "الاسم والمعرف"
+   },
+   "NetworkTrace": {
+      "message": "تتبع الشبكة"
+   },
+   "NoActionRequired": {
+      "message": "بلا إجراء مطلوب"
+   },
+   "NotSupportedPage": {
+      "message": "يتعذر تشغيل تشخيصات الصفحات علي هذه الصفحة. استخدم هذه الاداه لصفحات موقع SharePoint فقط."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "لا يمكن تشغيل التشخيص حينما تكون الصفحة في وضع التحرير. في صفحتك، حدد \"حفظ كمسودة\" أو \"تجاهل التغييرات\" وحاول مرة أخرى."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "أنت تحاول استخدام أداه \"تشخيص الصفحة\" مع إصدار محلي من SharePoint. هذه الاداه للاستخدام مع SharePoint Online فقط."
+   },
+   "PageLoadTimeLabel": {
+      "message": "وقت تحميل الصفحة"
+   },
+   "PageTypeDataReady": {
+      "message": "اكتمل التحقق من ملف البيانات."
+   },
+   "PageUrlLabel": {
+      "message": "عنوان URL الصفحة"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "هذه الصفحة مستخدمة لشبكات تسليم المحتوى (CDN)"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "بلا ملحقات تستغرق وقتاً أطول من {0} مللي ثانية للتحميل"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "يوجد أق من 5 ملفات قيد الاستخدام"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "بلا أجزاء ويب تستخدم iFrames"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "كل صورة الصور الموجودة في الصفحة أصغر من {0} كيلوبايت"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "حجم الصفحة أصغر من 1000 كيلوبايت"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "هذه الصفحة مختبرة باستخدام حساب مستخدم"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "يوجد أقل من {0} طلبات إحضار عناصر القائمة"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "هناك أقل من {0} من طلبات SharePoint"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "هناك أقل من {0} من طلبات البحث"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "StartRow لطلبات البحث أقل من الحد"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "لا يستغرق تشغيل جزء ويب وقتا أطول من {0} مللي ثانية"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "بلا تنقل بنائي مكتشف"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "لم يتم تمكين شبكة CDN الخاصة"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "تم تمكين CDN العام والخاص. الرجاء استخدام مواقع CDN الافتراضية أو اطلب من مسؤول SharePoint إضافة مواقع مخصصة."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "لم يتم تمكين شبكة CDN العامة والخاصة"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "CDN العامة غير مُمكّنة"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "هناك 7 ملحقات أو أكثر."
+   },
+   "RenderTime": {
+      "message": "عرض"
+   },
+   "RunningAuditors": {
+      "message": "جاري التحقق من صحة البيانات..."
+   },
+   "RunningCollectors": {
+      "message": "جاري جمع البيانات... قد يستغرق هذا الأمر بضع دقائق."
+   },
+   "RunningPageTypeChecker": {
+      "message": "نوع صفحة التحقق"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "البدء"
+   },
+   "Stop": {
+      "message": "إيقاف"
+   },
+   "ThirdPartyNotice": {
+      "message": "إشعار الجهة الخارجية"
+   },
+   "TimeoutMessage": {
+      "message": "انتهت مهلة أداة تشخيص الصفحة. الرجاء المحاولة مرة أخرى."
+   },
+   "TitleForCBQAuditor": {
+      "message": "التحقق من وجود أجزاء ويب خاصة بـ CBQ"
+   },
+   "Total": {
+      "message": "الإجمالي"
+   },
+   "TunePerformanceInstruction": {
+      "message": "يمكنك العثور على مزيد من المعلومات حول تحسين الأداء وأوقات تنزيل الصفحة في"
+   },
+   "TunePerformanceLinkName": {
+      "message": "تحسين أداء SharePoint Online"
+   },
+   "Url": {
+      "message": "عنوان Url"
+   },
+   "UrlDescription": {
+      "message": "تم العثور على {0} عناوين URL"
+   },
+   "UrlsDescription": {
+      "message": "تم العثور على {0} عناوين URL"
+   },
+   "UserVoice": {
+      "message": "صوت المستخدم"
+   },
+   "VersionLabel": {
+      "message": "الإصدار"
+   },
+   "Warning": {
+      "message": "فرص التحسين"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "أي جزء من أجزاء الويب المضمنة في Microsoft يستغرق أكثر من 2000 مللي ثانية للتحميل داخل منفذ العرض أو يستغرق أكثر من 4000 مللي ثانية للتحميل خارج منفذ العرض، يؤثر علي أداء الصفحة."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "iFrames غير مستخدمة بواسطة جزء ويب واحد أو أكثر"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "تؤثر أجزاء ويب Microsoft على زمن التحميل"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "هناك 5 ملحقات أو أكثر."
+   }
+}

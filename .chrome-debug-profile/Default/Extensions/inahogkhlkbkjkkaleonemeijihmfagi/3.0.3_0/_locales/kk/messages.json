@@ -1,0 +1,356 @@
+{
+  "TitleForCBQAuditor": {
+    "message": "CBQ WebPart тексерісі"
+  },
+  "DescriptionForCBQAuditor": {
+    "message": "\"Сұрау бойынша контент\" веб-бөлігін емес, \"Іздеу бойынша контент\" веб-бөлігін пайдалануға кеңес беріледі."
+  },
+  "PassedTitleForCDNAuditor": {
+    "message": "Осы парақшада мазмұнды жеткізу желілері (CDN) пайдаланылады"
+  },
+  "FailedTitleForCDNAuditor": {
+    "message": "Кейбір активтер CDNs қызметін пайдаланбайды"
+  },
+  "PublicAndPrivateCDNNotEnabledTitle": {
+    "message": "Жалпыға қолжетімді және жеке CDN желісі қосылмаған."
+  },
+  "CDNNotEnabledActionMessage": {
+    "message": "Жалпыға қолжетімді және жеке CDN желісі әдепкі конфигурациямен қосылуы керек. Екі CDN желісін де қосу және әдепкі CDN орындарын пайдалану үшін, SharePoint әкімшісіне хабарласыңыз немесе SharePoint әкімшісінен пайдаланушы орындарын қосуды сұраңыз."
+  },
+  "PrivateCDNNotEnabledTitle": {
+    "message": "Жеке CDN желісі қосылмаған"
+  },
+  "PublicCDNNotEnabledTitle": {
+    "message": "Жалпыға қолжетімді CDN қосылмаған"
+  },
+  "PublicAndPrivateCDNEnbledActionMessage": {
+    "message": "Жалпыға қолжетімді және жеке CDN желісі қосылған. Әдепкі CDN орындарын пайдаланыңыз немесе SharePoint әкімшісінен реттелетін орындарды қосуды сұраңыз."
+  },
+  "DescriptionForCDNAuditor": {
+    "message": "CDN желілері статикалық ресурстарды сұрап жатқан браузерлерге жақын статикалық ресурстарды кэштеу арқылы өнімділікті арттырады. Парақшалардың статикалық ресурстарын сақтауға арналған CDN желілерін реттеу үшін, SharePoint әкімшісіне хабарласыңыз."
+  },
+  "Url": {
+    "message": "URL"
+  },
+  "NameAndId": {
+    "message": "Аты және ИД"
+  },
+  "Total": {
+    "message": "Жалпы"
+  },
+  "ModuleLoad": {
+    "message": "Модульді жүктеу"
+  },
+  "Init": {
+    "message": "Инициализация"
+  },
+  "FailedTitleForIFrameAuditor": {
+    "message": "Үш немесе одан да көп веб-бөліктер iFrames элементтерін пайдаланады"
+  },
+  "WarningTitleForIFrameAuditor": {
+    "message": "Бір немесе одан да көп веб-бөліктер iFrames элементтерін пайдаланады"
+  },
+  "PassedTitleForIFrameAuditor": {
+    "message": "iFrame элементтерін пайдаланатын веб-бөліктер жоқ"
+  },
+  "DescriptionForIFrameAuditor": {
+    "message": "iFrame элементтерін пайдалану парақша өнімділігін азайтады, себебі мазмұн сыртқы парақшадан жүктеледі. Егер iFrame элементтерін пайдалану қажет болса, iFrame элементтерінің орнына кескіндерді пайдаланыңыз немесе олардың санын азайтыңыз және (немесе) олардың орнын қарап шығу терезесінен ауыстырыңыз."
+  },
+  "PassedTitleForImageSizeAuditor": {
+    "message": "Парақшадағы барлық кескіндердің әрқайсысы {0} КБ-дан аз"
+  },
+  "FailedTitleForImageSizeAuditorOfSingleImage": {
+    "message": "Бұл парақшада 1 үлкен кескін бар"
+  },
+  "FailedTitleForImageSizeAuditorOfMultipleImages": {
+    "message": "Бұл парақшада {0} үлкен кескін бар"
+  },
+  "DescriptionForImageSizeAuditor": {
+    "message": "Осы парақшадағы кескіндер оның өнімділігін оңтайландыру үшін тым үлкен. Осы парақшадағы барлық кескіндердің әрқайсысын {0} КБ-дан кіші өлшемге дейін кішірейтіңіз."
+  },
+  "DescriptionForImageSizeAuditorMb": {
+    "message": "Осы парақшадағы кескіндер оның оңтайлы өнімділігі үшін тым үлкен. Осы парақшадағы барлық кескіндердің әрқайсысын {0} МБ-дан кіші өлшемге дейін кішірейтіңіз."
+  },
+  "FailedTitleForPageWeightAuditor": {
+    "message": "Парақшаның өлшемі — {0} КБ"
+  },
+  "PassedTitleForPageWeightAuditor": {
+    "message": "Беттің салмағы 1000 Кбайт-тан кішірек"
+  },
+  "DescriptionForPageWeightAuditor": {
+    "message": "Кескіндер, бейне және мәтін сияқты парақша контенті парақшаның өнімділігіне әсер етеді. Веб-бөліктер санын азайтып, мазмұнды жеткізу желілерін (CDN) пайдаланыңыз жән парақша контентін шектеңіз."
+  },
+  "FailedTitleForPermissionAuditor": {
+    "message": "Парақша өнімділігін пайдаланушы тіркелгісімен сынақтан өткізіңіз"
+  },
+  "PassedTitleForPermissionAuditor": {
+    "message": "Парақша өнімділігі пайдаланушы тіркелгісімен сыналды"
+  },
+  "DescriptionForPermissionAuditor": {
+    "message": "Жүйеге әкімші ретінде кіргенде өнімділікті сынақтан өткізген кезде, қауіпсіздік топтары шақырған трафиктің артуы нәтижелерге әсер етеді."
+  },
+  "PassedTitleForRequestsToSearchAuditor": {
+    "message": "Іздеу сұрауларының саны {0} санынан аспайды"
+  },
+  "FailedTitleForRequestsToSearchAuditor": {
+    "message": "Бұл бетте іздеу қызметіне қоңыраулар ({0}) бар"
+  },
+  "DescriptionForRequestsToSearchAuditor": {
+    "message": "Бұл бет іздеуді ұсынылған шақырулардың базалық санынан асады. Әр бет үшін сұрауларды {0} іздеу сұрауынан азырақ болатындай шектеңіз."
+  },
+  "PassedTitleForSearchPropertyAuditor": {
+    "message": "Іздеу сұрауларының StartRow мәні шектен аз"
+  },
+  "FailedTitleForSearchPropertyAuditor": {
+    "message": "Іздеу сұрауларының StartRow мәні {0} шегінен асады"
+  },
+  "DescriptionForSearchPropertyAuditor": {
+    "message": "Іздеу тәжірибесін жоғары өнімділікпен қамтамасыз ету үшін StartRow максималды қолдау көрсетілетін мәні {0} дейін шектелген."
+  },
+  "PassedTitleForRequestsToListItemFetchAuditor": {
+    "message": "{0} мәнінен азырақ тізім элементін алу сұраулары бар"
+  },
+  "FailedTitleForRequestsToListItemFetchAuditor": {
+    "message": "Бұл бетте {0} тізім элементін алуға шақыру бар"
+  },
+  "DescriptionForRequestsToListItemFetchAuditor": {
+    "message": "Бұл бет кэш тақырыбы арқылы тізім элементін алуды ұсынылған шақырулардың базалық санынан асады. Әр бет үшін сұрауларды {0} тізім элементін алуды сұраулардан азырақ болатындай шектеңіз."
+  },
+  "PassedTitleForRequestsToSPOAuditor": {
+    "message": "SharePoint сұрауларының саны {0} санынан аспайды"
+  },
+  "FailedTitleForRequestsToSPOAuditor": {
+    "message": "Бұл парақшада {0} SharePoint қоңырауы бар"
+  },
+  "DescriptionForRequestsToSPOAuditor": {
+    "message": "Осы парақшадағы SharePoint қоңырауларының саны ұсынылатын негізгі қоңыраулар санынан асып кетті. Сұрауларды әр {1} парақша үшін {0} SharePoint сұрауынан аз мәнге азайтыңыз."
+  },
+  "ClassicPageType": {
+    "message": "классикалық"
+  },
+  "ModernPageType": {
+    "message": "заманауи"
+  },
+  "PassedTitleForSlowWebPartAuditor": {
+    "message": "Веб-бөлікті іске қосуға {0} мс-дан артық уақыт кетпейді"
+  },
+  "FailedTitleForSlowWebPartAuditor": {
+    "message": "Реттелген веб бөліктері беттің жүктелу уақытына ықпал етуде"
+  },
+  "WarningTitleForSlowWebPartAuditor": {
+    "message": "Microsoft веб бөліктері жүктеу уақытына ықпал етуде"
+  },
+  "ErrorDescriptionForSlowWebPartAuditor": {
+    "message": "Қарау терезесінде жүктеу үшін 2000 мс-дан ұзағырақ уақытты алатын немесе қарау терезесінен тыс жерде жүктеу үшін 4000 мс-дан ұзағырақ уақытты алатын кез келген реттелетін веб-бөлік парақшаның өнімділігіне әсер етеді."
+  },
+  "WarningDescriptionForSlowWebPartAuditor": {
+    "message": "Қарау терезесінде жүктеу үшін 2000 мс-дан ұзағырақ уақытты алатын немесе қарау терезесінен тыс жерде жүктеу үшін 4000 мс-дан ұзағырақ уақытты алатын кез келген кірістірілген Microsoft веб-бөлігі парақшаның өнімділігіне әсер етеді."
+  },
+  "Microsoft": {
+    "message": "Microsoft"
+  },
+  "Custom": {
+    "message": "Реттелетін"
+  },
+  "MadeBy": {
+    "message": "MadeBy"
+  },
+  "LazyLoadingTime": {
+    "message": "Кейінге қалдырылған жүктеме"
+  },
+  "RenderTime": {
+    "message": "Көрсету"
+  },
+  "FailedTitleForStructuralNavAuditor": {
+    "message": "Құрылымдық навигацияны кэштеу мүмкіндігі қосылмаған"
+  },
+  "PassedTitleForStructuralNavAuditor": {
+    "message": "Құрылымдық навигация анықталмады"
+  },
+  "DescriptionForStructuralNavAuditor": {
+    "message": "Кэштелмейтін құрылымдық навигация сайт өнімділігін баяулатады. Сайт навигациясын басқарылатын навигацияға немесе іздеу негізіндегі навигацияға өзгертіңіз."
+  },
+  "FailedTitleForExtensionCountAuditor": {
+    "message": "Тым көп кеңейтім қолданылған"
+  },
+  "PassedTitleForExtensionCountAuditor": {
+    "message": "5-тен аз кеңейтім пайдаланылады"
+  },
+  "YellowSectionDescriptionForExtensionCountAuditor": {
+    "message": "5 немесе одан да көп кеңейтім бар."
+  },
+  "RedSectionDescriptionForExtensionCountAuditor": {
+    "message": "7 немесе одан да көп кеңейтім бар."
+  },
+  "FailedTitleForExtensionAuditor": {
+    "message": "Кеңейтімдер жүктеу уақытына әсер етуі мүмкін"
+  },
+  "PassedTitleForExtensionAuditor": {
+    "message": "Кеңейтімдерді жүктеуге {0} мс-дан артық уақыт кетпейді"
+  },
+  "DescriptionForSingleExtensionAuditor": {
+    "message": "1 кеңейтімді жүктеуге {0} мс-дан көп уақыт алады және бұл парақша өнімділігіне әсер етеді."
+  },
+  "DescriptionForMultiExtensionAuditor": {
+    "message": "{0} кеңейтімді жүктеуге {1} мс-дан көп уақыт алады және бұл парақша өнімділігіне әсер етеді."
+  },
+  "DescriptionForExtensionAuditor": {
+    "message": "Бір немесе бірнеше кеңейтімді көрсету үшін 1000 мс шамасынан көп уақыт кетеді."
+  },
+  "AppName": {
+    "message": "SharePoint үшін парақшалар диагностикасы"
+  },
+  "AppDescription": {
+    "message": "Сайт парақшаларының өнімділігін талдап, оңтайландыру бойынша ұсыныстар алыңыз."
+  },
+  "DetectPageType": {
+    "message": "Парақша түрі анықталуда..."
+  },
+  "HelpLinksCategoryName": {
+    "message": "Қосымша ресурстар"
+  },
+  "HowToUseLinkName": {
+    "message": "SharePoint Online беттерінің диагностикасы құралы"
+  },
+  "HowToUseInstruction": {
+    "message": "Осы құрал және оның жұмысы туралы қосымша ақпарат"
+  },
+  "TunePerformanceLinkName": {
+    "message": "SharePoint Online өнімділігін реттеу"
+  },
+  "TunePerformanceInstruction": {
+    "message": "Өнімділікті арттыру және бетті жүктеп алуды жылдамдату туралы қосымша ақпаратты мына жерден қараңыз"
+  },
+  "FeedbackCategoryName": {
+    "message": "Пікір жіберу"
+  },
+  "FeedbackInstruction": {
+    "message": "Ұсыныстар немесе сұрақтар бар ма? Оларды жариялаңыз "
+  },
+  "UserVoice": {
+    "message": "Пайдаланушы дауысы"
+  },
+  "VersionLabel": {
+    "message": "Нұсқа"
+  },
+  "RunningPageTypeChecker": {
+    "message": "Парақша түрін тексеру"
+  },
+  "PageTypeDataReady": {
+    "message": "Парақша түрін тексеру аяқталды"
+  },
+  "RunningCollectors": {
+    "message": "Деректер жиналуда... Бұған бірнеше минут кетуі мүмкін"
+  },
+  "CollectorsDataReady": {
+    "message": "Деректерді жинау аяқталды"
+  },
+  "RunningAuditors": {
+    "message": "Деректер тексерілуде..."
+  },
+  "AuditorsDataReady": {
+    "message": "Деректерді тексеру аяқталды"
+  },
+  "CorrelationIdLabel": {
+    "message": "Корреляция идентификаторы"
+  },
+  "SPRequestDurationLabel": {
+    "message": "SPRequestDuration"
+  },
+  "SPIISLatencyLabel": {
+    "message": "SPIISLatency"
+  },
+  "PageLoadTimeLabel": {
+    "message": "Парақшаны жүктеу уақыты"
+  },
+  "PageUrlLabel": {
+    "message": "Беттің URL мекенжайы"
+  },
+  "Start": {
+    "message": "Бастау"
+  },
+  "Stop": {
+    "message": "Тоқтату"
+  },
+  "DiagnosticTests": {
+    "message": "Диагностикалық сынақтар"
+  },
+  "NetworkTrace": {
+    "message": "Желілік трафикті қадағалау"
+  },
+  "DurationGreaterThanThreshold": {
+    "message": "Ұзақтығы {0} мс шамасынан артық"
+  },
+  "DurationWithinWarningThreshold": {
+    "message": "Ұзақтығы {0} мс шегінде"
+  },
+  "AttentionRequired": {
+    "message": "Назар аудару қажет"
+  },
+  "NoActionRequired": {
+    "message": "Ешбір әрекет қажет емес"
+  },
+  "Warning": {
+    "message": "Жақсарту мүмкіндіктері"
+  },
+  "NotSupportedPage": {
+    "message": "Осы парақшада парақша диагностикасын іске қосу мүмкін емес. Осы құралды тек SharePoint сайт парақшалары үшін пайдаланыңыз."
+  },
+  "NotSupportedPageInEdit": {
+    "message": "Парақша өңдеу режимінде болған кезде, диагностиканы іске қосу мүмкін емес. Парақшада \"Нобай ретінде сақтау\" немесе \"Өзгерістерден бас тарту\" опциясын таңдап, әрекетті қайталап көріңіз."
+  },
+  "OnPremPageNotSupportedMessage": {
+    "message": "SharePoint жергілікті нұсқасында парақшалар диагностикасы құралын пайдаланғалы жатырсыз. Бұл құрал тек SharePoint Online нұсқасында пайдалануға арналған."
+  },
+  "HomePageNotSupportedMessage": {
+    "message": "SharePoint бастапқы беті сияқты жүйелік парақшалар үшін диагностиканы іске қосу мүмкін емес. Осы құралды тек SharePoint сайт парақшалары үшін пайдаланыңыз."
+  },
+  "LearnMore": {
+    "message": "Қосымша мәлімет"
+  },
+  "About": {
+    "message": "Ақпарат"
+  },
+  "TimeoutMessage": {
+    "message": "Парақшалар диагностикасы құралын күту уақыты өтті. Әрекетті қайталап көріңіз."
+  },
+  "ThirdPartyNotice": {
+    "message": "Үшінші тарап хабарландыруы"
+  },
+  "EnableDevDashboardCheckBoxLabel": {
+    "message": "Қолдау көрсету журналын жүргізу функциясын қосу (өнімділікке әсер етуі мүмкін; Microsoft қолдау көрсету қызметінің көмегімен ақауларды түзету үшін пайдаланылады)"
+  },
+  "EnableDevDashboardWarningMessage": {
+    "message": "Қолдау көрсету журналын жүргізу функциясы қосылды"
+  },
+  "EnableHarPreviewCheckBoxLabel": {
+    "message": "HTTP мұрағатына (HAR) экспорттауды іске қосу"
+  },
+  "ErrorMessage": {
+    "message": "Парақша диагностикасын орындау кезінде қате орын алды. Әрекетті кейінірек қайталап көріңіз. Егер қате қайталанса, хабарласыңыз:"
+  },
+  "MicrosoftSupport": {
+    "message": "Microsoft қолдау көрсету қызметі."
+  },
+  "ExportToJson": {
+    "message": "JSON файлына экспорттау"
+  },
+  "ExportToJsonHover": {
+    "message": "JavaScript нысандар нотациясына (JSON) экспорттау"
+  },
+  "ExportToHar": {
+    "message": "HAR форматына экспорттау"
+  },
+  "ExportToHarHover": {
+    "message": "HTTP мұрағатына (HAR) экспорттау"
+  },
+  "Description": {
+    "message": "SharePoint Online бағдарламасындағы бет өнімділігінің мәселелерін анықтау құралы"
+  },
+  "UrlDescription": {
+    "message": "{0} URL мекенжайы табылды"
+  },
+  "UrlsDescription": {
+    "message": "{0} URL мекенжайы табылды"
+  }
+}

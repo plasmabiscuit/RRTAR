@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "form": "Research & Related Budget v3.0",
+    "url": "https://apply07.grants.gov/apply/jsf/workspace/onlineForm.faces",
+    "notes": [
+      "All selectors must be evaluated inside the iframe: await page.frame({url: /grants.gov/}) or page.frameLocator('iframe')",
+      "Row-indexed fields use pattern {fieldName}{budgetPeriod}_{rowIndex}, e.g. budgetPeriodStartDate1, baseSalaryA1_1",
+      "Budget period index starts at 1. Row index starts at 1.",
+      "Fields marked 'read_only_auto_calc' are auto-calculated by the form and should not be filled.",
+      "Fields marked 'read_only_prepopulated' are pre-filled from SF-424 and should not be written."
+    ]
+  },
+
+  "iframe_selector": "iframe",
+
+  "sections": {
+
+    "ORGANIZATION": {
+      "label": "Organization Information",
+      "fields": {
+        "uei": {
+          "selector": "#sAMUEI",
+          "playwright": "frameLocator('iframe').locator('#sAMUEI')",
+          "label": "UEI",
+          "type": "text",
+          "note": "read_only_prepopulated"
+        },
+        "organizationName": {
+          "selector": "#organizationName",
+          "playwright": "frameLocator('iframe').locator('#organizationName')",
+          "label": "Enter name of Organization",
+          "type": "text",
+          "note": "read_only_prepopulated"
+        },
+        "budgetType_project": {
+          "selector": "#project",
+          "playwright": "frameLocator('iframe').locator('#project')",
+          "label": "Budget Type: Project",
+          "type": "radio",
+          "name": "budgetType",
+          "value": "Project"
+        },
+        "budgetType_subaward": {
+          "selector": "#subaward",
+          "playwright": "frameLocator('iframe').locator('#subaward')",
+          "label": "Budget Type: Subaward/Consortium",
+          "type": "radio",
+          "name": "budgetType",
+          "value": "Subaward/Consortium"
+        }
+      }
+    },
+
+    "BUDGET_PERIOD_DATES": {
+      "label": "Budget Period Dates (per period, index N=1,2,...)",
+      "fields": {
+        "budgetPeriodStartDate": {
+          "selector": "#budgetPeriodStartDate{N}",
+          "playwright": "frameLocator('iframe').locator('#budgetPeriodStartDate1')",
+          "label": "Start Date",
+          "type": "text",
+          "format": "MM/DD/YYYY",
+          "note": "read_only_prepopulated"
+        },
+        "budgetPeriodEndDate": {
+          "selector": "#budgetPeriodEndDate{N}",
+          "playwright": "frameLocator('iframe').locator('#budgetPeriodEndDate1')",
+          "label": "End Date",
+          "type": "text",
+          "format": "MM/DD/YYYY",
+          "required": true
+        }
+      },
+      "actions": {
+        "deletePeriod": {
+          "selector": "#deletePeriod{N}",
+          "playwright": "frameLocator('iframe').locator('#deletePeriod1')",
+          "type": "button"
+        }
+      }
+    },
+
+    "A_SENIOR_KEY_PERSON": {
+      "label": "A. Senior / Key Person (modal dialog fields + grid rows)",
+      "note": "Click Edit/Delete buttons by row. Modal fields are shared for add/edit.",
+      "modal_fields": {
+        "prefix": {
+          "selector": "#prefix",
+          "playwright": "frameLocator('iframe').locator('#prefix')",
+          "label": "Prefix",
+          "type": "select",
+          "options": ["", "Mr.", "Mrs.", "Miss", "Ms.", "Dr.", "Rev.", "Prof.", "Other (Specify)"]
+        },
+        "otherPrefix": {
+          "selector": "#otherPrefix",
+          "playwright": "frameLocator('iframe').locator('#otherPrefix')",
+          "label": "Prefix – Other (Specify)",
+          "type": "text"
+        },
+        "firstName": {
+          "selector": "#firstName",
+          "playwright": "frameLocator('iframe').locator('#firstName')",
+          "label": "First Name",
+          "type": "text"
+        },
+        "middleName": {
+          "selector": "#middleName",
+          "playwright": "frameLocator('iframe').locator('#middleName')",
+          "label": "Middle Name",
+          "type": "text"
+        },
+        "lastName": {
+          "selector": "#lastName",
+          "playwright": "frameLocator('iframe').locator('#lastName')",
+          "label": "Last Name",
+          "type": "text"
+        },
+        "suffix": {
+          "selector": "#suff

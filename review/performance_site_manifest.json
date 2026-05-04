@@ -1,0 +1,39 @@
+[
+  {
+    "source_pdf": "PerformanceSite_ORNL",
+    "primary_site": {
+      "individual": false,
+      "organization_name": "",
+      "uei": "",
+      "street1": "",
+      "street2": "",
+      "city": "",
+      "county": "",
+      "state": "TN: Tennessee",
+      "province": "",
+      "country": "USA: UNITED STATES",
+      "zip_postal_code": "",
+      "congressional_district": ""
+    },
+    "other_sites": [
+      {
+        "individual": false,
+        "organization_name": "Oak Ridge National Laboratory (ORNL)",
+        "uei": "ZLHJJ57QA2H8",
+        "street1": "1 Bethel Valley Road",
+        "street2": "",
+        "city": "Oak Ridge",
+        "county": "",
+        "state": "TN: Tennessee",
+        "province": "",
+        "country": "USA: UNITED STATES",
+        "zip_postal_code": "37831-6156",
+        "congressional_district": "TN-003"
+      }
+    ],
+    "additional_sites_attachment": {
+      "path": null,
+      "sha1_base64": null
+    }
+  }
+]

@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "關於"
+   },
+   "AppDescription": {
+      "message": "分析網站頁面的效能，並取得最佳化建議。"
+   },
+   "AppName": {
+      "message": "適用於 SharePoint 的頁面診斷"
+   },
+   "AttentionRequired": {
+      "message": "需要注意"
+   },
+   "AuditorsDataReady": {
+      "message": "資料驗證完成"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "必須使用預設設定啟用公用和私人 CDN。請與 SharePoint 系統管理員合作，同時啟用兩個 CDN 並使用預設的 CDN 位置，或要求 SharePoint 系統管理員新增自訂位置。"
+   },
+   "ClassicPageType": {
+      "message": "傳統"
+   },
+   "CollectorsDataReady": {
+      "message": "資料收集完成"
+   },
+   "CorrelationIdLabel": {
+      "message": "相互關聯識別碼"
+   },
+   "Custom": {
+      "message": "自訂"
+   },
+   "Description": {
+      "message": "用於 SharePoint Online 中識別頁面效能問題的工具"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "建議使用依搜尋顯示內容的網頁組件，而不是依查詢顯示內容的網頁組件。"
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "CDN 透過較接近要求快取靜態資產的瀏覽器來提高效能。與 SharePoint 系統管理員合作，設定與配置 CDN 以儲存靜態網頁資產。"
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "一或多個擴充功能花費超過 1000 毫秒的時間進行轉譯。 "
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "使用 iFrame 會減緩頁面效能，因為內容是從外部頁面載入。請使用影像而非 iFrame，但如果必須使用 iFrame，請最小化數量，且/或將其移出檢視區。"
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "這個頁面上的影像太大，因此無法最佳化頁面效能。請將此頁面上的所有影像縮減為每個低於 {0} MB。"
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "這個頁面上的影像太大，因此無法最佳化頁面效能。請將此頁面上的所有影像縮減為每個低於 {0} MB。"
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0} 個擴充功能的載入時間長於 {1} 毫秒，影響了頁面效能。"
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "例如影像、視訊和文字等頁面內容正影響頁面效能。請減少網頁組件數量、使用內容傳遞網路 (CDN)，並限制頁面內容。"
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "當您以系統管理員身分登入測試效能時，結果會受到安全性群組造成的流量增加所影響。"
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "此頁面超過不含快取標題的 [清單項目擷取] 的建議呼叫基準數。限制要求少於每頁 {0} 個 [清單項目擷取] 要求。"
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "此頁面超過 SharePoint 的建議呼叫基準數。請針對每 {0} 個頁面限制要求為少於 {1} 個 SharePoint 要求。"
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "此頁面超過 [搜尋] 的建議呼叫基準數。限制要求少於每頁 {0} 個 [搜尋] 要求。"
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "為了提供高效能的搜尋體驗，我們會將 StartRow 的支援值上限限制為{0}。"
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "1 個擴充功能的載入時間長於 {0} 毫秒，影響了頁面效能。"
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "沒有快取的結構化流覽會減緩網站效能。使用受管理或搜尋導向流覽重新設計網站的流覽。"
+   },
+   "DetectPageType": {
+      "message": "正在偵測頁面類型..."
+   },
+   "DiagnosticTests": {
+      "message": "診斷測試"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "持續時間超過 {0} 毫秒"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "持續時間在閾值 {0} 毫秒內"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "啟用支援記錄 (可能會影響效能; 用於透過 Microsoft 支援服務進行疑難排解)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "已啟用支援記錄"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "啟用匯出到 HTTP 封存 (HAR)"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "凡是在檢視區內載入耗時超過 2000 毫秒時間或在檢視區外載入耗時超過 4000 毫秒時間的自訂網頁組件，都會影響頁面效能。"
+   },
+   "ErrorMessage": {
+      "message": "執行頁面診斷時發生錯誤。請稍後再試。如果仍然發生錯誤，請連絡"
+   },
+   "ExportToHar": {
+      "message": "匯出至 HAR"
+   },
+   "ExportToHarHover": {
+      "message": "匯出至 HTTP 封存 (HAR)"
+   },
+   "ExportToJson": {
+      "message": "匯出至 JSON"
+   },
+   "ExportToJsonHover": {
+      "message": "匯出至 JavaScript 物件標記法 (JSON)"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "部分資產沒有使用 CDN"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "擴充功能可能會影響載入時間"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "使用過多擴充功能"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "使用 iFrame 的三或多個網頁組件"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "此頁面包含 {0} 個大型影像"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "此頁面包含 1 個大型影像"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "頁面權數為 {0} KB"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "以使用者帳戶測試頁面效能"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "此頁面有 {0} 個對 [清單項目擷取] 的呼叫"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "此頁面有 {0} 個對 SharePoint 的呼叫"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "此頁面有 {0} 個對 [搜尋] 的呼叫"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "搜尋要求的 StartRow 超過限制{0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "自訂網頁組件會影響頁面載入時間"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "未啟用結構化瀏覽快取"
+   },
+   "FeedbackCategoryName": {
+      "message": "提供意見反應"
+   },
+   "FeedbackInstruction": {
+      "message": "有建議或問題嗎? 張貼在 "
+   },
+   "HelpLinksCategoryName": {
+      "message": "其他資源"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "無法在系統頁面 (例如 SharePoint 起始頁面) 上執行診斷。僅在 SharePoint 網站頁面上使用這個工具。"
+   },
+   "HowToUseInstruction": {
+      "message": "深入了解此工具及其運作方式"
+   },
+   "HowToUseLinkName": {
+      "message": "適用於 SharePoint Online 的頁面診斷工具"
+   },
+   "Init": {
+      "message": "Init"
+   },
+   "LazyLoadingTime": {
+      "message": "消極式載入"
+   },
+   "LearnMore": {
+      "message": "深入了解"
+   },
+   "MadeBy": {
+      "message": "MadeBy"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "Microsoft 支援服務。"
+   },
+   "ModernPageType": {
+      "message": "新式"
+   },
+   "ModuleLoad": {
+      "message": "模組載入"
+   },
+   "NameAndId": {
+      "message": "名稱和識別碼"
+   },
+   "NetworkTrace": {
+      "message": "網路追蹤"
+   },
+   "NoActionRequired": {
+      "message": "無需採取動作"
+   },
+   "NotSupportedPage": {
+      "message": "無法在此頁面上執行頁面診斷。僅針對 SharePoint 網站頁面使用此工具。"
+   },
+   "NotSupportedPageInEdit": {
+      "message": "頁面處於編輯模式時，無法執行診斷。在您的頁面上，選取 [儲存為草稿] 或 [捨棄變更]，然後再試一次。"
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "您正嘗試使用頁面診斷工具與內部部署版本的 SharePoint。此工具僅適用于 SharePoint Online。"
+   },
+   "PageLoadTimeLabel": {
+      "message": "頁面載入時間"
+   },
+   "PageTypeDataReady": {
+      "message": "頁面類型檢查完成"
+   },
+   "PageUrlLabel": {
+      "message": "頁面 URL"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "此頁面使用內容傳遞網路 (CDN)"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "沒有擴充功能的載入時間超過 {0} 毫秒"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "使用的擴充功能少於 5 個"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "沒有使用 iFrame 的網頁組件"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "頁面上的所有影像每個都低於 {0} KB"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "頁面權重小於 1000 kb"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "以使用者帳戶測試頁面效能"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "比 {0} 清單項目擷取要求更少"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "SharePoint 要求少於 {0}"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "比 {0} 搜尋要求更少"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "搜尋要求的 StartRow 低於限制"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "沒有網頁組件需要超過 {0} 毫秒的時間執行"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "未偵測到結構化瀏覽"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "未啟用私人 CDN"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "公用和私人 CDN 已啟用。請使用預設的 CDN 位置，或要求 SharePoint 系統管理員新增自訂位置。"
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "未啟用公用與私人 CDN"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "未啟用公用 CDN"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "有 7 個以上的擴充功能。"
+   },
+   "RenderTime": {
+      "message": "轉譯"
+   },
+   "RunningAuditors": {
+      "message": "正在驗證資料..."
+   },
+   "RunningCollectors": {
+      "message": "正在收集資料...這需要數分鐘"
+   },
+   "RunningPageTypeChecker": {
+      "message": "正在檢查頁面類型"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "開始"
+   },
+   "Stop": {
+      "message": "停止"
+   },
+   "ThirdPartyNotice": {
+      "message": "第三方聲明"
+   },
+   "TimeoutMessage": {
+      "message": "頁面診斷工具已逾時。請再試一次。"
+   },
+   "TitleForCBQAuditor": {
+      "message": "檢查 CBQ 網頁組件"
+   },
+   "Total": {
+      "message": "總計"
+   },
+   "TunePerformanceInstruction": {
+      "message": "了解有關改善效能和頁面下載時間的詳細資訊"
+   },
+   "TunePerformanceLinkName": {
+      "message": "調整 SharePoint Online 效能"
+   },
+   "Url": {
+      "message": "URL"
+   },
+   "UrlDescription": {
+      "message": "找到 {0} 個 URL"
+   },
+   "UrlsDescription": {
+      "message": "找到 {0} 個 URL"
+   },
+   "UserVoice": {
+      "message": "使用者的語音"
+   },
+   "VersionLabel": {
+      "message": "版本"
+   },
+   "Warning": {
+      "message": "改善機會"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "凡是在檢視區內載入耗時超過 2000 毫秒或在檢視區外載入耗時超過 4000 毫秒的內建 Microsoft 網頁組件，都會影響頁面效能。"
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "使用 iFrame 的一或多個網頁元件"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Microsoft 網頁組件會影響載入時間"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "有 5 個以上的擴充功能。"
+   }
+}

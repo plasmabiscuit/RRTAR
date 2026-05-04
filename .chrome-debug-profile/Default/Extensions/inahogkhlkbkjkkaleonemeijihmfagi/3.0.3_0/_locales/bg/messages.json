@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "Информация"
+   },
+   "AppDescription": {
+      "message": "Анализирайте производителността на страниците на вашия сайт и получете препоръки за оптимизиране."
+   },
+   "AppName": {
+      "message": "Диагностика на страници за SharePoint"
+   },
+   "AttentionRequired": {
+      "message": "Изисква се внимание"
+   },
+   "AuditorsDataReady": {
+      "message": "Проверката на данни завърши"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "И двете публични и частни CDN трябва да бъдат активирани с конфигурацията по подразбиране. Партнирайте си с вашия администратор на SharePoint, за да разрешите и двете CDNs, и използвайте местоположенията на CDN по подразбиране или помолете администратора на SharePoint да добави местоположения по избор."
+   },
+   "ClassicPageType": {
+      "message": "класически"
+   },
+   "CollectorsDataReady": {
+      "message": "Събирането на данни завърши"
+   },
+   "CorrelationIdLabel": {
+      "message": "ИД на корелация"
+   },
+   "Custom": {
+      "message": "По избор"
+   },
+   "Description": {
+      "message": "Инструмент за идентифициране на проблеми с производителността на страницата в SharePoint Online"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "Препоръчваме да използвате уеб частта \"Съдържание чрез търсене\", а не уеб частта \"Съдържание чрез заявка\"."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "CDN мрежите подобряват производителността чрез кеширане на статични активи по-близо до браузърите, които ги изискват. Партнирайте си с администратор на SharePoint, за да настроите и конфигурирате CDN мрежи за съхранение на статични активи на страницата."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "Едно или повече разширения отнемат повече от 1000 мс за рендиране. "
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "Използването на iFrames забавя производителността на страницата, тъй като съдържанието се зарежда от външна страница. Използвайте изображения вместо iFrames, но ако се налага да се използват iFrames, намалете броя им и/или ги преместете извън изгледа."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "Изображенията на тази страница са твърде големи за постигане на оптимална производителност на страницата. Намалете всички изображения на тази страница, така че всяко от тях да е по-малко от {0} КБ."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "Изображенията на тази страница са твърде големи за постигане на оптимална производителност на страницата. Намалете всички изображения на тази страница, така че всяко от тях да е по-малко от {0} МБ."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0} разширенията са по-дълги от {1} ms за зареждане и това се отразява на производителността на страницата."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "Съдържание на страницата като изображения, видео и текстово съобщение се отразява на производителността на страницата. Намалете броя на уеб частите, използвайте мрежи за доставяне на съдържание (CDN мрежи) и ограничете съдържанието на страницата."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "Когато тествате производителността като сте влезли като администратор, резултатите се влияят от увеличения трафик, предизвикан от групи за защита."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "Тази страница надвишава базовия брой препоръчителни повиквания към извличане на елемент от списък със заглавка на кеша. Ограничете исканията до по-малко от {0} искания за извличане на елементи от списък за всяка страница."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "Тази страница надвишава базовия брой препоръчителни обаждания към SharePoint. Ограничете исканията до по-малко от {0} заявки за SharePoint за всяка {1} страница."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "Тази страница надвишава базовия брой препоръчителни обаждания за търсене. Ограничете исканията до по-малко от {0} заявки за търсене за всяка страница."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "За да предоставим възможност за търсене с висока производителност, ограничаваме максималната поддържана стойност на StartRow да бъде {0}."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "1 разширение отнема повече време от {0} ms да се зареди и това се отразява на производителността на страницата."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "Структурна навигация, която не е кеширана, забавя производителността. Променете навигацията на вашия сайт като използвате управляема или задействана от търсенето навигация."
+   },
+   "DetectPageType": {
+      "message": "Откриване на типа страница..."
+   },
+   "DiagnosticTests": {
+      "message": "Диагностични тестове"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "Продължителността е по-голяма от {0} мс"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "Времетраенето е в рамките на прага {0} мс"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "Разрешаване на регистрирането за поддръжката (може да повлияе на производителността; използване за отстраняване на неизправности с поддръжката от Microsoft)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "Разрешено регистриране за поддръжката"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "Разрешаване на експортирането към HTTP архив (HAR)"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "Всяка уеб част по избор, която отнема повече от 2000 MS, за да се зареди във вътрешността на изгледа или отнема повече от 4000 MS, за да се зареди извън изгледа, влияе върху производителността на страницата."
+   },
+   "ErrorMessage": {
+      "message": "Възникна грешка при изпълнение на диагностиката на страницата. Опитайте отново по-късно. Ако грешката продължава да се появява, се свържете с"
+   },
+   "ExportToHar": {
+      "message": "Експортиране към HTTP архив"
+   },
+   "ExportToHarHover": {
+      "message": "Експортиране към HTTP архив (HAR)"
+   },
+   "ExportToJson": {
+      "message": "Експортиране в JSON"
+   },
+   "ExportToJsonHover": {
+      "message": "Експортиране в обектова нотация на JavaScript (JSON)"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "Някои активи не използват CDNs"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "Разширенията може да оказват влияние върху времето за зареждане"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "Използвани са твърде много разширения"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "Три или повече уеб части използват iFrames"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "Тази страница съдържа {0} големи изображения"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "Тази страница съдържа 1 голямо изображение"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "Теглото на страницата е {0} КБ"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "Тествайте производителността на страницата с потребителски акаунт"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Тази страница има {0} повиквания към извличане на елемент от списък"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "Тази страница има {0} обаждания към SharePoint"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "Тази страница има {0} повиквания към \"Търсене\""
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "StartRow на заявките за търсене надвишава ограничението {0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "Уеб частите оказват влияние върху времето за зареждане на страницата"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "Кеширане на структурната навигация не е разрешено"
+   },
+   "FeedbackCategoryName": {
+      "message": "Изпращане на обратна връзка"
+   },
+   "FeedbackInstruction": {
+      "message": "Имате предложения или въпроси? Публикувайте ги в "
+   },
+   "HelpLinksCategoryName": {
+      "message": "Допълнителни ресурси"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "Не може да се изпълни диагностика на системни страници, като напр. началната страница на SharePoint. Използвайте този инструмент само за страници на сайт на SharePoint."
+   },
+   "HowToUseInstruction": {
+      "message": "Научете повече за този инструмент и това как работи"
+   },
+   "HowToUseLinkName": {
+      "message": "Инструмент за диагностика на страници за SharePoint Online"
+   },
+   "Init": {
+      "message": "Първоначален"
+   },
+   "LazyLoadingTime": {
+      "message": "Мързеливо зареждане"
+   },
+   "LearnMore": {
+      "message": "Научете повече"
+   },
+   "MadeBy": {
+      "message": "Създадено от"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "поддръжката от Microsoft."
+   },
+   "ModernPageType": {
+      "message": "модерен"
+   },
+   "ModuleLoad": {
+      "message": "Зареждане на модула"
+   },
+   "NameAndId": {
+      "message": "Име и ИД"
+   },
+   "NetworkTrace": {
+      "message": "Проследяване на мрежата"
+   },
+   "NoActionRequired": {
+      "message": "Не се изисква действие"
+   },
+   "NotSupportedPage": {
+      "message": "Не може да се изпълни диагностика на страница на тази страница. Използвайте този инструмент само за страници на сайт на SharePoint."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "Не може да се изпълни диагностика, докато страницата е в режим на редактиране. На вашата страница изберете Запиши като чернова или отхвърляне на промените и опитайте отново."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "Опитвате се да използвате инструмента за диагностика на страници с локална версия на SharePoint. Този инструмент е само за използване с SharePoint online."
+   },
+   "PageLoadTimeLabel": {
+      "message": "Време за зареждане на страница"
+   },
+   "PageTypeDataReady": {
+      "message": "Проверката на типа на страницата завърши"
+   },
+   "PageUrlLabel": {
+      "message": "URL адрес на страница"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "Тази страница използва мрежи за доставяне на съдържание (CDN мрежи)"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "Няма разширения, които да отнемат повече от {0} мс за зареждане"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "Има по-малко от 5 използвани разширения"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "Няма уеб части, използващи iFrames"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "Всички изображения на тази страница са по-малки от {0} КБ всяко"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "Теглото на страницата е по-малко от 1000 КБ"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "Производителността на страницата е тествана с потребителски акаунт"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Има по-малко от исканията за извличане на елемент от списък на {0}"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "Има по-малко от {0} заявки на SharePoint"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "Има по-малко от {0} заявки за търсене"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "StartRow на исканията за търсене е по-нисък от ограничението"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "Никоя уеб част не отнема при изпълнение повече от {0} мс"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "Не е открита структурна навигация"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "Частни CDN не са разрешени"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "Публичните и частните CDN са разрешени. Използвайте местоположенията на CDN по подразбиране или помолете администратор на SharePoint да добави местоположения по избор."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "Публични и частни CDN не са разрешени"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "Публичната CDN не е активирана"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "Има 7 или повече разширения."
+   },
+   "RenderTime": {
+      "message": "Рендиране"
+   },
+   "RunningAuditors": {
+      "message": "Проверка на данните..."
+   },
+   "RunningCollectors": {
+      "message": "Събиране на данни... Това може да продължи няколко минути"
+   },
+   "RunningPageTypeChecker": {
+      "message": "Проверка на типа на страницата"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "Старт"
+   },
+   "Stop": {
+      "message": "Стоп"
+   },
+   "ThirdPartyNotice": {
+      "message": "Бележки за трети лица"
+   },
+   "TimeoutMessage": {
+      "message": "Времето на изчакване на инструмента за диагностика на страници изтече. Опитайте отново."
+   },
+   "TitleForCBQAuditor": {
+      "message": "Проверка за уеб частта \"Съдържание чрез заявка\""
+   },
+   "Total": {
+      "message": "Общо"
+   },
+   "TunePerformanceInstruction": {
+      "message": "Намерете повече информация за подобряването на производителността и времето за изтегляне на страници в"
+   },
+   "TunePerformanceLinkName": {
+      "message": "Настройване на производителността на SharePoint Online"
+   },
+   "Url": {
+      "message": "URL адрес"
+   },
+   "UrlDescription": {
+      "message": "Намерен е {0} URL адрес"
+   },
+   "UrlsDescription": {
+      "message": "Намерени са {0} URL адреса"
+   },
+   "UserVoice": {
+      "message": "UserVoice"
+   },
+   "VersionLabel": {
+      "message": "Версия"
+   },
+   "Warning": {
+      "message": "Възможности за подобрение"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "Всяка вградена уеб част на Microsoft, която отнема повече от 2000 MS, за да се зареди във вътрешността на изгледа или е по-дълга от 4000 MS, за да се зареди извън изгледа, влияе върху производителността на страницата."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "Един или повече уеб части използват iFrames"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Microsoft уеб частите оказват влияние върху времето за зареждане"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "Има 5 или повече разширения."
+   }
+}

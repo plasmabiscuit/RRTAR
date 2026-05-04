@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "Πληροφορίες"
+   },
+   "AppDescription": {
+      "message": "Αναλύστε τις επιδόσεις των σελίδων της τοποθεσίας σας και λάβετε προτάσεις για βελτιστοποίηση."
+   },
+   "AppName": {
+      "message": "Διαγνωστικά σελίδας για το SharePoint"
+   },
+   "AttentionRequired": {
+      "message": "Απαιτείται προσοχή"
+   },
+   "AuditorsDataReady": {
+      "message": "Η επικύρωση δεδομένων ολοκληρώθηκε"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "Το δημόσιο και το ιδιωτικό CDN πρέπει να είναι ενεργοποιημένα με βάση την προεπιλεγμένη ρύθμιση παραμέτρων. Συνεργαστείτε με έναν διαχειριστή SharePoint για να ενεργοποιήσετε και τα δύο CDN και χρησιμοποιήστε τις προεπιλεγμένες τοποθεσίες CDN, ή ζητήστε από έναν διαχειριστή SharePoint να προσθέσει προσαρμοσμένες θέσεις."
+   },
+   "ClassicPageType": {
+      "message": "κλασικό"
+   },
+   "CollectorsDataReady": {
+      "message": "Η συλλογή δεδομένων ολοκληρώθηκε"
+   },
+   "CorrelationIdLabel": {
+      "message": "CorrelationID"
+   },
+   "Custom": {
+      "message": "Προσαρμογή"
+   },
+   "Description": {
+      "message": "Ένα εργαλείο για τον προσδιορισμό προβλημάτων επιδόσεων σελίδας στο SharePoint Online"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "Συνιστάται η χρήση του τμήματος Web \"Περιεχόμενο βάσει αναζήτησης\" αντί του τμήματος Web \"Ερώτημα περιεχομένου\"."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "Τα CDN βελτιώνουν την απόδοση αποθηκεύοντας στατικά στοιχεία στην κρυφή μνήμη πιο κοντά στα προγράμματα περιήγησης που τα ζητούν. Συνεργαστείτε με έναν Διαχειριστή SharePoint για να ρυθμίσετε και να ρυθμίσετε τα CDN για την αποθήκευση στοιχείων στατικής σελίδας."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "Μία ή περισσότερες επεκτάσεις διαρκούν περισσότερο από 1000 MS για απόδοση. "
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "Η χρήση iFrame επιβραδύνει την απόδοση της σελίδας, επειδή το περιεχόμενο φορτώνει από μια εξωτερική σελίδα. Χρησιμοποιήστε εικόνες αντί για iFrames, ωστόσο, εάν πρέπει να χρησιμοποιήσετε iFrame, ελαχιστοποιήστε τον αριθμό ή/και μετακινήστε τες έξω από την οπτική γωνία."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "Οι εικόνες σε αυτή τη σελίδα είναι πολύ μεγάλες για να βελτιστοποιήσουν την απόδοση σελίδας. Μειώστε όλες τις εικόνες σε αυτή τη σελίδα σε μικρότερες από {0} kb η κάθε μία."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "Οι εικόνες σε αυτή τη σελίδα είναι πολύ μεγάλες για βέλτιστη απόδοση σελίδας. Μειώστε όλες τις εικόνες σε αυτή τη σελίδα σε μικρότερες από {0} mb η κάθε μία."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0} επεκτάσεις διαρκούν περισσότερο από {1} μιλισεκόντ για να φορτώσουν, γεγονός που επηρεάζει την απόδοση της σελίδας."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "Το περιεχόμενο της σελίδας, όπως εικόνες, βίντεο και κείμενο, επηρεάζει τις επιδόσεις της σελίδας. Μειώστε τον αριθμό των τμημάτων Web, χρησιμοποιήστε τα δίκτυα παροχής περιεχομένου (CDN) και περιορίστε το περιεχόμενο της σελίδας."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "Κατά τον έλεγχο των επιδόσεων ενώ είστε συνδεδεμένοι ως διαχειριστής, τα αποτελέσματα επηρεάζονται από την αυξημένη κίνηση που προκαλείται από ομάδες ασφαλείας."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "Αυτή η σελίδα υπερβαίνει τον αριθμό γραμμής βάσης των προτεινόμενων κλήσεων στη λήψη στοιχείου λίστας με κεφαλίδα cache εκτός. Περιορίστε τις αιτήσεις σε λιγότερες από {0} αιτήσεις λήψης στοιχείων λίστας για κάθε σελίδα."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "Αυτή η σελίδα υπερβαίνει τον αριθμό γραμμών βάσης των προτεινόμενων κλήσεων στο SharePoint. Μειώστε τις αιτήσεις σε λιγότερες από {0} αιτήσεις SharePoint για κάθε {1} σελίδα."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "Αυτή η σελίδα υπερβαίνει τον αριθμό γραμμής βάσης των προτεινόμενων κλήσεων για αναζήτηση. Περιορίστε τις αιτήσεις σε λιγότερες από {0} αιτήσεις αναζήτησης για κάθε σελίδα."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "Προκειμένου να παρέχουμε εμπειρία αναζήτησης με υψηλές επιδόσεις, περιορίζουμε τη μέγιστη υποστηριζόμενη τιμή του StartRow ώστε να είναι {0}."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "1 επέκταση διαρκεί περισσότερο από {0} μιλισεκόντ για να φορτώσει, γεγονός που επηρεάζει την απόδοση της σελίδας."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "Η δομή περιήγησης που δεν αποθηκεύεται στο cache επιβραδύνει την επίδοση της τοποθεσίας. Επανασχεδιάστε την περιήγηση της τοποθεσίας σας με τη διαχείριση ή την περιήγηση με βάση την αναζήτηση."
+   },
+   "DetectPageType": {
+      "message": "Εντοπισμός τύπου σελίδας..."
+   },
+   "DiagnosticTests": {
+      "message": "Διαγνωστικοί έλεγχοι"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "Η διάρκεια είναι μεγαλύτερη από {0}ms"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "Η διάρκεια είναι εντός του ορίου {0}ms"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "Ενεργοποίηση καταγραφής υποστήριξης (ενδέχεται να επηρεαστούν οι επιδόσεις, χρησιμοποιείται για την αντιμετώπιση προβλημάτων με την υποστήριξη της Microsoft)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "Ενεργοποιημένη καταγραφή υποστήριξης"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "Ενεργοποίηση εξαγωγής σε αρχειοθήκη HTTP (HAR)"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "Οποιοδήποτε προσαρμοσμένο Τμήμα διαδικτύου που χρειάζεται περισσότερο από 2000 ms για να φορτώσει μέσα στην οπτική γωνία ή χρειάζεται περισσότερο από 4000 ms για να φορτώσει έξω από την οπτική γωνία επηρεάζει τις επιδόσεις της σελίδας."
+   },
+   "ErrorMessage": {
+      "message": "Παρουσιάστηκε σφάλμα κατά την εκτέλεση των διαγνωστικών σελίδων. Δοκιμάστε ξανά αργότερα. Εάν το σφάλμα εξακολουθεί να εμφανίζεται, επικοινωνήστε με"
+   },
+   "ExportToHar": {
+      "message": "Εξαγωγή σε HAR"
+   },
+   "ExportToHarHover": {
+      "message": "Εξαγωγή σε αρχειοθήκη HTTP (HAR)"
+   },
+   "ExportToJson": {
+      "message": "Εξαγωγή σε JSON"
+   },
+   "ExportToJsonHover": {
+      "message": "Εξαγωγή σε σημειογραφία αντικειμένων JavaScript (JSON)"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "Ορισμένα πάγια στοιχεία δεν χρησιμοποιούν CDN"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "Οι επεκτάσεις μπορεί να επηρεάζουν τον χρόνο φόρτωσης"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "Χρησιμοποιήθηκαν υπερβολικά πολλές επεκτάσεις"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "Τρία ή περισσότερα τμήματα Web με χρήση iFrames"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "Αυτή η σελίδα περιέχει {0} μεγάλες εικόνες"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "Αυτή η σελίδα περιέχει 1 μεγάλη εικόνα"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "Το βάρος της σελίδας είναι {0} KB"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "Δοκιμή επιδόσεων σελίδας με λογαριασμό χρήστη"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Αυτή η σελίδα έχει {0} κλήσεις στη λήψη στοιχείου λίστας"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "Αυτή η σελίδα περιέχει {0} κλήσεις στο SharePoint"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "Αυτή η σελίδα έχει {0} κλήσεις για αναζήτηση"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "Η τιμή της παραμέτρου StartRow των αιτημάτων αναζήτησης υπερβαίνει το όριο {0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "Τα προσαρμοσμένα τμήματα Web επηρεάζουν τον χρόνο φόρτωσης σελίδας"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "Η προσωρινή αποθήκευση δομικής περιήγησης δεν είναι ενεργοποιημένη"
+   },
+   "FeedbackCategoryName": {
+      "message": "Υποβολή σχολίων"
+   },
+   "FeedbackInstruction": {
+      "message": "Έχετε προτάσεις ή ερωτήσεις; Δημοσιεύστε τις στο "
+   },
+   "HelpLinksCategoryName": {
+      "message": "Πρόσθετοι πόροι"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "Δεν είναι δυνατή η εκτέλεση διαγνωστικών σε σελίδες συστήματος όπως η αρχική σελίδα του SharePoint. Χρησιμοποιήστε αυτό το εργαλείο μόνο για σελίδες τοποθεσίας του SharePoint."
+   },
+   "HowToUseInstruction": {
+      "message": "Μάθετε περισσότερα σχετικά με αυτό το εργαλείο και τον τρόπο με τον οποίο λειτουργεί στη σελίδα"
+   },
+   "HowToUseLinkName": {
+      "message": "Εργαλείο διαγνωστικών σελίδας για το SharePoint Online"
+   },
+   "Init": {
+      "message": "Προετοιμασία"
+   },
+   "LazyLoadingTime": {
+      "message": "Αργή φόρτωση"
+   },
+   "LearnMore": {
+      "message": "Μάθετε περισσότερα"
+   },
+   "MadeBy": {
+      "message": "MadeBy"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "Υποστήριξη της Microsoft."
+   },
+   "ModernPageType": {
+      "message": "σύγχρονος"
+   },
+   "ModuleLoad": {
+      "message": "Φόρτωση λειτουργικής μονάδας"
+   },
+   "NameAndId": {
+      "message": "Όνομα και αναγνωριστικό"
+   },
+   "NetworkTrace": {
+      "message": "Ανίχνευση δικτύου"
+   },
+   "NoActionRequired": {
+      "message": "Δεν απαιτείται καμιά ενέργεια"
+   },
+   "NotSupportedPage": {
+      "message": "Δεν είναι δυνατή η εκτέλεση διαγνωστικών σελίδας σε αυτήν τη σελίδα. Χρησιμοποιήστε αυτό το εργαλείο μόνο για σελίδες τοποθεσίας του SharePoint."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "Δεν είναι δυνατή η εκτέλεση διαγνωστικών ενώ η σελίδα βρίσκεται σε κατάσταση επεξεργασίας. Στη σελίδα σας, επιλέξτε \"Αποθήκευση ως πρόχειρου\" ή απορρίψτε τις αλλαγές και προσπαθήστε ξανά."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "Προσπαθείτε να χρησιμοποιήσετε το εργαλείο διαγνωστικών σελίδας με μια έκδοση του SharePoint εσωτερικής εγκατάστασης. Αυτό το εργαλείο είναι μόνο για χρήση με το SharePoint Online."
+   },
+   "PageLoadTimeLabel": {
+      "message": "Χρόνος φόρτωσης σελίδας"
+   },
+   "PageTypeDataReady": {
+      "message": "Ο έλεγχος τύπου σελίδας ολοκληρώθηκε"
+   },
+   "PageUrlLabel": {
+      "message": "Διεύθυνση URL σελίδας"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "Αυτή η σελίδα χρησιμοποιεί δίκτυα παροχής περιεχομένου (CDN)"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "Καμία επέκταση δεν διαρκεί περισσότερο από {0} ms για φόρτωση"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "Χρησιμοποιούνται λιγότερες από 5 επεκτάσεις"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "Δεν υπάρχουν τμήματα Web που χρησιμοποιούν iFrames"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "Όλες οι εικόνες στη σελίδα είναι μικρότερες από {0} kb η κάθε μία."
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "Το βάρος σελίδας είναι μικρότερο από 1000 kb"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "Η απόδοση σελίδας δοκιμάστηκε με ένα λογαριασμό χρήστη"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Υπάρχουν λιγότερες από {0} αιτήσεις λήψης στοιχείων λίστας"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "Υπάρχουν λιγότερες από {0} αιτήσεις του SharePoint"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "Υπάρχουν λιγότερα από {0} αιτήματα αναζήτησης"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "Η τιμή της παραμέτρου StartRow των αιτημάτων αναζήτησης είναι χαμηλότερη από το όριο"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "Κανένα τμήμα Web δεν χρειάζεται περισσότερο από {0} ms για εκτέλεση"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "Δεν εντοπίστηκε δομική περιήγηση"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "Το ιδιωτικό CDN δεν είναι ενεργοποιημένο"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "Το δημόσιο και το ιδιωτικό CDN είναι ενεργοποιημένα. Χρησιμοποιήστε τις προεπιλεγμένες τοποθεσίες CDN ή ζητήστε από έναν διαχειριστή SharePoint να προσθέσει προσαρμοσμένες τοποθεσίες."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "Το δημόσιο και το ιδιωτικό CDN δεν είναι ενεργοποιημένα"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "Το δημόσιο CDN δεν είναι ενεργοποιημένο"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "Υπάρχουν 7 ή περισσότερες επεκτάσεις."
+   },
+   "RenderTime": {
+      "message": "Απόδοση"
+   },
+   "RunningAuditors": {
+      "message": "Επικύρωση δεδομένων..."
+   },
+   "RunningCollectors": {
+      "message": "Συλλογή δεδομένων... Αυτό μπορεί να διαρκέσει μερικά λεπτά"
+   },
+   "RunningPageTypeChecker": {
+      "message": "Έλεγχος τύπου σελίδας"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "Έναρξη"
+   },
+   "Stop": {
+      "message": "Διακοπή"
+   },
+   "ThirdPartyNotice": {
+      "message": "Γνωστοποίηση τρίτου μέρους"
+   },
+   "TimeoutMessage": {
+      "message": "Το χρονικό όριο του εργαλείου διαγνωστικών σελίδας έληξε. Προσπαθήστε ξανά."
+   },
+   "TitleForCBQAuditor": {
+      "message": "Έλεγχος για το τμήμα Web CBQ"
+   },
+   "Total": {
+      "message": "Σύνολο"
+   },
+   "TunePerformanceInstruction": {
+      "message": "Βρείτε περισσότερες πληροφορίες σχετικά με τη βελτίωση των επιδόσεων και τους χρόνους λήψης σελίδων στην ενότητα"
+   },
+   "TunePerformanceLinkName": {
+      "message": "Συντονισμός επιδόσεων του SharePoint Online"
+   },
+   "Url": {
+      "message": "Διεύθυνση URL"
+   },
+   "UrlDescription": {
+      "message": "Βρέθηκε {0} διεύθυνση URL"
+   },
+   "UrlsDescription": {
+      "message": "Βρέθηκαν {0} διευθύνσεις URL"
+   },
+   "UserVoice": {
+      "message": "UserVoice"
+   },
+   "VersionLabel": {
+      "message": "Έκδοση"
+   },
+   "Warning": {
+      "message": "Ευκαιρίες βελτίωσης"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "Οποιοδήποτε ενσωματωμένο τμήμα διαδικτύου της Microsoft που χρειάζεται περισσότερο από 2000 ms για να φορτώσει μέσα στην οπτική γωνία ή χρειάζεται περισσότερο από 4000 ms για να φορτώσει έξω από την οπτική γωνία επηρεάζει τις επιδόσεις της σελίδας."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "Ένα ή περισσότερα τμήματα Web με χρήση iFrames"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Τα τμήματα web της Microsoft επηρεάζουν τον χρόνο φόρτωσης"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "Υπάρχουν 5 ή περισσότερες επεκτάσεις."
+   }
+}

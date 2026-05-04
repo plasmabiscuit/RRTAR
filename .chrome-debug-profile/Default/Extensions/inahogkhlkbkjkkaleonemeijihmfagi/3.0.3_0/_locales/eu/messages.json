@@ -1,0 +1,356 @@
+{
+  "TitleForCBQAuditor": {
+    "message": "Egiaztatu CBQ web zatia"
+  },
+  "DescriptionForCBQAuditor": {
+    "message": "Kontsultak egiteko web zatiaren edukiaren ordez, bilaketak egiteko web zatiaren edukia erabiltzea gomendatzen du."
+  },
+  "PassedTitleForCDNAuditor": {
+    "message": "Orri hau edukia entregatzeko sarea (CDN) erabiltzen ari da"
+  },
+  "FailedTitleForCDNAuditor": {
+    "message": "Aktibo batzuk ez dira ari CDNak erabiltzen"
+  },
+  "PublicAndPrivateCDNNotEnabledTitle": {
+    "message": "CDN publiko eta pribatuak ez daude gaituta"
+  },
+  "CDNNotEnabledActionMessage": {
+    "message": "CDN publiko eta pribatuak gehitu behar dira konfigurazio lehenetsiarekin. Hitz egin SharePoint-eko administratzailearekin CDN mota biak gaitzeko eta erabili CDN kokaleku lehenetsiak, edo eskatu SharePoint-eko administratzaileari kokaleku pertsonalizatuak gehitzeko."
+  },
+  "PrivateCDNNotEnabledTitle": {
+    "message": "CDN pribatua ez dago gaituta"
+  },
+  "PublicCDNNotEnabledTitle": {
+    "message": "CDN publikoa ez dago gaituta"
+  },
+  "PublicAndPrivateCDNEnbledActionMessage": {
+    "message": "CDN publikoak eta pribatuak gaituta daude. Erabili CDN-ren kokapen lehenetsiak edo eskatu SharePoint-eko administratzaile bati kokapen pertsonalizatuak gehitzeko."
+  },
+  "DescriptionForCDNAuditor": {
+    "message": "CDN-ek errendimendua hobetzen dute, elementu estatikoak eskatzen dituzten nabigatzaileetatik gertuago biltegiratuz. Elkartu SharePoint-en Administratzailearekin CDN-ak ezarri eta konfiguratzeko, orri-elementu estatikoak gordetzeko."
+  },
+  "Url": {
+    "message": "URLa"
+  },
+  "NameAndId": {
+    "message": "Izena eta IDa"
+  },
+  "Total": {
+    "message": "Guztira"
+  },
+  "ModuleLoad": {
+    "message": "Moduluen karga"
+  },
+  "Init": {
+    "message": "Hasieratzea"
+  },
+  "FailedTitleForIFrameAuditor": {
+    "message": "Hiru web-zatik edo gehiagok darabiltzate iFrame-ak"
+  },
+  "WarningTitleForIFrameAuditor": {
+    "message": "Web zati batek edo gehiagok darabiltza iFrame-ak"
+  },
+  "PassedTitleForIFrameAuditor": {
+    "message": "Ez dago iFrame-ak erabiltzen dituen web zatirik."
+  },
+  "DescriptionForIFrameAuditor": {
+    "message": "iFrame-ak erabiltzeak orriaren errendimendua moteltzen du edukia kanpoko orrietatik kargatzen dutelako. Erabili irudiak iFrame-en ordez, baina iFrame-ak beharrezkoak badira, ahalik eta gutxien izan daitezela edo mugitu ikuspegitik kanpo."
+  },
+  "PassedTitleForImageSizeAuditor": {
+    "message": "Orriko argazki guztiak {0} kb baino txikiagoak dira."
+  },
+  "FailedTitleForImageSizeAuditorOfSingleImage": {
+    "message": "Orri honek 1 irudi handi ditu"
+  },
+  "FailedTitleForImageSizeAuditorOfMultipleImages": {
+    "message": "Orri honek {0} irudi handi ditu"
+  },
+  "DescriptionForImageSizeAuditor": {
+    "message": "Orri honetako irudiak handiegiak dira orriaren errendimendua optimizatzeko. Egin orriko argazki guztiak{0} kb baino txikiagoak."
+  },
+  "DescriptionForImageSizeAuditorMb": {
+    "message": "Orri honetako irudiak handiegiak dira orriak errendimendu optimoa izan dezan. Egin orriko argazki guztiak {0} mb baino txikiagoak."
+  },
+  "FailedTitleForPageWeightAuditor": {
+    "message": "Orriak {0} kb du"
+  },
+  "PassedTitleForPageWeightAuditor": {
+    "message": "Orriak 1000 KB baino gutxiago hartzen ditu"
+  },
+  "DescriptionForPageWeightAuditor": {
+    "message": "Orriaren edukiak, hala nola, irudiak, bideoak eta testua, orriaren errendimenduan eragiten ari dira. Gutxitu web zati kopurua, erabili edukia banatzeko sareak (CDN) eta mugatu orriko edukia."
+  },
+  "FailedTitleForPermissionAuditor": {
+    "message": "Aztertu orriaren errendimendua erabiltzaile kontu bat erabiliz"
+  },
+  "PassedTitleForPermissionAuditor": {
+    "message": "Orriaren errendimendua aztertu da erabiltzaile kontu bat erabiliz"
+  },
+  "DescriptionForPermissionAuditor": {
+    "message": "Administratzaile gisa saioa hasita duzula errendimendua aztertzen baduzu, segurtasun-taldeen trafiko igoerak eragina izango du emaitzetan."
+  },
+  "PassedTitleForRequestsToSearchAuditor": {
+    "message": "Bilaketako {0} eskaera baino gutxiago daude"
+  },
+  "FailedTitleForRequestsToSearchAuditor": {
+    "message": "Orri honek bilaketarako {0} dei ditu"
+  },
+  "DescriptionForRequestsToSearchAuditor": {
+    "message": "Orri honek Bilaketari egitea gomendatzen den deien oinarrizko kopurua gainditzen du. Mugatu eskaerak Bilaketaren {0} eskaera baino gutxiago egon daitezen orri bakoitzeko."
+  },
+  "PassedTitleForSearchPropertyAuditor": {
+    "message": "Bilaketa-eskaeren StartRow muga baino txikiagoa da"
+  },
+  "FailedTitleForSearchPropertyAuditor": {
+    "message": "Bilaketa-eskaeren StartRow-ek {0} muga gainditzen du"
+  },
+  "DescriptionForSearchPropertyAuditor": {
+    "message": "Errendimendu handiko bilaketa-esperientzia eskaintzeko, StartRow-en gehienezko balioa {0} izatera mugatzen dugu."
+  },
+  "PassedTitleForRequestsToListItemFetchAuditor": {
+    "message": "Zerrenda-elementuak eskuratzeko {0} eskaera baino gutxiago daude"
+  },
+  "FailedTitleForRequestsToListItemFetchAuditor": {
+    "message": "Orri honek zerrendako elementuak bilatzeko {0} dei ditu"
+  },
+  "DescriptionForRequestsToListItemFetchAuditor": {
+    "message": "Orri honek zerrenda-elementuak eskuratzeko gomendatutako deien oinarrizko kopurua gainditzen du, cache-goibururik gabe egiten badira deiok. Mugatu eskaerak zerrenda-elementuak eskuratzeko {0} eskaera baino gutxiago egon daitezen orri bakoitzeko."
+  },
+  "PassedTitleForRequestsToSPOAuditor": {
+    "message": "SharePoint-eko {0} eskaera baino gutxiago daude"
+  },
+  "FailedTitleForRequestsToSPOAuditor": {
+    "message": "Orri honek SharePoint-erako {0} dei ditu"
+  },
+  "DescriptionForRequestsToSPOAuditor": {
+    "message": "Orrialde honek SharePoint-i egitea gomendatzen den deien oinarrizko kopurua gainditzen du. Mugatu itzazu eskaerak SharePoint-en {0} eskaera baino gutxiagotara orri bakoitzeko ({1})."
+  },
+  "ClassicPageType": {
+    "message": "klasikoa"
+  },
+  "ModernPageType": {
+    "message": "modernoa"
+  },
+  "PassedTitleForSlowWebPartAuditor": {
+    "message": "Web zati batek ere ez du {0} ms baino gehiago hartzen exekutatzen"
+  },
+  "FailedTitleForSlowWebPartAuditor": {
+    "message": "Web zati pertsonalizatuek luzatu egiten dute orria kargatzeko denbora"
+  },
+  "WarningTitleForSlowWebPartAuditor": {
+    "message": "Microsoft-en web zatiak orriaren karga-denboran eragiten ari dira"
+  },
+  "ErrorDescriptionForSlowWebPartAuditor": {
+    "message": "Ikuspegi barruan kargatzeko 2000 ms baino gehiago hartzen duen edozein web zati pertsonalizatuk edo ikuspegitik kanpo 4000 ms behar dituenak orriaren errendimendua kaltetzen du."
+  },
+  "WarningDescriptionForSlowWebPartAuditor": {
+    "message": "Ikuspegi barruan kargatzeko 2000 ms baino gehiago hartzen duen Microsoft-en integratutako edozein web zatik edo ikuspegitik kanpo 4000 ms behar dituenak orriaren errendimendua kaltetzen du."
+  },
+  "Microsoft": {
+    "message": "Microsoft"
+  },
+  "Custom": {
+    "message": "Pertsonalizatua"
+  },
+  "MadeBy": {
+    "message": "MadeBy"
+  },
+  "LazyLoadingTime": {
+    "message": "Karga motela"
+  },
+  "RenderTime": {
+    "message": "Errendatu"
+  },
+  "FailedTitleForStructuralNavAuditor": {
+    "message": "Ez dago gaituta egiturazko nabigazioa cachean gordetzea"
+  },
+  "PassedTitleForStructuralNavAuditor": {
+    "message": "Ez da aurkitu egiturazko nabigaziorik"
+  },
+  "DescriptionForStructuralNavAuditor": {
+    "message": "Cachean gordeta ez dagoen egiturazko nabigazioak gunearen errendimendua makaltzen du. Berriro diseinatu gunearen nabigazioa eta erabili kudeatutako edo bilaketa bidezko nabigazioa."
+  },
+  "FailedTitleForExtensionCountAuditor": {
+    "message": "Luzapen gehiegi erabiltzen ari zara"
+  },
+  "PassedTitleForExtensionCountAuditor": {
+    "message": "Bost luzapen baino gutxiago erabiltzen ari dira"
+  },
+  "YellowSectionDescriptionForExtensionCountAuditor": {
+    "message": "5 luzapen edo gehiago daude."
+  },
+  "RedSectionDescriptionForExtensionCountAuditor": {
+    "message": "7 luzapen edo gehiago daude."
+  },
+  "FailedTitleForExtensionAuditor": {
+    "message": "Baliteke luzapenek kargatzeko denboran eragina izatea"
+  },
+  "PassedTitleForExtensionAuditor": {
+    "message": "Luzapen batek ere ez du {0} ms baino gehiago hartzen kargatzen"
+  },
+  "DescriptionForSingleExtensionAuditor": {
+    "message": "1 luzapenek {0} ms baino gehiago behar dituzte kargatzeko, eta horrek orriaren errendimendua kaltetzen du."
+  },
+  "DescriptionForMultiExtensionAuditor": {
+    "message": "{0} luzapenek {1} ms baino gehiago behar dituzte kargatzeko, eta horrek orriaren errendimendua kaltetzen du."
+  },
+  "DescriptionForExtensionAuditor": {
+    "message": "Luzapen batek edo gehiago 1.000 ms baino gehiago behar izaten ari da errendatzeko."
+  },
+  "AppName": {
+    "message": "SharePoint-en orri-diagnostikoa"
+  },
+  "AppDescription": {
+    "message": "Aztertu guneko orrien errendimendua eta lortu optimizatzeko gomendioak."
+  },
+  "DetectPageType": {
+    "message": "Orri mota hautematen…"
+  },
+  "HelpLinksCategoryName": {
+    "message": "Baliabide gehigarriak"
+  },
+  "HowToUseLinkName": {
+    "message": "SharePoint Online-ren orri-diagnostikoen tresna"
+  },
+  "HowToUseInstruction": {
+    "message": "Tresna honi eta haren funtzionamenduari buruzko informazio gehiago"
+  },
+  "TunePerformanceLinkName": {
+    "message": "Doitu SharePoint Online-ren errendimendua"
+  },
+  "TunePerformanceInstruction": {
+    "message": "Lortu orriaren errendimendua eta deskarga-denbora hobetzeari buruzko informazio gehiago hemen:"
+  },
+  "FeedbackCategoryName": {
+    "message": "Bidali oharrak"
+  },
+  "FeedbackInstruction": {
+    "message": "Iradokizun edo galderarik duzu? Argitara itzazu hemen: "
+  },
+  "UserVoice": {
+    "message": "Erabiltzailearen ahotsa"
+  },
+  "VersionLabel": {
+    "message": "Bertsioa"
+  },
+  "RunningPageTypeChecker": {
+    "message": "Orri mota egiaztatzen"
+  },
+  "PageTypeDataReady": {
+    "message": "Egiaztatu dira orri motak"
+  },
+  "RunningCollectors": {
+    "message": "Datuak biltzen… agian minutu batzuk beharko dira"
+  },
+  "CollectorsDataReady": {
+    "message": "Bildu dira datuak"
+  },
+  "RunningAuditors": {
+    "message": "Datuak balidatzen…"
+  },
+  "AuditorsDataReady": {
+    "message": "Balidatu dira datuak"
+  },
+  "CorrelationIdLabel": {
+    "message": "CorrelationID"
+  },
+  "SPRequestDurationLabel": {
+    "message": "SPRequestDuration"
+  },
+  "SPIISLatencyLabel": {
+    "message": "SPIISLatency"
+  },
+  "PageLoadTimeLabel": {
+    "message": "Orria kargatzeko denbora"
+  },
+  "PageUrlLabel": {
+    "message": "Orriaren URLa"
+  },
+  "Start": {
+    "message": "Hasi"
+  },
+  "Stop": {
+    "message": "Gelditu"
+  },
+  "DiagnosticTests": {
+    "message": "Diagnostiko-probak"
+  },
+  "NetworkTrace": {
+    "message": "Sare-aztarna"
+  },
+  "DurationGreaterThanThreshold": {
+    "message": "Iraupena {0}ms-tik gorakoa da"
+  },
+  "DurationWithinWarningThreshold": {
+    "message": "Iraupena {0}ms-ko atalasearen barruan dago"
+  },
+  "AttentionRequired": {
+    "message": "Zerbait egin behar duzu"
+  },
+  "NoActionRequired": {
+    "message": "Ez da ekintzarik behar"
+  },
+  "Warning": {
+    "message": "Hobetzeko aukerak"
+  },
+  "NotSupportedPage": {
+    "message": "Ezin da egin orri honen diagnostikoa. Erabili tresna hau SharePoint guneetako orrietan bakarrik."
+  },
+  "NotSupportedPageInEdit": {
+    "message": "Diagnostikoak ezin dira egin orria edizio moduan dagoenean. Zure orrian, hautatu Gorde zirriborro gisa edo Baztertu aldaketak, eta saiatu berriro."
+  },
+  "OnPremPageNotSupportedMessage": {
+    "message": "SharePoint-en bertsio lokal batekin erabili nahi duzu orrien diagnostikoak egiteko tresna. Tresna hori SharePoint Online-n erabili behar da."
+  },
+  "HomePageNotSupportedMessage": {
+    "message": "Diagnostikoak ezin dira egin sistemaren orrietan, hala nola SharePoint-en hasierako orrian. Erabili tresna hau SharePoint guneetako orrietan bakarrik."
+  },
+  "LearnMore": {
+    "message": "Informazio gehiago"
+  },
+  "About": {
+    "message": "Honi buruz"
+  },
+  "TimeoutMessage": {
+    "message": "Orriaren diagnostikoa egiteko tresnak denbora-muga gainditu du. Saiatu berriro."
+  },
+  "ThirdPartyNotice": {
+    "message": "Hirugarrenen oharra"
+  },
+  "EnableDevDashboardCheckBoxLabel": {
+    "message": "Gaitu laguntza-erregistroa (baliteke errendimenduari kalte egitea; erabil ezazu arazoak konpontzeko Microsoft-en laguntza teknikoarekin)"
+  },
+  "EnableDevDashboardWarningMessage": {
+    "message": "Laguntza-erregistroa gaituta"
+  },
+  "EnableHarPreviewCheckBoxLabel": {
+    "message": "Gaitu HTTP artxibora (HAR) esportatzeko aukera"
+  },
+  "ErrorMessage": {
+    "message": "Errore bat gertatu da orri-diagnostikoa egitean. Saiatu berriro geroago. Errorea berriro gertatzen bada, jarri honekin harremanetan:"
+  },
+  "MicrosoftSupport": {
+    "message": "Microsoft-en laguntza-zerbitzua."
+  },
+  "ExportToJson": {
+    "message": "Esportatu JSON gisa"
+  },
+  "ExportToJsonHover": {
+    "message": "Esportatu JavaScript Object Notation (JSON) gisa"
+  },
+  "ExportToHar": {
+    "message": "Esportatu HAR gisa"
+  },
+  "ExportToHarHover": {
+    "message": "Esportatu HTTP Archive gisa (HAR)"
+  },
+  "Description": {
+    "message": "Sareko SharePoint-en errendimendu arazoak identifikatzeko tresna bat."
+  },
+  "UrlDescription": {
+    "message": "{0} URL aurkitu da"
+  },
+  "UrlsDescription": {
+    "message": "{0} URL aurkitu dira"
+  }
+}

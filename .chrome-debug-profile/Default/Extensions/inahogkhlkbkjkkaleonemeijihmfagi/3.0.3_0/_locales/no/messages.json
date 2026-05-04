@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "Om"
+   },
+   "AppDescription": {
+      "message": "Analyser ytelsen for områdesidene, og få anbefalinger for optimalisering."
+   },
+   "AppName": {
+      "message": "Sidediagnostikk for SharePoint"
+   },
+   "AttentionRequired": {
+      "message": "Krever behandling"
+   },
+   "AuditorsDataReady": {
+      "message": "Datavalidering er fullført"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "Både offentlige og private CDN-er må aktiveres med standard konfigurasjon. Samarbeid med en SharePoint-administrator for å aktivere begge CDN-ene, og bruk standard CDN-plasseringer for å be en SharePoint-administrator om å legge til egendefinerte plasseringer."
+   },
+   "ClassicPageType": {
+      "message": "klassisk"
+   },
+   "CollectorsDataReady": {
+      "message": "Datainnsamling er fullført"
+   },
+   "CorrelationIdLabel": {
+      "message": "Korrelasjons-ID"
+   },
+   "Custom": {
+      "message": "Egendefinert"
+   },
+   "Description": {
+      "message": "Et verktøy for å identifisere side ytelsesproblemer i SharePoint Online"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "Anbefal å bruke Content by Search WebPart i stedet for Content by Query WebPart."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "CDN-er forbedrer ytelsen ved å bufre statiske ressurser nærmere nettleserne som ber om dem. Samarbeid med en SharePoint-administrator for å konfigurere CDN-er til å lagre statiske sideressurser."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "En eller flere utvidelser tar lengre tid enn 1000 ms å gjengi."
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "Bruk av iFrames gjør sideytelsen langsommere fordi innholdet lastes inn fra en ekstern side. Bruk bilder i stedet for iFrames, men hvis iFrames må brukes, må du minimere antallet og/eller flytte dem fra visningsområdet."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "Bildene på denne siden er for store for optimal sideytelse. Reduser alle bilder på denne siden til mindre enn {0} KB hver."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "Bildene på denne siden er for store for optimal sideytelse. Reduser alle bilder på denne siden til mindre enn {0} MB hver."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0} utvidelser tar lengre tid enn {1} ms å lade, og dette påvirker ytelsen til siden."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "Sideinnhold, for eksempel bilder, videoer og tekst, påvirker sideytelsen. Reduser antall nettdeler, bruk innholdsleveringsnettverk (CDN) og begrens sideinnhold."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "Når du tester ytelse mens du er logget på som administrator, påvirkes resultatet av økt trafikk som skyldes sikkerhetsgrupper."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "Denne siden overskrider det opprinnelige antallet anbefalte kall til henting av listeelement med hurtigbufferhodet ut. Begrens forespørsler til færre enn {0} henteforespørsler for listeelement for hver side."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "Denne siden overskrider det planlagte antallet anbefalte anrop til SharePoint. Begrens forespørsler til færre enn {0} SharePoint-forespørsler for hver {1} side."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "Denne siden overskrider det opprinnelige antallet anbefalte anrop som skal søkes. Begrens forespørsler til færre enn {0} søkeforespørsler for hver side."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "Hvis du vil gi en søkeopplevelse med høy ytelse, begrenser vi den maksimale verdien som støttes for StartRow, slik at den blir {0}."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "1 utvidelse tar lengre tid enn {0} ms å laste, og dette påvirker ytelsen til siden."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "Strukturnavigering som ikke er hurtigbufret gjør nettstedytelsen langsommere. Utform navigasjonen på nettstedet ved hjelp av behandlet eller søkedrevet navigasjon."
+   },
+   "DetectPageType": {
+      "message": "Søker etter sidetype..."
+   },
+   "DiagnosticTests": {
+      "message": "Diagnosetester"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "Varigheten er større enn {0} ms"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "Varigheten er innenfor terskelen {0}ms"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "Aktiver kundestøttelogging (kan påvirke ytelsen, brukes til feilsøking med Microsoft Kundestøtte)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "Kundestøttelogging er aktivert"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "Aktiver eksport til HTTP-arkiv (HAR)"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "En egendefinert webdel som tar mer enn 2000 MS å laste inn i visningsområdet eller tar mer enn 4000 MS å laste inn utenfor visningsområdet, påvirker sideytelsen."
+   },
+   "ErrorMessage": {
+      "message": "Det oppstod en feil under kjøring av sidediagnose. Prøv på nytt senere. Hvis feilen vedvarer, kan du kontakte"
+   },
+   "ExportToHar": {
+      "message": "Eksporter til HAR"
+   },
+   "ExportToHarHover": {
+      "message": "Eksporter til HTTP-arkiv (HAR)"
+   },
+   "ExportToJson": {
+      "message": "Eksporter til JSON"
+   },
+   "ExportToJsonHover": {
+      "message": "Eksporter til JavaScript Object Notation (JSON)"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "Noen ressurser bruker ikke CDN-er"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "Utvidelser kan påvirke innlastingstiden"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "For mange filtyper brukes"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "Tre eller flere nettdeler som bruker iFrame"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "Denne siden inneholder {0} store bilder"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "Denne siden inneholder 1 stort bilde"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "Sidetykkelsen er {0} KB"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "Test sideytelsen med en brukerkonto"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Denne siden har {0} kall til henting av listeelement"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "Denne siden har {0} anrop til SharePoint"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "Denne siden har {0} anrop til Søk"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "StartRow for søkeforespørsler overskrider begrensningen {0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "Egendefinerte nettdeler har innvirkning på sidens innlastingstid"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "Strukturell navigering er ikke aktivert"
+   },
+   "FeedbackCategoryName": {
+      "message": "Gi tilbakemelding"
+   },
+   "FeedbackInstruction": {
+      "message": "Har du forslag eller spørsmål? Legg dem inn på "
+   },
+   "HelpLinksCategoryName": {
+      "message": "Tilleggsressurser"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "Kan ikke kjøre diagnostikk på systemsider, for eksempel startsiden for SharePoint. Bruk dette verktøyet bare for SharePoint-områder."
+   },
+   "HowToUseInstruction": {
+      "message": "Finn ut mer om dette verktøyet og hvordan det fungerer i"
+   },
+   "HowToUseLinkName": {
+      "message": "Sidediagnoseverktøy for SharePoint Online"
+   },
+   "Init": {
+      "message": "Init"
+   },
+   "LazyLoadingTime": {
+      "message": "Forsinket lasting"
+   },
+   "LearnMore": {
+      "message": "Finn ut mer"
+   },
+   "MadeBy": {
+      "message": "MadeBy"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "Microsoft Kundestøtte"
+   },
+   "ModernPageType": {
+      "message": "moderne"
+   },
+   "ModuleLoad": {
+      "message": "Last inn modul"
+   },
+   "NameAndId": {
+      "message": "Navn og ID"
+   },
+   "NetworkTrace": {
+      "message": "Nettverkssporing"
+   },
+   "NoActionRequired": {
+      "message": "Ingen handling kreves"
+   },
+   "NotSupportedPage": {
+      "message": "Kan ikke kjøre side diagnose på denne siden. Bruk dette verktøyet bare for SharePoint-områder."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "Kan ikke kjøre diagnose mens siden er i redigerings modus. Velg Lagre som kladd eller forkast endringer på siden, og prøv på nytt."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "Du prøver å bruke side diagnose verktøyet med en lokal versjon av SharePoint. Dette verktøyet er bare for bruk med SharePoint Online."
+   },
+   "PageLoadTimeLabel": {
+      "message": "Sideinnlastingstid"
+   },
+   "PageTypeDataReady": {
+      "message": "Kontroll av sidetype er fullført"
+   },
+   "PageUrlLabel": {
+      "message": "Nettadresse for side"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "Denne siden bruker innholdsleveringsnettverk (CDN)"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "Ingen utvidelser tar lengre tid enn {0} MS å laste inn"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "Det er færre enn fem utvidelser som brukes"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "Det finnes ingen nettdeler som bruker iFrames"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "Alle bildene på siden er mindre enn {0} KB hver"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "Sidevekten er mindre enn 1000 kB"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "Sideytelsen ble testet med en brukerkonto"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Det er færre forespørsler om henting av listeelement enn {0}"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "Det er færre enn {0} SharePoint-forespørsler"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "Det er færre enn {0} søkeforespørsler"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "StartRow for søkeforespørsler er lavere enn begrensningen"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "Ingen nettdeler tar lengre tid enn {0} MS til å kjøre"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "Ingen strukturell navigasjon oppdaget"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "Privat CDN er ikke aktivert"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "Offentlig og privat CDN er aktivert. Bruk standard CDN-plasseringer, eller be en SharePoint-administrator om å legge til egendefinerte plasseringer."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "Offentlig og privat CDN er ikke aktivert"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "Offentlig CDN er ikke aktivert"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "Det er sju eller flere utvidelser."
+   },
+   "RenderTime": {
+      "message": "Gjengi"
+   },
+   "RunningAuditors": {
+      "message": "Validerer data..."
+   },
+   "RunningCollectors": {
+      "message": "Samler inn data... Dette kan ta noen minutter"
+   },
+   "RunningPageTypeChecker": {
+      "message": "Kontrollerer sidetype"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "Start"
+   },
+   "Stop": {
+      "message": "Stopp"
+   },
+   "ThirdPartyNotice": {
+      "message": "Tredjepartsmerknad"
+   },
+   "TimeoutMessage": {
+      "message": "Sidediagnoseverktøyet ble tidsavbrutt. Prøv på nytt."
+   },
+   "TitleForCBQAuditor": {
+      "message": "Se etter CBQ WebPart"
+   },
+   "Total": {
+      "message": "Totalt"
+   },
+   "TunePerformanceInstruction": {
+      "message": "Finn mer informasjon om forbedring av ytelsen og nedlastingstiden for sider i"
+   },
+   "TunePerformanceLinkName": {
+      "message": "Juster SharePoint Online-ytelsen"
+   },
+   "Url": {
+      "message": "URL-adresse"
+   },
+   "UrlDescription": {
+      "message": "Fant {0} URL-adresse"
+   },
+   "UrlsDescription": {
+      "message": "Fant {0} URL-adresser"
+   },
+   "UserVoice": {
+      "message": "Brukerstemme"
+   },
+   "VersionLabel": {
+      "message": "Versjon"
+   },
+   "Warning": {
+      "message": "Forbedringsmuligheter"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "En innebygd Microsoft-nettside som tar mer enn 2000 MS å laste inn i visningsområdet eller tar mer enn 4000 MS å laste inn utenfor visningsområdet, påvirker sideytelsen."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "Én eller flere nettdeler som bruker iFrame"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Microsoft-nettdeler har innvirkning på sidens innlastingstid"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "Det er fem eller flere utvidelser."
+   }
+}

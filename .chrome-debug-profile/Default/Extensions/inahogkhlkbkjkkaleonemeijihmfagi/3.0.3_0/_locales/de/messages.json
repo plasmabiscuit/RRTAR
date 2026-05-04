@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "Info"
+   },
+   "AppDescription": {
+      "message": "Analysieren Sie die Leistung Ihrer Website-Seiten und erhalten Sie Empfehlungen zur Optimierung."
+   },
+   "AppName": {
+      "message": "Seitendiagnose für SharePoint"
+   },
+   "AttentionRequired": {
+      "message": "Aktion erforderlich"
+   },
+   "AuditorsDataReady": {
+      "message": "Datenüberprüfung abgeschlossen"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "Sowohl das öffentliche als auch das private CDN müssen in der Standardkonfiguration aktiviert sein. Arbeiten Sie mit einem SharePoint-Administrator zusammen, um beide CDNs zu aktivieren und die Standard-CDN-Speicherorte zu verwenden, oder bitten Sie einen SharePoint-Administrator, benutzerdefinierte Speicherorte hinzuzufügen."
+   },
+   "ClassicPageType": {
+      "message": "klassische"
+   },
+   "CollectorsDataReady": {
+      "message": "Datenerfassung abgeschlossen"
+   },
+   "CorrelationIdLabel": {
+      "message": "CorrelationID"
+   },
+   "Custom": {
+      "message": "Benutzerdefiniert"
+   },
+   "Description": {
+      "message": "Ein Tool zum Erkennen von Problemen mit der Seitenleistung in SharePoint Online"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "Verwendung von \"Inhalt durch Suche\"-WebPart anstelle von \"Inhalt durch Abfrage\"-WebPart empfehlen."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "CDNs verbessern die Leistung, indem sie statische Inhalte näher an den anfragenden Browsern zwischenspeichern. Arbeiten Sie mit einem SharePoint-Administrator zusammen, um CDNs zum Aufbewahren von statischen Seitenobjekten einzurichten und zu konfigurieren."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "Eine oder mehrere Erweiterungen benötigen für die Wiedergabe länger als 1000 Millisekunden. "
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "Die Verwendung von iFrames verlangsamt die Seitenleistung, da Inhalte von einer externen Seite geladen werden. Verwenden Sie Bilder anstelle von iFrames, wenn jedoch iFrames verwendet werden muss, minimieren Sie die Anzahl und/oder verkleinern Sie diese vom Viewport aus."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "Die Bilder auf dieser Seite sind für eine optimale Seitenleistung zu groß. Reduzieren Sie alle Bilder auf dieser Seite jeweils auf kleiner als {0} KB."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "Die Bilder auf dieser Seite sind für eine optimale Seitenleistung zu groß. Reduzieren Sie alle Bilder auf dieser Seite jeweils auf kleiner als {0} MB."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0} Erweiterungen benötigen länger als {1} ms, und dies wirkt sich auf die Seitenleistung aus."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "Seiteninhalte wie Bilder, Videos und Text wirken sich auf die Seitenleistung aus. Verringern Sie die Anzahl der Webparts, verwenden Sie Content Delivery Networks (CDNs) und schränken Sie Seiteninhalte ein."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "Wenn Sie die Leistung testen, während Sie als Administrator angemeldet sind, sind die Ergebnisse von erhöhtem Datenverkehr durch Sicherheitsgruppen beeinflusst."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "Diese Seite überschreitet die Baselineanzahl der empfohlenen Aufrufe zum Abrufen von Listenelementen mit ausgehendem Cacheheader. Beschränken Sie Anforderungen auf weniger als {0} Anforderungen zum Abrufen von Listenelementen für jede Seite."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "Diese Seite überschreitet die Basisanzahl an empfohlenen Aufrufen von SharePoint. Begrenzen Sie die Anforderungen für jede {1} Seite auf weniger als {0} SharePoint-Anforderungen."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "Diese Seite überschreitet die Basisanzahl der empfohlenen Suchaufrufe. Beschränken Sie Anforderungen auf weniger als{0}Suchanfragen für jede Seite."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "Um eine hohe Sucherfahrung zu bieten, begrenzen wir den maximal unterstützten Wert von StartRow auf {0}."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "1 Erweiterung benötigt länger als {0} ms, und dies wirkt sich auf die Seitenleistung aus."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "Strukturelle Navigation, die nicht zwischengespeichert wird, verlangsamt die Leistung der Website. Sie können die Navigation Ihrer Website mithilfe von verwalteter oder such-gesteuerter Navigation neu gestalten."
+   },
+   "DetectPageType": {
+      "message": "Seitentyp wird erkannt..."
+   },
+   "DiagnosticTests": {
+      "message": "Diagnosetests"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "Die Dauer ist größer als {0} ms"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "Die Dauer liegt innerhalb des Schwellenwerts von {0}ms."
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "Supportprotokollierung aktivieren (kann die Leistung beeinträchtigen; für die Problembehandlung mit dem Microsoft-Support verwenden)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "Supportprotokollierung aktiviert"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "Export nach HTTP-Archiv (HAR) aktivieren"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "Jedes benutzerdefinierte Webpart, das länger als 2000 ms zum Laden innerhalb des Ansichtsfensters oder länger als 4000 ms zum Laden außerhalb des Ansichtsfensters benötigt, wirkt sich auf die Seitenleistung aus."
+   },
+   "ErrorMessage": {
+      "message": "Fehler beim Ausführen der Seitendiagnose. Versuchen Sie es später noch mal. Wenn der Fehler weiterhin auftritt, wenden Sie sich an"
+   },
+   "ExportToHar": {
+      "message": "Nach HAR exportieren"
+   },
+   "ExportToHarHover": {
+      "message": "Nach HTTP-Archiv (HAR) exportieren"
+   },
+   "ExportToJson": {
+      "message": "Nach JSON exportieren"
+   },
+   "ExportToJsonHover": {
+      "message": "Nach JSON (JavaScript Object Notation) exportieren"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "Einige Objekte verwenden keine CDNs"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "Erweiterungen wirken sich möglicherweise auf die Ladezeit aus"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "Zu viele Erweiterungen werden verwendet"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "Drei oder mehr Webparts, die iFrames verwenden"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "Diese Seite enthält {0} große Bilder"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "Diese Seite enthält 1 großes Bild"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "Der Seitenumfang beläuft sich auf {0} KB"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "Prüfen der Seitenleistung mit einem Benutzerkonto"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Diese Seite enthält {0} Aufrufe des Listenelementabrufs."
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "Diese Seite weist {0} Aufrufe von SharePoint auf."
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "Diese Seite enthält {0} Suchaufrufe."
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "StartRow von Suchanforderungen überschreitet die Einschränkung {0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "Benutzerdefinierte Webparts beeinträchtigen die Seitenladezeit"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "Zwischenspeicherung der strukturellen Navigation nicht aktiviert"
+   },
+   "FeedbackCategoryName": {
+      "message": "Feedback abgeben"
+   },
+   "FeedbackInstruction": {
+      "message": "Habe Sie Vorschläge oder Fragen? Posten Sie sie auf "
+   },
+   "HelpLinksCategoryName": {
+      "message": "Zusätzliche Ressourcen"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "Auf Systemseiten wie der SharePoint-Startseite kann keine Diagnose ausgeführt werden. Verwenden Sie dieses Tool nur für SharePoint-Siteseiten."
+   },
+   "HowToUseInstruction": {
+      "message": "Weitere Informationen zu diesem Tool und seiner Funktionsweise"
+   },
+   "HowToUseLinkName": {
+      "message": "Seitendiagnosetool für SharePoint Online"
+   },
+   "Init": {
+      "message": "Initialisierung"
+   },
+   "LazyLoadingTime": {
+      "message": "Verzögertes Laden"
+   },
+   "LearnMore": {
+      "message": "Weitere Informationen"
+   },
+   "MadeBy": {
+      "message": "MadeBy"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "Microsoft-Support."
+   },
+   "ModernPageType": {
+      "message": "moderne"
+   },
+   "ModuleLoad": {
+      "message": "Laden von Modulen"
+   },
+   "NameAndId": {
+      "message": "Name und ID"
+   },
+   "NetworkTrace": {
+      "message": "Netzwerkablaufverfolgung"
+   },
+   "NoActionRequired": {
+      "message": "Es ist keine Aktion erforderlich"
+   },
+   "NotSupportedPage": {
+      "message": "Die Seiten Diagnose kann auf dieser Seite nicht ausgeführt werden. Dieses Tool nur für Share Point-Website Seiten verwenden."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "Die Diagnose kann nicht ausgeführt werden, während sich die Seite im Bearbeitungs Modus befindet. Wählen Sie auf Ihrer Seite \"als Entwurf speichern\" oder \"Änderungen verwerfen\" aus, und versuchen Sie es noch mal."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "Sie versuchen, das Seiten Diagnose Tool mit einer lokalen Version von Share Point zu verwenden. Dieses Tool kann nur mit Share Point online verwendet werden."
+   },
+   "PageLoadTimeLabel": {
+      "message": "Seitenladezeit"
+   },
+   "PageTypeDataReady": {
+      "message": "Überprüfung des Seitentyps abgeschlossen"
+   },
+   "PageUrlLabel": {
+      "message": "Seiten-URL"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "Diese Seite verwendet Inhalts Content Delivery Networks (CDNs)"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "Keine der Erweiterungen benötigen länger als {0} ms zum Laden"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "Es werden weniger als 5 Erweiterungen verwendet."
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "Es sind keine Webparts vorhanden, die iFrames verwenden"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "Alle Bilder auf der Seite sind jeweils kleiner als {0}KB"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "Die Seitengewichtung ist kleiner als 1.000 KB."
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "Die Seitenleistung wurde mit einem Benutzerkonto getestet"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Es sind weniger als {0} Anforderungen zum Abrufen von Listenelementen vorhanden."
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "Es sind weniger als {0} SharePoint-Anforderungen vorhanden"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "Es sind weniger als {0} Suchanforderungen vorhanden."
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "StartRow der Suchanforderungen ist niedriger als die Einschränkung."
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "Die Ausführung keines der Webparts dauert länger als {0} ms"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "Keine strukturelle Navigation erkannt"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "Privates CDN ist nicht aktiviert."
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "Öffentliches und privates CDN sind aktiviert. Bitte verwenden Sie die Standard-CDN-Speicherorte, oder bitten Sie einen SharePoint-Administrator, benutzerdefinierte Speicherorte hinzuzufügen."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "Öffentliches und privates CDN sind nicht aktiviert"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "Öffentliches CDN ist nicht aktiviert."
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "Es gibt 7 oder mehr Erweiterungen."
+   },
+   "RenderTime": {
+      "message": "Rendern"
+   },
+   "RunningAuditors": {
+      "message": "Daten werden überprüft..."
+   },
+   "RunningCollectors": {
+      "message": "Daten werden erfasst... Dies könnte ein paar Minuten dauern"
+   },
+   "RunningPageTypeChecker": {
+      "message": "Seitentyp wird überprüft"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "Anfang"
+   },
+   "Stop": {
+      "message": "Stopp"
+   },
+   "ThirdPartyNotice": {
+      "message": "Hinweis von Drittanbietern"
+   },
+   "TimeoutMessage": {
+      "message": "Timeout des Seitendiagnosetools. Versuchen Sie es bitte noch mal."
+   },
+   "TitleForCBQAuditor": {
+      "message": "Auf CBQ-WebPart überprüfen"
+   },
+   "Total": {
+      "message": "Gesamt"
+   },
+   "TunePerformanceInstruction": {
+      "message": "Weiter Informationen zum Verbessern der Leistung und Seitendownloadzeiten finden Sie in"
+   },
+   "TunePerformanceLinkName": {
+      "message": "Optimieren der SharePoint Online-Leistung"
+   },
+   "Url": {
+      "message": "URL"
+   },
+   "UrlDescription": {
+      "message": "{0} URL gefunden"
+   },
+   "UrlsDescription": {
+      "message": "{0} URLs gefunden"
+   },
+   "UserVoice": {
+      "message": "Benutzerstimme"
+   },
+   "VersionLabel": {
+      "message": "Version"
+   },
+   "Warning": {
+      "message": "Möglichkeiten für Verbesserungen"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "Jedes integrierte Microsoft-Webpart, das länger als 2000 ms zum Laden innerhalb des Ansichtsfensters oder länger als 4000 ms zum Laden außerhalb des Ansichtsfensters benötigt, wirkt sich auf die Seitenleistung aus."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "Ein oder mehrere Webparts die iFrames verwenden"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Microsoft Webparts beeinträchtigen die Ladezeit"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "Es gibt 5 oder mehr Erweiterungen."
+   }
+}

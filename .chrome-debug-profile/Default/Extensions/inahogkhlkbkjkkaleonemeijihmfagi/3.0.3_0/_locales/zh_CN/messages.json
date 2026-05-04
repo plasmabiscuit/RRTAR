@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "关于"
+   },
+   "AppDescription": {
+      "message": "分析网站页面的性能并获取优化建议。"
+   },
+   "AppName": {
+      "message": "适用于 SharePoint 的页面诊断"
+   },
+   "AttentionRequired": {
+      "message": "需注意"
+   },
+   "AuditorsDataReady": {
+      "message": "数据验证完成"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "公共和私有 CDN 都需要在默认配置下启用。请与 SharePoint 管理员合作，启用这两个 CDN 并使用默认的 CDN 位置，或要求 SharePoint 管理员添加自定义位置。"
+   },
+   "ClassicPageType": {
+      "message": "古典"
+   },
+   "CollectorsDataReady": {
+      "message": "数据收集完成"
+   },
+   "CorrelationIdLabel": {
+      "message": "相关 ID"
+   },
+   "Custom": {
+      "message": "自定义"
+   },
+   "Description": {
+      "message": "用于识别 SharePoint Online 中的页面性能问题的工具"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "建议用“按搜索显示的内容”Web 部件取代“按按查询显示的内容”Web 部件。"
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "CDN 通过将静态资产缓存在距请求它们的浏览器更近的位置来提高性能。请与 SharePoint 管理员合作，以设置和配置 CDN 来存储静态页面资产。"
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "一个或多个扩展名的显示时间超过 1000 毫秒。"
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "使用 iFrame 会降低页面性能，因为内容从外部页面加载。使用图像而不是 iFrame，但如果必须使用 iFrame，请尽量减少数字和/或将它们移出视区。"
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "此页面上的图像太大，无法获取最佳页面性能。将此页面上的所有图像减少到 {0} kb 以下。"
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "此页面上的图像太大，无法获取最佳页面性能。将此页面上的所有图像减少到 {0} mb 以下。"
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "{0} 个扩展的加载时间超过 {1} 毫秒，正在影响页面性能。"
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "页面内容 (如图像、视频和文本) 正在影响页面性能。减少 Web 部件数量，使用内容交付网络 (CDN) 并限制页面内容。"
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "以管理员身份登录并测试性能时，由安全组导致的通信量增加会影响结果。"
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "此页超过了建议调用包含输出缓存标头的列表项提取的基线数。将请求限制为每页的列表项提取请求少于 {0}。"
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "此页面超出了对 SharePoint 的建议调用的基准数量。每个 {1} 页面的请求限制为少于 {0} 个 SharePoint 请求。"
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "此页面超过了建议的搜索调用的基线数。将每个页面的请求限制为少于 {0} 个搜索请求。"
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "为了提供高性能的搜索体验，我们已将 StartRow 支持的最大值限制为{0}。"
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "1 个扩展的加载时间超过 {0} 毫秒，正在影响页面性能。"
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "未缓存的结构导航会降低网站性能。使用托管或搜索驱动的导航重新设计网站的导航。"
+   },
+   "DetectPageType": {
+      "message": "正在检测页面类型..."
+   },
+   "DiagnosticTests": {
+      "message": "诊断测试"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "持续时间大于 {0} 毫秒"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "持续时间在阈值 {0} 毫秒范围内"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "启用支持日志记录(可能会影响性能；用于通过 Microsoft 支持人员进行疑难解答)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "支持日志记录已启用"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "启用导出到 HTTP 存档 (HAR) 的功能"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "需要超过 2000 毫秒才能在视区内部加载或者超过 4000 毫秒才能在视区外部加载的任何自定义 Web 部件都会影响页面性能。"
+   },
+   "ErrorMessage": {
+      "message": "运行页面诊断时出错。请稍后再试。如果仍然出现此错误，请联系"
+   },
+   "ExportToHar": {
+      "message": "导出到 HAR"
+   },
+   "ExportToHarHover": {
+      "message": "导出到 HTTP 存档(HAR)"
+   },
+   "ExportToJson": {
+      "message": "导出到 JSON"
+   },
+   "ExportToJsonHover": {
+      "message": "导出到 JavaScript 对象表示法(JSON)"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "某些资产未使用 CDN"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "扩展可能影响加载时间"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "使用的扩展名太多"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "三个或更多 Web 部件使用 iFrame"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "此页面包含 {0} 大图像"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "此页面包含 1 张大图像"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "页面权重为 {0} kb"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "使用用户账户测试页面性能"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "此页面对列表项提取{0}调用"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "此页面对 Microsoft Office SharePoint Online 进行 {0} 调用"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "此页面包含对搜索的 {0} 调用"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "搜索请求的 StartRow 超过了限制{0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "自定义 web 部件影响页面加载时间"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "结构导航缓存未启用"
+   },
+   "FeedbackCategoryName": {
+      "message": "提供反馈"
+   },
+   "FeedbackInstruction": {
+      "message": "有建议或问题? 将其发布到"
+   },
+   "HelpLinksCategoryName": {
+      "message": "其他资源"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "无法对 SharePoint 起始页等系统页面运行诊断。仅对 SharePoint 网站页面使用此工具。"
+   },
+   "HowToUseInstruction": {
+      "message": "详细了解此工具及其工作方式"
+   },
+   "HowToUseLinkName": {
+      "message": "用于 SharePoint Online 的页面诊断工具"
+   },
+   "Init": {
+      "message": "初始"
+   },
+   "LazyLoadingTime": {
+      "message": "延迟加载"
+   },
+   "LearnMore": {
+      "message": "了解详细信息"
+   },
+   "MadeBy": {
+      "message": "MadeBy"
+   },
+   "Microsoft": {
+      "message": "Microsoft"
+   },
+   "MicrosoftSupport": {
+      "message": "Microsoft 支持。"
+   },
+   "ModernPageType": {
+      "message": "现代"
+   },
+   "ModuleLoad": {
+      "message": "模块加载"
+   },
+   "NameAndId": {
+      "message": "名称和 ID"
+   },
+   "NetworkTrace": {
+      "message": "网络跟踪"
+   },
+   "NoActionRequired": {
+      "message": "无需任何操作"
+   },
+   "NotSupportedPage": {
+      "message": "无法在此页面上运行页面诊断。仅对 SharePoint 网站页面使用此工具。"
+   },
+   "NotSupportedPageInEdit": {
+      "message": "当页面处于编辑模式时，无法运行诊断。请在页面上选择“另存为草稿”或“放弃更改”，然后重试。"
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "您正在尝试对本地版本的 SharePoint 使用页面诊断工具。此工具仅供 SharePoint Online 使用。"
+   },
+   "PageLoadTimeLabel": {
+      "message": "页面加载时间"
+   },
+   "PageTypeDataReady": {
+      "message": "页面类型检查完成"
+   },
+   "PageUrlLabel": {
+      "message": "网页 URL"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "此页面正在使用内容交付网络 (CDN)"
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "无任何扩展的加载时间超过 {0} 毫秒"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "使用的扩展少于 5 个"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "没有使用 Iframe 的 web 部件"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "页面上的所有图像都小于 {0} kb"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "页面权重小于 1000 kb"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "页面性能使用用户账户测试"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "列表项提取请求少于 {0} 个"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "少于 {0} Microsoft Office SharePoint Online 请求"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "少于 {0} 搜索请求"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "搜索请求的 StartRow 低于限制"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "没有任何 web 部件运行超过 {0} 毫秒"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "未检测到结构导航"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "未启用专用 CDN"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "已启用公共和私有 CDN。请使用默认的 CDN 位置或请求 SharePoint 管理员添加自定义位置。"
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "未启用公用和专用 CDN"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "未启用公共 CDN"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "有 7 个或更多的扩展名。"
+   },
+   "RenderTime": {
+      "message": "呈现"
+   },
+   "RunningAuditors": {
+      "message": "正在验证数据…"
+   },
+   "RunningCollectors": {
+      "message": "正在收集数据…这可能需要几分钟时间"
+   },
+   "RunningPageTypeChecker": {
+      "message": "正在检查页面类型"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "开始"
+   },
+   "Stop": {
+      "message": "停止"
+   },
+   "ThirdPartyNotice": {
+      "message": "第三方通知"
+   },
+   "TimeoutMessage": {
+      "message": "页面诊断工具已超时。请重试。"
+   },
+   "TitleForCBQAuditor": {
+      "message": "检查 CBQ Web 部件"
+   },
+   "Total": {
+      "message": "总计"
+   },
+   "TunePerformanceInstruction": {
+      "message": "在下述位置查看详细信息了解如何提高性能和缩短页面下载时间"
+   },
+   "TunePerformanceLinkName": {
+      "message": "优化 SharePoint Online 性能"
+   },
+   "Url": {
+      "message": "URL"
+   },
+   "UrlDescription": {
+      "message": "找到 {0} 个 URL"
+   },
+   "UrlsDescription": {
+      "message": "找到 {0} 个 URL"
+   },
+   "UserVoice": {
+      "message": "UserVoice"
+   },
+   "VersionLabel": {
+      "message": "版本"
+   },
+   "Warning": {
+      "message": "改进机会"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "需要超过 2000 毫秒才能在视区内部加载或超过 4000 毫秒才能在视区外部加载的任何内置 Microsoft Web 部件都会影响页面性能。"
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "一个或多个 Web 部件使用 iFrame"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Microsoft web 部件影响加载时间"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "有 5 个或更多的扩展名。"
+   }
+}

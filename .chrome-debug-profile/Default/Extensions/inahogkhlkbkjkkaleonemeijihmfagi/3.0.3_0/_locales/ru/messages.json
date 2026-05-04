@@ -1,0 +1,356 @@
+{
+   "About": {
+      "message": "Сведения"
+   },
+   "AppDescription": {
+      "message": "Проанализируйте производительность страниц сайта и получите рекомендации по оптимизации."
+   },
+   "AppName": {
+      "message": "Диагностика страниц для SharePoint"
+   },
+   "AttentionRequired": {
+      "message": "Требуется внимание"
+   },
+   "AuditorsDataReady": {
+      "message": "Проверка данных завершена"
+   },
+   "CDNNotEnabledActionMessage": {
+      "message": "Общедоступная и частная сети CDN должны быть включены с конфигурациями по умолчанию. Свяжитесь с администратором SharePoint, чтобы включить обе сети CDN и использовать расположения CDN по умолчанию, или попросите администратора SharePoint добавить настраиваемые расположения."
+   },
+   "ClassicPageType": {
+      "message": "классический"
+   },
+   "CollectorsDataReady": {
+      "message": "Сбор данных завершен"
+   },
+   "CorrelationIdLabel": {
+      "message": "CorrelationID"
+   },
+   "Custom": {
+      "message": "Настраиваемая"
+   },
+   "Description": {
+      "message": "Инструмент для выявления проблем с производительностью страниц в SharePoint Online"
+   },
+   "DescriptionForCBQAuditor": {
+      "message": "Рекомендовать использование веб-части \"Контент по поиску\", а не \"Контент по запросу\"."
+   },
+   "DescriptionForCDNAuditor": {
+      "message": "CDN повышают производительность за счет кэширования статических ресурсов ближе к запрашивающим их браузерам. Вместе с администратором SharePoint установите и настройте CDN для хранения ресурсов статической страницы."
+   },
+   "DescriptionForExtensionAuditor": {
+      "message": "Для отображения одного или нескольких расширений требуется более 1000 мс."
+   },
+   "DescriptionForIFrameAuditor": {
+      "message": "Использование элементов iFrame снижает производительность страницы, так как содержимое загружается с внешней страницы. Используйте изображения вместо элементов iFrame или минимизируйте их количество и (или) переместите их из окна просмотра, если использование элементов iFrame все же необходимо."
+   },
+   "DescriptionForImageSizeAuditor": {
+      "message": "Изображения на этой странице слишком велики для оптимизации ее производительности. Уменьшите все изображения на этой странице до менее {0} КБ каждое."
+   },
+   "DescriptionForImageSizeAuditorMb": {
+      "message": "Изображения на этой странице слишком велики для ее оптимальной производительности. Уменьшите все изображения на этой странице до менее {0} МБ каждое."
+   },
+   "DescriptionForMultiExtensionAuditor": {
+      "message": "Загрузка нескольких ({0}) расширений занимает больше {1} мс, что влияет на производительность страницы."
+   },
+   "DescriptionForPageWeightAuditor": {
+      "message": "Содержимое страницы, например изображения, видео и текст, влияет на производительность страницы. Уменьшите количество веб-частей, воспользуйтесь сетями доставки содержимого (CDN) и ограничьте содержимое страницы."
+   },
+   "DescriptionForPermissionAuditor": {
+      "message": "Когда вы тестируете производительность, войдя в систему как администратор, на результаты влияет увеличение трафика, вызванное группами безопасности."
+   },
+   "DescriptionForRequestsToListItemFetchAuditor": {
+      "message": "На этой странице превышено рекомендуемое базовое количество вызовов получения элементов списка без заголовка кэша. Ограничьте число запросов на получение элементов списка (менее {0}) для каждой страницы."
+   },
+   "DescriptionForRequestsToSPOAuditor": {
+      "message": "На этой странице превышено рекомендуемое базовое количество вызовов SharePoint. Ограничьте число запросов SharePoint до менее {0} для каждой страницы {1}."
+   },
+   "DescriptionForRequestsToSearchAuditor": {
+      "message": "На этой странице превышено рекомендуемое базовое количество вызовов в службу поиска. Ограничьте число поисковых запросов (менее {0}) для каждой страницы."
+   },
+   "DescriptionForSearchPropertyAuditor": {
+      "message": "Чтобы обеспечить высокую производительность поиска, максимальное поддерживаемое значение StartRow ограничено до {0}."
+   },
+   "DescriptionForSingleExtensionAuditor": {
+      "message": "Загрузка 1 расширения занимает больше {0} мс, что влияет на производительность страницы."
+   },
+   "DescriptionForStructuralNavAuditor": {
+      "message": "Структурная навигация, которая не кэшируется, замедляет производительность сайта. Измените навигацию сайта на управляемую навигацию или навигацию на основе поиска."
+   },
+   "DetectPageType": {
+      "message": "Определение типа страницы..."
+   },
+   "DiagnosticTests": {
+      "message": "Диагностические тесты"
+   },
+   "DurationGreaterThanThreshold": {
+      "message": "Длительность больше {0} мс"
+   },
+   "DurationWithinWarningThreshold": {
+      "message": "Длительность находится в пределах порога {0} мс"
+   },
+   "EnableDevDashboardCheckBoxLabel": {
+      "message": "Включить ведение журнала поддержки (может повлиять на производительность; используется для устранения неполадок при помощи службы поддержки Майкрософт)"
+   },
+   "EnableDevDashboardWarningMessage": {
+      "message": "Ведение журнала поддержки включено"
+   },
+   "EnableHarPreviewCheckBoxLabel": {
+      "message": "Включить экспорт в архив HTTP (HAR)"
+   },
+   "ErrorDescriptionForSlowWebPartAuditor": {
+      "message": "Любая пользовательская веб-часть, загружающаяся дольше 2000 мс в окне просмотра или дольше 4000 мс за пределами окна просмотра, влияет на производительность страницы."
+   },
+   "ErrorMessage": {
+      "message": "Произошла ошибка при выполнении диагностики страницы. Повторите попытку позже. Если ошибка повторится, обратитесь в"
+   },
+   "ExportToHar": {
+      "message": "Экспорт в HAR"
+   },
+   "ExportToHarHover": {
+      "message": "Экспорт в архив HTTP (HAR)"
+   },
+   "ExportToJson": {
+      "message": "Экспорт в JSON"
+   },
+   "ExportToJsonHover": {
+      "message": "Экспорт в нотацию объектов JavaScript (JSON)"
+   },
+   "FailedTitleForCDNAuditor": {
+      "message": "Некоторые ресурсы не используют сети CDN"
+   },
+   "FailedTitleForExtensionAuditor": {
+      "message": "Расширения могут влиять на время загрузки"
+   },
+   "FailedTitleForExtensionCountAuditor": {
+      "message": "Слишком много используемых расширений"
+   },
+   "FailedTitleForIFrameAuditor": {
+      "message": "Три или более веб-частей, использующих элементы IFrame"
+   },
+   "FailedTitleForImageSizeAuditorOfMultipleImages": {
+      "message": "Эта страница содержит большие изображения ({0})"
+   },
+   "FailedTitleForImageSizeAuditorOfSingleImage": {
+      "message": "Эта страница содержит 1 большое изображение"
+   },
+   "FailedTitleForPageWeightAuditor": {
+      "message": "Страница занимает {0} КБ"
+   },
+   "FailedTitleForPermissionAuditor": {
+      "message": "Протестируйте производительность страницы с помощью учетной записи пользователя"
+   },
+   "FailedTitleForRequestsToListItemFetchAuditor": {
+      "message": "На этой странице {0} вызовы получения элементов списка"
+   },
+   "FailedTitleForRequestsToSPOAuditor": {
+      "message": "Эта страница содержит вызовы ({0}) SharePoint"
+   },
+   "FailedTitleForRequestsToSearchAuditor": {
+      "message": "Эта страница содержит вызовы ({0}) в службу поиска"
+   },
+   "FailedTitleForSearchPropertyAuditor": {
+      "message": "StartRow запросов поиска превышает ограничение {0}"
+   },
+   "FailedTitleForSlowWebPartAuditor": {
+      "message": "Пользовательские веб-части влияют на время загрузки страницы"
+   },
+   "FailedTitleForStructuralNavAuditor": {
+      "message": "Кэширование структурной навигации не включено"
+   },
+   "FeedbackCategoryName": {
+      "message": "Отправить отзыв"
+   },
+   "FeedbackInstruction": {
+      "message": "У вас есть предложения или вопросы? Опубликуйте их на "
+   },
+   "HelpLinksCategoryName": {
+      "message": "Дополнительные ресурсы"
+   },
+   "HomePageNotSupportedMessage": {
+      "message": "Невозможно запустить диагностику для системных страниц, таких как начальная страница SharePoint. Используйте это средство только для страниц сайтов SharePoint."
+   },
+   "HowToUseInstruction": {
+      "message": "Дополнительные сведения об этом средстве и о том, как оно работает"
+   },
+   "HowToUseLinkName": {
+      "message": "Средство диагностики страниц для SharePoint Online"
+   },
+   "Init": {
+      "message": "Инициализация"
+   },
+   "LazyLoadingTime": {
+      "message": "Отложенная загрузка"
+   },
+   "LearnMore": {
+      "message": "Подробнее"
+   },
+   "MadeBy": {
+      "message": "Автор"
+   },
+   "Microsoft": {
+      "message": "Майкрософт"
+   },
+   "MicrosoftSupport": {
+      "message": "Служба поддержки Майкрософт."
+   },
+   "ModernPageType": {
+      "message": "современный"
+   },
+   "ModuleLoad": {
+      "message": "Загрузка модуля"
+   },
+   "NameAndId": {
+      "message": "Имя и ИД"
+   },
+   "NetworkTrace": {
+      "message": "Трассировка сетевого трафика"
+   },
+   "NoActionRequired": {
+      "message": "Действия не требуются"
+   },
+   "NotSupportedPage": {
+      "message": "Не удается запустить диагностику страниц на этой странице. Использовать это средство только для страниц сайта SharePoint."
+   },
+   "NotSupportedPageInEdit": {
+      "message": "Не удается запустить диагностику, пока страница находится в режиме редактирования. На странице щелкните \"Сохранить как черновик\" или \"Отменить изменения\" и повторите попытку."
+   },
+   "OnPremPageNotSupportedMessage": {
+      "message": "Вы пытаетесь использовать средство диагностики страниц с локальной версией SharePoint. Это средство можно использовать только с SharePoint Online."
+   },
+   "PageLoadTimeLabel": {
+      "message": "Время загрузки страницы"
+   },
+   "PageTypeDataReady": {
+      "message": "Проверка типа страницы завершена"
+   },
+   "PageUrlLabel": {
+      "message": "URL-адрес страницы"
+   },
+   "PassedTitleForCDNAuditor": {
+      "message": "На этой странице используются сети доставки содержимого (CDN)."
+   },
+   "PassedTitleForExtensionAuditor": {
+      "message": "Загрузка расширений занимает не больше {0} мс"
+   },
+   "PassedTitleForExtensionCountAuditor": {
+      "message": "Использовано менее 5 расширений"
+   },
+   "PassedTitleForIFrameAuditor": {
+      "message": "Веб-части, в которых используются элементы iFrame, отсутствуют"
+   },
+   "PassedTitleForImageSizeAuditor": {
+      "message": "Все изображения на странице менее {0} KB каждое"
+   },
+   "PassedTitleForPageWeightAuditor": {
+      "message": "Страница занимает менее 1000 КБ"
+   },
+   "PassedTitleForPermissionAuditor": {
+      "message": "Производительность страницы была протестирована с помощью учетной записи пользователя"
+   },
+   "PassedTitleForRequestsToListItemFetchAuditor": {
+      "message": "Число запросов на получение элементов списка {0} меньше"
+   },
+   "PassedTitleForRequestsToSPOAuditor": {
+      "message": "Количество запросов SharePoint не превышает {0}"
+   },
+   "PassedTitleForRequestsToSearchAuditor": {
+      "message": "Количество поисковых запросов не превышает {0}"
+   },
+   "PassedTitleForSearchPropertyAuditor": {
+      "message": "Значение StartRow поисковых запросов меньше ограничения"
+   },
+   "PassedTitleForSlowWebPartAuditor": {
+      "message": "Запуск веб-части занимает не больше {0} мс"
+   },
+   "PassedTitleForStructuralNavAuditor": {
+      "message": "Структурная навигация не обнаружена"
+   },
+   "PrivateCDNNotEnabledTitle": {
+      "message": "Частная сеть CDN не включена"
+   },
+   "PublicAndPrivateCDNEnbledActionMessage": {
+      "message": "Общедоступные и частные сети CDN включены. Используйте стандартные расположения CDN или попросите администратора SharePoint добавить настраиваемые расположения."
+   },
+   "PublicAndPrivateCDNNotEnabledTitle": {
+      "message": "Общедоступные и частные сети CDN не включены"
+   },
+   "PublicCDNNotEnabledTitle": {
+      "message": "Общедоступная сеть CDN не включена"
+   },
+   "RedSectionDescriptionForExtensionCountAuditor": {
+      "message": "Имеется 7 или более расширений."
+   },
+   "RenderTime": {
+      "message": "Отрисовка"
+   },
+   "RunningAuditors": {
+      "message": "Проверка данных..."
+   },
+   "RunningCollectors": {
+      "message": "Сбор данных... Это может занять несколько минут"
+   },
+   "RunningPageTypeChecker": {
+      "message": "Проверка типа страницы"
+   },
+   "SPIISLatencyLabel": {
+      "message": "SPIISLatency"
+   },
+   "SPRequestDurationLabel": {
+      "message": "SPRequestDuration"
+   },
+   "Start": {
+      "message": "Начало"
+   },
+   "Stop": {
+      "message": "Остановить"
+   },
+   "ThirdPartyNotice": {
+      "message": "Уведомление о третьих лицах"
+   },
+   "TimeoutMessage": {
+      "message": "Истекло время ожидания для средства диагностики страниц. Повторите попытку."
+   },
+   "TitleForCBQAuditor": {
+      "message": "Проверка на наличие веб-части \"Контент по запросу\""
+   },
+   "Total": {
+      "message": "Всего"
+   },
+   "TunePerformanceInstruction": {
+      "message": "Дополнительные сведения о повышении производительности и ускорении скачивания страниц см. в"
+   },
+   "TunePerformanceLinkName": {
+      "message": "Настройка производительности SharePoint Online"
+   },
+   "Url": {
+      "message": "URL-адрес"
+   },
+   "UrlDescription": {
+      "message": "Найдено {0} URL-адрес"
+   },
+   "UrlsDescription": {
+      "message": "Найдено URL-адресов: {0}"
+   },
+   "UserVoice": {
+      "message": "User Voice"
+   },
+   "VersionLabel": {
+      "message": "Версия"
+   },
+   "Warning": {
+      "message": "Возможности улучшения"
+   },
+   "WarningDescriptionForSlowWebPartAuditor": {
+      "message": "Любая встроенная веб-часть Майкрософт, загружающаяся дольше 2000 мс в окне просмотра или дольше 4000 мс за пределами окна просмотра, влияет на производительность страницы."
+   },
+   "WarningTitleForIFrameAuditor": {
+      "message": "Одна или несколько веб-частей, использующих элементы iFrame"
+   },
+   "WarningTitleForSlowWebPartAuditor": {
+      "message": "Веб-части Майкрософт влияют на время загрузки"
+   },
+   "YellowSectionDescriptionForExtensionCountAuditor": {
+      "message": "Имеется 5 или более расширений."
+   }
+}
