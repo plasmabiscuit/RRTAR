@@ -1,6 +1,0 @@
-2026/04/29-16:16:49.886 28b5f Reusing MANIFEST /home/bates/GitHub/RRTard/.chrome-debug-profile/Default/Sync Data/LevelDB/MANIFEST-000001
-2026/04/29-16:16:49.888 28b5f Recovering log #50
-2026/04/29-16:16:49.889 28b5f Reusing old log /home/bates/GitHub/RRTard/.chrome-debug-profile/Default/Sync Data/LevelDB/000050.log 
-2026/04/29-16:22:18.216 28b61 Level-0 table #54: started
-2026/04/29-16:22:18.224 28b61 Level-0 table #54: 124327 bytes OK
-2026/04/29-16:22:18.238 28b61 Delete type=0 #50

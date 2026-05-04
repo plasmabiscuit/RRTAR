@@ -1,0 +1,30 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+.python-version
+
+# Local tooling and agent state
+.agents/
+.claude/
+.codex
+scripts/.codex
+.chrome-debug-profile/
+
+# Virtualenvs and dependencies
+.venv/
+node_modules/
+
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+
+# Local backups and editor artifacts
+*.bak-*
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
