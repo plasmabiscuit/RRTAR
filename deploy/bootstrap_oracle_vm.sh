@@ -26,6 +26,8 @@ Options:
   --env-file <path>            Environment file path. Default: /etc/rrtard/rrtard.env
   --host <host>                Default bind host for future backend. Default: 0.0.0.0
   --port <port>                Default bind port for future backend. Default: 8081
+  --repo-url <url>             Git repo to clone for app sync. Default: current repo origin if available.
+  --repo-ref <ref>             Git branch/tag/commit to clone. Default: current HEAD branch.
   --backend-cmd <command>      Install/enable a backend systemd service with this command.
   --worker-cmd <command>       Install/enable a worker systemd service with this command.
   --refresh-reference-data     Overwrite persistent config/data/schemas from the repo copy.
@@ -36,6 +38,8 @@ Examples:
 
   sudo ./deploy/bootstrap_oracle_vm.sh \
     --api-key "replace-me" \
+    --repo-url "https://github.com/plasmabiscuit/RRTAR.git" \
+    --repo-ref "main" \
     --backend-cmd "/opt/rrtard/.venv/bin/uvicorn backend.main:app --host 0.0.0.0 --port 8081" \
     --worker-cmd "/opt/rrtard/.venv/bin/python -m backend.worker"
 EOF
@@ -63,6 +67,8 @@ BACKEND_CMD=""
 WORKER_CMD=""
 REFRESH_REFERENCE_DATA="0"
 API_KEY=""
+REPO_URL=""
+REPO_REF=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -96,6 +102,14 @@ while [[ $# -gt 0 ]]; do
       ;;
     --port)
       PORT="${2:-}"
+      shift 2
+      ;;
+    --repo-url)
+      REPO_URL="${2:-}"
+      shift 2
+      ;;
+    --repo-ref)
+      REPO_REF="${2:-}"
       shift 2
       ;;
     --backend-cmd)
@@ -132,6 +146,7 @@ require_root
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+SOURCE_REPO_ROOT="${REPO_ROOT}"
 APP_DIR="${INSTALL_ROOT}/app"
 VENV_DIR="${INSTALL_ROOT}/.venv"
 ENV_DIR="$(dirname "${ENV_FILE}")"
@@ -142,11 +157,54 @@ DB_DIR="${STATE_ROOT}/db"
 TMP_DIR="${STATE_ROOT}/tmp"
 LOG_DIR="${STATE_ROOT}/log"
 REQ_FILE="${REPO_ROOT}/deploy/requirements.vm.txt"
+CLONE_DIR=""
 
 if [[ ! -f "${REQ_FILE}" ]]; then
   echo "Missing requirements file: ${REQ_FILE}" >&2
   exit 1
 fi
+
+infer_repo_defaults() {
+  if [[ -z "${REPO_URL}" ]]; then
+    REPO_URL="$(git -C "${REPO_ROOT}" remote get-url origin 2>/dev/null || true)"
+  fi
+
+  if [[ -z "${REPO_REF}" ]]; then
+    REPO_REF="$(git -C "${REPO_ROOT}" rev-parse --abbrev-ref HEAD 2>/dev/null || true)"
+  fi
+
+  if [[ "${REPO_REF}" == "HEAD" || -z "${REPO_REF}" ]]; then
+    REPO_REF="main"
+  fi
+}
+
+prepare_source_repo() {
+  infer_repo_defaults
+
+  if [[ -z "${REPO_URL}" ]]; then
+    log "Using local repo copy at ${REPO_ROOT}"
+    return
+  fi
+
+  CLONE_DIR="$(mktemp -d)"
+  log "Cloning source repo ${REPO_URL} (${REPO_REF})"
+  git clone --depth 1 --branch "${REPO_REF}" "${REPO_URL}" "${CLONE_DIR}"
+  SOURCE_REPO_ROOT="${CLONE_DIR}"
+  REQ_FILE="${SOURCE_REPO_ROOT}/deploy/requirements.vm.txt"
+
+  if [[ ! -f "${REQ_FILE}" ]]; then
+    echo "Missing requirements file after clone: ${REQ_FILE}" >&2
+    exit 1
+  fi
+}
+
+cleanup() {
+  if [[ -n "${CLONE_DIR}" && -d "${CLONE_DIR}" ]]; then
+    rm -rf "${CLONE_DIR}"
+  fi
+}
+
+trap cleanup EXIT
 
 install_packages() {
   log "Installing apt packages"
@@ -224,7 +282,7 @@ sync_repo() {
     --exclude 'extracted-budget-attachments/' \
     --exclude 'extracted-performance-site-xml/' \
     --exclude 'extracted-performance-site-attachments/' \
-    "${REPO_ROOT}/" "${APP_DIR}/"
+    "${SOURCE_REPO_ROOT}/" "${APP_DIR}/"
   chown -R "${APP_USER}:${APP_GROUP}" "${APP_DIR}"
 }
 
@@ -245,9 +303,9 @@ sync_reference_dir() {
 
 sync_reference_data() {
   log "Syncing persistent reference data"
-  sync_reference_dir "${REPO_ROOT}/config" "${CONFIG_DIR}"
-  sync_reference_dir "${REPO_ROOT}/data" "${DATA_DIR}"
-  sync_reference_dir "${REPO_ROOT}/schemas" "${SCHEMA_DIR}"
+  sync_reference_dir "${SOURCE_REPO_ROOT}/config" "${CONFIG_DIR}"
+  sync_reference_dir "${SOURCE_REPO_ROOT}/data" "${DATA_DIR}"
+  sync_reference_dir "${SOURCE_REPO_ROOT}/schemas" "${SCHEMA_DIR}"
   chown -R "${APP_USER}:${APP_GROUP}" "${CONFIG_DIR}" "${DATA_DIR}" "${SCHEMA_DIR}"
 }
 
@@ -382,6 +440,8 @@ EOF
 Next steps:
   1. SSH to the VM and verify the env file contents:
        sudo cat ${ENV_FILE}
+  2. Confirm the deployed source tree under:
+       ${APP_DIR}
   2. If you later add a backend entrypoint, rerun this script with:
        --backend-cmd "<start command>"
        --worker-cmd "<start command>"
@@ -390,6 +450,7 @@ Next steps:
 EOF
 }
 
+prepare_source_repo
 install_packages
 ensure_group
 ensure_user

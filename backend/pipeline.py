@@ -1,0 +1,302 @@
+from __future__ import annotations
+
+import dataclasses
+import importlib.util
+import json
+import shutil
+import sys
+import traceback
+from pathlib import Path
+from typing import Any
+
+from .settings import Settings
+from .store import update_job
+
+
+JOB_SPECS: dict[str, dict[str, Any]] = {
+    "keyperson": {
+        "input_dir": "input-pdfs",
+        "manifest_relpath": "review/import_manifest.json",
+        "validation_relpath": "review/validation.json",
+        "steps": [
+            ("extract", "scripts/extract.py", "run", []),
+            ("validate", "scripts/validate.py", "run", []),
+            ("normalize", "scripts/normalize.py", "run", ["agency"]),
+        ],
+    },
+    "budget": {
+        "input_dir": "input-budget-pdfs",
+        "manifest_relpath": "review/budget_manifest.json",
+        "validation_relpath": "review/validation.json",
+        "steps": [
+            ("extract", "scripts/extract_budget.py", "run", []),
+            ("normalize", "scripts/normalize_budget.py", "run", []),
+        ],
+    },
+    "performance-site": {
+        "input_dir": "input-performance-site-pdfs",
+        "manifest_relpath": "review/performance_site_manifest.json",
+        "validation_relpath": "review/validation.json",
+        "steps": [
+            ("extract", "scripts/extract_performance_site.py", "run", []),
+            ("normalize", "scripts/normalize_performance_site.py", "run", []),
+        ],
+    },
+}
+
+
+def process_job(settings: Settings, job: dict[str, Any]) -> dict[str, Any]:
+    job_id = job["id"]
+    spec = JOB_SPECS[job["job_type"]]
+    workspace_dir = settings.tmp_dir / "jobs" / job_id / "workspace"
+    workspace_dir.parent.mkdir(parents=True, exist_ok=True)
+    _prepare_workspace(settings, workspace_dir)
+    populate_job_inputs(job, settings)
+
+    update_job(settings, job_id, workspace_dir=str(workspace_dir))
+    try:
+        step_results = _run_pipeline_steps(
+            workspace_dir=workspace_dir,
+            agency=job.get("agency") or "default",
+            spec=spec,
+        )
+        validation_summary = _build_validation_summary(
+            job_type=job["job_type"],
+            step_results=step_results,
+            workspace_dir=workspace_dir,
+        )
+        validation_path = workspace_dir / spec["validation_relpath"]
+        validation_path.write_text(json.dumps(validation_summary, indent=2))
+
+        manifest_path = workspace_dir / spec["manifest_relpath"]
+        artifacts = _collect_artifacts(workspace_dir)
+        final_job = update_job(
+            settings,
+            job_id,
+            status="completed",
+            completed_at=_utc_now(),
+            manifest_path=str(manifest_path) if manifest_path.exists() else None,
+            validation_path=str(validation_path),
+            artifacts_json=json.dumps(artifacts),
+            result_json=json.dumps(
+                {
+                    "manifest_entries": len(step_results.get("manifest") or []),
+                    "validation": validation_summary,
+                    "steps": step_results["steps"],
+                }
+            ),
+            log_text=step_results["log_text"],
+            error_text=None,
+        )
+        return final_job or job
+    except Exception as exc:
+        final_job = update_job(
+            settings,
+            job_id,
+            status="failed",
+            completed_at=_utc_now(),
+            error_text=f"{type(exc).__name__}: {exc}",
+            log_text=traceback.format_exc(),
+        )
+        return final_job or job
+
+
+def _utc_now() -> str:
+    from .store import utc_now
+
+    return utc_now()
+
+
+def _prepare_workspace(settings: Settings, workspace_dir: Path) -> None:
+    if workspace_dir.exists():
+        shutil.rmtree(workspace_dir)
+    workspace_dir.mkdir(parents=True, exist_ok=True)
+
+    for filename in ("run.py", "requirements.txt", "package.json", "package-lock.json"):
+        src = settings.app_dir / filename
+        if src.exists():
+            shutil.copy2(src, workspace_dir / filename)
+
+    shutil.copytree(settings.app_dir / "scripts", workspace_dir / "scripts")
+
+    reference_sources = {
+        "config": _reference_source(settings.config_dir, settings.app_dir / "config"),
+        "data": _reference_source(settings.data_dir, settings.app_dir / "data"),
+        "schemas": _reference_source(settings.schemas_dir, settings.app_dir / "schemas"),
+        "fonts": settings.app_dir / "fonts",
+        "img": settings.app_dir / "img",
+        "icons": settings.app_dir / "icons",
+    }
+
+    for name, src in reference_sources.items():
+        if src.exists():
+            try:
+                (workspace_dir / name).symlink_to(src, target_is_directory=True)
+            except OSError:
+                shutil.copytree(src, workspace_dir / name)
+
+    venv_dir = settings.app_dir / ".venv"
+    if venv_dir.exists():
+        try:
+            (workspace_dir / ".venv").symlink_to(venv_dir, target_is_directory=True)
+        except OSError:
+            pass
+
+    for name in (
+        "review",
+        "audit",
+        "input-pdfs",
+        "input-budget-pdfs",
+        "input-performance-site-pdfs",
+        "extracted-xml",
+        "extracted-attachments",
+        "extracted-budget-xml",
+        "extracted-budget-attachments",
+        "extracted-performance-site-xml",
+        "extracted-performance-site-attachments",
+    ):
+        (workspace_dir / name).mkdir(parents=True, exist_ok=True)
+
+
+def populate_job_inputs(job: dict[str, Any], settings: Settings) -> None:
+    spec = JOB_SPECS[job["job_type"]]
+    upload_dir = Path(job["upload_dir"])
+    workspace_dir = settings.tmp_dir / "jobs" / job["id"] / "workspace"
+    target_input_dir = workspace_dir / spec["input_dir"]
+    if not workspace_dir.exists():
+        _prepare_workspace(settings, workspace_dir)
+    target_input_dir.mkdir(parents=True, exist_ok=True)
+    for src in sorted(upload_dir.iterdir()):
+        if src.is_file():
+            shutil.copy2(src, target_input_dir / src.name)
+
+
+def _run_pipeline_steps(
+    *,
+    workspace_dir: Path,
+    agency: str,
+    spec: dict[str, Any],
+) -> dict[str, Any]:
+    step_logs: list[dict[str, Any]] = []
+    validation_result = None
+    manifest = None
+
+    for step_name, rel_script, function_name, arg_names in spec["steps"]:
+        module = _load_module(workspace_dir / rel_script, step_name)
+        fn = getattr(module, function_name)
+        args = []
+        for arg_name in arg_names:
+            if arg_name == "agency":
+                args.append(agency)
+        result = fn(*args)
+        if step_name == "validate":
+            validation_result = result
+        if step_name == "normalize":
+            manifest = result
+        step_logs.append(
+            {
+                "step": step_name,
+                "script": rel_script,
+                "result_type": type(result).__name__,
+            }
+        )
+
+    return {
+        "validation_result": validation_result,
+        "manifest": manifest,
+        "steps": step_logs,
+        "log_text": json.dumps(step_logs, indent=2),
+    }
+
+
+def _load_module(script_path: Path, step_name: str):
+    module_name = f"backend_job_{script_path.stem}_{step_name}_{abs(hash(str(script_path)))}"
+    spec = importlib.util.spec_from_file_location(module_name, script_path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"Could not load script module: {script_path}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[module_name] = module
+    script_dir = str(script_path.parent)
+    sys.path.insert(0, script_dir)
+    try:
+        spec.loader.exec_module(module)
+    finally:
+        if sys.path and sys.path[0] == script_dir:
+            sys.path.pop(0)
+    return module
+
+
+def _build_validation_summary(
+    *,
+    job_type: str,
+    step_results: dict[str, Any],
+    workspace_dir: Path,
+) -> dict[str, Any]:
+    if job_type == "keyperson":
+        rows = step_results.get("validation_result") or []
+        file_errors = 0
+        person_errors = 0
+        person_warnings = 0
+        files = []
+        for row in rows:
+            row_dict = dataclasses.asdict(row)
+            files.append(row_dict)
+            file_errors += len(row_dict["file_errors"]) + len(row_dict["schema_errors"])
+            for person in row_dict["persons"]:
+                person_errors += len(person["errors"])
+                person_warnings += len(person["warnings"])
+        return {
+            "available": True,
+            "job_type": job_type,
+            "file_count": len(files),
+            "file_error_count": file_errors,
+            "person_error_count": person_errors,
+            "person_warning_count": person_warnings,
+            "report_html_path": _rel_if_exists(workspace_dir, workspace_dir / "review/validation_report.html"),
+            "files": files,
+        }
+
+    manifest = step_results.get("manifest") or []
+    return {
+        "available": False,
+        "job_type": job_type,
+        "message": "Dedicated validation script is not implemented for this form type yet.",
+        "manifest_entry_count": len(manifest),
+        "files": [],
+    }
+
+
+def _rel_if_exists(workspace_dir: Path, path: Path) -> str | None:
+    return str(path.relative_to(workspace_dir)) if path.exists() else None
+
+
+def _collect_artifacts(workspace_dir: Path) -> list[dict[str, Any]]:
+    artifacts: list[dict[str, Any]] = []
+    for path in sorted(workspace_dir.rglob("*")):
+        if not path.is_file():
+            continue
+        rel = path.relative_to(workspace_dir)
+        if rel.parts[0] not in {
+            "review",
+            "audit",
+            "extracted-xml",
+            "extracted-attachments",
+            "extracted-budget-xml",
+            "extracted-budget-attachments",
+            "extracted-performance-site-xml",
+            "extracted-performance-site-attachments",
+        }:
+            continue
+        artifacts.append(
+            {
+                "path": str(rel),
+                "size_bytes": path.stat().st_size,
+            }
+        )
+    return artifacts
+
+
+def _reference_source(preferred: Path, fallback: Path) -> Path:
+    if preferred.exists() and any(preferred.iterdir()):
+        return preferred
+    return fallback

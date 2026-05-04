@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RRTAR Automation</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 12px;
+        width: 320px;
+        background: #f5f7fa;
+        color: #17212b;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: 16px;
+      }
+
+      .row {
+        display: grid;
+        gap: 6px;
+        margin-bottom: 10px;
+      }
+
+      input,
+      button {
+        font: inherit;
+        padding: 8px 10px;
+      }
+
+      button {
+        border: 1px solid #2357a5;
+        background: #2357a5;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      button.secondary {
+        border-color: #bcc7d6;
+        background: #fff;
+        color: #17212b;
+      }
+
+      #status {
+        min-height: 54px;
+        white-space: pre-wrap;
+        font-size: 12px;
+        line-height: 1.4;
+        background: #fff;
+        border: 1px solid #d7e0eb;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>RRTAR Automation</h1>
+    <div class="row">
+      <label for="job-id">Job ID</label>
+      <input id="job-id" type="text" placeholder="Enter backend job ID">
+    </div>
+    <div class="row">
+      <button id="detect-btn" class="secondary" type="button">Detect Current Form</button>
+      <button id="autofill-btn" type="button">Fetch Manifest and Autofill</button>
+      <button id="options-btn" class="secondary" type="button">Open Settings</button>
+    </div>
+    <div id="status">Idle.</div>
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>
