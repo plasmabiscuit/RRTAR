@@ -893,7 +893,7 @@ button:active::before, .btn:active::before { opacity: .5; }
 .sub-dim     { font-size: .73rem; color: var(--muted); }
 .kp-manifest .person-src,
 .kp-manifest .sub-dim {
-  font-family: "DosReadable", "PixeloidSans", "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  font-size: .79rem;
 }
 .cred-tag    { font-family: monospace; font-size: .75rem; color: var(--primary); font-weight: 700; }
 .footer-note-wrap { position: relative; width: fit-content; max-width: 100%;
@@ -928,9 +928,9 @@ header .tab-bar { margin-left: 0; }
 .bgt-data-row:hover td { background: rgba(88,44,131,.04); }
 .bgt-label { text-align: left; min-width: 160px; }
 .bgt-detail { text-align: left; color: var(--muted); font-size: .74rem; min-width: 90px; }
-.bgt-num { text-align: right; white-space: nowrap; color: #4f5b6d; min-width: 50px; font-family: "DosReadable", "PixeloidSans", "Trebuchet MS", "Segoe UI", Arial, sans-serif; }
-.bgt-amt { text-align: right; white-space: nowrap; min-width: 82px; font-family: "DosReadable", "PixeloidSans", "Trebuchet MS", "Segoe UI", Arial, sans-serif; }
-.bgt-funds { font-weight: 600; color: var(--primary-deep); font-family: "DosReadable", "PixeloidSans", "Trebuchet MS", "Segoe UI", Arial, sans-serif; }
+.bgt-num { text-align: right; white-space: nowrap; color: #4f5b6d; min-width: 50px; font-family: "DosReadable", "PixeloidSans", "Trebuchet MS", "Segoe UI", Arial, sans-serif; font-size: .88rem; }
+.bgt-amt { text-align: right; white-space: nowrap; min-width: 82px; font-family: "DosReadable", "PixeloidSans", "Trebuchet MS", "Segoe UI", Arial, sans-serif; font-size: .88rem; }
+.bgt-funds { font-weight: 600; color: var(--primary-deep); font-family: "DosReadable", "PixeloidSans", "Trebuchet MS", "Segoe UI", Arial, sans-serif; font-size: .88rem; }
 .bgt-total-row td { background: rgba(88,44,131,.08); border-top: 1px solid var(--line); }
 .bgt-total-label { text-align: right; padding-right: .65rem; font-weight: 700;
                    font-size: .76rem; color: var(--primary); }
