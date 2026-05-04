@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import shutil
 from pathlib import Path
+from typing import Any, Dict, List, Optional
 
 try:
     from typing import Annotated
@@ -31,7 +32,7 @@ app.add_middleware(
 )
 
 
-def require_api_key(x_api_key: Annotated[str | None, Header()] = None) -> None:
+def require_api_key(x_api_key: Annotated[Optional[str], Header()] = None) -> None:
     expected = settings.shared_api_key.strip()
     if not expected:
         return
@@ -41,7 +42,7 @@ def require_api_key(x_api_key: Annotated[str | None, Header()] = None) -> None:
 
 @app.get("/health")
 @app.get("/api/health")
-def health() -> dict[str, object]:
+def health() -> Dict[str, Any]:
     return {
         "ok": True,
         "app_dir": str(settings.app_dir),
@@ -51,7 +52,7 @@ def health() -> dict[str, object]:
 
 @app.get("/config/reference", dependencies=[Depends(require_api_key)])
 @app.get("/api/config/reference", dependencies=[Depends(require_api_key)])
-def config_reference() -> dict[str, object]:
+def config_reference() -> Dict[str, Any]:
     contacts_path = _reference_path(settings.data_dir / "contacts.json", settings.app_dir / "data" / "contacts.json")
     contacts_count = 0
     if contacts_path.exists():
@@ -82,31 +83,31 @@ def config_reference() -> dict[str, object]:
 @app.post("/jobs/keyperson", dependencies=[Depends(require_api_key)])
 @app.post("/api/jobs/keyperson", dependencies=[Depends(require_api_key)])
 async def create_keyperson_job(
-    files: list[UploadFile] = File(...),
+    files: List[UploadFile] = File(...),
     agency: str = Form("default"),
-) -> dict[str, object]:
+) -> Dict[str, Any]:
     return await _create_job("keyperson", files, agency)
 
 
 @app.post("/jobs/budget", dependencies=[Depends(require_api_key)])
 @app.post("/api/jobs/budget", dependencies=[Depends(require_api_key)])
 async def create_budget_job(
-    files: list[UploadFile] = File(...),
-) -> dict[str, object]:
+    files: List[UploadFile] = File(...),
+) -> Dict[str, Any]:
     return await _create_job("budget", files, "default")
 
 
 @app.post("/jobs/performance-site", dependencies=[Depends(require_api_key)])
 @app.post("/api/jobs/performance-site", dependencies=[Depends(require_api_key)])
 async def create_performance_site_job(
-    files: list[UploadFile] = File(...),
-) -> dict[str, object]:
+    files: List[UploadFile] = File(...),
+) -> Dict[str, Any]:
     return await _create_job("performance-site", files, "default")
 
 
 @app.get("/jobs/{job_id}", dependencies=[Depends(require_api_key)])
 @app.get("/api/jobs/{job_id}", dependencies=[Depends(require_api_key)])
-def get_job(job_id: str) -> dict[str, object]:
+def get_job(job_id: str) -> Dict[str, Any]:
     job = store.get_job(settings, job_id)
     if job is None:
         raise HTTPException(status_code=404, detail="Job not found.")
@@ -137,7 +138,7 @@ def get_validation(job_id: str):
 
 @app.get("/jobs/{job_id}/artifacts", dependencies=[Depends(require_api_key)])
 @app.get("/api/jobs/{job_id}/artifacts", dependencies=[Depends(require_api_key)])
-def get_artifacts(job_id: str) -> dict[str, object]:
+def get_artifacts(job_id: str) -> Dict[str, Any]:
     job = _require_job(job_id)
     return {"job_id": job_id, "artifacts": job.get("artifacts", [])}
 
@@ -158,7 +159,7 @@ def get_artifact_file(job_id: str, path: str):
     return FileResponse(resolved)
 
 
-async def _create_job(job_type: str, files: list[UploadFile], agency: str) -> dict[str, object]:
+async def _create_job(job_type: str, files: List[UploadFile], agency: str) -> Dict[str, Any]:
     if job_type not in JOB_SPECS:
         raise HTTPException(status_code=400, detail="Unsupported job type.")
     if not files:
@@ -169,7 +170,7 @@ async def _create_job(job_type: str, files: list[UploadFile], agency: str) -> di
     upload_dir = job_root / store.utc_now().replace(":", "-")
     upload_dir.mkdir(parents=True, exist_ok=True)
 
-    original_filenames: list[str] = []
+    original_filenames: List[str] = []
     for upload in files:
         safe_name = Path(upload.filename or "upload.pdf").name
         destination = upload_dir / safe_name
@@ -187,14 +188,14 @@ async def _create_job(job_type: str, files: list[UploadFile], agency: str) -> di
     return _serialize_job(job)
 
 
-def _require_job(job_id: str) -> dict[str, object]:
+def _require_job(job_id: str) -> Dict[str, Any]:
     job = store.get_job(settings, job_id)
     if job is None:
         raise HTTPException(status_code=404, detail="Job not found.")
     return job
 
 
-def _serialize_job(job: dict[str, object]) -> dict[str, object]:
+def _serialize_job(job: Dict[str, Any]) -> Dict[str, Any]:
     return {
         "id": job["id"],
         "job_type": job["job_type"],
