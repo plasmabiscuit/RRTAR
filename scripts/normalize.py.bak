@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 """
 Normalize validated XML files into import_manifest.json and import_manifest.xlsx.
 
@@ -14,7 +12,6 @@ import re
 import subprocess
 import sys
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
 
 from lxml import etree
 from openpyxl import Workbook
@@ -35,7 +32,7 @@ GLOB_LIB_NS = "http://apply.grants.gov/system/GlobalLibrary-V2.0"
 GLOB_NS = "http://apply.grants.gov/system/Global-V1.0"
 
 
-def sha1_b64(path: Path) -> Optional[str]:
+def sha1_b64(path: Path) -> str | None:
     if not path or not path.exists():
         return None
     import base64
@@ -50,16 +47,12 @@ def _t(el: etree._Element, tag: str, ns: str = FORM_NS) -> str:
     return (child.text or "").strip() if child is not None else ""
 
 
-def _form_ns(el: Optional[etree._Element]) -> str:
+def _form_ns(el: etree._Element | None) -> str:
     return etree.QName(el.tag).namespace if el is not None else FORM_NS
 
 
-def _resolve_attachment(
-    desc_pattern: str,
-    att_dir: Path,
-    last_name: str = "",
-    label: str = "",
-) -> Tuple[Optional[str], Optional[str]]:
+def _resolve_attachment(desc_pattern: str, att_dir: Path,
+                        last_name: str = "", label: str = "") -> tuple[str | None, str | None]:
     """Return (path_str, sha1_b64) for an extracted attachment file.
 
     Tries short human names first (e.g. Zhan-Biosketch.pdf, Zhan-Biosketch_2.pdf),
@@ -143,7 +136,7 @@ def _match_line(text: str, pattern: str) -> str:
     return _clean_ws(m.group(1)) if m else ""
 
 
-def _classify_attachment_pdf(text: str) -> Optional[str]:
+def _classify_attachment_pdf(text: str) -> str | None:
     upper = text.upper()
     if "BIOGRAPHICAL SKETCH" in upper:
         return "biosketch"
@@ -196,7 +189,7 @@ def _parse_support_pdf(path: Path, text: str) -> dict:
     }
 
 
-def _parse_attachment_only_pdf(path: Path) -> Optional[dict]:
+def _parse_attachment_only_pdf(path: Path) -> dict | None:
     text = _pdf_text(path)
     if not text:
         return None
@@ -208,7 +201,7 @@ def _parse_attachment_only_pdf(path: Path) -> Optional[dict]:
     return None
 
 
-def _attachment_person_key(parsed: dict) -> Tuple[str, str]:
+def _attachment_person_key(parsed: dict) -> tuple[str, str]:
     person = parsed.get("person", {})
     return (
         (person.get("first_name") or "").lower().strip(),
@@ -216,7 +209,7 @@ def _attachment_person_key(parsed: dict) -> Tuple[str, str]:
     )
 
 
-def _load_contacts() -> Tuple[Dict[str, dict], Dict[str, dict]]:
+def _load_contacts() -> tuple[dict[str, dict], dict[str, dict]]:
     path = DATA_DIR / "contacts.json"
     if not path.exists():
         return {}, {}
@@ -606,8 +599,8 @@ def _dedup_check(entries: list[dict]) -> list[dict]:
         last     = (p.get("last_name",  "") or "").lower().strip()
         name_key = (first, last)
 
-        match_idx: Optional[int] = None
-        match_by: Optional[str] = None
+        match_idx: int | None = None
+        match_by:  str | None = None
 
         if email and email in seen_email:
             match_idx = seen_email[email]

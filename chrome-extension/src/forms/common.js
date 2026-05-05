@@ -204,11 +204,36 @@
     for (const button of Array.from(doc.querySelectorAll("button"))) {
       const text = (button.textContent || "").trim();
       if (snippets.some((snippet) => text.includes(snippet))) {
-        button.click();
+        triggerButtonClick(button);
         return true;
       }
     }
     return false;
+  }
+
+  function isButtonEnabled(button) {
+    if (!button) {
+      return false;
+    }
+    return !button.disabled && !button.hasAttribute("disabled");
+  }
+
+  function triggerButtonClick(button) {
+    if (!button) {
+      return false;
+    }
+    button.focus();
+    for (const type of ["pointerdown", "mousedown", "pointerup", "mouseup", "click"]) {
+      button.dispatchEvent(new MouseEvent(type, {
+        bubbles: true,
+        cancelable: true,
+        view: window,
+      }));
+    }
+    if (isButtonEnabled(button)) {
+      button.click();
+    }
+    return true;
   }
 
   function sleep(ms) {
@@ -304,11 +329,13 @@
     findFormFrame,
     getElement,
     getFormDefinitionByType,
+    isButtonEnabled,
     manifestWarnings,
     selectControlValue,
     setCheckboxValue,
     setControlValue,
     sleep,
+    triggerButtonClick,
     uploadAttachmentFromJob,
     waitFor,
   };

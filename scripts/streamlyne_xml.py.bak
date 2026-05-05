@@ -278,7 +278,7 @@ def preprocess_lines(lines: list[str]) -> list[str]:
     return merged
 
 
-def detect_unsupported_multi_period_summary(lines: list[str]) -> Optional[str]:
+def detect_unsupported_multi_period_summary(lines: list[str]) -> str | None:
     period_header_count = max((len(PERIOD_TOKEN_RE.findall(line)) for line in lines), default=0)
     if period_header_count <= 1:
         return None
@@ -577,7 +577,7 @@ def parse_budget_pdf(lines: list[str], key_person_names: set[str]) -> BudgetData
     return budget
 
 
-def add_text(parent: etree._Element, tag: str, value: Optional[object]) -> etree._Element:
+def add_text(parent: etree._Element, tag: str, value: Optional[str | decimal.Decimal | int]) -> etree._Element:
     el = etree.SubElement(parent, q_rr(tag))
     if value is None:
         el.text = ""

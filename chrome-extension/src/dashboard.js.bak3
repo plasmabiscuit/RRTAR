@@ -147,8 +147,6 @@ const contactModalCancelBtn = document.querySelector("#contact-modal-cancel");
 let activeTab = normalizeFormType(new URL(location.href).searchParams.get("tab") || "keyperson");
 let currentState = null;
 let currentContactResults = [];
-let statusHideTimer = 0;
-const STATUS_TIMEOUT_MS = 5000;
 
 init();
 
@@ -338,220 +336,17 @@ function renderKeypersonManifest(manifest, preview) {
 }
 
 function renderBudgetManifest(manifest) {
-  if (!Array.isArray(manifest) || manifest.length === 0) {
-    return '<p class="empty-note">No budget manifest loaded yet.</p>';
-  }
-
-  function months(value) {
-    return value || "";
-  }
-
-  function secHdr(label) {
-    return `<tr class="bgt-sec-hdr"><td colspan="9">${escapeHtml(label)}</td></tr>`;
-  }
-
-  function dataRow({
-    name = "",
-    role = "",
-    cal = "",
-    acad = "",
-    summ = "",
-    pers = "",
-    salary = "",
-    fringe = "",
-    funds = "",
-    indent = 0,
-  }) {
-    const pad = 0.55 + indent * 0.8;
-    return `<tr class="bgt-data-row">
-      <td class="bgt-label" style="padding-left:${pad}rem">${escapeHtml(name)}</td>
-      <td class="bgt-detail">${escapeHtml(role)}</td>
-      <td class="bgt-num">${escapeHtml(cal)}</td>
-      <td class="bgt-num">${escapeHtml(acad)}</td>
-      <td class="bgt-num">${escapeHtml(summ)}</td>
-      <td class="bgt-num">${escapeHtml(pers)}</td>
-      <td class="bgt-amt">${escapeHtml(salary)}</td>
-      <td class="bgt-amt">${escapeHtml(fringe)}</td>
-      <td class="bgt-amt bgt-funds">${escapeHtml(funds)}</td>
-    </tr>`;
-  }
-
-  function totalRow(label, amount, className = "bgt-total-row") {
-    return `<tr class="${className}">
-      <td colspan="8" class="bgt-total-label">${escapeHtml(label)}</td>
-      <td class="bgt-amt bgt-funds">${escapeHtml(amount)}</td>
-    </tr>`;
-  }
-
-  const thead = `<thead><tr class="bgt-col-hdr">
-    <th class="bgt-label">Description</th>
-    <th class="bgt-detail">Role / Notes</th>
-    <th class="bgt-num">Cal Mo</th>
-    <th class="bgt-num">Acad Mo</th>
-    <th class="bgt-num">Sum Mo</th>
-    <th class="bgt-num"># Pers</th>
-    <th class="bgt-amt">Req Salary</th>
-    <th class="bgt-amt">Fringe</th>
-    <th class="bgt-amt">Funds Req</th>
-  </tr></thead>`;
-
-  const standardOtherPersonnel = [
-    ["post_doc_associates", "Post Doctoral Associates"],
-    ["graduate_students", "Graduate Students (Research Assistants)"],
-    ["undergraduate_students", "Undergraduate Students"],
-    ["secretarial_clerical", "Secretarial / Clerical"],
-  ];
-
   return manifest.map((entry, index) => {
     const org = entry.organization || {};
     const just = entry.budget_justification || {};
-    const justName = fileLabel(just.path || "");
     const periods = Array.isArray(entry.periods) ? entry.periods.map((period) => {
-      const periodIndex = period.period_index || "?";
-      const start = period.start_date || "";
-      const end = period.end_date || "";
-      const rows = [];
-
-      const secA = period.section_a || {};
-      rows.push(secHdr("A. SENIOR / KEY PERSONNEL"));
-      for (const kp of secA.key_persons || []) {
-        rows.push(dataRow({
-          name: `${kp.first_name || ""} ${kp.last_name || ""}`.trim(),
-          role: kp.project_role || "",
-          cal: months(kp.calendar_months),
-          acad: months(kp.academic_months),
-          summ: months(kp.summer_months),
-          salary: formatMoney(kp.requested_salary),
-          fringe: formatMoney(kp.fringe_benefits),
-          funds: formatMoney(kp.funds_requested),
-        }));
-      }
-      rows.push(totalRow("Section A Total", formatMoney(secA.total)));
-
-      const secB = period.section_b || {};
-      rows.push(secHdr("B. OTHER PERSONNEL"));
-      for (const [key, label] of standardOtherPersonnel) {
-        const item = secB[key];
-        if (item && (item.funds_requested || item.requested_salary)) {
-          rows.push(dataRow({
-            name: label,
-            cal: months(item.calendar_months),
-            acad: months(item.academic_months),
-            summ: months(item.summer_months),
-            pers: item.number_of_personnel || "",
-            salary: formatMoney(item.requested_salary),
-            fringe: formatMoney(item.fringe_benefits),
-            funds: formatMoney(item.funds_requested),
-          }));
-        }
-      }
-      for (const other of secB.other_personnel || []) {
-        rows.push(dataRow({
-          name: other.project_role || "Other Personnel",
-          cal: months(other.calendar_months),
-          acad: months(other.academic_months),
-          summ: months(other.summer_months),
-          pers: other.number_of_personnel || "",
-          salary: formatMoney(other.requested_salary),
-          fringe: formatMoney(other.fringe_benefits),
-          funds: formatMoney(other.funds_requested),
-        }));
-      }
-      rows.push(totalRow("Section B Total", formatMoney(secB.total_funds)));
-
-      const secC = period.section_c || {};
-      if ((secC.items || []).length || secC.total) {
-        rows.push(secHdr("C. EQUIPMENT"));
-        for (const item of secC.items || []) {
-          rows.push(dataRow({
-            name: item.description || item.item || "",
-            funds: formatMoney(item.cost || item.funds_requested),
-          }));
-        }
-        rows.push(totalRow("Section C Total", formatMoney(secC.total)));
-      }
-
-      const secD = period.section_d || {};
-      if (secD.total_travel_cost) {
-        rows.push(secHdr("D. TRAVEL"));
-        rows.push(dataRow({
-          name: "Total Travel Costs",
-          funds: formatMoney(secD.total_travel_cost),
-        }));
-      }
-
-      const secE = period.section_e || {};
-      if (secE.total_cost || secE.other_cost) {
-        rows.push(secHdr("E. PARTICIPANT / TRAINEE SUPPORT COSTS"));
-        if (secE.other_description || secE.other_cost) {
-          rows.push(dataRow({
-            name: secE.other_description || "Other Costs",
-            funds: formatMoney(secE.other_cost),
-          }));
-        }
-        rows.push(totalRow("Section E Total", formatMoney(secE.total_cost)));
-      }
-
-      const secF = period.section_f || {};
-      rows.push(secHdr("F. OTHER DIRECT COSTS"));
-      const directCostRows = [
-        ["Materials and Supplies", secF.materials_supplies],
-        ["Publication Costs", secF.publication_costs],
-        ["Consultant Services", secF.consultant_services],
-        ["ADP / Computer Services", secF.adp_computer_services],
-        ["Subawards / Consortium / Contractual", secF.subawards_consortium_contractual_costs],
-        ["Equipment / Facility Rental User Fees", secF.equipment_facility_rental_user_fees],
-        ["Alterations / Renovations", secF.alterations_renovations],
-      ];
-      for (const [label, value] of directCostRows) {
-        if (value) {
-          rows.push(dataRow({ name: label, funds: formatMoney(value) }));
-        }
-      }
-      for (const other of secF.other_items || []) {
-        rows.push(dataRow({
-          name: other.description || "Other",
-          funds: formatMoney(other.cost),
-        }));
-      }
-      rows.push(totalRow("Section F Total", formatMoney(secF.total)));
-
-      rows.push(totalRow("G. TOTAL DIRECT COSTS (A - F)", formatMoney(period.direct_costs), "bgt-subtotal-row"));
-
-      const secH = period.section_h || {};
-      rows.push(secHdr("H. INDIRECT COSTS"));
-      for (const indirect of secH.indirect_costs || []) {
-        const notes = [];
-        if (indirect.rate) notes.push(`Rate: ${indirect.rate}%`);
-        if (indirect.base) notes.push(`Base: ${formatMoney(indirect.base)}`);
-        rows.push(dataRow({
-          name: indirect.cost_type || "",
-          role: notes.join(" · "),
-          funds: formatMoney(indirect.fund_requested),
-        }));
-      }
-      if (secH.cognizant_agency) {
-        rows.push(dataRow({ name: `Cognizant Federal Agency: ${secH.cognizant_agency}` }));
-      }
-      rows.push(totalRow("Section H Total", formatMoney(secH.total)));
-
-      rows.push(totalRow("I. TOTAL DIRECT AND INDIRECT COSTS (G + H)", formatMoney(period.total_costs), "bgt-subtotal-row"));
-
-      const feeTotal = period.total_costs_fee;
-      if (feeTotal && feeTotal !== period.total_costs) {
-        rows.push(totalRow("TOTAL COSTS + FEE", formatMoney(feeTotal), "bgt-grand-total-row"));
-      }
-
-      return `<div class="budget-period-hdr">Period ${escapeHtml(String(periodIndex))}: ${escapeHtml(start)} – ${escapeHtml(end)}</div>
-        <div class="bgt-table-wrap">
-          <table class="bgt-table">${thead}<tbody>${rows.join("")}</tbody></table>
-        </div>`;
+      return `<div class="budget-period-hdr">Period ${escapeHtml(String(period.period_index || "?"))}: ${escapeHtml(period.start_date || "")} – ${escapeHtml(period.end_date || "")}</div>
+      <div class="sub-info">Direct Costs: ${escapeHtml(formatMoney(period.direct_costs))} · Total Costs: ${escapeHtml(formatMoney(period.total_costs))}</div>`;
     }).join("") : "";
-
     return `<div class="card budget-row-card">
       <div class="budget-org">${escapeHtml(org.name || `Budget source ${index + 1}`)}</div>
       <div class="sub-dim" style="font-size:.8rem">${escapeHtml(org.budget_type || "")}${org.uei ? ` &nbsp;|&nbsp; UEI: ${escapeHtml(org.uei)}` : ""}</div>
-      ${just.path ? `<div class="sub-info" style="font-size:.8rem;margin:.45rem 0">${icon("file", "icon-status")} Budget Justification: ${escapeHtml(justName)}</div>` : ""}
+      <div class="sub-info" style="font-size:.8rem;margin:.45rem 0">${icon("file", "icon-status")} Budget Justification: ${escapeHtml(fileLabel(just.path))}</div>
       <div class="file-link-btn">${renderAttachmentCell(index, "budget_justification", just.path || "", false)}</div>
       ${periods}
     </div>`;
@@ -831,7 +626,7 @@ async function runAutomate() {
     setStatus(`Detected ${detection.detection.formType}, but this dashboard tab is ${activeTab}. Switch tabs or open the correct Grants.gov form.`, "warn");
     return;
   }
-  setStatus(`Running ${TAB_DEFS[activeTab].automateStep} against the active Grants.gov tab...`, "", { sticky: true });
+  setStatus(`Running ${TAB_DEFS[activeTab].automateStep} against the active Grants.gov tab...`, "");
   const result = await chrome.tabs.sendMessage(tab.id, {
     type: "rrtar:autofill-manifest",
     payload,
@@ -844,7 +639,7 @@ async function runBackendPipeline(step) {
     setStatus(`Stage at least one PDF for ${TAB_DEFS[activeTab].title} before running ${step}.`, "warn");
     return;
   }
-  setStatus(`Running ${step} on the backend for ${TAB_DEFS[activeTab].title}...`, "", { sticky: true });
+  setStatus(`Running ${step} on the backend for ${TAB_DEFS[activeTab].title}...`, "");
   const result = await chrome.runtime.sendMessage({
     type: "rrtar:run-backend-pipeline",
     formType: activeTab,
@@ -963,9 +758,7 @@ function applyAttachmentPath(manifest, formType, entryIndex, kind, path) {
   }
 }
 
-function setStatus(message, kind, options = {}) {
-  window.clearTimeout(statusHideTimer);
-  statusHideTimer = 0;
+function setStatus(message, kind) {
   if (!message) {
     statusStrip.hidden = true;
     statusStrip.textContent = "";
@@ -975,14 +768,6 @@ function setStatus(message, kind, options = {}) {
   statusStrip.hidden = false;
   statusStrip.textContent = message;
   statusStrip.className = `status-strip ${kind || ""}`.trim();
-  if (!options.sticky) {
-    statusHideTimer = window.setTimeout(() => {
-      statusStrip.hidden = true;
-      statusStrip.textContent = "";
-      statusStrip.className = "status-strip";
-      statusHideTimer = 0;
-    }, STATUS_TIMEOUT_MS);
-  }
 }
 
 function isBackendPipelineStep(step) {

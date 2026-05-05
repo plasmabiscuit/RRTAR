@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 """
 Normalize extracted Performance Site XML files into performance_site_manifest.json
 and performance_site_manifest.xlsx.
@@ -8,7 +6,6 @@ and performance_site_manifest.xlsx.
 import hashlib
 import json
 from pathlib import Path
-from typing import Optional, Tuple
 
 from lxml import etree
 from openpyxl import Workbook
@@ -24,21 +21,21 @@ FORM_NS = "http://apply.grants.gov/forms/PerformanceSite_4_0-V4.0"
 GLOB_LIB_NS = "http://apply.grants.gov/system/GlobalLibrary-V2.0"
 
 
-def sha1_b64(path: Path) -> Optional[str]:
+def sha1_b64(path: Path) -> str | None:
     if not path or not path.exists():
         return None
     import base64
     return base64.b64encode(hashlib.sha1(path.read_bytes()).digest()).decode()
 
 
-def _t(el: Optional[etree._Element], tag: str, ns: str = FORM_NS) -> str:
+def _t(el: etree._Element | None, tag: str, ns: str = FORM_NS) -> str:
     if el is None:
         return ""
     child = el.find(f"{{{ns}}}{tag}")
     return (child.text or "").strip() if child is not None else ""
 
 
-def _addr(el: Optional[etree._Element], tag: str) -> str:
+def _addr(el: etree._Element | None, tag: str) -> str:
     return _t(el, tag, GLOB_LIB_NS)
 
 
@@ -64,7 +61,7 @@ def _parse_site(site_el: etree._Element) -> dict:
     }
 
 
-def _resolve_attachment(stem: str) -> Tuple[Optional[str], Optional[str]]:
+def _resolve_attachment(stem: str) -> tuple[str | None, str | None]:
     if ATT_DIR.is_dir():
         for p in sorted(ATT_DIR.iterdir()):
             if p.stem.startswith(stem):

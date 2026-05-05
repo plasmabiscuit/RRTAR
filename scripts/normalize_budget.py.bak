@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 """
 Normalize extracted R&R Budget XML files into budget_manifest.json and budget_manifest.xlsx.
 
@@ -13,7 +11,6 @@ import json
 import os
 import sys
 from pathlib import Path
-from typing import Optional, Tuple
 
 BASE = Path(__file__).resolve().parents[1]
 XML_DIR  = BASE / "extracted-budget-xml"
@@ -43,21 +40,21 @@ FORM_NS     = "http://apply.grants.gov/forms/RR_Budget_3_0-V3.0"
 GLOB_LIB_NS = "http://apply.grants.gov/system/GlobalLibrary-V2.0"
 
 
-def sha1_b64(path: Path) -> Optional[str]:
+def sha1_b64(path: Path) -> str | None:
     if not path or not path.exists():
         return None
     import base64
     return base64.b64encode(hashlib.sha1(path.read_bytes()).digest()).decode()
 
 
-def _t(el: Optional[etree._Element], tag: str, ns: str = FORM_NS) -> str:
+def _t(el: etree._Element | None, tag: str, ns: str = FORM_NS) -> str:
     if el is None:
         return ""
     child = el.find(f"{{{ns}}}{tag}")
     return (child.text or "").strip() if child is not None else ""
 
 
-def _parse_personnel_row(el: Optional[etree._Element]) -> dict:
+def _parse_personnel_row(el: etree._Element | None) -> dict:
     if el is None:
         return {}
     return {
@@ -265,7 +262,7 @@ def _parse_period(year_el: etree._Element, index: int) -> dict:
     }
 
 
-def _resolve_justification(stem: str) -> Tuple[Optional[str], Optional[str]]:
+def _resolve_justification(stem: str) -> tuple[str | None, str | None]:
     if ATT_DIR.is_dir():
         for p in sorted(ATT_DIR.iterdir()):
             if p.stem.startswith(stem) and "BudgetJustification" in p.stem:

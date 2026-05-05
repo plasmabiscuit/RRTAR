@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 """
 Extract XFA datasets XML and embedded attachments from subrecipient R&R Key Person PDFs.
 
@@ -15,7 +13,6 @@ import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
 
 import pikepdf
 from lxml import etree
@@ -35,7 +32,7 @@ GLOB_LIB_NS = "http://apply.grants.gov/system/GlobalLibrary-V2.0"
 _DESC_RECORD_RE = re.compile(r"\.(PDPI|KeyPerson)\[(\d+)\]\.")
 
 # Maps (record_type, slot_suffix) → short human label for the output filename
-_SLOT_LABELS: Dict[Tuple[str, str], str] = {
+_SLOT_LABELS: dict[tuple[str, str], str] = {
     ("PDPI",      "mandatoryFile0"): "Biosketch",
     ("PDPI",      "optionalFile0"):  "Current_Pending",
     ("KeyPerson", "optionalFile0"):  "Biosketch",
@@ -43,7 +40,7 @@ _SLOT_LABELS: Dict[Tuple[str, str], str] = {
 }
 
 
-def _slot_label(desc: str) -> Optional[str]:
+def _slot_label(desc: str) -> str | None:
     """Return 'Biosketch' or 'Current_Pending' from a /Desc string, or None."""
     m = _DESC_RECORD_RE.search(desc)
     if not m:
@@ -62,7 +59,7 @@ def safe_filename(s: str) -> str:
     return re.sub(r"[^\w.\-\[\]]", "_", s)
 
 
-def _get_xfa_array(pdf: pikepdf.Pdf) -> List[Tuple[str, bytes]]:
+def _get_xfa_array(pdf: pikepdf.Pdf) -> list[bytes]:
     """Return a list of (name, bytes) tuples from the XFA array, or a single-item list."""
     xfa = pdf.Root.AcroForm.XFA
     if isinstance(xfa, pikepdf.Stream):
@@ -79,7 +76,7 @@ def _get_xfa_array(pdf: pikepdf.Pdf) -> List[Tuple[str, bytes]]:
     return packets
 
 
-def _find_datasets(packets: List[Tuple[str, bytes]]) -> bytes:
+def _find_datasets(packets: list[tuple[str, bytes]]) -> bytes:
     """Return the bytes of the 'datasets' XFA packet."""
     # Try by name first
     for name, data in packets:
@@ -132,9 +129,9 @@ def _extract_form_element(datasets_bytes: bytes) -> etree._Element:
     return chosen
 
 
-def _build_person_name_map(form_el: etree._Element) -> Dict[str, str]:
+def _build_person_name_map(form_el: etree._Element) -> dict[str, str]:
     """Return {"PDPI[0]": "Anton", "KeyPerson[0]": "Zhan", ...} for last-name prefixing."""
-    name_map: Dict[str, str] = {}
+    name_map: dict[str, str] = {}
     form_ns = etree.QName(form_el.tag).namespace
     kp_idx = 0
     for child in form_el:
@@ -157,11 +154,8 @@ def _build_person_name_map(form_el: etree._Element) -> Dict[str, str]:
     return name_map
 
 
-def _extract_embedded_files(
-    pdf: pikepdf.Pdf,
-    att_dir: Path,
-    name_map: Optional[Dict[str, str]] = None,
-) -> List[dict]:
+def _extract_embedded_files(pdf: pikepdf.Pdf, att_dir: Path,
+                             name_map: dict[str, str] | None = None) -> list[dict]:
     """Extract all embedded files from /Root/Names/EmbeddedFiles/Names.
 
     Filenames are prefixed with the person's last name when name_map is provided,
@@ -226,7 +220,7 @@ def _extract_embedded_files(
     return results
 
 
-def _count_persons(form_el: etree._Element) -> Tuple[int, int]:
+def _count_persons(form_el: etree._Element) -> tuple[int, int]:
     pdpi_count = 0
     kp_count = 0
     for child in form_el:
@@ -275,7 +269,7 @@ def extract_pdf(pdf_path: Path) -> dict:
     return record
 
 
-def run(input_dir: Optional[Path] = None) -> None:
+def run(input_dir: Path | None = None) -> None:
     input_dir = input_dir or (BASE / "input-pdfs")
     XML_DIR.mkdir(exist_ok=True)
     ATT_DIR.mkdir(exist_ok=True)

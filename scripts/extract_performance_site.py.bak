@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 """
 Extract XFA datasets XML and embedded attachments from Project/Performance Site PDFs.
 
@@ -15,7 +13,6 @@ import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import List, Optional, Tuple
 
 import pikepdf
 from lxml import etree
@@ -40,7 +37,7 @@ def safe_filename(s: str) -> str:
     return re.sub(r"[^\w.\-\[\]]", "_", s)
 
 
-def _get_xfa_array(pdf: pikepdf.Pdf) -> List[Tuple[str, bytes]]:
+def _get_xfa_array(pdf: pikepdf.Pdf) -> list[tuple[str, bytes]]:
     xfa = pdf.Root.AcroForm.XFA
     if isinstance(xfa, pikepdf.Stream):
         return [("single", bytes(xfa.read_bytes()))]
@@ -53,7 +50,7 @@ def _get_xfa_array(pdf: pikepdf.Pdf) -> List[Tuple[str, bytes]]:
     ]
 
 
-def _find_datasets(packets: List[Tuple[str, bytes]]) -> bytes:
+def _find_datasets(packets: list[tuple[str, bytes]]) -> bytes:
     for name, data in packets:
         if name == "datasets":
             return data
@@ -74,7 +71,7 @@ def _extract_form_element(datasets_bytes: bytes) -> etree._Element:
     raise ValueError(f"Element '{FORM_LOCAL}' not found in datasets packet")
 
 
-def _extract_embedded_files(pdf: pikepdf.Pdf, att_dir: Path, stem: str) -> List[dict]:
+def _extract_embedded_files(pdf: pikepdf.Pdf, att_dir: Path, stem: str) -> list[dict]:
     results = []
     try:
         names_tree = pdf.Root.Names.EmbeddedFiles.Names
@@ -155,7 +152,7 @@ def extract_pdf(pdf_path: Path) -> dict:
     return record
 
 
-def run(input_dir: Optional[Path] = None) -> None:
+def run(input_dir: Path | None = None) -> None:
     input_dir = input_dir or (BASE / "input-performance-site-pdfs")
     XML_DIR.mkdir(exist_ok=True)
     ATT_DIR.mkdir(exist_ok=True)

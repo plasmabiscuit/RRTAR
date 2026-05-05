@@ -71,7 +71,10 @@
       return;
     }
     for (let attempt = 0; attempt < 6; attempt += 1) {
-      const clicked = common.clickFirstButtonByText(document, ["Add Period"]);
+      const clicked = clickFirstMatchingButton([
+        "#addBudgetPeriod button",
+        "button[data-bind*='addBudgetPeriod']",
+      ], ["Add Period"]);
       if (!clicked) {
         throw new Error(`Add Period button not found for period ${periodIndex}.`);
       }
@@ -91,7 +94,9 @@
     if (periodIndex > 1 && existingRows < targetRows) {
       for (let idx = existingRows + 1; idx <= targetRows; idx += 1) {
         await openModal(addButtonId);
-        await closeModal();
+        await closeModal({
+          expectedRowSelector: `#requestedSalaryA${periodIndex}_${idx}`,
+        });
       }
       existingRows = common.countExisting(document, `#requestedSalaryA${periodIndex}_{N}`, 12);
     }
@@ -99,9 +104,12 @@
     for (let personIndex = 0; personIndex < persons.length; personIndex += 1) {
       const rowIndex = periodIndex === 1 ? personIndex + 1 : personIndex + 2;
       if (periodIndex === 1) {
-        await openModal(addButtonId);
+        await openModal(addButtonId, periodIndex, rowIndex);
         fillModalPerson(persons[personIndex], stats);
-        await closeModal();
+        await closeModal({
+          expectedRowSelector: `#requestedSalaryA${periodIndex}_${rowIndex}`,
+        });
+        await common.sleep(100);
       } else {
         fillSectionARow(periodIndex, rowIndex, persons[personIndex], stats);
       }
@@ -119,20 +127,34 @@
     }
   }
 
-  async function openModal(buttonId) {
+  async function openModal(buttonId, periodIndex, rowIndex) {
     const button = document.getElementById(buttonId);
     if (!button) {
       throw new Error(`Key Person add button not found: ${buttonId}`);
     }
-    button.click();
-    await common.waitFor(() => {
-      const modal = document.getElementById(MODAL_ID);
-      return modal && (modal.classList.contains("in") || /display:\s*block/i.test(modal.getAttribute("style") || ""));
-    }, 8000, 150);
-    await common.sleep(200);
+    const rowSelector = periodIndex && rowIndex ? `#requestedSalaryA${periodIndex}_${rowIndex}` : "";
+    for (let attempt = 1; attempt <= 3; attempt += 1) {
+      button.click();
+      try {
+        await common.waitFor(() => {
+          const modal = document.getElementById(MODAL_ID);
+          return modal && (modal.classList.contains("in") || /display:\s*block/i.test(modal.getAttribute("style") || ""));
+        }, 8000, 150);
+        await common.sleep(400);
+        return;
+      } catch (error) {
+        if (rowSelector && document.querySelector(rowSelector)) {
+          return;
+        }
+        if (attempt === 3) {
+          throw new Error(`Senior Key Person modal did not open for period ${periodIndex || "?"} row ${rowIndex || "?"}: ${error?.message || error}`);
+        }
+        await common.sleep(350);
+      }
+    }
   }
 
-  async function closeModal() {
+  async function closeModal(options = {}) {
     const button = document.querySelector(".modal-footer .btn-primary");
     if (!button) {
       throw new Error("Budget modal save button not found.");
@@ -142,7 +164,10 @@
       const modal = document.getElementById(MODAL_ID);
       return modal && !modal.classList.contains("in");
     }, 8000, 150);
-    await common.sleep(150);
+    if (options.expectedRowSelector) {
+      await common.waitFor(() => document.querySelector(options.expectedRowSelector), 8000, 150);
+    }
+    await common.sleep(300);
   }
 
   function fillModalPerson(person, stats) {
@@ -166,9 +191,7 @@
     };
 
     for (const [id, value] of Object.entries(fields)) {
-      const result = id === "projectRole"
-        ? common.selectControlValue(document, id, value)
-        : common.setControlValue(document, id, value);
+      const result = common.setControlValue(document, id, value);
       common.accumulate(result, stats, "fields", id);
     }
   }
@@ -199,7 +222,7 @@
     const neededDynamic = 4 + otherRows.length;
 
     for (let rowIndex = Math.max(existingDynamic + 1, 5); rowIndex <= neededDynamic; rowIndex += 1) {
-      const clicked = common.clickFirstButtonByText(document, ["Add Additional Other Personnel"]);
+      const clicked = clickPeriodButton(periodIndex, ["Add Additional Other Personnel"]);
       if (!clicked) {
         stats.errors.push(`Could not add Other Personnel row ${rowIndex} for period ${periodIndex}.`);
         break;
@@ -234,12 +257,11 @@
     for (let idx = 0; idx < items.length; idx += 1) {
       const rowIndex = idx + 1;
       if (rowIndex > 1 && !document.getElementById(`equipmentItem${periodIndex}_${rowIndex}`)) {
-        const clicked = common.clickFirstButtonByText(document, ["Add Additional Equipment"]);
+        const clicked = await ensureEquipmentRow(periodIndex, rowIndex);
         if (!clicked) {
           stats.errors.push(`Could not add equipment row ${rowIndex} for period ${periodIndex}.`);
           continue;
         }
-        await common.waitFor(() => document.getElementById(`equipmentItem${periodIndex}_${rowIndex}`), 6000, 120);
       }
       writeFieldMap({
         [`equipmentItem${periodIndex}_${rowIndex}`]: items[idx]?.item || "",
@@ -308,7 +330,7 @@
     for (let idx = 0; idx < rows.length; idx += 1) {
       const rowIndex = idx + 1;
       if (rowIndex > 1 && !document.getElementById(`indirectCostType${periodIndex}_${rowIndex}`)) {
-        const clicked = common.clickFirstButtonByText(document, ["Add Additional Indirect Cost"]);
+        const clicked = clickPeriodButton(periodIndex, ["Add Additional Indirect Cost"]);
         if (!clicked) {
           stats.errors.push(`Could not add indirect cost row ${rowIndex} for period ${periodIndex}.`);
           continue;
@@ -419,5 +441,83 @@
       const result = common.setControlValue(document, id, value, options);
       common.accumulate(result, stats, "fields", id);
     }
+  }
+
+  function clickFirstMatchingButton(selectors, textSnippets = []) {
+    for (const selector of selectors) {
+      const button = document.querySelector(selector);
+      if (button) {
+        common.triggerButtonClick(button);
+        return true;
+      }
+    }
+    if (textSnippets.length) {
+      return common.clickFirstButtonByText(document, textSnippets);
+    }
+    return false;
+  }
+
+  function clickPeriodButton(periodIndex, textSnippets) {
+    const container = document.getElementById(`BudgetPeriod${periodIndex}`);
+    if (container) {
+      for (const button of Array.from(container.querySelectorAll("button"))) {
+        const text = (button.textContent || "").trim();
+        if (textSnippets.some((snippet) => text.includes(snippet))) {
+          common.triggerButtonClick(button);
+          return true;
+        }
+      }
+    }
+    return common.clickFirstButtonByText(document, textSnippets);
+  }
+
+  function clickScopedButton(periodIndex, selectors, textSnippets = []) {
+    const container = document.getElementById(`BudgetPeriod${periodIndex}`);
+    if (container) {
+      for (const selector of selectors) {
+        const button = container.querySelector(selector);
+        if (button) {
+          common.triggerButtonClick(button);
+          return true;
+        }
+      }
+    }
+    return clickFirstMatchingButton(selectors, textSnippets);
+  }
+
+  async function ensureEquipmentRow(periodIndex, rowIndex) {
+    const rowId = `equipmentItem${periodIndex}_${rowIndex}`;
+    if (document.getElementById(rowId)) {
+      return true;
+    }
+    for (let attempt = 1; attempt <= 3; attempt += 1) {
+      const container = document.getElementById(`BudgetPeriod${periodIndex}`);
+      const boundButton = container?.querySelector("button[data-bind*='addEquipment.bind($root, listC)'], button[data-bind*='addEquipment.bind']");
+      if (boundButton) {
+        await common.waitFor(() => common.isButtonEnabled(boundButton), 4000, 100);
+      }
+      const clicked = clickScopedButton(
+        periodIndex,
+        [
+          "button[data-bind*='addEquipment.bind($root, listC)']",
+          "button[data-bind*='addEquipment.bind']",
+        ],
+        ["Add Additional Equipment"],
+      );
+      if (!clicked) {
+        return false;
+      }
+      try {
+        await common.waitFor(() => document.getElementById(rowId), 8000, 150);
+        await common.sleep(150);
+        return true;
+      } catch (error) {
+        if (attempt === 3) {
+          return false;
+        }
+        await common.sleep(250);
+      }
+    }
+    return false;
   }
 })();

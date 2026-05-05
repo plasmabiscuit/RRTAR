@@ -8,30 +8,18 @@ const DEFAULT_STATE = {
 };
 
 const STATE_KEY = "rrtar-dashboard-state-v1";
-const SETTINGS_KEY = "rrtar-settings-v1";
 const DB_NAME = "rrtar-dashboard-files";
 const DB_VERSION = 1;
 const STORE_FILES = "files";
 const CONTACTS_DATA_URL = chrome.runtime.getURL("assets/data/contacts.json");
 const CONTACT_SEARCH_LIMIT = 24;
-const BACKEND_POLL_MS = 2000;
-const BACKEND_TIMEOUT_MS = 120000;
-
-const DEFAULT_SETTINGS = {
-  backendBaseUrl: "https://150.230.162.179.sslip.io",
-  apiKey: "",
-  agency: "default",
-};
 
 let contactsCache = null;
 
 chrome.runtime.onInstalled.addListener(async () => {
-  const current = await chrome.storage.local.get([STATE_KEY, SETTINGS_KEY]);
+  const current = await chrome.storage.local.get(STATE_KEY);
   if (!current[STATE_KEY]) {
     await chrome.storage.local.set({ [STATE_KEY]: DEFAULT_STATE });
-  }
-  if (!current[SETTINGS_KEY]) {
-    await chrome.storage.local.set({ [SETTINGS_KEY]: DEFAULT_SETTINGS });
   }
 });
 
@@ -53,10 +41,8 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
     "rrtar:fetch-attachment": () => fetchAttachment(message.path),
     "rrtar:open-dashboard": () => openDashboard(message.formType),
     "rrtar:search-contacts": () => searchContacts(message.query, message.limit),
-    "rrtar:get-settings": () => getSettings(),
-    "rrtar:set-settings": () => setSettings(message.settings),
-    "rrtar:test-backend": () => testBackend(),
-    "rrtar:run-backend-pipeline": () => runBackendPipeline(message.formType),
+    "rrtar:get-settings": async () => ({ ok: true, settings: {} }),
+    "rrtar:set-settings": async () => ({ ok: true }),
   };
 
   const handler = handlers[message.type];
@@ -74,9 +60,8 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
 
 async function getDashboardState(formType) {
   const state = await readState();
-  const settings = await readSettings();
   if (!formType) {
-    return { ok: true, state, settings };
+    return { ok: true, state };
   }
   const files = await listFilesForForm(formType);
   return {
@@ -84,10 +69,8 @@ async function getDashboardState(formType) {
     formType,
     activeTab: state.activeTab,
     manifest: state.forms?.[formType]?.manifest || [],
-    backend: state.forms?.[formType]?.backend || null,
     files,
     preview: buildPreview(formType, state.forms?.[formType]?.manifest || []),
-    settings,
   };
 }
 
@@ -101,10 +84,7 @@ async function setDashboardTab(tab) {
 async function saveManifest(formType, manifest) {
   const cleanFormType = normalizeFormType(formType);
   const state = await readState();
-  state.forms[cleanFormType] = {
-    manifest: Array.isArray(manifest) ? manifest : [],
-    backend: state.forms?.[cleanFormType]?.backend || null,
-  };
+  state.forms[cleanFormType] = { manifest: Array.isArray(manifest) ? manifest : [] };
   state.activeTab = cleanFormType;
   await writeState(state);
   return {
@@ -175,21 +155,20 @@ async function prepareAutofill(formType) {
 
 async function fetchAttachment(path) {
   const fileId = parsePseudoFilePath(path);
-  if (fileId) {
-    const record = await idbGet(fileId);
-    if (!record?.blob) {
-      return { ok: false, error: "Attachment file not found." };
-    }
-    const bytes = new Uint8Array(await record.blob.arrayBuffer());
-    return {
-      ok: true,
-      fileName: record.name || "attachment.pdf",
-      mimeType: record.mimeType || "application/octet-stream",
-      base64: uint8ArrayToBase64(bytes),
-    };
+  if (!fileId) {
+    return { ok: false, error: "Attachment reference is not a clientside file id." };
   }
-
-  return fetchBackendArtifactAttachment(path);
+  const record = await idbGet(fileId);
+  if (!record?.blob) {
+    return { ok: false, error: "Attachment file not found." };
+  }
+  const bytes = new Uint8Array(await record.blob.arrayBuffer());
+  return {
+    ok: true,
+    fileName: record.name || "attachment.pdf",
+    mimeType: record.mimeType || "application/octet-stream",
+    base64: uint8ArrayToBase64(bytes),
+  };
 }
 
 async function openDashboard(formType) {
@@ -197,108 +176,6 @@ async function openDashboard(formType) {
   const url = chrome.runtime.getURL(`src/dashboard.html?tab=${encodeURIComponent(cleanFormType)}`);
   await chrome.tabs.create({ url });
   return { ok: true };
-}
-
-async function getSettings() {
-  return { ok: true, settings: await readSettings() };
-}
-
-async function setSettings(settings) {
-  const merged = mergeSettings(settings);
-  await chrome.storage.local.set({ [SETTINGS_KEY]: merged });
-  return { ok: true, settings: merged };
-}
-
-async function testBackend() {
-  const settings = await readSettings();
-  const baseUrl = requireBackendBaseUrl(settings);
-  const health = await authorizedFetchJson(settings, `${baseUrl}/health`, { requireApiKey: false });
-  const reference = await authorizedFetchJson(settings, `${baseUrl}/api/config/reference`);
-  return {
-    ok: true,
-    health,
-    reference,
-    settings: {
-      backendBaseUrl: settings.backendBaseUrl,
-      agency: settings.agency,
-      apiKeyPresent: Boolean(settings.apiKey),
-    },
-  };
-}
-
-async function runBackendPipeline(formType) {
-  const cleanFormType = normalizeFormType(formType);
-  const settings = await readSettings();
-  const baseUrl = requireBackendBaseUrl(settings);
-  if (!settings.apiKey.trim()) {
-    throw new Error("API key is not configured. Open extension settings first.");
-  }
-
-  const sourceFiles = await listFileRecordsForForm(cleanFormType, "source-pdf");
-  if (!sourceFiles.length) {
-    throw new Error("No source PDFs are staged for this tab.");
-  }
-
-  const endpoint = getBackendJobEndpoint(cleanFormType);
-  const formData = new FormData();
-  for (const record of sourceFiles) {
-    formData.append("files", new File([record.blob], record.name || "upload.pdf", {
-      type: record.mimeType || "application/pdf",
-      lastModified: Date.now(),
-    }));
-  }
-  if (cleanFormType === "keyperson") {
-    formData.append("agency", settings.agency);
-  }
-
-  const createResponse = await fetch(`${baseUrl}${endpoint}`, {
-    method: "POST",
-    headers: {
-      "x-api-key": settings.apiKey,
-    },
-    body: formData,
-  });
-  const job = await parseJsonResponse(createResponse, "Could not create backend job.");
-  if (!createResponse.ok) {
-    throw new Error(job?.detail || job?.error || "Backend job creation failed.");
-  }
-
-  const finalJob = await pollBackendJob(settings, baseUrl, job.id);
-  if (finalJob.status !== "completed") {
-    throw new Error(finalJob.error_text || `Backend job ended with status ${finalJob.status}.`);
-  }
-
-  const manifest = await authorizedFetchJson(settings, `${baseUrl}/api/jobs/${job.id}/manifest`);
-  let validation = null;
-  try {
-    validation = await authorizedFetchJson(settings, `${baseUrl}/api/jobs/${job.id}/validation`);
-  } catch {
-    validation = null;
-  }
-
-  const state = await readState();
-  state.forms[cleanFormType] = {
-    manifest: Array.isArray(manifest) ? manifest : [],
-    backend: {
-      jobId: job.id,
-      status: finalJob.status,
-      jobType: finalJob.job_type,
-      completedAt: finalJob.completed_at || null,
-      result: finalJob.result || null,
-      validation,
-    },
-  };
-  state.activeTab = cleanFormType;
-  await writeState(state);
-
-  return {
-    ok: true,
-    formType: cleanFormType,
-    job: finalJob,
-    manifest: state.forms[cleanFormType].manifest,
-    backend: state.forms[cleanFormType].backend,
-    preview: buildPreview(cleanFormType, state.forms[cleanFormType].manifest),
-  };
 }
 
 async function searchContacts(query, limit) {
@@ -335,52 +212,6 @@ async function writeState(state) {
   await chrome.storage.local.set({ [STATE_KEY]: mergeState(state) });
 }
 
-async function readSettings() {
-  const raw = await chrome.storage.local.get(SETTINGS_KEY);
-  return mergeSettings(raw[SETTINGS_KEY] || {});
-}
-
-async function fetchBackendArtifactAttachment(path) {
-  const cleanPath = String(path || "").trim();
-  if (!cleanPath) {
-    return { ok: false, error: "Attachment path is required." };
-  }
-
-  const settings = await readSettings();
-  const baseUrl = settings.backendBaseUrl.trim();
-  if (!baseUrl) {
-    return { ok: false, error: "Attachment reference is not a clientside file id, and backend base URL is not configured." };
-  }
-
-  const state = await readState();
-  const candidateJobIds = Object.values(state.forms || {})
-    .map((formState) => formState?.backend?.jobId || "")
-    .filter(Boolean);
-
-  for (const jobId of candidateJobIds) {
-    const response = await fetch(
-      `${baseUrl}/api/jobs/${encodeURIComponent(jobId)}/artifacts/file?path=${encodeURIComponent(cleanPath)}`,
-      {
-        method: "GET",
-        headers: settings.apiKey.trim() ? { "x-api-key": settings.apiKey } : {},
-      },
-    );
-    if (!response.ok) {
-      continue;
-    }
-    const blob = await response.blob();
-    const bytes = new Uint8Array(await blob.arrayBuffer());
-    return {
-      ok: true,
-      fileName: basename(cleanPath),
-      mimeType: blob.type || "application/octet-stream",
-      base64: uint8ArrayToBase64(bytes),
-    };
-  }
-
-  return { ok: false, error: `Attachment file not found for path: ${cleanPath}` };
-}
-
 function mergeState(state) {
   const merged = JSON.parse(JSON.stringify(DEFAULT_STATE));
   if (state && typeof state === "object") {
@@ -389,20 +220,7 @@ function mergeState(state) {
       if (Array.isArray(state.forms?.[formType]?.manifest)) {
         merged.forms[formType].manifest = state.forms[formType].manifest;
       }
-      if (state.forms?.[formType]?.backend && typeof state.forms[formType].backend === "object") {
-        merged.forms[formType].backend = state.forms[formType].backend;
-      }
     }
-  }
-  return merged;
-}
-
-function mergeSettings(settings) {
-  const merged = { ...DEFAULT_SETTINGS };
-  if (settings && typeof settings === "object") {
-    merged.backendBaseUrl = normalizeBackendBaseUrl(settings.backendBaseUrl || merged.backendBaseUrl);
-    merged.apiKey = String(settings.apiKey || merged.apiKey).trim();
-    merged.agency = String(settings.agency || merged.agency).trim() || "default";
   }
   return merged;
 }
@@ -423,74 +241,6 @@ async function loadContacts() {
     return a.localeCompare(b);
   });
   return contactsCache;
-}
-
-function getBackendJobEndpoint(formType) {
-  if (formType === "budget") return "/api/jobs/budget";
-  if (formType === "performance-site") return "/api/jobs/performance-site";
-  return "/api/jobs/keyperson";
-}
-
-function requireBackendBaseUrl(settings) {
-  const baseUrl = normalizeBackendBaseUrl(settings.backendBaseUrl);
-  if (!baseUrl) {
-    throw new Error("Backend base URL is not configured. Open extension settings first.");
-  }
-  return baseUrl;
-}
-
-function normalizeBackendBaseUrl(value) {
-  const text = String(value || "").trim();
-  return text.replace(/\/+$/, "");
-}
-
-async function pollBackendJob(settings, baseUrl, jobId) {
-  const started = Date.now();
-  while (Date.now() - started < BACKEND_TIMEOUT_MS) {
-    const job = await authorizedFetchJson(settings, `${baseUrl}/api/jobs/${jobId}`);
-    if (job?.status === "completed" || job?.status === "failed") {
-      return job;
-    }
-    await sleep(BACKEND_POLL_MS);
-  }
-  throw new Error(`Timed out waiting for backend job ${jobId}.`);
-}
-
-async function authorizedFetchJson(settings, url, options = {}) {
-  const requireApiKey = options.requireApiKey !== false;
-  const headers = new Headers(options.headers || {});
-  if (requireApiKey) {
-    if (!settings.apiKey.trim()) {
-      throw new Error("API key is not configured.");
-    }
-    headers.set("x-api-key", settings.apiKey);
-  }
-  const response = await fetch(url, {
-    method: options.method || "GET",
-    headers,
-    body: options.body,
-  });
-  const payload = await parseJsonResponse(response, `Request failed: ${url}`);
-  if (!response.ok) {
-    throw new Error(payload?.detail || payload?.error || `${response.status} ${response.statusText}`);
-  }
-  return payload;
-}
-
-async function parseJsonResponse(response, fallbackMessage) {
-  const text = await response.text();
-  if (!text) {
-    return {};
-  }
-  try {
-    return JSON.parse(text);
-  } catch {
-    throw new Error(fallbackMessage || text);
-  }
-}
-
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function rankContacts(contacts, query) {
@@ -703,12 +453,6 @@ async function listFilesForForm(formType) {
   const cleanFormType = normalizeFormType(formType);
   const files = await idbList(cleanFormType);
   return files.map(serializeFileRecord);
-}
-
-async function listFileRecordsForForm(formType, role = "") {
-  const cleanFormType = normalizeFormType(formType);
-  const files = await idbList(cleanFormType);
-  return role ? files.filter((file) => file.role === role) : files;
 }
 
 function openDb() {

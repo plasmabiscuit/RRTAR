@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 """
 Extract XFA datasets XML and embedded attachments from R&R Budget PDFs.
 
@@ -338,7 +336,7 @@ def extract_pdf(pdf_path: Path) -> dict:
     return record
 
 
-def run(input_dir: Optional[Path] = None) -> None:
+def run(input_dir: Path | None = None) -> None:
     input_dir = input_dir or (BASE / "input-budget-pdfs")
     XML_DIR.mkdir(exist_ok=True)
     ATT_DIR.mkdir(exist_ok=True)

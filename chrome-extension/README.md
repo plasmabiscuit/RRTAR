@@ -31,6 +31,7 @@ Current v1 behavior:
 
 - detects supported Grants.gov forms by iframe URL pattern
 - provides a full-page dashboard inside the extension for managing manifests and uploaded files
+- bundles `contacts.json` inside the extension and can append Key Person entries directly from local contact search
 - keeps the popup as a thin execution surface
 - previews the detected form and current stored manifest summary in the popup
 - hard-blocks autofill when the loaded manifest form does not match the detected Grants.gov form
@@ -47,4 +48,5 @@ Known v1 constraints:
 
 - PDF parsing/normalization has not been ported yet; manifests are currently imported as JSON
 - the extension dashboard is the source of truth for manifest editing and pipeline state
+- contact-derived Key Person entries still require review for role, address, and attachments before automate
 - no auto-save is performed after fill

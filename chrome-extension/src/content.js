@@ -50,14 +50,27 @@
       if (data.formType && detection.formType !== data.formType) {
         return;
       }
-      runAutofillInCurrentFrame(data.payload).then((result) => {
-        window.top.postMessage({
-          source: "rrtar-extension",
-          type: "rrtar:iframe-autofill-result",
-          requestId: data.requestId,
-          result,
-        }, "*");
-      });
+      runAutofillInCurrentFrame(data.payload)
+        .then((result) => {
+          window.top.postMessage({
+            source: "rrtar-extension",
+            type: "rrtar:iframe-autofill-result",
+            requestId: data.requestId,
+            result,
+          }, "*");
+        })
+        .catch((error) => {
+          window.top.postMessage({
+            source: "rrtar-extension",
+            type: "rrtar:iframe-autofill-result",
+            requestId: data.requestId,
+            result: {
+              ok: false,
+              error: error?.message || String(error),
+              details: error?.stack ? { stack: String(error.stack) } : undefined,
+            },
+          }, "*");
+        });
     }
   });
 
