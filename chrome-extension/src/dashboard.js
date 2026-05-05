@@ -133,6 +133,23 @@ const TAB_DEFS = {
   },
 };
 
+const KEYPERSON_ROLE_OPTIONS = [
+  "",
+  "PD/PI",
+  "Co-PD/PI",
+  "Faculty",
+  "Post Doctoral",
+  "Post Doctoral Associate",
+  "Post Doctoral Scholar",
+  "Other Professional",
+  "Graduate Student",
+  "Undergraduate Student",
+  "Technician",
+  "Consultant",
+  "Co-Investigator",
+  "Other (Specify)",
+];
+
 const tabBar = document.querySelector("#tab-bar");
 const appMain = document.querySelector("#app-main");
 const statusStrip = document.querySelector("#status-strip");
@@ -322,19 +339,29 @@ function renderKeypersonManifest(manifest, preview) {
     const attach = entry.attachments || {};
     const bio = attach.biosketch?.path || "";
     const sup = attach.current_pending_support?.path || "";
+    const roleValue = normalizeProjectRoleValue(person.project_role || "");
+    const roleOptions = buildKeypersonRoleOptions(roleValue).map((role) => (
+      `<option value="${escapeAttr(role)}"${role === roleValue ? " selected" : ""}>${escapeHtml(role || "— select role —")}</option>`
+    )).join("");
+    const showOtherRole = roleValue === "Other (Specify)";
     return `<tr>
-      <td style="text-align:center">${entry.exclude ? "No" : "Yes"}</td>
+      <td>${renderEntryActions(index, entry)}</td>
       <td><span class="person-name">${escapeHtml(name)}</span><br><span class="person-src">${escapeHtml(sourcePdf)} / ${escapeHtml(srcLabel)}</span></td>
       <td>${person.email ? `<a href="mailto:${escapeAttr(person.email)}" class="sub-info">${escapeHtml(person.email)}</a>` : '<span class="sub-dim">—</span>'}${person.phone ? `<br><span class="sub-dim">${escapeHtml(person.phone)}</span>` : ""}</td>
       <td>${escapeHtml(person.organization_name || "—")}${person.department || person.division ? `<div class="sub-dim" style="margin-top:.2rem">${escapeHtml([person.department || "", person.division || ""].filter(Boolean).join(" · "))}</div>` : ""}</td>
-      <td>${escapeHtml(person.project_role || "—")}${person.credential ? `<div class="sub-dim mono" style="margin-top:.25rem">${escapeHtml(person.credential)}</div>` : ""}</td>
+      <td>
+        <select class="edit-field edit-field-sm kp-role-select" data-entry-index="${index}">
+          ${roleOptions}
+        </select>
+        <input type="text" class="edit-field edit-field-sm kp-other-role-input" data-entry-index="${index}" value="${escapeAttr(person.other_project_role_category || "")}" placeholder="Specify other role…" style="margin-top:.25rem;${showOtherRole ? "" : "display:none;"}">
+        ${person.credential ? `<div class="sub-dim mono" style="margin-top:.25rem">${escapeHtml(person.credential)}</div>` : ""}
+      </td>
       <td>${renderAttachmentCell(index, "biosketch", bio, Boolean(attach.biosketch?.required))}<br>${renderAttachmentCell(index, "current_pending_support", sup, false)}</td>
-      <td>${renderEntryActions(index, entry)}</td>
       <td>${warnings.length ? `<ul class="warn-list">${warnings.map((warning) => `<li>${escapeHtml(warning)}</li>`).join("")}</ul>` : '<span class="sub-dim">—</span>'}</td>
     </tr>`;
   }).join("");
 
-  return `<div class="kp-manifest"><table><thead><tr><th>Incl.</th><th>Name</th><th>Contact</th><th>Organization</th><th>Role / Credential</th><th>Attachments</th><th>Actions</th><th>Warnings</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  return `<div class="kp-manifest"><table><thead><tr><th>Actions</th><th>Name</th><th>Contact</th><th>Organization</th><th>Role / Credential</th><th>Attachments</th><th>Warnings</th></tr></thead><tbody>${rows}</tbody></table></div>`;
 }
 
 function renderBudgetManifest(manifest) {
@@ -718,6 +745,37 @@ function bindPageInteractions() {
     });
   });
 
+  document.querySelectorAll(".kp-role-select").forEach((select) => {
+    select.addEventListener("change", async () => {
+      const index = Number(select.getAttribute("data-entry-index") || -1);
+      const otherInput = document.querySelector(`.kp-other-role-input[data-entry-index="${index}"]`);
+      const role = normalizeProjectRoleValue(select.value);
+      if (otherInput) {
+        otherInput.style.display = role === "Other (Specify)" ? "" : "none";
+        if (role !== "Other (Specify)") {
+          otherInput.value = "";
+        }
+      }
+      await updateManifest((manifest) => {
+        const person = manifest[index]?.person;
+        if (!person) return;
+        person.project_role = role;
+        person.other_project_role_category = role === "Other (Specify)" ? String(otherInput?.value || "").trim() : "";
+      }, "Updated project role.");
+    });
+  });
+
+  document.querySelectorAll(".kp-other-role-input").forEach((input) => {
+    input.addEventListener("change", async () => {
+      const index = Number(input.getAttribute("data-entry-index") || -1);
+      await updateManifest((manifest) => {
+        const person = manifest[index]?.person;
+        if (!person) return;
+        person.other_project_role_category = String(input.value || "").trim();
+      }, "Updated other project role.");
+    });
+  });
+
   document.querySelectorAll("[data-step]").forEach((button) => {
     button.addEventListener("click", async () => {
       const step = button.getAttribute("data-step");
@@ -1048,6 +1106,35 @@ function formatMoney(value) {
   const number = Number(String(value).replace(/[$,\s]/g, ""));
   if (!Number.isFinite(number)) return String(value);
   return `$${number.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+}
+
+function buildKeypersonRoleOptions(currentRole) {
+  const options = [...KEYPERSON_ROLE_OPTIONS];
+  if (currentRole && !options.includes(currentRole)) {
+    options.push(currentRole);
+  }
+  return options;
+}
+
+function normalizeProjectRoleValue(value) {
+  const text = String(value || "").trim();
+  if (!text) {
+    return "";
+  }
+  const normalized = text.toUpperCase().replace(/[^A-Z0-9]/g, "");
+  if (normalized === "PI" || normalized === "PDPI" || normalized === "PRINCIPALINVESTIGATOR") {
+    return "PD/PI";
+  }
+  if (normalized === "COPI" || normalized === "COINVESTIGATOR") {
+    return "Co-Investigator";
+  }
+  if (normalized === "COPDPI" || normalized === "MULTIPLEPI") {
+    return "Co-PD/PI";
+  }
+  if (normalized === "OTHERSIGNIFICANTCONTRIBUTOR" || normalized === "OSC") {
+    return "Other (Specify)";
+  }
+  return text;
 }
 
 function normalizeFormType(value) {

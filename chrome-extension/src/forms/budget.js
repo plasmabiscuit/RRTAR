@@ -256,7 +256,7 @@
     const items = Array.isArray(section?.items) ? section.items : [];
     for (let idx = 0; idx < items.length; idx += 1) {
       const rowIndex = idx + 1;
-      if (rowIndex > 1 && !document.getElementById(`equipmentItem${periodIndex}_${rowIndex}`)) {
+      if (rowIndex > 1 && !hasVisibleEquipmentRow(periodIndex, rowIndex)) {
         const clicked = await ensureEquipmentRow(periodIndex, rowIndex);
         if (!clicked) {
           stats.errors.push(`Could not add equipment row ${rowIndex} for period ${periodIndex}.`);
@@ -487,7 +487,7 @@
 
   async function ensureEquipmentRow(periodIndex, rowIndex) {
     const rowId = `equipmentItem${periodIndex}_${rowIndex}`;
-    if (document.getElementById(rowId)) {
+    if (hasVisibleEquipmentRow(periodIndex, rowIndex)) {
       return true;
     }
     for (let attempt = 1; attempt <= 3; attempt += 1) {
@@ -508,7 +508,7 @@
         return false;
       }
       try {
-        await common.waitFor(() => document.getElementById(rowId), 8000, 150);
+        await common.waitFor(() => hasVisibleEquipmentRow(periodIndex, rowIndex), 8000, 150);
         await common.sleep(150);
         return true;
       } catch (error) {
@@ -519,5 +519,9 @@
       }
     }
     return false;
+  }
+
+  function hasVisibleEquipmentRow(periodIndex, rowIndex) {
+    return common.isElementVisible(document.getElementById(`equipmentItem${periodIndex}_${rowIndex}`));
   }
 })();

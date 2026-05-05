@@ -164,7 +164,15 @@ async function removeFile(id) {
 async function prepareAutofill(formType) {
   const cleanFormType = normalizeFormType(formType);
   const state = await readState();
-  const manifest = state.forms?.[cleanFormType]?.manifest || [];
+  let manifest = state.forms?.[cleanFormType]?.manifest || [];
+  const backendJobId = state.forms?.[cleanFormType]?.backend?.jobId || "";
+  const settings = await readSettings();
+  manifest = await localizeManifestAttachments(cleanFormType, manifest, settings, backendJobId);
+  state.forms[cleanFormType] = {
+    manifest,
+    backend: state.forms?.[cleanFormType]?.backend || null,
+  };
+  await writeState(state);
   return {
     ok: true,
     formType: cleanFormType,
@@ -269,6 +277,12 @@ async function runBackendPipeline(formType) {
   }
 
   const manifest = await authorizedFetchJson(settings, `${baseUrl}/api/jobs/${job.id}/manifest`);
+  const localizedManifest = await localizeManifestAttachments(
+    cleanFormType,
+    Array.isArray(manifest) ? manifest : [],
+    settings,
+    job.id,
+  );
   let validation = null;
   try {
     validation = await authorizedFetchJson(settings, `${baseUrl}/api/jobs/${job.id}/validation`);
@@ -278,7 +292,7 @@ async function runBackendPipeline(formType) {
 
   const state = await readState();
   state.forms[cleanFormType] = {
-    manifest: Array.isArray(manifest) ? manifest : [],
+    manifest: localizedManifest,
     backend: {
       jobId: job.id,
       status: finalJob.status,
@@ -379,6 +393,140 @@ async function fetchBackendArtifactAttachment(path) {
   }
 
   return { ok: false, error: `Attachment file not found for path: ${cleanPath}` };
+}
+
+async function localizeManifestAttachments(formType, manifest, settings, jobId) {
+  const localized = structuredClone(Array.isArray(manifest) ? manifest : []);
+  if (!localized.length) {
+    return localized;
+  }
+  const stagedFiles = await listFileRecordsForForm(formType);
+
+  if (formType === "keyperson") {
+    for (const entry of localized) {
+      await localizeAttachmentPath(entry?.attachments?.biosketch, formType, "biosketch", settings, jobId, stagedFiles);
+      await localizeAttachmentPath(entry?.attachments?.current_pending_support, formType, "current_pending_support", settings, jobId, stagedFiles);
+    }
+    return localized;
+  }
+
+  if (formType === "budget") {
+    for (const entry of localized) {
+      await localizeAttachmentPath(entry?.budget_justification, formType, "budget_justification", settings, jobId, stagedFiles);
+      const periods = Array.isArray(entry?.periods) ? entry.periods : [];
+      for (const period of periods) {
+        const periodIndex = String(period?.period_index || "");
+        const periodAttachments = entry?.period_attachments?.[periodIndex];
+        if (periodAttachments && typeof periodAttachments === "object") {
+          for (const [kind, pathValue] of Object.entries(periodAttachments)) {
+            if (!pathValue) continue;
+            periodAttachments[kind] = await resolveAttachmentPath(
+              String(pathValue),
+              formType,
+              kind,
+              settings,
+              jobId,
+              stagedFiles,
+            );
+          }
+        }
+        const inlineAttachments = period?.attachments;
+        if (inlineAttachments && typeof inlineAttachments === "object") {
+          for (const [kind, pathValue] of Object.entries(inlineAttachments)) {
+            if (!pathValue) continue;
+            inlineAttachments[kind] = await resolveAttachmentPath(
+              String(pathValue),
+              formType,
+              kind,
+              settings,
+              jobId,
+              stagedFiles,
+            );
+          }
+        }
+      }
+    }
+    return localized;
+  }
+
+  if (formType === "performance-site") {
+    for (const entry of localized) {
+      await localizeAttachmentPath(entry?.additional_sites_attachment, formType, "additional_sites_attachment", settings, jobId, stagedFiles);
+    }
+  }
+
+  return localized;
+}
+
+async function localizeAttachmentPath(target, formType, role, settings, jobId, stagedFiles) {
+  const originalPath = String(target?.path || "").trim();
+  if (!target || !originalPath) {
+    return;
+  }
+  target.path = await resolveAttachmentPath(originalPath, formType, role, settings, jobId, stagedFiles);
+}
+
+async function resolveAttachmentPath(path, formType, role, settings, jobId, stagedFiles) {
+  const originalPath = String(path || "").trim();
+  if (!originalPath || parsePseudoFilePath(originalPath)) {
+    return originalPath;
+  }
+  const stagedMatch = matchStagedFileByPath(stagedFiles, originalPath, role);
+  if (stagedMatch) {
+    return `rrtar-file://${stagedMatch.id}`;
+  }
+  if (!jobId) {
+    return originalPath;
+  }
+  try {
+    return await persistBackendArtifactAsLocalFile(formType, role, originalPath, settings, jobId);
+  } catch {
+    return originalPath;
+  }
+}
+
+function matchStagedFileByPath(stagedFiles, path, role) {
+  const fileName = basename(path).toLowerCase();
+  const preferredRole = String(role || "").toLowerCase();
+  const matches = (Array.isArray(stagedFiles) ? stagedFiles : []).filter((record) => (
+    String(record?.name || "").toLowerCase() === fileName
+  ));
+  if (!matches.length) {
+    return null;
+  }
+  const roleMatch = matches.find((record) => String(record?.role || "").toLowerCase() === preferredRole);
+  if (roleMatch) {
+    return roleMatch;
+  }
+  const sourcePdfMatch = matches.find((record) => record.role === "source-pdf");
+  return sourcePdfMatch || matches[0];
+}
+
+async function persistBackendArtifactAsLocalFile(formType, role, path, settings, jobId) {
+  const response = await fetch(
+    `${settings.backendBaseUrl}/api/jobs/${encodeURIComponent(jobId)}/artifacts/file?path=${encodeURIComponent(path)}`,
+    {
+      method: "GET",
+      headers: settings.apiKey.trim() ? { "x-api-key": settings.apiKey } : {},
+    },
+  );
+  if (!response.ok) {
+    throw new Error(`Could not fetch backend artifact: ${path}`);
+  }
+
+  const blob = await response.blob();
+  const record = {
+    id: crypto.randomUUID(),
+    formType: normalizeFormType(formType),
+    role: String(role || "attachment"),
+    name: basename(path),
+    mimeType: blob.type || "application/octet-stream",
+    size: Number(blob.size || 0),
+    createdAt: new Date().toISOString(),
+    blob,
+  };
+  await idbPut(record);
+  return `rrtar-file://${record.id}`;
 }
 
 function mergeState(state) {
@@ -545,7 +693,7 @@ function compareContacts(left, right) {
 }
 
 function buildKeyPersonEntryFromContact(contact) {
-  const street2 = [contact.workLocation, formatCampusBox(contact.campusBox)].filter(Boolean).join(" · ");
+  const street2 = formatCampusBox(contact.campusBox);
   return {
     source_pdf: "contacts.json",
     source_element: "ContactDirectory",
@@ -570,12 +718,12 @@ function buildKeyPersonEntryFromContact(contact) {
       address: {
         street1: street2 ? "1 William L. Jones Dr" : "",
         street2,
-        city: "",
-        county: "",
-        state: "",
+        city: "Cookeville",
+        county: "Putnam",
+        state: "TN: Tennessee",
         province: "",
         country: "",
-        postal_code: "",
+        postal_code: "388505-0001",
       },
       phone: contact.workPhone || "",
       fax: "",
@@ -619,6 +767,11 @@ function formatCampusBox(value) {
     return "";
   }
   return /^campus box\b/i.test(text) ? text : `Campus Box ${text}`;
+}
+
+function basename(path) {
+  const parts = String(path || "").split(/[\\/]/);
+  return parts[parts.length - 1] || "";
 }
 
 function normalizeFormType(value) {

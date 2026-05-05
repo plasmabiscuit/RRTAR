@@ -2,33 +2,33 @@
   const common = self.RRTARAutofillCommon;
 
   const FIELD_SPECS = [
-    ["personPrefix{N}", "prefix"],
-    ["personOtherPrefix{N}", "prefix", { allowEmpty: false }],
-    ["personFirstName{N}", "first_name"],
-    ["personMiddleName{N}", "middle_name"],
-    ["personLastName{N}", "last_name"],
-    ["personSuffix{N}", "suffix"],
-    ["personOtherSuffix{N}", "suffix", { allowEmpty: false }],
-    ["personTitle{N}", "title"],
-    ["personOrganization{N}", "organization_name"],
-    ["personDepartment{N}", "department"],
-    ["personDivision{N}", "division"],
-    ["personStreet1{N}", "address.street1"],
-    ["personStreet2{N}", "address.street2"],
-    ["personCity{N}", "address.city"],
-    ["personCounty{N}", "address.county"],
-    ["personState{N}", "address.state", { select: true, treatAsState: true }],
-    ["personProvince{N}", "address.province"],
-    ["personCountry{N}", "address.country"],
-    ["personZipCode{N}", "address.postal_code"],
-    ["personPhoneNumber{N}", "phone"],
-    ["personFaxNumber{N}", "fax"],
-    ["personEmail{N}", "email"],
-    ["personCredential{N}", "credential"],
-    ["personProjectRole{N}", "project_role", { select: true }],
-    ["personOtherProjectRole{N}", "other_project_role_category"],
-    ["personDegreeType{N}", "degree_type"],
-    ["personDegreeYear{N}", "degree_year"],
+    ["Prefix", "prefix"],
+    ["OtherPrefix", "prefix", { allowEmpty: false }],
+    ["FirstName", "first_name"],
+    ["MiddleName", "middle_name"],
+    ["LastName", "last_name"],
+    ["Suffix", "suffix"],
+    ["OtherSuffix", "suffix", { allowEmpty: false }],
+    ["Title", "title"],
+    ["Organization", "organization_name"],
+    ["Department", "department"],
+    ["Division", "division"],
+    ["Street1", "address.street1"],
+    ["Street2", "address.street2"],
+    ["City", "address.city"],
+    ["County", "address.county"],
+    ["State", "address.state", { treatAsState: true }],
+    ["Province", "address.province"],
+    ["Country", "address.country"],
+    ["ZipCode", "address.postal_code"],
+    ["PhoneNumber", "phone"],
+    ["FaxNumber", "fax"],
+    ["Email", "email"],
+    ["Credential", "credential"],
+    ["ProjectRole", "project_role"],
+    ["OtherProjectRole", "other_project_role_category"],
+    ["DegreeType", "degree_type"],
+    ["DegreeYear", "degree_year"],
   ];
 
   self.RRTARKeyPersonAutofill = {
@@ -54,7 +54,7 @@
       for (let index = 0; index < entries.length; index += 1) {
         const person = entries[index]?.person || {};
         const rowNumber = index + 1;
-        fillPersonRow(rowNumber, person, stats);
+        fillPersonProfile(rowNumber, person, stats);
         await uploadPersonAttachments(rowNumber, entries[index]?.attachments || {}, stats);
       }
 
@@ -72,8 +72,9 @@
   };
 
   async function ensureProfileSlots(targetCount) {
+    const targetAdditionalProfiles = Math.max(0, Number(targetCount || 0));
     let existing = document.querySelectorAll("[id^='personFirstName']").length;
-    while (existing < targetCount) {
+    while (existing < targetAdditionalProfiles) {
       const addButton = document.querySelector("#addProfile button");
       if (!addButton) {
         throw new Error("Add Profile button not found.");
@@ -85,42 +86,45 @@
     }
   }
 
-  function fillPersonRow(rowNumber, person, stats) {
-    for (const [template, fieldPath, options] of FIELD_SPECS) {
-      const id = template.replace("{N}", String(rowNumber));
+  function fillPersonProfile(rowNumber, person, stats) {
+    for (const [fieldSuffix, fieldPath, options] of FIELD_SPECS) {
+      const id = `person${fieldSuffix}${rowNumber}`;
       let value = readField(person, fieldPath);
 
-      if (id.startsWith("personOtherPrefix") && !isOtherValue(person.prefix)) {
+      if (fieldSuffix === "OtherPrefix" && !isOtherValue(person.prefix)) {
         value = "";
       }
-      if (id.startsWith("personOtherSuffix") && !isOtherValue(person.suffix)) {
+      if (fieldSuffix === "OtherSuffix" && !isOtherValue(person.suffix)) {
         value = "";
       }
-      if (id.startsWith("personOtherProjectRole") && !isOtherValue(person.project_role)) {
+      if (fieldSuffix === "OtherProjectRole" && !isOtherValue(person.project_role)) {
         value = "";
+      }
+      if (fieldSuffix === "ProjectRole") {
+        value = normalizeProjectRole(value);
       }
 
-      const result = options?.select
-        ? common.selectControlValue(document, id, value, options)
-        : common.setControlValue(document, id, value, options);
+      const result = common.setControlValue(document, id, value, options);
       common.accumulate(result, stats, "fields", id);
     }
   }
 
   async function uploadPersonAttachments(rowNumber, attachments, stats) {
+    const bioId = `personBioSketchsFile${rowNumber}`;
     const bioResult = await common.uploadAttachmentFromJob(
       document,
-      `personBioSketchsFile${rowNumber}`,
+      bioId,
       attachments?.biosketch?.path || "",
     );
-    common.accumulate(bioResult, stats, "uploads", `personBioSketchsFile${rowNumber}`);
+    common.accumulate(bioResult, stats, "uploads", bioId);
 
+    const supportId = `personSupportsFile${rowNumber}`;
     const supportResult = await common.uploadAttachmentFromJob(
       document,
-      `personSupportsFile${rowNumber}`,
+      supportId,
       attachments?.current_pending_support?.path || "",
     );
-    common.accumulate(supportResult, stats, "uploads", `personSupportsFile${rowNumber}`);
+    common.accumulate(supportResult, stats, "uploads", supportId);
   }
 
   function readField(person, path) {
@@ -130,5 +134,26 @@
   function isOtherValue(value) {
     const text = String(value || "").toUpperCase();
     return text.includes("OTHER");
+  }
+
+  function normalizeProjectRole(value) {
+    const text = String(value || "").trim();
+    if (!text) {
+      return "";
+    }
+    const normalized = text.toUpperCase().replace(/[^A-Z0-9]/g, "");
+    if (normalized === "PI" || normalized === "PDPI" || normalized === "PRINCIPALINVESTIGATOR") {
+      return "PD/PI";
+    }
+    if (normalized === "COPI" || normalized === "COINVESTIGATOR") {
+      return "Co-Investigator";
+    }
+    if (normalized === "COPDPI" || normalized === "CO_PDPI" || normalized === "MULTIPLEPI") {
+      return "Co-PD/PI";
+    }
+    if (normalized === "OTHERSIGNIFICANTCONTRIBUTOR" || normalized === "OSC") {
+      return "Other (Specify)";
+    }
+    return text;
   }
 })();

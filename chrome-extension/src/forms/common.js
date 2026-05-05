@@ -104,6 +104,13 @@
     return doc.getElementById(selectorOrId);
   }
 
+  function isElementVisible(element) {
+    if (!element) {
+      return false;
+    }
+    return Boolean(element.offsetWidth || element.offsetHeight || element.getClientRects().length);
+  }
+
   function setControlValue(doc, selectorOrId, value, options = {}) {
     const element = getElement(doc, selectorOrId);
     if (!element) {
@@ -152,8 +159,9 @@
 
     const normalizedCandidates = new Set(candidates.map(normalizeChoice).filter(Boolean));
     let matchedOption = null;
+    let matchedIndex = -1;
 
-    for (const option of Array.from(element.options || [])) {
+    for (const [index, option] of Array.from(element.options || []).entries()) {
       const label = option.textContent || "";
       const optValue = option.value || "";
       if (
@@ -161,20 +169,47 @@
         normalizedCandidates.has(normalizeChoice(optValue))
       ) {
         matchedOption = option;
+        matchedIndex = index;
         break;
       }
     }
 
+    if (!matchedOption && options.treatAsState) {
+      for (const [index, option] of Array.from(element.options || []).entries()) {
+        const labelNorm = normalizeChoice(option.textContent || "");
+        const valueNorm = normalizeChoice(option.value || "");
+        for (const candidate of normalizedCandidates) {
+          if (
+            (candidate && labelNorm.includes(candidate)) ||
+            (candidate && valueNorm.includes(candidate))
+          ) {
+            matchedOption = option;
+            matchedIndex = index;
+            break;
+          }
+        }
+        if (matchedOption) {
+          break;
+        }
+      }
+    }
+
     if (!matchedOption && rawValue === "") {
-      matchedOption = Array.from(element.options || []).find((option) => !String(option.value || "").trim()) || null;
+      matchedIndex = Array.from(element.options || []).findIndex((option) => !String(option.value || "").trim());
+      matchedOption = matchedIndex >= 0 ? element.options[matchedIndex] : null;
     }
     if (!matchedOption) {
       return { ok: false, error: `No matching option for ${selectorOrId}: ${rawValue}` };
     }
 
-    element.value = matchedOption.value;
+    element.selectedIndex = matchedIndex;
     dispatchInputEvents(element);
-    return { ok: true, value: matchedOption.value };
+    return {
+      ok: true,
+      value: matchedOption.value,
+      label: (matchedOption.textContent || "").trim(),
+      index: matchedIndex,
+    };
   }
 
   function setCheckboxValue(doc, selectorOrId, checked) {
@@ -193,7 +228,7 @@
     let count = 0;
     for (let idx = start; idx <= maxCount; idx += 1) {
       const selector = selectorTemplate.replace("{N}", String(idx));
-      if (doc.querySelector(selector)) {
+      if (isElementVisible(doc.querySelector(selector))) {
         count = idx;
       }
     }
@@ -330,6 +365,7 @@
     getElement,
     getFormDefinitionByType,
     isButtonEnabled,
+    isElementVisible,
     manifestWarnings,
     selectControlValue,
     setCheckboxValue,
