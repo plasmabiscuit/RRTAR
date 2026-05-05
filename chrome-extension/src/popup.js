@@ -1,8 +1,14 @@
 const statusEl = document.querySelector("#status");
-const jobIdInput = document.querySelector("#job-id");
+const previewEl = document.querySelector("#preview");
 const detectBtn = document.querySelector("#detect-btn");
+const openDashboardBtn = document.querySelector("#open-dashboard-btn");
 const autofillBtn = document.querySelector("#autofill-btn");
 const optionsBtn = document.querySelector("#options-btn");
+
+let currentDetection = null;
+let currentPayload = null;
+
+autofillBtn.disabled = true;
 
 detectBtn.addEventListener("click", async () => {
   setStatus("Detecting current Grants.gov form...");
@@ -18,30 +24,57 @@ detectBtn.addEventListener("click", async () => {
     return;
   }
 
-  const detection = response.detection;
-  if (!detection.supported) {
+  currentDetection = response.detection;
+  if (!currentDetection.supported) {
+    currentPayload = null;
+    renderPreview(null);
     setStatus("No supported form detected in this tab.");
+    refreshAutofillState();
     return;
   }
 
-  setStatus(`Detected form: ${detection.formType}\niframe: ${detection.iframeSrc}`);
+  setStatus(`Detected form: ${currentDetection.formType}\nLoading current dashboard manifest...`);
+  const bundleResult = await chrome.runtime.sendMessage({
+    type: "rrtar:prepare-autofill",
+    formType: currentDetection.formType,
+  });
+
+  if (!bundleResult?.ok) {
+    currentPayload = null;
+    renderPreview(null);
+    setStatus(formatObject(bundleResult));
+    refreshAutofillState();
+    return;
+  }
+
+  currentPayload = bundleResult;
+  renderPreview(bundleResult);
+  setStatus(`Loaded current ${bundleResult.formType} manifest from extension dashboard.`);
+  refreshAutofillState();
+});
+
+openDashboardBtn.addEventListener("click", async () => {
+  const result = await chrome.runtime.sendMessage({
+    type: "rrtar:open-dashboard",
+    formType: currentDetection?.formType || "keyperson",
+  });
+  if (!result?.ok) {
+    setStatus(result?.error || "Could not open dashboard.");
+  }
 });
 
 autofillBtn.addEventListener("click", async () => {
-  const jobId = jobIdInput.value.trim();
-  if (!jobId) {
-    setStatus("Job ID is required.");
+  if (!currentPayload) {
+    setStatus("Detect the current form first.");
     return;
   }
-
-  setStatus(`Fetching manifest for job ${jobId}...`);
-  const manifestResult = await chrome.runtime.sendMessage({
-    type: "rrtar:fetch-manifest",
-    jobId,
-  });
-
-  if (!manifestResult?.ok) {
-    setStatus(formatObject(manifestResult));
+  if (!currentDetection?.supported) {
+    setStatus("Detect the active Grants.gov form first.");
+    return;
+  }
+  if (currentDetection.formType !== currentPayload.formType) {
+    setStatus(`Manifest form ${currentPayload.formType} does not match detected form ${currentDetection.formType}.`);
+    refreshAutofillState();
     return;
   }
 
@@ -51,10 +84,10 @@ autofillBtn.addEventListener("click", async () => {
     return;
   }
 
-  setStatus("Manifest loaded. Sending to page automation...");
+  setStatus(`Autofilling ${currentPayload.formType} from extension dashboard manifest...`);
   const autofillResult = await chrome.tabs.sendMessage(tab.id, {
     type: "rrtar:autofill-manifest",
-    manifest: manifestResult.manifest,
+    payload: currentPayload,
   });
   setStatus(formatObject(autofillResult));
 });
@@ -70,6 +103,43 @@ async function getActiveTab() {
 
 function setStatus(text) {
   statusEl.textContent = text;
+}
+
+function renderPreview(bundle) {
+  if (!bundle?.ok) {
+    previewEl.textContent = "Detect a Grants.gov form to load the current dashboard manifest.";
+    return;
+  }
+
+  const lines = [
+    `Form: ${bundle.formType}`,
+    ...(Array.isArray(bundle.preview?.lines) ? bundle.preview.lines : []),
+  ];
+
+  const warnings = Array.isArray(bundle.preview?.warnings) ? bundle.preview.warnings : [];
+  if (warnings.length) {
+    lines.push("");
+    lines.push("Warnings:");
+    for (const warning of warnings.slice(0, 8)) {
+      lines.push(`- ${warning}`);
+    }
+    if (warnings.length > 8) {
+      lines.push(`- ... ${warnings.length - 8} more`);
+    }
+  }
+
+  previewEl.textContent = lines.join("\n");
+}
+
+function refreshAutofillState() {
+  const canRun = Boolean(
+    currentPayload?.ok &&
+    Array.isArray(currentPayload?.manifest) &&
+    currentPayload.manifest.length > 0 &&
+    currentDetection?.supported &&
+    currentPayload.formType === currentDetection.formType,
+  );
+  autofillBtn.disabled = !canRun;
 }
 
 function formatObject(value) {

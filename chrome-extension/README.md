@@ -1,29 +1,22 @@
 # Chrome Extension
 
-This directory is the v1 Chrome extension workspace for Grants.gov-side automation.
+This directory is the browser-native RRTAR workspace for Grants.gov-side automation.
 
 Why it lives at the project root:
 
-- the Oracle VM is backend-only in the current deployment plan
+- the dashboard and autofill runtime now live entirely inside Chrome
 - the browser automation runtime needs to be packaged independently from the Python app
-- keeping it buildless for v1 makes it easy to load unpacked in Chrome during backend bring-up
+- keeping it buildless makes it easy to load unpacked during rapid iteration
 
 ## Layout
 
 - `manifest.json`: extension manifest
-- `src/background.js`: backend API access and extension-wide message handling
+- `src/background.js`: extension-wide state, file storage, and message handling
 - `src/content.js`: Grants.gov page detection and automation dispatch
 - `src/forms/`: per-form automation modules
-- `src/popup.*`: operator UI for choosing a job and triggering autofill
-- `src/options.*`: backend URL and API key settings
-
-## Current backend assumption
-
-Default backend URL:
-
-- `http://100.117.80.82:8081`
-
-That is the Tailscale address provided for the Oracle VM. The extension stores this value in Chrome storage and allows it to be changed in the options page.
+- `src/dashboard.*`: full-page clientside dashboard
+- `src/popup.*`: thin execution UI for detect/open-dashboard/autofill
+- `src/options.*`: minimal extension info page
 
 ## Load in Chrome
 
@@ -34,24 +27,24 @@ That is the Tailscale address provided for the Oracle VM. The extension stores t
 
 ## Current scope
 
-This scaffold is intentionally thin:
+Current v1 behavior:
 
 - detects supported Grants.gov forms by iframe URL pattern
-- fetches manifests from the backend
-- provides popup/options plumbing
-- defines per-form modules where the current Playwright logic can be ported
+- provides a full-page dashboard inside the extension for managing manifests and uploaded files
+- keeps the popup as a thin execution surface
+- previews the detected form and current stored manifest summary in the popup
+- hard-blocks autofill when the loaded manifest form does not match the detected Grants.gov form
+- fills the current form without clicking Grants.gov Save
+- uploads supported attachments from clientside files stored by the extension
 
-It does not yet fully replace the existing Playwright fillers. The next implementation step is porting the DOM-write logic from:
+The form fillers are now browser-side ports of:
 
 - `scripts/automate.py`
 - `scripts/automate_budget.py`
 - `scripts/automate_performance_site.py`
 
-## Important deployment caveat
+Known v1 constraints:
 
-The repo does not yet contain the `backend/` package referenced by the bootstrap examples. If the VM bootstrap was run with:
-
-- `backend.main:app`
-- `backend.worker`
-
-then the systemd services will fail until those modules are added.
+- PDF parsing/normalization has not been ported yet; manifests are currently imported as JSON
+- the extension dashboard is the source of truth for manifest editing and pipeline state
+- no auto-save is performed after fill

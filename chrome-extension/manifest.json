@@ -2,23 +2,31 @@
   "manifest_version": 3,
   "name": "RRTAR Grants.gov Automation",
   "version": "0.1.0",
-  "description": "Fetch prepared manifests from the Oracle backend and drive Grants.gov forms in the active tab.",
+  "description": "Run a clientside Grants.gov dashboard and drive supported forms in the active tab.",
+  "icons": {
+    "16": "assets/icon_16.png",
+    "48": "assets/icon_48.png",
+    "128": "assets/icon_128.png"
+  },
   "permissions": [
     "storage",
-    "tabs"
+    "tabs",
+    "unlimitedStorage"
   ],
   "host_permissions": [
     "https://*.grants.gov/*",
-    "https://grants.gov/*",
-    "http://100.117.80.82/*",
-    "http://127.0.0.1/*",
-    "http://localhost/*"
+    "https://grants.gov/*"
   ],
   "background": {
     "service_worker": "src/background.js",
     "type": "module"
   },
   "action": {
+    "default_icon": {
+      "16": "assets/icon_16.png",
+      "48": "assets/icon_48.png",
+      "128": "assets/icon_128.png"
+    },
     "default_title": "RRTAR Automation",
     "default_popup": "src/popup.html"
   },
@@ -29,7 +37,9 @@
         "https://*.grants.gov/*",
         "https://grants.gov/*"
       ],
+      "all_frames": true,
       "js": [
+        "src/forms/common.js",
         "src/forms/keyperson.js",
         "src/forms/budget.js",
         "src/forms/performance-site.js",

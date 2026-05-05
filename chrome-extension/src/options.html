@@ -42,15 +42,9 @@
   </head>
   <body>
     <h1>RRTAR Extension Settings</h1>
-    <div class="field">
-      <label for="backend-base-url">Backend Base URL</label>
-      <input id="backend-base-url" type="url" placeholder="http://100.117.80.82:8081">
-    </div>
-    <div class="field">
-      <label for="shared-api-key">Shared API Key</label>
-      <input id="shared-api-key" type="password" placeholder="Optional for now">
-    </div>
-    <button id="save-btn" type="button">Save Settings</button>
+    <p>This build is clientside. There is no backend or dashboard URL to configure.</p>
+    <p>The extension dashboard stores manifests and uploaded files inside the browser.</p>
+    <button id="open-dashboard-btn" type="button">Open Dashboard</button>
     <div id="status"></div>
     <script type="module" src="./options.js"></script>
   </body>

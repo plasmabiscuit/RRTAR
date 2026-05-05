@@ -12,7 +12,7 @@
       body {
         margin: 0;
         padding: 12px;
-        width: 320px;
+        width: 340px;
         background: #f5f7fa;
         color: #17212b;
       }
@@ -28,7 +28,10 @@
         margin-bottom: 10px;
       }
 
-      input,
+      .button-row {
+        grid-template-columns: 1fr 1fr;
+      }
+
       button {
         font: inherit;
         padding: 8px 10px;
@@ -48,7 +51,7 @@
       }
 
       #status {
-        min-height: 54px;
+        min-height: 48px;
         white-space: pre-wrap;
         font-size: 12px;
         line-height: 1.4;
@@ -56,18 +59,34 @@
         border: 1px solid #d7e0eb;
         padding: 8px;
       }
+
+      #preview {
+        min-height: 110px;
+        white-space: pre-wrap;
+        font-size: 12px;
+        line-height: 1.45;
+        background: #fff;
+        border: 1px solid #d7e0eb;
+        padding: 8px;
+      }
+
+      .meta {
+        font-size: 11px;
+        color: #556678;
+      }
     </style>
   </head>
   <body>
     <h1>RRTAR Automation</h1>
-    <div class="row">
-      <label for="job-id">Job ID</label>
-      <input id="job-id" type="text" placeholder="Enter backend job ID">
+    <div class="row button-row">
+      <button id="detect-btn" class="secondary" type="button">Detect Current Form</button>
+      <button id="open-dashboard-btn" class="secondary" type="button">Open Dashboard</button>
+      <button id="autofill-btn" type="button">Autofill Current Form</button>
+      <button id="options-btn" class="secondary" type="button">Open Settings</button>
     </div>
     <div class="row">
-      <button id="detect-btn" class="secondary" type="button">Detect Current Form</button>
-      <button id="autofill-btn" type="button">Fetch Manifest and Autofill</button>
-      <button id="options-btn" class="secondary" type="button">Open Settings</button>
+      <div class="meta">Preview</div>
+      <div id="preview">Detect a Grants.gov form to load the current dashboard manifest.</div>
     </div>
     <div id="status">Idle.</div>
     <script type="module" src="./popup.js"></script>
