@@ -246,12 +246,21 @@ async function runBackendPipeline(formType) {
   if (!sourceFiles.length) {
     throw new Error("No source PDFs are staged for this tab.");
   }
+  const supplementalFiles = cleanFormType === "budget"
+    ? await listFileRecordsForForm(cleanFormType, "budget-metadata")
+    : [];
 
   const endpoint = getBackendJobEndpoint(cleanFormType);
   const formData = new FormData();
   for (const record of sourceFiles) {
     formData.append("files", new File([record.blob], record.name || "upload.pdf", {
       type: record.mimeType || "application/pdf",
+      lastModified: Date.now(),
+    }));
+  }
+  for (const record of supplementalFiles) {
+    formData.append("files", new File([record.blob], record.name || "upload.budget.json", {
+      type: record.mimeType || "application/json",
       lastModified: Date.now(),
     }));
   }

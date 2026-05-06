@@ -229,11 +229,11 @@ function renderPage() {
       <div class="card">
         <h2>${icon(def.dropIcon, "icon-chip")}${escapeHtml(def.dropTitle)} &nbsp;<span class="badge ${files.length ? "ok" : "pend"}">${files.length} file${files.length === 1 ? "" : "s"}</span></h2>
         <label id="drop-zone" class="drop-zone">
-          <input type="file" id="pdf-file-input" accept=".pdf" multiple>
+          <input type="file" id="pdf-file-input" accept="${escapeAttr(uploadAcceptValue(activeTab))}" multiple>
           <div class="dz-icon">${icon("upload")}</div>
           <div class="drop-zone-copy">
             <p><strong>${escapeHtml(def.uploadHint)}</strong> or click to browse</p>
-            <p style="font-size:.8rem">PDFs staged here will appear below for this tab.</p>
+            <p style="font-size:.8rem">${escapeHtml(uploadHintCopy(activeTab))}</p>
           </div>
         </label>
         ${renderFileTable(files)}
@@ -292,15 +292,16 @@ function renderPipelineSummary(preview, backend) {
 }
 
 function renderFileTable(files) {
-  const sourceFiles = files.filter((file) => file.role === "source-pdf");
-  if (!sourceFiles.length) {
-    return '<div class="upload-list"><p class="empty-note upload-list-empty">No PDFs yet — drop some above.</p></div>';
+  const pipelineFiles = Array.isArray(files) ? files.filter((file) => isPipelineStageFile(file)) : [];
+  if (!pipelineFiles.length) {
+    return '<div class="upload-list"><p class="empty-note upload-list-empty">No staged files yet — drop some above.</p></div>';
   }
-  const rows = sourceFiles.map((file) => {
+  const rows = pipelineFiles.map((file) => {
     const remove = `<button type="button" class="btn-danger btn-sm" data-remove-file="${escapeAttr(file.id)}">${icon("close", "icon-btn")}Remove</button>`;
-    return `<tr><td><strong style="font-size:.83rem">${escapeHtml(file.name)}</strong></td><td class="sub-dim">${formatSize(file.size)}</td><td><span class="badge ok">staged</span> <span class="sub-info">ready</span></td><td style="text-align:right">${remove}</td></tr>`;
+    const kind = pipelineFileKindLabel(file);
+    return `<tr><td><strong style="font-size:.83rem">${escapeHtml(file.name)}</strong></td><td class="sub-dim">${formatSize(file.size)}</td><td><span class="badge ok">staged</span> <span class="sub-info">${escapeHtml(kind)}</span></td><td style="text-align:right">${remove}</td></tr>`;
   }).join("");
-  return `<div class="upload-list"><div class="upload-list-head"><span class="upload-list-title">Staged PDFs</span><span class="sub-dim">${sourceFiles.length} file${sourceFiles.length === 1 ? "" : "s"}</span></div><table><thead><tr><th>File</th><th>Size</th><th>Status</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  return `<div class="upload-list"><div class="upload-list-head"><span class="upload-list-title">Staged Files</span><span class="sub-dim">${pipelineFiles.length} file${pipelineFiles.length === 1 ? "" : "s"}</span></div><table><thead><tr><th>File</th><th>Size</th><th>Status</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>`;
 }
 
 function renderManifestBadge(manifest, preview) {
@@ -795,17 +796,17 @@ function bindPageInteractions() {
 }
 
 async function uploadFiles(fileList) {
-  const files = Array.from(fileList || []).filter((file) => file.name.toLowerCase().endsWith(".pdf"));
-  if (!files.length) {
-    setStatus("Please choose PDF files only.", "warn");
+  const classifiedFiles = classifyDroppedFiles(activeTab, fileList);
+  if (!classifiedFiles.length) {
+    setStatus(uploadRejectMessage(activeTab), "warn");
     return;
   }
-  for (const file of files) {
+  for (const { file, role } of classifiedFiles) {
     const serialized = await serializeFileForMessage(file);
     const result = await chrome.runtime.sendMessage({
       type: "rrtar:put-file",
       formType: activeTab,
-      role: "source-pdf",
+      role,
       file: serialized,
       meta: { name: file.name, mimeType: file.type, size: file.size },
     });
@@ -1053,6 +1054,51 @@ function isBackendPipelineStep(step) {
     "extract-performance-site",
     "normalize-performance-site",
   ].includes(String(step || ""));
+}
+
+function uploadAcceptValue(formType) {
+  return formType === "budget" ? ".pdf,.budget.json,application/json" : ".pdf";
+}
+
+function uploadHintCopy(formType) {
+  if (formType === "budget") {
+    return "Budget PDFs and optional same-stem Streamlyne .budget.json sidecars staged here will appear below.";
+  }
+  return "PDFs staged here will appear below for this tab.";
+}
+
+function classifyDroppedFiles(formType, fileList) {
+  const files = Array.from(fileList || []);
+  return files.map((file) => {
+    const lower = String(file?.name || "").toLowerCase();
+    if (lower.endsWith(".pdf")) {
+      return { file, role: "source-pdf" };
+    }
+    if (formType === "budget" && lower.endsWith(".budget.json")) {
+      return { file, role: "budget-metadata" };
+    }
+    return null;
+  }).filter(Boolean);
+}
+
+function uploadRejectMessage(formType) {
+  if (formType === "budget") {
+    return "Please choose budget PDFs or optional same-stem Streamlyne .budget.json sidecars only.";
+  }
+  return "Please choose PDF files only.";
+}
+
+function isPipelineStageFile(file) {
+  const role = String(file?.role || "");
+  return role === "source-pdf" || role === "budget-metadata";
+}
+
+function pipelineFileKindLabel(file) {
+  const role = String(file?.role || "");
+  if (role === "budget-metadata") {
+    return "sidecar metadata";
+  }
+  return "ready";
 }
 
 function icon(name, classes = "") {

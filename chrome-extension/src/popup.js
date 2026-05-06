@@ -1,57 +1,21 @@
 const statusEl = document.querySelector("#status");
 const previewEl = document.querySelector("#preview");
-const detectBtn = document.querySelector("#detect-btn");
+const formChipEl = document.querySelector("#form-chip");
 const openDashboardBtn = document.querySelector("#open-dashboard-btn");
 const autofillBtn = document.querySelector("#autofill-btn");
 const optionsBtn = document.querySelector("#options-btn");
 
 let currentDetection = null;
 let currentPayload = null;
+let currentPreviewBundle = null;
+const FORM_CHIP_LABELS = {
+  keyperson: "Key Person",
+  budget: "Budget",
+  "performance-site": "Perf. Site",
+};
 
 autofillBtn.disabled = true;
-
-detectBtn.addEventListener("click", async () => {
-  setStatus("Detecting current Grants.gov form...");
-  const tab = await getActiveTab();
-  if (!tab?.id) {
-    setStatus("No active tab.");
-    return;
-  }
-
-  const response = await chrome.tabs.sendMessage(tab.id, { type: "rrtar:detect-form" });
-  if (!response?.ok) {
-    setStatus(response?.error || "Could not detect form.");
-    return;
-  }
-
-  currentDetection = response.detection;
-  if (!currentDetection.supported) {
-    currentPayload = null;
-    renderPreview(null);
-    setStatus("No supported form detected in this tab.");
-    refreshAutofillState();
-    return;
-  }
-
-  setStatus(`Detected form: ${currentDetection.formType}\nLoading current dashboard manifest...`);
-  const bundleResult = await chrome.runtime.sendMessage({
-    type: "rrtar:prepare-autofill",
-    formType: currentDetection.formType,
-  });
-
-  if (!bundleResult?.ok) {
-    currentPayload = null;
-    renderPreview(null);
-    setStatus(formatObject(bundleResult));
-    refreshAutofillState();
-    return;
-  }
-
-  currentPayload = bundleResult;
-  renderPreview(bundleResult);
-  setStatus(`Loaded current ${bundleResult.formType} manifest from extension dashboard.`);
-  refreshAutofillState();
-});
+autofillBtn.classList.add("btn-disabled");
 
 openDashboardBtn.addEventListener("click", async () => {
   const result = await chrome.runtime.sendMessage({
@@ -59,60 +23,206 @@ openDashboardBtn.addEventListener("click", async () => {
     formType: currentDetection?.formType || "keyperson",
   });
   if (!result?.ok) {
-    setStatus(result?.error || "Could not open dashboard.");
+    setStatus(result?.error || "Could not open dashboard.", "err");
   }
 });
 
 autofillBtn.addEventListener("click", async () => {
-  if (!currentPayload) {
-    setStatus("Detect the current form first.");
-    return;
-  }
+  await detectAndLoad({ silentSuccess: true, skipManifestReload: true });
   if (!currentDetection?.supported) {
-    setStatus("Detect the active Grants.gov form first.");
+    setStatus("No supported Grants.gov form detected in the active tab.", "warn");
     return;
   }
-  if (currentDetection.formType !== currentPayload.formType) {
-    setStatus(`Manifest form ${currentPayload.formType} does not match detected form ${currentDetection.formType}.`);
+  if (!currentPreviewBundle?.ok) {
+    setStatus("No compatible Grants.gov form is ready in the active tab.", "warn");
+    return;
+  }
+  if (currentDetection.formType !== currentPreviewBundle.formType) {
+    setStatus(`Manifest form ${currentPreviewBundle.formType} does not match detected form ${currentDetection.formType}.`, "warn");
     refreshAutofillState();
     return;
   }
 
+  setStatus(`Preparing ${currentPreviewBundle.formType} manifest for automation...`, "pend");
+  const prepared = await chrome.runtime.sendMessage({
+    type: "rrtar:prepare-autofill",
+    formType: currentDetection.formType,
+  });
+  if (!prepared?.ok) {
+    currentPayload = null;
+    setStatus(formatObject(prepared), "err");
+    refreshAutofillState();
+    return;
+  }
+  currentPayload = prepared;
+
   const tab = await getActiveTab();
   if (!tab?.id) {
-    setStatus("No active tab.");
+    setStatus("No active tab.", "err");
     return;
   }
 
-  setStatus(`Autofilling ${currentPayload.formType} from extension dashboard manifest...`);
-  const autofillResult = await chrome.tabs.sendMessage(tab.id, {
-    type: "rrtar:autofill-manifest",
-    payload: currentPayload,
-  });
-  setStatus(formatObject(autofillResult));
+  setStatus(`Autofilling ${currentPayload.formType} from extension dashboard manifest...`, "pend");
+  try {
+    const autofillResult = await chrome.tabs.sendMessage(tab.id, {
+      type: "rrtar:autofill-manifest",
+      payload: currentPayload,
+    });
+    setStatus(formatObject(autofillResult), autofillResult?.ok ? "ok" : "err");
+  } catch (_error) {
+    setStatus("Could not reach the Grants.gov form in the active tab.", "err");
+  }
 });
 
 optionsBtn.addEventListener("click", () => {
   chrome.runtime.openOptionsPage();
 });
 
+init();
+
+async function init() {
+  await detectAndLoad();
+}
+
 async function getActiveTab() {
   const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
   return tabs[0] || null;
 }
 
-function setStatus(text) {
-  statusEl.textContent = text;
+function isGrantsGovTab(tab) {
+  const url = String(tab?.url || "").trim();
+  if (!url) {
+    return false;
+  }
+  try {
+    const parsed = new URL(url);
+    return parsed.hostname === "grants.gov" || parsed.hostname.endsWith(".grants.gov");
+  } catch {
+    return false;
+  }
 }
 
-function renderPreview(bundle) {
+async function detectAndLoad({ silentSuccess = false, skipManifestReload = false } = {}) {
+  setFormChip("Scanning", "pend");
+  setStatus("Checking the active Grants.gov tab and loading the current manifest...", "pend");
+
+  const tab = await getActiveTab();
+  if (!tab?.id) {
+    currentDetection = null;
+    currentPayload = null;
+    currentPreviewBundle = null;
+    renderPreview(null, null);
+    setFormChip("No tab", "err");
+    setStatus("No active tab.", "err");
+    refreshAutofillState();
+    return;
+  }
+
+  if (!isGrantsGovTab(tab)) {
+    currentDetection = null;
+    currentPayload = null;
+    currentPreviewBundle = null;
+    renderPreview(null, null);
+    setFormChip("Offsite", "warn");
+    setStatus("Active tab is not a grants.gov page.", "warn");
+    refreshAutofillState();
+    return;
+  }
+
+  let response;
+  try {
+    response = await chrome.tabs.sendMessage(tab.id, { type: "rrtar:detect-form" });
+  } catch (_error) {
+    currentDetection = null;
+    currentPayload = null;
+    currentPreviewBundle = null;
+    renderPreview(null, null);
+    setFormChip("No form", "warn");
+    setStatus("No supported Grants.gov form detected in the active tab.", "warn");
+    refreshAutofillState();
+    return;
+  }
+
+  if (!response?.ok) {
+    currentDetection = null;
+    currentPayload = null;
+    currentPreviewBundle = null;
+    renderPreview(null, null);
+    setFormChip("Error", "err");
+    setStatus(response?.error || "Could not detect form.", "err");
+    refreshAutofillState();
+    return;
+  }
+
+  currentDetection = response.detection;
+  if (!currentDetection?.supported) {
+    currentPayload = null;
+    currentPreviewBundle = null;
+    renderPreview(null, currentDetection);
+    setFormChip("No form", "warn");
+    setStatus("No supported Grants.gov form detected in the active tab.", "warn");
+    refreshAutofillState();
+    return;
+  }
+
+  setFormChip(shortFormLabel(currentDetection), "ok");
+  currentPayload = null;
+
+  if (skipManifestReload && currentPreviewBundle?.ok && currentPreviewBundle.formType === currentDetection.formType) {
+    renderPreview(currentPreviewBundle, currentDetection);
+    refreshAutofillState();
+    if (!silentSuccess) {
+      setStatus(`Detected ${currentDetection.label || currentDetection.formType}.`, "ok");
+    }
+    return;
+  }
+
+  setStatus(`Detected ${currentDetection.label || currentDetection.formType}. Loading the current dashboard manifest...`, "pend");
+  const bundleResult = await chrome.runtime.sendMessage({
+    type: "rrtar:get-dashboard-state",
+    formType: currentDetection.formType,
+  });
+
+  if (!bundleResult?.ok) {
+    currentPreviewBundle = null;
+    renderPreview(null, currentDetection);
+    setStatus(formatObject(bundleResult), "err");
+    refreshAutofillState();
+    return;
+  }
+
+  currentPreviewBundle = bundleResult;
+  renderPreview(bundleResult, currentDetection);
+  refreshAutofillState();
+  if (!silentSuccess) {
+    setStatus(`Loaded current ${bundleResult.formType} manifest from extension dashboard.`, "ok");
+  }
+}
+
+function setStatus(text, tone = "pend") {
+  statusEl.textContent = text;
+  statusEl.className = `card status-card ${tone}`;
+}
+
+function setFormChip(text, tone = "pend") {
+  formChipEl.textContent = text;
+  formChipEl.className = `badge ${tone}`;
+}
+
+function shortFormLabel(detection) {
+  return FORM_CHIP_LABELS[detection?.formType] || detection?.label || detection?.formType || "Unknown";
+}
+
+function renderPreview(bundle, detection) {
   if (!bundle?.ok) {
-    previewEl.textContent = "Detect a Grants.gov form to load the current dashboard manifest.";
+    previewEl.textContent = detection?.supported
+      ? `${detection.label || detection.formType}\n\nOpen Dashboard to review or import the matching manifest before running automation.`
+      : "Open a supported Grants.gov form to auto-load the matching manifest.\n\nSupported: R&R Senior/Key Person, R&R Budget, Project/Performance Site.";
     return;
   }
 
   const lines = [
-    `Form: ${bundle.formType}`,
+    `Form: ${detection?.label || bundle.formType}`,
     ...(Array.isArray(bundle.preview?.lines) ? bundle.preview.lines : []),
   ];
 
@@ -133,13 +243,14 @@ function renderPreview(bundle) {
 
 function refreshAutofillState() {
   const canRun = Boolean(
-    currentPayload?.ok &&
-    Array.isArray(currentPayload?.manifest) &&
-    currentPayload.manifest.length > 0 &&
+    currentPreviewBundle?.ok &&
+    Array.isArray(currentPreviewBundle?.manifest) &&
+    currentPreviewBundle.manifest.length > 0 &&
     currentDetection?.supported &&
-    currentPayload.formType === currentDetection.formType,
+    currentPreviewBundle.formType === currentDetection.formType,
   );
   autofillBtn.disabled = !canRun;
+  autofillBtn.classList.toggle("btn-disabled", !canRun);
 }
 
 function formatObject(value) {
