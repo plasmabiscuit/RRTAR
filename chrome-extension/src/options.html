@@ -655,17 +655,17 @@
               <span class="icon icon-chip"><img src="../assets/img/backend.png" alt=""></span>
               <span>Backend Access</span>
             </h2>
-            <p class="card-copy">The dashboard still keeps manifests and uploads inside browser storage, but PDF processing can be handed off to the backend API from here.</p>
+            <p class="card-copy">The dashboard keeps manifests and uploads inside browser storage, but PDF processing can be handed off to the backend temporarily.</p>
             <div class="field-grid">
               <div class="field">
                 <label for="backend-base-url">Backend Base URL</label>
                 <input id="backend-base-url" class="text-input" type="url" placeholder="https://rrtar.duckdns.org">
-                <p class="field-note">Use the backend base endpoint the extension should call for health checks and document processing.</p>
+                <p class="field-note">Endpoint the extension should call for health checks and document processing.</p>
               </div>
               <div class="field">
                 <label for="api-key">API Key</label>
                 <input id="api-key" class="text-input" type="password" placeholder="Paste the shared backend API key">
-                <p class="field-note">Stored locally in extension settings and sent with backend requests.</p>
+                <p class="field-note">Stored locally in extension settings.</p>
               </div>
             </div>
             <div class="button-row">
@@ -684,7 +684,7 @@
               <div class="field">
                 <label for="agency">Agency</label>
                 <input id="agency" class="text-input" type="text" placeholder="default">
-                <p class="field-note">Default agency value used when building Key Person outputs through the backend flow.</p>
+                <p class="field-note">Default agency value used when building Key Person outputs.</p>
               </div>
             </div>
             <div class="button-row compact">
@@ -703,7 +703,7 @@
                 <span class="toggle-ui" aria-hidden="true"></span>
                 <span class="toggle-copy">
                   <span class="toggle-title">Retro Fonts</span>
-                  <span class="toggle-note">Turn off to use Arial on supported screens.</span>
+                  <span class="toggle-note">Turn off to use Arial.</span>
                 </span>
               </label>
             </div>
@@ -716,7 +716,7 @@
               <span class="badge pend">Ready</span>
             </div>
             <div id="status">Idle.</div>
-            <p class="status-help">Use this panel to confirm saves, backend health results, and whether the dashboard launch request succeeded.</p>
+            <p class="status-help">Use this panel to confirm that the dashboard request succeeded.</p>
           </section>
         </aside>
       </div>
