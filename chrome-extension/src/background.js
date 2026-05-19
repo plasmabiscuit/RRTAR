@@ -12,19 +12,22 @@ const SETTINGS_KEY = "rrtar-settings-v1";
 const DB_NAME = "rrtar-dashboard-files";
 const DB_VERSION = 1;
 const STORE_FILES = "files";
-const CONTACTS_DATA_URL = chrome.runtime.getURL("assets/data/contacts.json");
 const CONTACT_SEARCH_LIMIT = 24;
 const BACKEND_POLL_MS = 2000;
 const BACKEND_TIMEOUT_MS = 120000;
+const DEFAULT_BACKEND_BASE_URL = "https://rrtar.duckdns.org";
+const LEGACY_BACKEND_BASE_URLS = new Set([
+  "https://150.230.162.179.sslip.io",
+  "https://150.230.162.179",
+  "http://150.230.162.179",
+]);
 
 const DEFAULT_SETTINGS = {
-  backendBaseUrl: "https://150.230.162.179.sslip.io",
+  backendBaseUrl: DEFAULT_BACKEND_BASE_URL,
   apiKey: "",
   agency: "default",
   useRetroFonts: true,
 };
-
-let contactsCache = null;
 
 chrome.runtime.onInstalled.addListener(async () => {
   const current = await chrome.storage.local.get([STATE_KEY, SETTINGS_KEY]);
@@ -326,26 +329,19 @@ async function runBackendPipeline(formType) {
 }
 
 async function searchContacts(query, limit) {
-  const contacts = await loadContacts();
+  const settings = await readSettings();
+  const baseUrl = requireBackendBaseUrl(settings);
   const normalizedQuery = String(query || "").trim();
   const maxResults = Math.max(1, Math.min(Number(limit) || CONTACT_SEARCH_LIMIT, 50));
-  const results = rankContacts(contacts, normalizedQuery).slice(0, maxResults).map((contact, index) => ({
-    id: contact.email || `${contact.fullName || "contact"}-${index}`,
-    label: contact.fullName || [contact.firstName, contact.lastName].filter(Boolean).join(" ").trim() || contact.email || "Unknown contact",
-    email: contact.email || "",
-    jobTitle: contact.jobTitle || "",
-    department: contact.department || "",
-    unit: contact.unit || "",
-    division: contact.Parent || "",
-    workPhone: contact.workPhone || "",
-    workLocation: contact.workLocation || "",
-    campusBox: contact.campusBox || "",
-    manifestEntry: buildKeyPersonEntryFromContact(contact),
-  }));
+  const response = await authorizedFetchJson(
+    settings,
+    `${baseUrl}/api/contacts/search?query=${encodeURIComponent(normalizedQuery)}&limit=${encodeURIComponent(maxResults)}`,
+  );
+  const results = Array.isArray(response?.results) ? response.results : [];
   return {
     ok: true,
     query: normalizedQuery,
-    total: results.length,
+    total: Number(response?.total || results.length),
     results,
   };
 }
@@ -361,7 +357,17 @@ async function writeState(state) {
 
 async function readSettings() {
   const raw = await chrome.storage.local.get(SETTINGS_KEY);
-  return mergeSettings(raw[SETTINGS_KEY] || {});
+  const merged = mergeSettings(raw[SETTINGS_KEY] || {});
+  if (shouldMigrateBackendBaseUrl(raw[SETTINGS_KEY]?.backendBaseUrl, merged.backendBaseUrl)) {
+    await chrome.storage.local.set({
+      [SETTINGS_KEY]: {
+        ...merged,
+        backendBaseUrl: DEFAULT_BACKEND_BASE_URL,
+      },
+    });
+    merged.backendBaseUrl = DEFAULT_BACKEND_BASE_URL;
+  }
+  return merged;
 }
 
 async function fetchBackendArtifactAttachment(path) {
@@ -568,24 +574,6 @@ function mergeSettings(settings) {
   return merged;
 }
 
-async function loadContacts() {
-  if (contactsCache) {
-    return contactsCache;
-  }
-  const response = await fetch(CONTACTS_DATA_URL);
-  if (!response.ok) {
-    throw new Error(`Could not load bundled contacts.json (${response.status}).`);
-  }
-  const raw = await response.json();
-  const entries = Object.values(raw || {}).filter((item) => item && typeof item === "object");
-  contactsCache = entries.sort((left, right) => {
-    const a = `${left.lastName || ""}\u0000${left.firstName || ""}\u0000${left.email || ""}`.toLowerCase();
-    const b = `${right.lastName || ""}\u0000${right.firstName || ""}\u0000${right.email || ""}`.toLowerCase();
-    return a.localeCompare(b);
-  });
-  return contactsCache;
-}
-
 function getBackendJobEndpoint(formType) {
   if (formType === "budget") return "/api/jobs/budget";
   if (formType === "performance-site") return "/api/jobs/performance-site";
@@ -603,6 +591,12 @@ function requireBackendBaseUrl(settings) {
 function normalizeBackendBaseUrl(value) {
   const text = String(value || "").trim();
   return text.replace(/\/+$/, "");
+}
+
+function shouldMigrateBackendBaseUrl(storedValue, mergedValue) {
+  const normalizedStored = normalizeBackendBaseUrl(storedValue);
+  const normalizedMerged = normalizeBackendBaseUrl(mergedValue);
+  return LEGACY_BACKEND_BASE_URLS.has(normalizedStored) && normalizedMerged !== DEFAULT_BACKEND_BASE_URL;
 }
 
 async function pollBackendJob(settings, baseUrl, jobId) {
@@ -652,134 +646,6 @@ async function parseJsonResponse(response, fallbackMessage) {
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-function rankContacts(contacts, query) {
-  if (!query) {
-    return contacts;
-  }
-  const needle = query.toLowerCase().trim();
-  const tokens = needle.split(/\s+/).filter(Boolean);
-  return contacts
-    .map((contact) => ({
-      contact,
-      score: scoreContact(contact, needle, tokens),
-    }))
-    .filter((item) => item.score > 0)
-    .sort((left, right) => right.score - left.score || compareContacts(left.contact, right.contact))
-    .map((item) => item.contact);
-}
-
-function scoreContact(contact, needle, tokens) {
-  const fullName = String(contact.fullName || [contact.firstName, contact.lastName].filter(Boolean).join(" ")).trim();
-  const email = String(contact.email || "");
-  const haystacks = [
-    fullName,
-    email,
-    contact.department,
-    contact.unit,
-    contact.Parent,
-    contact.jobTitle,
-    contact.workLocation,
-    contact.campusBox,
-  ].map((value) => String(value || "").toLowerCase());
-
-  let score = 0;
-  if (fullName.toLowerCase() === needle) score += 140;
-  if (email.toLowerCase() === needle) score += 140;
-  if (fullName.toLowerCase().startsWith(needle)) score += 110;
-  if (email.toLowerCase().startsWith(needle)) score += 110;
-  if (haystacks.some((value) => value.includes(needle))) score += 50;
-  for (const token of tokens) {
-    if (haystacks.some((value) => value.includes(token))) {
-      score += 18;
-    } else {
-      score -= 12;
-    }
-  }
-  return score;
-}
-
-function compareContacts(left, right) {
-  return `${left.lastName || ""}\u0000${left.firstName || ""}\u0000${left.email || ""}`
-    .localeCompare(`${right.lastName || ""}\u0000${right.firstName || ""}\u0000${right.email || ""}`);
-}
-
-function buildKeyPersonEntryFromContact(contact) {
-  const street2 = formatCampusBox(contact.campusBox);
-  return {
-    source_pdf: "contacts.json",
-    source_element: "ContactDirectory",
-    source_index: 0,
-    target_action: "add_as_key_person",
-    exclude: false,
-    person: {
-      prefix: "",
-      first_name: contact.firstName || "",
-      middle_name: "",
-      last_name: contact.lastName || "",
-      suffix: "",
-      title: contact.jobTitle || "",
-      organization_name: inferOrganizationName(contact),
-      department: contact.department || "",
-      division: contact.Parent || "",
-      credential: "",
-      project_role: "",
-      other_project_role_category: "",
-      degree_type: "",
-      degree_year: "",
-      address: {
-        street1: street2 ? "1 William L. Jones Dr" : "",
-        street2,
-        city: "Cookeville",
-        county: "Putnam",
-        state: "TN: Tennessee",
-        province: "",
-        country: "",
-        postal_code: "388505-0001",
-      },
-      phone: contact.workPhone || "",
-      fax: "",
-      email: contact.email || "",
-    },
-    attachments: {
-      biosketch: {
-        required: true,
-        source: "contacts-directory",
-        path: "",
-        sha1_base64: null,
-      },
-      current_pending_support: {
-        required: false,
-        source: "contacts-directory",
-        path: "",
-        sha1_base64: null,
-      },
-    },
-    validation: {
-      schema_valid: true,
-      business_rules_valid: false,
-      warnings: [
-        "Added from bundled contacts.json; review role, address, email, and attachments before automate.",
-      ],
-    },
-  };
-}
-
-function inferOrganizationName(contact) {
-  const email = String(contact.email || "").toLowerCase();
-  if (email.endsWith("@tntech.edu")) {
-    return "Tennessee Technological University";
-  }
-  return "";
-}
-
-function formatCampusBox(value) {
-  const text = String(value || "").trim();
-  if (!text) {
-    return "";
-  }
-  return /^campus box\b/i.test(text) ? text : `Campus Box ${text}`;
 }
 
 function basename(path) {

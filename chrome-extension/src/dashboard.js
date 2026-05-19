@@ -256,7 +256,7 @@ function renderPage() {
           <button id="export-manifest-btn" class="btn-success btn-sm" type="button">${icon("save", "icon-btn")}Export Manifest</button>
           <button id="clear-manifest-btn" class="btn-warn btn-sm" type="button">${icon("trash", "icon-btn")}Clear Manifest</button>
         </span>
-        <span class="manifest-save-note">${activeTab === "keyperson" ? "Build locally from bundled contacts, import a manifest JSON, or run the backend pipeline. Review warnings and required attachments before automate." : "Use the backend pipeline to generate a manifest from staged PDFs, or import a current manifest JSON for local review."}</span>
+        <span class="manifest-save-note">${activeTab === "keyperson" ? "Search backend contacts, import a manifest JSON, or run the backend pipeline. Review warnings and required attachments before automate." : "Use the backend pipeline to generate a manifest from staged PDFs, or import a current manifest JSON for local review."}</span>
       </form>
       <div class="manifest-wrap">${renderManifest(activeTab, manifest, preview)}</div>
     </div>
@@ -945,8 +945,8 @@ async function openContactModal() {
   }
   currentContactResults = [];
   contactSearchInput.value = "";
-  contactSearchMeta.textContent = "Search bundled contacts by name, email, department, unit, location, or title.";
-  contactSearchResults.innerHTML = '<p class="empty-note">Type a search above to load matching contacts from the bundled dataset.</p>';
+  contactSearchMeta.textContent = "Search backend contacts by name, email, department, unit, location, or title.";
+  contactSearchResults.innerHTML = '<p class="empty-note">Type a search above to load matching contacts from the backend directory.</p>';
   contactModal.hidden = false;
   document.body.classList.add("modal-open");
   await performContactSearch("");
@@ -975,7 +975,7 @@ async function performContactSearch(query) {
   const count = currentContactResults.length;
   contactSearchMeta.textContent = result.query
     ? `${count} match${count === 1 ? "" : "es"} for “${result.query}”.`
-    : `${count} contacts shown from bundled contacts.json.`;
+    : `${count} contacts shown from the backend directory.`;
   if (!count) {
     contactSearchResults.innerHTML = '<p class="empty-note">No contacts matched that search.</p>';
     return;
@@ -1001,7 +1001,7 @@ async function performContactSearch(query) {
         const entry = structuredClone(contact.manifestEntry);
         entry.source_index = manifest.filter((row) => row?.source_element === "ContactDirectory").length;
         manifest.push(entry);
-      }, `Added ${contact.label} from bundled contacts.`);
+      }, `Added ${contact.label} from backend contacts.`);
       closeContactModal();
     });
   });

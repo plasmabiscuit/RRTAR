@@ -14,6 +14,7 @@ from fastapi import Depends, FastAPI, File, Form, Header, HTTPException, UploadF
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 
+from . import contacts as contacts_service
 from . import store
 from .pipeline import JOB_SPECS
 from .settings import Settings
@@ -53,14 +54,10 @@ def health() -> Dict[str, Any]:
 @app.get("/config/reference", dependencies=[Depends(require_api_key)])
 @app.get("/api/config/reference", dependencies=[Depends(require_api_key)])
 def config_reference() -> Dict[str, Any]:
-    contacts_path = _reference_path(settings.data_dir / "contacts.json", settings.app_dir / "data" / "contacts.json")
+    contacts_path = _contacts_path()
     contacts_count = 0
     if contacts_path.exists():
-        try:
-            contacts = json.loads(contacts_path.read_text())
-            contacts_count = len(contacts) if isinstance(contacts, dict) else 0
-        except json.JSONDecodeError:
-            contacts_count = 0
+        contacts_count = len(contacts_service.load_contacts(contacts_path))
 
     selector_profiles = []
     config_root = _reference_dir(settings.config_dir, settings.app_dir / "config")
@@ -78,6 +75,13 @@ def config_reference() -> Dict[str, Any]:
         "selector_profiles": selector_profiles,
         "contacts_count": contacts_count,
     }
+
+
+@app.get("/contacts/search", dependencies=[Depends(require_api_key)])
+@app.get("/api/contacts/search", dependencies=[Depends(require_api_key)])
+def contacts_search(query: str = "", limit: int = 24) -> Dict[str, Any]:
+    contacts = contacts_service.load_contacts(_contacts_path())
+    return contacts_service.search_contacts(contacts, query, limit)
 
 
 @app.post("/jobs/keyperson", dependencies=[Depends(require_api_key)])
@@ -225,3 +229,7 @@ def _reference_dir(preferred: Path, fallback: Path) -> Path:
     if preferred.exists() and any(preferred.iterdir()):
         return preferred
     return fallback
+
+
+def _contacts_path() -> Path:
+    return _reference_path(settings.data_dir / "contacts.json", settings.app_dir / "data" / "contacts.json")
