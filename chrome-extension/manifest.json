@@ -16,12 +16,7 @@
   "host_permissions": [
     "https://*.grants.gov/*",
     "https://grants.gov/*",
-    "https://rrtar.duckdns.org/*",
-    "http://rrtar.duckdns.org/*",
-    "https://*.sslip.io/*",
-    "http://*.sslip.io/*",
-    "https://150.230.162.179/*",
-    "http://150.230.162.179/*"
+    "https://rrtar.duckdns.org/*"
   ],
   "background": {
     "service_worker": "src/background.js",

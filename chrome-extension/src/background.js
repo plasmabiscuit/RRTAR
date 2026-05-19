@@ -16,10 +16,12 @@ const CONTACT_SEARCH_LIMIT = 24;
 const BACKEND_POLL_MS = 2000;
 const BACKEND_TIMEOUT_MS = 120000;
 const DEFAULT_BACKEND_BASE_URL = "https://rrtar.duckdns.org";
+const ALLOWED_BACKEND_ORIGIN = "https://rrtar.duckdns.org";
 const LEGACY_BACKEND_BASE_URLS = new Set([
   "https://150.230.162.179.sslip.io",
   "https://150.230.162.179",
   "http://150.230.162.179",
+  "http://rrtar.duckdns.org",
 ]);
 
 const DEFAULT_SETTINGS = {
@@ -377,7 +379,7 @@ async function fetchBackendArtifactAttachment(path) {
   }
 
   const settings = await readSettings();
-  const baseUrl = settings.backendBaseUrl.trim();
+  const baseUrl = requireBackendBaseUrl(settings);
   if (!baseUrl) {
     return { ok: false, error: "Attachment reference is not a clientside file id, and backend base URL is not configured." };
   }
@@ -519,8 +521,9 @@ function matchStagedFileByPath(stagedFiles, path, role) {
 }
 
 async function persistBackendArtifactAsLocalFile(formType, role, path, settings, jobId) {
+  const baseUrl = requireBackendBaseUrl(settings);
   const response = await fetch(
-    `${settings.backendBaseUrl}/api/jobs/${encodeURIComponent(jobId)}/artifacts/file?path=${encodeURIComponent(path)}`,
+    `${baseUrl}/api/jobs/${encodeURIComponent(jobId)}/artifacts/file?path=${encodeURIComponent(path)}`,
     {
       method: "GET",
       headers: settings.apiKey.trim() ? { "x-api-key": settings.apiKey } : {},
@@ -585,12 +588,30 @@ function requireBackendBaseUrl(settings) {
   if (!baseUrl) {
     throw new Error("Backend base URL is not configured. Open extension settings first.");
   }
+  if (baseUrl !== ALLOWED_BACKEND_ORIGIN) {
+    throw new Error(`Backend base URL must be ${ALLOWED_BACKEND_ORIGIN}.`);
+  }
   return baseUrl;
 }
 
 function normalizeBackendBaseUrl(value) {
   const text = String(value || "").trim();
-  return text.replace(/\/+$/, "");
+  if (!text) {
+    return "";
+  }
+  let parsed;
+  try {
+    parsed = new URL(text);
+  } catch {
+    return text.replace(/\/+$/, "");
+  }
+  parsed.hash = "";
+  parsed.search = "";
+  const normalized = parsed.toString().replace(/\/+$/, "");
+  if (LEGACY_BACKEND_BASE_URLS.has(normalized)) {
+    return DEFAULT_BACKEND_BASE_URL;
+  }
+  return normalized;
 }
 
 function shouldMigrateBackendBaseUrl(storedValue, mergedValue) {
