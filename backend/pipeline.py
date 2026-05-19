@@ -45,6 +45,14 @@ JOB_SPECS: dict[str, dict[str, Any]] = {
 }
 
 
+class StepExecutionError(RuntimeError):
+    def __init__(self, step_name: str, step_logs: list[dict[str, Any]], cause: Exception):
+        super().__init__(str(cause))
+        self.step_name = step_name
+        self.step_logs = step_logs
+        self.cause = cause
+
+
 def process_job(settings: Settings, job: dict[str, Any]) -> dict[str, Any]:
     job_id = job["id"]
     spec = JOB_SPECS[job["job_type"]]
@@ -94,12 +102,20 @@ def process_job(settings: Settings, job: dict[str, Any]) -> dict[str, Any]:
         )
         return final_job or job
     except Exception as exc:
+        failed_step = exc.step_name if isinstance(exc, StepExecutionError) else None
+        step_logs = exc.step_logs if isinstance(exc, StepExecutionError) else []
         final_job = update_job(
             settings,
             job_id,
             status="failed",
             completed_at=_utc_now(),
             error_text=f"{type(exc).__name__}: {exc}",
+            result_json=json.dumps(
+                {
+                    "failed_step": failed_step,
+                    "steps": step_logs,
+                }
+            ),
             log_text=traceback.format_exc(),
         )
         return final_job or job
@@ -199,7 +215,18 @@ def _run_pipeline_steps(
             for arg_name in arg_names:
                 if arg_name == "agency":
                     args.append(agency)
-            result = fn(*args)
+            try:
+                result = fn(*args)
+            except Exception as exc:
+                step_logs.append(
+                    {
+                        "step": step_name,
+                        "script": rel_script,
+                        "status": "failed",
+                        "error": f"{type(exc).__name__}: {exc}",
+                    }
+                )
+                raise StepExecutionError(step_name, step_logs, exc) from exc
             if step_name == "validate":
                 validation_result = result
             if step_name == "normalize":
@@ -208,6 +235,7 @@ def _run_pipeline_steps(
                 {
                     "step": step_name,
                     "script": rel_script,
+                    "status": "completed",
                     "result_type": type(result).__name__,
                 }
             )

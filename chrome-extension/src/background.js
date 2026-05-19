@@ -81,8 +81,9 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
 async function getDashboardState(formType) {
   const state = await readState();
   const settings = await readSettings();
+  const reference = await getBackendReference(settings);
   if (!formType) {
-    return { ok: true, state, settings };
+    return { ok: true, state, settings, reference };
   }
   const files = await listFilesForForm(formType);
   return {
@@ -94,6 +95,7 @@ async function getDashboardState(formType) {
     files,
     preview: buildPreview(formType, state.forms?.[formType]?.manifest || []),
     settings,
+    reference,
   };
 }
 
@@ -287,8 +289,34 @@ async function runBackendPipeline(formType) {
   }
 
   const finalJob = await pollBackendJob(settings, baseUrl, job.id);
+  const state = await readState();
+  const existingManifest = state.forms?.[cleanFormType]?.manifest || [];
+  const backendState = {
+    jobId: job.id,
+    status: finalJob.status,
+    jobType: finalJob.job_type,
+    completedAt: finalJob.completed_at || null,
+    result: finalJob.result || null,
+    validation: null,
+    errorText: finalJob.error_text || null,
+  };
+
   if (finalJob.status !== "completed") {
-    throw new Error(finalJob.error_text || `Backend job ended with status ${finalJob.status}.`);
+    state.forms[cleanFormType] = {
+      manifest: existingManifest,
+      backend: backendState,
+    };
+    state.activeTab = cleanFormType;
+    await writeState(state);
+    return {
+      ok: false,
+      formType: cleanFormType,
+      job: finalJob,
+      backend: backendState,
+      manifest: existingManifest,
+      preview: buildPreview(cleanFormType, existingManifest),
+      error: finalJob.error_text || `Backend job ended with status ${finalJob.status}.`,
+    };
   }
 
   const manifest = await authorizedFetchJson(settings, `${baseUrl}/api/jobs/${job.id}/manifest`);
@@ -305,17 +333,11 @@ async function runBackendPipeline(formType) {
     validation = null;
   }
 
-  const state = await readState();
+  backendState.validation = validation;
+  backendState.errorText = null;
   state.forms[cleanFormType] = {
     manifest: localizedManifest,
-    backend: {
-      jobId: job.id,
-      status: finalJob.status,
-      jobType: finalJob.job_type,
-      completedAt: finalJob.completed_at || null,
-      result: finalJob.result || null,
-      validation,
-    },
+    backend: backendState,
   };
   state.activeTab = cleanFormType;
   await writeState(state);
@@ -328,6 +350,18 @@ async function runBackendPipeline(formType) {
     backend: state.forms[cleanFormType].backend,
     preview: buildPreview(cleanFormType, state.forms[cleanFormType].manifest),
   };
+}
+
+async function getBackendReference(settings) {
+  if (!settings?.apiKey?.trim()) {
+    return null;
+  }
+  try {
+    const baseUrl = requireBackendBaseUrl(settings);
+    return await authorizedFetchJson(settings, `${baseUrl}/api/config/reference`);
+  } catch {
+    return null;
+  }
 }
 
 async function searchContacts(query, limit) {

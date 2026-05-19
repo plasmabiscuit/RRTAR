@@ -88,18 +88,17 @@ const TAB_DEFS = {
     dropIcon: "pdfschip",
     manifestIcon: "manifestchip",
     uploadHint: "Drop Key Person PDFs here",
-    automateStep: "automate",
+    referenceTitle: "Hosted Schema",
     steps: [
-      ["fetch-schemas", "Download and pin Grants.gov XSD schemas", false],
-      ["extract", "Parse XFA XML and attachments from input PDFs", true],
-      ["validate", "Schema and business-rule validation", true],
-      ["normalize", "Build import_manifest.json for review", true],
-      ["automate", "Drive the live Grants.gov form", true],
+      ["extract", "Extract", "Parse XFA XML and attachments from staged Key Person PDFs.", true],
+      ["validate", "Validate", "Run hosted schema and business-rule validation on extracted people.", true],
+      ["normalize", "Normalize", "Build `import_manifest.json` for review and editing.", true],
+      ["automate", "Automate", "Drive the live Grants.gov Key Person form from the reviewed manifest.", true],
     ],
   },
   budget: {
     title: "Budget",
-    pipelineTitle: "Budget Pipeline",
+    pipelineTitle: "Pipeline",
     dropTitle: "Budget PDFs",
     manifestTitle: "Budget Manifest",
     tabIcon: "budget",
@@ -107,16 +106,17 @@ const TAB_DEFS = {
     dropIcon: "pdfschip",
     manifestIcon: "manifestchip",
     uploadHint: "Drop Budget PDFs here",
-    automateStep: "automate-budget",
+    referenceTitle: "Hosted Reference",
     steps: [
-      ["extract-budget", "Parse budget PDFs into reviewable data", true],
-      ["normalize-budget", "Build budget_manifest.json for review", true],
-      ["automate-budget", "Drive the live R&R Budget form", true],
+      ["extract", "Extract", "Parse staged budget PDFs and any Streamlyne sidecars into reviewable data.", true],
+      ["validate", "Validate", "Dedicated budget validation is not automated yet; review extracted data after pipeline output loads.", false],
+      ["normalize", "Normalize", "Build `budget_manifest.json` for review before automation.", true],
+      ["automate", "Automate", "Drive the live R&R Budget form from the reviewed manifest.", true],
     ],
   },
   "performance-site": {
     title: "Performance Site",
-    pipelineTitle: "Performance Site Pipeline",
+    pipelineTitle: "Pipeline",
     dropTitle: "Performance Site PDFs",
     manifestTitle: "Performance Site Manifest",
     tabIcon: "pin",
@@ -124,11 +124,12 @@ const TAB_DEFS = {
     dropIcon: "pdfschip",
     manifestIcon: "manifestchip",
     uploadHint: "Drop Performance Site PDFs here",
-    automateStep: "automate-performance-site",
+    referenceTitle: "Hosted Reference",
     steps: [
-      ["extract-performance-site", "Parse Performance Site PDFs into reviewable data", true],
-      ["normalize-performance-site", "Build performance_site_manifest.json for review", true],
-      ["automate-performance-site", "Drive the live Performance Site form", true],
+      ["extract", "Extract", "Parse staged Performance Site PDFs into reviewable site data.", true],
+      ["validate", "Validate", "Dedicated Performance Site validation is not automated yet; review generated site rows after extraction.", false],
+      ["normalize", "Normalize", "Build `performance_site_manifest.json` for review before automation.", true],
+      ["automate", "Automate", "Drive the live Project/Performance Site form from the reviewed manifest.", true],
     ],
   },
 };
@@ -224,8 +225,7 @@ function renderPage() {
     <div class="row2">
       <div class="card">
         <h2>${icon(def.pipelineIcon, "icon-chip")}${escapeHtml(def.pipelineTitle)}</h2>
-        <ul class="steps">${renderSteps(def, manifest, files)}</ul>
-        <div class="automate-row">${renderAutomateButton(manifest)}</div>
+        ${renderPipelineCard(def, manifest, files, backend, currentState?.reference)}
         <div class="chrome-box">
           <button id="open-grants-inline" class="btn-primary btn-panel" type="button">${icon("globe", "icon-btn")}Open Grants.gov</button>
           <span class="chrome-info">${escapeHtml(renderPipelineSummary(preview, backend))}</span>
@@ -266,18 +266,41 @@ function renderPage() {
   bindPageInteractions();
 }
 
-function renderSteps(def, manifest, files) {
-  return def.steps.map(([name, hint, enabled]) => {
-    const done = stepDone(name, manifest, files);
-    const badge = done
-      ? `<span class="badge done step-badge step-state" aria-label="done">${icon("check", "icon-status")}</span>`
-      : `<span class="badge pend step-badge step-state">${enabled ? "pending" : "not yet"}</span>`;
-    const action = enabled
-      ? `<span class="step-action"><button type="button" class="btn-run step-btn" data-step="${escapeAttr(name)}">${icon("play", "icon-btn")}Run</button></span>`
-      : `<span class="step-action"><button type="button" class="btn-disabled step-btn" disabled>${icon("play", "icon-btn")}Run</button></span>`;
-    const fullHint = enabled ? hint : `${hint} — not yet ported to clientside`;
-    return `<li>${action}<strong class="step-name">${escapeHtml(name)}</strong>${badge}<span class="step-hint">${escapeHtml(fullHint)}</span></li>`;
-  }).join("");
+function renderPipelineCard(def, manifest, files, backend, reference) {
+  const sourceCount = countSourceFiles(files);
+  const referenceSupport = reference?.pipeline_support?.[activeTab] || null;
+  const referenceStatus = getReferenceStatus(def, sourceCount, referenceSupport);
+  const steps = def.steps.map(([id, title, description, automated]) => (
+    getPipelineStepStatus({ id, title, description, automated, manifest, files, backend, referenceSupport })
+  ));
+  return `
+    <div class="pipeline-reference-box">
+      <div>
+        <div class="pipeline-reference-title">${escapeHtml(def.referenceTitle)}</div>
+        <div class="pipeline-reference-copy">${escapeHtml(referenceStatus.description)}</div>
+      </div>
+      <span class="badge ${referenceStatus.tone}">${renderStatusGlyph(referenceStatus)}${escapeHtml(referenceStatus.label)}</span>
+    </div>
+    <div class="pipeline-flow">
+      ${steps.map((step, index) => `
+        <div class="pipeline-flow-node-wrap">
+          <div class="pipeline-flow-node ${escapeAttr(step.nodeClass)}">${renderStatusGlyph(step)}</div>
+          ${index < steps.length - 1 ? `<div class="pipeline-flow-link ${escapeAttr(step.linkClass)}"></div>` : ""}
+        </div>
+        <div class="pipeline-flow-step">
+          <div class="pipeline-step-head">
+            <strong class="pipeline-step-name">${escapeHtml(step.title)}</strong>
+            <span class="badge ${step.tone}">${renderStatusGlyph(step)}${escapeHtml(step.label)}</span>
+          </div>
+          <div class="pipeline-step-copy">${escapeHtml(step.description)}</div>
+        </div>
+      `).join("")}
+    </div>
+    <div class="automate-row">
+      ${renderPipelineButton(files)}
+      ${renderAutomateButton(manifest)}
+    </div>
+  `;
 }
 
 function renderAutomateButton(manifest) {
@@ -287,11 +310,21 @@ function renderAutomateButton(manifest) {
   return `<button id="automate-btn" class="btn-automate btn-panel" type="button">${icon("automate", "icon-btn")}Automate</button>`;
 }
 
+function renderPipelineButton(files) {
+  if (!countSourceFiles(files)) {
+    return `<button class="btn-disabled btn-panel" type="button" disabled title="Stage PDFs first">${icon("play", "icon-btn")}Run Pipeline</button>`;
+  }
+  return `<button id="run-pipeline-btn" class="btn-run btn-panel" type="button">${icon("play", "icon-btn")}Run Pipeline</button>`;
+}
+
 function renderPipelineSummary(preview, backend) {
   const lines = Array.isArray(preview?.lines) ? preview.lines : [];
   if (backend?.jobId) {
     const stamp = backend.completedAt ? new Date(backend.completedAt).toLocaleString() : "in progress";
     lines.push(`Backend: ${backend.status || "unknown"} (${stamp})`);
+    if (backend?.status === "failed" && backend?.result?.failed_step) {
+      lines.push(`Failed at: ${backend.result.failed_step}`);
+    }
   }
   return lines.join(" · ") || "Stage PDFs, run the backend pipeline, then automate.";
 }
@@ -618,29 +651,6 @@ function renderEntryActions(index, entry) {
   </div>`;
 }
 
-function stepDone(name, manifest, files) {
-  const backend = currentState?.backend || null;
-  if (name === "fetch-schemas") {
-    return false;
-  }
-  if (isBackendPipelineStep(name)) {
-    return backend?.status === "completed" && Array.isArray(manifest) && manifest.length > 0;
-  }
-  if (name.includes("extract")) {
-    return files.filter((file) => file.role === "source-pdf").length > 0;
-  }
-  if (name.includes("validate")) {
-    return false;
-  }
-  if (name.includes("normalize")) {
-    return Array.isArray(manifest) && manifest.length > 0;
-  }
-  if (name.includes("automate")) {
-    return false;
-  }
-  return false;
-}
-
 function bindPageInteractions() {
   document.querySelector("#open-grants-inline")?.addEventListener("click", () => {
     chrome.tabs.create({ url: "https://apply07.grants.gov/" });
@@ -782,21 +792,7 @@ function bindPageInteractions() {
     });
   });
 
-  document.querySelectorAll("[data-step]").forEach((button) => {
-    button.addEventListener("click", async () => {
-      const step = button.getAttribute("data-step");
-      if (step === TAB_DEFS[activeTab].automateStep) {
-        await runAutomate();
-        return;
-      }
-      if (isBackendPipelineStep(step)) {
-        await runBackendPipeline(step);
-        return;
-      }
-      setStatus(`${step} is shown for parity with ui.py, but it is not ported to clientside yet.`, "warn");
-    });
-  });
-
+  document.querySelector("#run-pipeline-btn")?.addEventListener("click", runBackendPipeline);
   document.querySelector("#automate-btn")?.addEventListener("click", runAutomate);
 }
 
@@ -895,7 +891,7 @@ async function runAutomate() {
     setStatus(`Detected ${detection.detection.formType}, but this dashboard tab is ${activeTab}. Switch tabs or open the correct Grants.gov form.`, "warn");
     return;
   }
-  setStatus(`Running ${TAB_DEFS[activeTab].automateStep} against the active Grants.gov tab...`, "", { sticky: true });
+  setStatus(`Running automate against the active Grants.gov ${TAB_DEFS[activeTab].title} form...`, "", { sticky: true });
   const result = await chrome.tabs.sendMessage(tab.id, {
     type: "rrtar:autofill-manifest",
     payload,
@@ -903,18 +899,20 @@ async function runAutomate() {
   setStatus(typeof result === "string" ? result : JSON.stringify(result, null, 2), result?.ok ? "" : "err");
 }
 
-async function runBackendPipeline(step) {
+async function runBackendPipeline() {
   if (!Array.isArray(currentState?.files) || !currentState.files.some((file) => file.role === "source-pdf")) {
-    setStatus(`Stage at least one PDF for ${TAB_DEFS[activeTab].title} before running ${step}.`, "warn");
+    setStatus(`Stage at least one PDF for ${TAB_DEFS[activeTab].title} before running the pipeline.`, "warn");
     return;
   }
-  setStatus(`Running ${step} on the backend for ${TAB_DEFS[activeTab].title}...`, "", { sticky: true });
+  setStatus(`Running the backend pipeline for ${TAB_DEFS[activeTab].title}...`, "", { sticky: true });
   const result = await chrome.runtime.sendMessage({
     type: "rrtar:run-backend-pipeline",
     formType: activeTab,
   });
   if (!result?.ok) {
-    setStatus(result?.error || `Backend pipeline failed during ${step}.`, "err");
+    await refreshState();
+    const failedStep = result?.backend?.result?.failed_step;
+    setStatus(result?.error || `Backend pipeline failed${failedStep ? ` during ${failedStep}` : ""}.`, "err");
     return;
   }
   await refreshState();
@@ -1049,18 +1047,6 @@ function setStatus(message, kind, options = {}) {
   }
 }
 
-function isBackendPipelineStep(step) {
-  return [
-    "extract",
-    "validate",
-    "normalize",
-    "extract-budget",
-    "normalize-budget",
-    "extract-performance-site",
-    "normalize-performance-site",
-  ].includes(String(step || ""));
-}
-
 function uploadAcceptValue(formType) {
   return formType === "budget" ? ".pdf,.budget.json,application/json" : ".pdf";
 }
@@ -1104,6 +1090,96 @@ function pipelineFileKindLabel(file) {
     return "sidecar metadata";
   }
   return "ready";
+}
+
+function getReferenceStatus(def, sourceCount, support) {
+  if (!support) {
+    return {
+      tone: "pend",
+      label: "unverified",
+      glyph: "dot",
+      description: sourceCount
+        ? `Could not verify the backend ${def.referenceTitle.toLowerCase()} right now.`
+        : `Backend ${def.referenceTitle.toLowerCase()} status has not been verified yet.`,
+    };
+  }
+  return {
+    tone: support.available ? "ok" : "err",
+    label: support.available ? "available" : "missing",
+    glyph: support.available ? "check" : "close",
+    description: support.detail || `${def.referenceTitle} ${support.available ? "is available" : "is missing"} on the backend.`,
+  };
+}
+
+function getPipelineStepStatus({ id, title, description, automated, manifest, files, backend, referenceSupport }) {
+  const sourceCount = countSourceFiles(files);
+  const manifestCount = Array.isArray(manifest) ? manifest.length : 0;
+  const steps = Array.isArray(backend?.result?.steps) ? backend.result.steps : [];
+  const completedSteps = new Set(steps.filter((step) => step?.status === "completed" || !step?.status).map((step) => step.step));
+  const failedStep = String(backend?.result?.failed_step || "");
+  const hasBackendValidation = Boolean(backend?.validation?.available || backend?.validation?.file_count);
+  const hasCompletedBackendRun = backend?.status === "completed";
+  const extractDone = completedSteps.has("extract") || manifestCount > 0 || hasCompletedBackendRun;
+  const validateDone = completedSteps.has("validate") || hasBackendValidation;
+  const normalizeDone = completedSteps.has("normalize") || manifestCount > 0 || hasCompletedBackendRun;
+
+  if (failedStep === id) {
+    return { title, description, tone: "err", label: "failed", glyph: "close", nodeClass: "err", linkClass: "stalled" };
+  }
+  if (id === "extract" && extractDone) {
+    return { title, description, tone: "ok", label: "done", glyph: "check", nodeClass: "ok", linkClass: "ok" };
+  }
+  if (id === "validate") {
+    if (!automated) {
+      const readyForManualReview = manifestCount > 0 || extractDone || normalizeDone;
+      return {
+        title,
+        description,
+        tone: readyForManualReview ? "warn" : "pend",
+        label: readyForManualReview ? "manual" : "pending",
+        glyph: readyForManualReview ? "warning" : "dot",
+        nodeClass: readyForManualReview ? "warn" : "pend",
+        linkClass: readyForManualReview ? "warn" : "pending",
+      };
+    }
+    if (validateDone) {
+      return { title, description, tone: "ok", label: "done", glyph: "check", nodeClass: "ok", linkClass: "ok" };
+    }
+  }
+  if (id === "normalize" && normalizeDone) {
+    return { title, description, tone: "ok", label: "done", glyph: "check", nodeClass: "ok", linkClass: "ok" };
+  }
+  if (id === "automate") {
+    if (manifestCount > 0) {
+      return { title, description, tone: "ok", label: "ready", glyph: "check", nodeClass: "ok", linkClass: "ok" };
+    }
+    return { title, description, tone: "pend", label: "pending", glyph: "dot", nodeClass: "pend", linkClass: "pending" };
+  }
+  if (sourceCount === 0) {
+    return { title, description, tone: "pend", label: "pending", glyph: "dot", nodeClass: "pend", linkClass: "pending" };
+  }
+  if (backend?.status === "failed" && failedStep && stepOrderIndex(failedStep) < stepOrderIndex(id)) {
+    return { title, description, tone: "pend", label: "blocked", glyph: "dot", nodeClass: "pend", linkClass: "stalled" };
+  }
+  if (id === "validate" && referenceSupport?.validation_available === false) {
+    return { title, description, tone: "warn", label: "manual", glyph: "warning", nodeClass: "warn", linkClass: "warn" };
+  }
+  return { title, description, tone: "pend", label: "pending", glyph: "dot", nodeClass: "pend", linkClass: "pending" };
+}
+
+function renderStatusGlyph(status) {
+  if (status.glyph === "check") return icon("check", "icon-status");
+  if (status.glyph === "close") return icon("close", "icon-status");
+  if (status.glyph === "warning") return icon("warning", "icon-status");
+  return '<span class="pipeline-dot" aria-hidden="true"></span>';
+}
+
+function stepOrderIndex(stepId) {
+  return ["extract", "validate", "normalize", "automate"].indexOf(String(stepId || ""));
+}
+
+function countSourceFiles(files) {
+  return Array.isArray(files) ? files.filter((file) => file.role === "source-pdf").length : 0;
 }
 
 function icon(name, classes = "") {

@@ -74,6 +74,7 @@ def config_reference() -> Dict[str, Any]:
         "role_mapping": _read_json_if_exists(_reference_path(settings.config_dir / "role_mapping.json", settings.app_dir / "config" / "role_mapping.json")),
         "selector_profiles": selector_profiles,
         "contacts_count": contacts_count,
+        "pipeline_support": _pipeline_support_summary(selector_profiles),
     }
 
 
@@ -233,3 +234,37 @@ def _reference_dir(preferred: Path, fallback: Path) -> Path:
 
 def _contacts_path() -> Path:
     return _reference_path(settings.data_dir / "contacts.json", settings.app_dir / "data" / "contacts.json")
+
+
+def _pipeline_support_summary(selector_profiles: List[str]) -> Dict[str, Dict[str, Any]]:
+    schemas_root = _reference_dir(settings.schemas_dir, settings.app_dir / "schemas")
+    config_root = _reference_dir(settings.config_dir, settings.app_dir / "config")
+    selector_profile_set = set(selector_profiles)
+    keyperson_schema = schemas_root / "RR_KeyPersonExpanded_4_0-V4.0.xsd"
+    budget_reference = config_root / "RR_budget_reference.json"
+    performance_reference = config_root / "selector_profile.grantsgov-performance-site-4.0.json"
+    budget_selector = "selector_profile.grantsgov-rr-budget-3.0.json" in selector_profile_set
+    performance_selector = performance_reference.name in selector_profile_set
+    return {
+        "keyperson": {
+            "reference_type": "schema",
+            "available": keyperson_schema.exists(),
+            "name": keyperson_schema.name,
+            "detail": "Hosted Grants.gov Key Person schema is available on the backend." if keyperson_schema.exists() else "Hosted Grants.gov Key Person schema is missing on the backend.",
+            "validation_available": True,
+        },
+        "budget": {
+            "reference_type": "reference",
+            "available": budget_reference.exists() and budget_selector,
+            "name": budget_reference.name,
+            "detail": "Hosted budget reference files are available on the backend." if budget_reference.exists() and budget_selector else "Hosted budget reference files are incomplete on the backend.",
+            "validation_available": False,
+        },
+        "performance-site": {
+            "reference_type": "reference",
+            "available": performance_reference.exists() and performance_selector,
+            "name": performance_reference.name,
+            "detail": "Hosted performance-site reference files are available on the backend." if performance_reference.exists() and performance_selector else "Hosted performance-site reference files are incomplete on the backend.",
+            "validation_available": False,
+        },
+    }
