@@ -186,8 +186,13 @@ async function refreshState() {
     setStatus(result?.error || "Could not load dashboard state.", "err");
     return;
   }
+  applyFontMode(result.settings);
   currentState = result;
   renderPage();
+}
+
+function applyFontMode(settings) {
+  document.body.classList.toggle("fonts-plain", settings?.useRetroFonts === false);
 }
 
 function renderTabs() {

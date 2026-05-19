@@ -21,6 +21,7 @@ const DEFAULT_SETTINGS = {
   backendBaseUrl: "https://150.230.162.179.sslip.io",
   apiKey: "",
   agency: "default",
+  useRetroFonts: true,
 };
 
 let contactsCache = null;
@@ -560,6 +561,9 @@ function mergeSettings(settings) {
     merged.backendBaseUrl = normalizeBackendBaseUrl(settings.backendBaseUrl || merged.backendBaseUrl);
     merged.apiKey = String(settings.apiKey || merged.apiKey).trim();
     merged.agency = String(settings.agency || merged.agency).trim() || "default";
+    if (Object.prototype.hasOwnProperty.call(settings, "useRetroFonts")) {
+      merged.useRetroFonts = Boolean(settings.useRetroFonts);
+    }
   }
   return merged;
 }

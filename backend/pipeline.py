@@ -69,13 +69,17 @@ def process_job(settings: Settings, job: dict[str, Any]) -> dict[str, Any]:
         validation_path.write_text(json.dumps(validation_summary, indent=2))
 
         manifest_path = workspace_dir / spec["manifest_relpath"]
+        if not manifest_path.exists():
+            raise FileNotFoundError(
+                f"Expected manifest output was not created: {manifest_path.relative_to(workspace_dir)}"
+            )
         artifacts = _collect_artifacts(workspace_dir)
         final_job = update_job(
             settings,
             job_id,
             status="completed",
             completed_at=_utc_now(),
-            manifest_path=str(manifest_path) if manifest_path.exists() else None,
+            manifest_path=str(manifest_path),
             validation_path=str(validation_path),
             artifacts_json=json.dumps(artifacts),
             result_json=json.dumps(
@@ -180,26 +184,36 @@ def _run_pipeline_steps(
     step_logs: list[dict[str, Any]] = []
     validation_result = None
     manifest = None
+    scripts_dir = str(workspace_dir / "scripts")
+    inserted_scripts_dir = False
 
-    for step_name, rel_script, function_name, arg_names in spec["steps"]:
-        module = _load_module(workspace_dir / rel_script, step_name)
-        fn = getattr(module, function_name)
-        args = []
-        for arg_name in arg_names:
-            if arg_name == "agency":
-                args.append(agency)
-        result = fn(*args)
-        if step_name == "validate":
-            validation_result = result
-        if step_name == "normalize":
-            manifest = result
-        step_logs.append(
-            {
-                "step": step_name,
-                "script": rel_script,
-                "result_type": type(result).__name__,
-            }
-        )
+    if scripts_dir not in sys.path:
+        sys.path.insert(0, scripts_dir)
+        inserted_scripts_dir = True
+
+    try:
+        for step_name, rel_script, function_name, arg_names in spec["steps"]:
+            module = _load_module(workspace_dir / rel_script, step_name)
+            fn = getattr(module, function_name)
+            args = []
+            for arg_name in arg_names:
+                if arg_name == "agency":
+                    args.append(agency)
+            result = fn(*args)
+            if step_name == "validate":
+                validation_result = result
+            if step_name == "normalize":
+                manifest = result
+            step_logs.append(
+                {
+                    "step": step_name,
+                    "script": rel_script,
+                    "result_type": type(result).__name__,
+                }
+            )
+    finally:
+        if inserted_scripts_dir and sys.path and sys.path[0] == scripts_dir:
+            sys.path.pop(0)
 
     return {
         "validation_result": validation_result,

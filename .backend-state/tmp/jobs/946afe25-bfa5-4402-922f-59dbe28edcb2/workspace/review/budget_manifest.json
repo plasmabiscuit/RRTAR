@@ -1,0 +1,805 @@
+[
+  {
+    "source_pdf": "BRE-SPAD_budget",
+    "organization": {
+      "uei": "KZNHNMDUTJA5",
+      "name": "Tennessee Technological University",
+      "budget_type": "Project"
+    },
+    "budget_justification": {
+      "path": "extracted-budget-attachments/BRE-SPAD_budget_BudgetJustification.pdf",
+      "sha1_base64": "tcuADWR1/9Lw0YuMY/ZExSNp3S4="
+    },
+    "periods": [
+      {
+        "period_index": 1,
+        "start_date": "2027-01-01",
+        "end_date": "2027-12-31",
+        "section_a": {
+          "key_persons": [
+            {
+              "prefix": "Dr.",
+              "first_name": "Steven",
+              "middle_name": "",
+              "last_name": "Anton",
+              "suffix": "",
+              "project_role": "PD/PI",
+              "calendar_months": "",
+              "academic_months": "3.50",
+              "summer_months": "1.00",
+              "base_salary": "",
+              "requested_salary": "80212.00",
+              "fringe_benefits": "31199.00",
+              "funds_requested": "111411.00"
+            },
+            {
+              "prefix": "",
+              "first_name": "John",
+              "middle_name": "",
+              "last_name": "Liu",
+              "suffix": "",
+              "project_role": "Co-PD",
+              "calendar_months": "1.00",
+              "academic_months": "",
+              "summer_months": "",
+              "base_salary": "",
+              "requested_salary": "0.00",
+              "fringe_benefits": "0.00",
+              "funds_requested": "0.00"
+            },
+            {
+              "prefix": "",
+              "first_name": "Xuanzhi",
+              "middle_name": "",
+              "last_name": "Zhan",
+              "suffix": "",
+              "project_role": "Co-PD",
+              "calendar_months": "",
+              "academic_months": "1.00",
+              "summer_months": "2.00",
+              "base_salary": "",
+              "requested_salary": "26952.00",
+              "fringe_benefits": "8984.00",
+              "funds_requested": "35936.00"
+            },
+            {
+              "prefix": "",
+              "first_name": "Neal",
+              "middle_name": "",
+              "last_name": "Hunt",
+              "suffix": "",
+              "project_role": "Co-PD",
+              "calendar_months": "1.00",
+              "academic_months": "",
+              "summer_months": "",
+              "base_salary": "",
+              "requested_salary": "9331.00",
+              "fringe_benefits": "3919.00",
+              "funds_requested": "13250.00"
+            }
+          ],
+          "total": "160597.00"
+        },
+        "section_b": {
+          "graduate_students": {
+            "number_of_personnel": "1",
+            "project_role": "Graduate Students",
+            "calendar_months": "0.75",
+            "academic_months": "",
+            "summer_months": "",
+            "requested_salary": "2400.00",
+            "fringe_benefits": "0.00",
+            "funds_requested": "2400.00"
+          },
+          "undergraduate_students": {
+            "number_of_personnel": "1",
+            "project_role": "Undergraduate Students",
+            "calendar_months": "2.50",
+            "academic_months": "",
+            "summer_months": "",
+            "requested_salary": "6000.00",
+            "fringe_benefits": "0.00",
+            "funds_requested": "6000.00"
+          },
+          "secretarial_clerical": {
+            "number_of_personnel": "1",
+            "project_role": "Secretarial / Clerical",
+            "calendar_months": "6.00",
+            "academic_months": "",
+            "summer_months": "",
+            "requested_salary": "25000.00",
+            "fringe_benefits": "10500.00",
+            "funds_requested": "35500.00"
+          },
+          "other_personnel": [],
+          "total_number": "3",
+          "total_funds": "43900.00"
+        },
+        "section_c": {
+          "items": [
+            {
+              "item": "Odyssey F (2-Laser) Imaging",
+              "funds_requested": "67890.00"
+            },
+            {
+              "item": "Keyence BZX Fluorescence Microscope",
+              "funds_requested": "67441.00"
+            }
+          ],
+          "total": "135331.00"
+        },
+        "section_d": {
+          "total_travel_cost": "44000.00"
+        },
+        "section_e": {},
+        "section_f": {
+          "materials_supplies": "",
+          "publication_costs": "",
+          "consultant_services": "",
+          "adp_computer_services": "",
+          "subawards_consortium_contractual_costs": "",
+          "equipment_facility_rental_user_fees": "",
+          "alterations_renovations": "",
+          "other_items": [
+            {
+              "description": "Pilot Research Project Program",
+              "cost": "0.00"
+            },
+            {
+              "description": "Training courses - OSP staff",
+              "cost": "3400.00"
+            },
+            {
+              "description": "External Evaluator",
+              "cost": "12000.00"
+            },
+            {
+              "description": "PD/PI Mentor Consulting Fees",
+              "cost": "25405.00"
+            },
+            {
+              "description": "Faculty Mentor Consulting Fees",
+              "cost": "40000.00"
+            },
+            {
+              "description": "BREP & IBR Activities",
+              "cost": "30000.00"
+            }
+          ],
+          "total": "110805.00"
+        },
+        "section_h": {
+          "indirect_costs": [
+            {
+              "cost_type": "MTDC",
+              "rate": "43.50",
+              "base": "359302.00",
+              "fund_requested": "156296.00"
+            }
+          ],
+          "total": "156296.00",
+          "cognizant_agency": ""
+        },
+        "total_compensation": "204497.00",
+        "direct_costs": "494633.00",
+        "total_costs": "650929.00",
+        "total_costs_fee": "650929.00"
+      },
+      {
+        "period_index": 2,
+        "start_date": "2028-01-01",
+        "end_date": "2028-12-31",
+        "section_a": {
+          "key_persons": [
+            {
+              "prefix": "Dr.",
+              "first_name": "Steven",
+              "middle_name": "",
+              "last_name": "Anton",
+              "suffix": "",
+              "project_role": "PD/PI",
+              "calendar_months": "",
+              "academic_months": "3.50",
+              "summer_months": "1.00",
+              "base_salary": "",
+              "requested_salary": "80212.00",
+              "fringe_benefits": "31199.00",
+              "funds_requested": "111411.00"
+            },
+            {
+              "prefix": "",
+              "first_name": "John",
+              "middle_name": "",
+              "last_name": "Liu",
+              "suffix": "",
+              "project_role": "Co-PD",
+              "calendar_months": "1.00",
+              "academic_months": "",
+              "summer_months": "",
+              "base_salary": "",
+              "requested_salary": "0.00",
+              "fringe_benefits": "0.00",
+              "funds_requested": "0.00"
+            },
+            {
+              "prefix": "",
+              "first_name": "Xuanzhi",
+              "middle_name": "",
+              "last_name": "Zhan",
+              "suffix": "",
+              "project_role": "Co-PD",
+              "calendar_months": "",
+              "academic_months": "1.00",
+              "summer_months": "2.00",
+              "base_salary": "",
+              "requested_salary": "26952.00",
+              "fringe_benefits": "8984.00",
+              "funds_requested": "35936.00"
+            },
+            {
+              "prefix": "",
+              "first_name": "Neal",
+              "middle_name": "",
+              "last_name": "Hunt",
+              "suffix": "",
+              "project_role": "Co-PD",
+              "calendar_months": "1.00",
+              "academic_months": "",
+              "summer_months": "",
+              "base_salary": "",
+              "requested_salary": "9331.00",
+              "fringe_benefits": "3919.00",
+              "funds_requested": "13250.00"
+            }
+          ],
+          "total": "160597.00"
+        },
+        "section_b": {
+          "graduate_students": {
+            "number_of_personnel": "1",
+            "project_role": "Graduate Students",
+            "calendar_months": "0.75",
+            "academic_months": "",
+            "summer_months": "",
+            "requested_salary": "2400.00",
+            "fringe_benefits": "0.00",
+            "funds_requested": "2400.00"
+          },
+          "undergraduate_students": {
+            "number_of_personnel": "1",
+            "project_role": "Undergraduate Students",
+            "calendar_months": "2.50",
+            "academic_months": "",
+            "summer_months": "",
+            "requested_salary": "6000.00",
+            "fringe_benefits": "0.00",
+            "funds_requested": "6000.00"
+          },
+          "secretarial_clerical": {
+            "number_of_personnel": "1",
+            "project_role": "Secretarial / Clerical",
+            "calendar_months": "6.00",
+            "academic_months": "",
+            "summer_months": "",
+            "requested_salary": "25000.00",
+            "fringe_benefits": "10500.00",
+            "funds_requested": "35500.00"
+          },
+          "other_personnel": [],
+          "total_number": "3",
+          "total_funds": "43900.00"
+        },
+        "section_c": {
+          "items": [],
+          "total": ""
+        },
+        "section_d": {
+          "total_travel_cost": "44000.00"
+        },
+        "section_e": {},
+        "section_f": {
+          "materials_supplies": "",
+          "publication_costs": "",
+          "consultant_services": "",
+          "adp_computer_services": "",
+          "subawards_consortium_contractual_costs": "",
+          "equipment_facility_rental_user_fees": "",
+          "alterations_renovations": "",
+          "other_items": [
+            {
+              "description": "Pilot Research Project Program",
+              "cost": "140000.00"
+            },
+            {
+              "description": "Training courses - OSP staff",
+              "cost": "3450.00"
+            },
+            {
+              "description": "External Evaluator",
+              "cost": "10000.00"
+            },
+            {
+              "description": "PD/PI Mentor Consulting Fees",
+              "cost": "25405.00"
+            },
+            {
+              "description": "Faculty Mentor Consulting Fees",
+              "cost": "40000.00"
+            },
+            {
+              "description": "BREP & IBR Activities",
+              "cost": "27000.00"
+            }
+          ],
+          "total": "245855.00"
+        },
+        "section_h": {
+          "indirect_costs": [
+            {
+              "cost_type": "MTDC",
+              "rate": "43.50",
+              "base": "494352.00",
+              "fund_requested": "215043.00"
+            }
+          ],
+          "total": "215043.00",
+          "cognizant_agency": ""
+        },
+        "total_compensation": "204497.00",
+        "direct_costs": "494352.00",
+        "total_costs": "709395.00",
+        "total_costs_fee": "709395.00"
+      },
+      {
+        "period_index": 3,
+        "start_date": "2029-01-01",
+        "end_date": "2029-12-31",
+        "section_a": {
+          "key_persons": [
+            {
+              "prefix": "Dr.",
+              "first_name": "Steven",
+              "middle_name": "",
+              "last_name": "Anton",
+              "suffix": "",
+              "project_role": "PD/PI",
+              "calendar_months": "",
+              "academic_months": "3.50",
+              "summer_months": "1.00",
+              "base_salary": "",
+              "requested_salary": "80212.00",
+              "fringe_benefits": "31199.00",
+              "funds_requested": "111411.00"
+            },
+            {
+              "prefix": "",
+              "first_name": "John",
+              "middle_name": "",
+              "last_name": "Liu",
+              "suffix": "",
+              "project_role": "Co-PD",
+              "calendar_months": "1.00",
+              "academic_months": "",
+              "summer_months": "",
+              "base_salary": "",
+              "requested_salary": "0.00",
+              "fringe_benefits": "0.00",
+              "funds_requested": "0.00"
+            },
+            {
+              "prefix": "",
+              "first_name": "Xuanzhi",
+              "middle_name": "",
+              "last_name": "Zhan",
+              "suffix": "",
+              "project_role": "Co-PD",
+              "calendar_months": "",
+              "academic_months": "1.00",
+              "summer_months": "1.00",
+              "base_salary": "",
+              "requested_salary": "17968.00",
+              "fringe_benefits": "6379.00",
+              "funds_requested": "24347.00"
+            }
+          ],
+          "total": "135758.00"
+        },
+        "section_b": {
+          "graduate_students": {
+            "number_of_personnel": "1",
+            "project_role": "Graduate Students",
+            "calendar_months": "0.75",
+            "academic_months": "",
+            "summer_months": "",
+            "requested_salary": "2400.00",
+            "fringe_benefits": "0.00",
+            "funds_requested": "2400.00"
+          },
+          "undergraduate_students": {
+            "number_of_personnel": "1",
+            "project_role": "Undergraduate Students",
+            "calendar_months": "2.50",
+            "academic_months": "",
+            "summer_months": "",
+            "requested_salary": "6000.00",
+            "fringe_benefits": "0.00",
+            "funds_requested": "6000.00"
+          },
+          "secretarial_clerical": {
+            "number_of_personnel": "1",
+            "project_role": "Secretarial / Clerical",
+            "calendar_months": "6.00",
+            "academic_months": "",
+            "summer_months": "",
+            "requested_salary": "25000.00",
+            "fringe_benefits": "10500.00",
+            "funds_requested": "35500.00"
+          },
+          "other_personnel": [],
+          "total_number": "3",
+          "total_funds": "43900.00"
+        },
+        "section_c": {
+          "items": [],
+          "total": ""
+        },
+        "section_d": {
+          "total_travel_cost": "34000.00"
+        },
+        "section_e": {},
+        "section_f": {
+          "materials_supplies": "",
+          "publication_costs": "",
+          "consultant_services": "",
+          "adp_computer_services": "",
+          "subawards_consortium_contractual_costs": "",
+          "equipment_facility_rental_user_fees": "",
+          "alterations_renovations": "",
+          "other_items": [
+            {
+              "description": "Pilot Research Project Program",
+              "cost": "180000.00"
+            },
+            {
+              "description": "Training courses - OSP staff",
+              "cost": "1500.00"
+            },
+            {
+              "description": "External Evaluator",
+              "cost": "10000.00"
+            },
+            {
+              "description": "PD/PI Mentor Consulting Fees",
+              "cost": "25405.00"
+            },
+            {
+              "description": "Faculty Mentor Consulting Fees",
+              "cost": "40000.00"
+            },
+            {
+              "description": "BREP & IBR Activities",
+              "cost": "22000.00"
+            }
+          ],
+          "total": "278905.00"
+        },
+        "section_h": {
+          "indirect_costs": [
+            {
+              "cost_type": "MTDC",
+              "rate": "43.50",
+              "base": "492562.00",
+              "fund_requested": "214265.00"
+            }
+          ],
+          "total": "214265.00",
+          "cognizant_agency": ""
+        },
+        "total_compensation": "179658.00",
+        "direct_costs": "492563.00",
+        "total_costs": "706828.00",
+        "total_costs_fee": "706828.00"
+      },
+      {
+        "period_index": 4,
+        "start_date": "2030-01-01",
+        "end_date": "2030-12-31",
+        "section_a": {
+          "key_persons": [
+            {
+              "prefix": "Dr.",
+              "first_name": "Steven",
+              "middle_name": "",
+              "last_name": "Anton",
+              "suffix": "",
+              "project_role": "PD/PI",
+              "calendar_months": "",
+              "academic_months": "3.50",
+              "summer_months": "1.00",
+              "base_salary": "",
+              "requested_salary": "80212.00",
+              "fringe_benefits": "31199.00",
+              "funds_requested": "111411.00"
+            },
+            {
+              "prefix": "",
+              "first_name": "John",
+              "middle_name": "",
+              "last_name": "Liu",
+              "suffix": "",
+              "project_role": "Co-PD",
+              "calendar_months": "1.00",
+              "academic_months": "",
+              "summer_months": "",
+              "base_salary": "",
+              "requested_salary": "0.00",
+              "fringe_benefits": "0.00",
+              "funds_requested": "0.00"
+            },
+            {
+              "prefix": "",
+              "first_name": "Xuanzhi",
+              "middle_name": "",
+              "last_name": "Zhan",
+              "suffix": "",
+              "project_role": "Co-PD",
+              "calendar_months": "",
+              "academic_months": "1.00",
+              "summer_months": "1.00",
+              "base_salary": "",
+              "requested_salary": "17968.00",
+              "fringe_benefits": "6379.00",
+              "funds_requested": "24347.00"
+            }
+          ],
+          "total": "135758.00"
+        },
+        "section_b": {
+          "graduate_students": {
+            "number_of_personnel": "1",
+            "project_role": "Graduate Students",
+            "calendar_months": "0.75",
+            "academic_months": "",
+            "summer_months": "",
+            "requested_salary": "2400.00",
+            "fringe_benefits": "0.00",
+            "funds_requested": "2400.00"
+          },
+          "undergraduate_students": {
+            "number_of_personnel": "1",
+            "project_role": "Undergraduate Students",
+            "calendar_months": "2.50",
+            "academic_months": "",
+            "summer_months": "",
+            "requested_salary": "6000.00",
+            "fringe_benefits": "0.00",
+            "funds_requested": "6000.00"
+          },
+          "secretarial_clerical": {
+            "number_of_personnel": "1",
+            "project_role": "Secretarial / Clerical",
+            "calendar_months": "6.00",
+            "academic_months": "",
+            "summer_months": "",
+            "requested_salary": "25000.00",
+            "fringe_benefits": "10500.00",
+            "funds_requested": "35500.00"
+          },
+          "other_personnel": [],
+          "total_number": "3",
+          "total_funds": "43900.00"
+        },
+        "section_c": {
+          "items": [],
+          "total": ""
+        },
+        "section_d": {
+          "total_travel_cost": "34000.00"
+        },
+        "section_e": {},
+        "section_f": {
+          "materials_supplies": "",
+          "publication_costs": "",
+          "consultant_services": "",
+          "adp_computer_services": "",
+          "subawards_consortium_contractual_costs": "",
+          "equipment_facility_rental_user_fees": "",
+          "alterations_renovations": "",
+          "other_items": [
+            {
+              "description": "Pilot Research Project Program",
+              "cost": "180000.00"
+            },
+            {
+              "description": "Training courses - OSP staff",
+              "cost": "1550.00"
+            },
+            {
+              "description": "External Evaluator",
+              "cost": "10000.00"
+            },
+            {
+              "description": "PD/PI Mentor Consulting Fees",
+              "cost": "25405.00"
+            },
+            {
+              "description": "Faculty Mentor Consulting Fees",
+              "cost": "40000.00"
+            },
+            {
+              "description": "BREP & IBR Activities",
+              "cost": "19000.00"
+            }
+          ],
+          "total": "275955.00"
+        },
+        "section_h": {
+          "indirect_costs": [
+            {
+              "cost_type": "MTDC",
+              "rate": "43.50",
+              "base": "489612.00",
+              "fund_requested": "212981.00"
+            }
+          ],
+          "total": "212981.00",
+          "cognizant_agency": ""
+        },
+        "total_compensation": "179658.00",
+        "direct_costs": "489613.00",
+        "total_costs": "702594.00",
+        "total_costs_fee": "702594.00"
+      },
+      {
+        "period_index": 5,
+        "start_date": "2027-01-01",
+        "end_date": "2027-12-31",
+        "section_a": {
+          "key_persons": [
+            {
+              "prefix": "Dr.",
+              "first_name": "Steven",
+              "middle_name": "",
+              "last_name": "Anton",
+              "suffix": "",
+              "project_role": "PD/PI",
+              "calendar_months": "",
+              "academic_months": "3.50",
+              "summer_months": "1.00",
+              "base_salary": "",
+              "requested_salary": "80212.00",
+              "fringe_benefits": "31199.00",
+              "funds_requested": "111411.00"
+            },
+            {
+              "prefix": "",
+              "first_name": "John",
+              "middle_name": "",
+              "last_name": "Liu",
+              "suffix": "",
+              "project_role": "Co-PD",
+              "calendar_months": "1.00",
+              "academic_months": "",
+              "summer_months": "",
+              "base_salary": "",
+              "requested_salary": "0.00",
+              "fringe_benefits": "0.00",
+              "funds_requested": "0.00"
+            },
+            {
+              "prefix": "",
+              "first_name": "Xuanzhi",
+              "middle_name": "",
+              "last_name": "Zhan",
+              "suffix": "",
+              "project_role": "Co-PD",
+              "calendar_months": "",
+              "academic_months": "1.00",
+              "summer_months": "1.00",
+              "base_salary": "",
+              "requested_salary": "17968.00",
+              "fringe_benefits": "6379.00",
+              "funds_requested": "24347.00"
+            }
+          ],
+          "total": "135758.00"
+        },
+        "section_b": {
+          "graduate_students": {
+            "number_of_personnel": "1",
+            "project_role": "Graduate Students",
+            "calendar_months": "0.75",
+            "academic_months": "",
+            "summer_months": "",
+            "requested_salary": "2400.00",
+            "fringe_benefits": "0.00",
+            "funds_requested": "2400.00"
+          },
+          "undergraduate_students": {
+            "number_of_personnel": "1",
+            "project_role": "Undergraduate Students",
+            "calendar_months": "2.50",
+            "academic_months": "",
+            "summer_months": "",
+            "requested_salary": "6000.00",
+            "fringe_benefits": "0.00",
+            "funds_requested": "6000.00"
+          },
+          "secretarial_clerical": {
+            "number_of_personnel": "1",
+            "project_role": "Secretarial / Clerical",
+            "calendar_months": "6.00",
+            "academic_months": "",
+            "summer_months": "",
+            "requested_salary": "25000.00",
+            "fringe_benefits": "10500.00",
+            "funds_requested": "35500.00"
+          },
+          "other_personnel": [],
+          "total_number": "3",
+          "total_funds": "43900.00"
+        },
+        "section_c": {
+          "items": [],
+          "total": ""
+        },
+        "section_d": {
+          "total_travel_cost": "34000.00"
+        },
+        "section_e": {},
+        "section_f": {
+          "materials_supplies": "",
+          "publication_costs": "",
+          "consultant_services": "",
+          "adp_computer_services": "",
+          "subawards_consortium_contractual_costs": "",
+          "equipment_facility_rental_user_fees": "",
+          "alterations_renovations": "",
+          "other_items": [
+            {
+              "description": "Pilot Research Project Program",
+              "cost": "180000.00"
+            },
+            {
+              "description": "Training courses - OSP staff",
+              "cost": "1550.00"
+            },
+            {
+              "description": "External Evaluator",
+              "cost": "10000.00"
+            },
+            {
+              "description": "PD/PI Mentor Consulting Fees",
+              "cost": "25405.00"
+            },
+            {
+              "description": "Faculty Mentor Consulting Fees",
+              "cost": "40000.00"
+            },
+            {
+              "description": "BREP & IBR Activities",
+              "cost": "19000.00"
+            }
+          ],
+          "total": "275955.00"
+        },
+        "section_h": {
+          "indirect_costs": [
+            {
+              "cost_type": "MTDC",
+              "rate": "43.50",
+              "base": "489612.00",
+              "fund_requested": "212981.00"
+            }
+          ],
+          "total": "212981.00",
+          "cognizant_agency": ""
+        },
+        "total_compensation": "179658.00",
+        "direct_costs": "489613.00",
+        "total_costs": "702594.00",
+        "total_costs_fee": "702594.00"
+      }
+    ]
+  }
+]

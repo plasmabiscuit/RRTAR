@@ -1,0 +1,7 @@
+{
+  "available": false,
+  "job_type": "budget",
+  "message": "Dedicated validation script is not implemented for this form type yet.",
+  "manifest_entry_count": 1,
+  "files": []
+}

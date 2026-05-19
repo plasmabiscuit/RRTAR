@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "RRTAR Grants.gov Automation",
+  "name": "R&R Tool-Assisted Re-Entry",
   "version": "0.1.0",
-  "description": "Run a clientside Grants.gov dashboard and drive supported forms in the active tab.",
+  "description": "The R&RTAR dashboard manages, previews, and automates the entry of R&R familiy forms into a grants.gov workspace.",
   "icons": {
     "16": "assets/icon_16.png",
     "48": "assets/icon_48.png",

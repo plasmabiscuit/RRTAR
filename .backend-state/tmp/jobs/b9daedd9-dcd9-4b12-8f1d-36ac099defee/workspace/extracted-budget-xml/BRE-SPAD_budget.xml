@@ -1,0 +1,686 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<RR_Budget_3_0:RR_Budget_3_0 xmlns:RR_Budget_3_0="http://apply.grants.gov/forms/RR_Budget_3_0-V3.0" xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V1.0" xmlns:grantwrapper="http://apply.grants.gov/system/MetaGrantApplicationWrapper" xmlns:grant="http://apply.grants.gov/system/MetaGrantApplication" xmlns:header="http://apply.grants.gov/system/Header-V1.0" xmlns:glob="http://apply.grants.gov/system/Global-V1.0" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" RR_Budget_3_0:FormVersion="3.0">
+  <RR_Budget_3_0:SAMUEI>KZNHNMDUTJA5</RR_Budget_3_0:SAMUEI>
+  <RR_Budget_3_0:BudgetType>Project</RR_Budget_3_0:BudgetType>
+  <RR_Budget_3_0:OrganizationName>Tennessee Technological University</RR_Budget_3_0:OrganizationName>
+  <RR_Budget_3_0:BudgetYear>
+    <RR_Budget_3_0:BudgetPeriodStartDate>2027-01-01</RR_Budget_3_0:BudgetPeriodStartDate>
+    <RR_Budget_3_0:BudgetPeriodEndDate>2027-12-31</RR_Budget_3_0:BudgetPeriodEndDate>
+    <RR_Budget_3_0:KeyPersons>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Dr.</globLib:PrefixName>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Steven</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Anton</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>PD/PI</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:AcademicMonths>3.50</RR_Budget_3_0:AcademicMonths>
+        <RR_Budget_3_0:SummerMonths>1.00</RR_Budget_3_0:SummerMonths>
+        <RR_Budget_3_0:RequestedSalary>80212.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>31199.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>111411.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">John</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Liu</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>Co-PD</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>1.00</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>0.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>0.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>0.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Xuanzhi</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Zhan</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>Co-PD</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:AcademicMonths>1.00</RR_Budget_3_0:AcademicMonths>
+        <RR_Budget_3_0:SummerMonths>2.00</RR_Budget_3_0:SummerMonths>
+        <RR_Budget_3_0:RequestedSalary>26952.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>8984.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>35936.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Neal</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Hunt</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>Co-PD</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>1.00</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>9331.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>3919.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>13250.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:TotalFundForKeyPersons>160597.00</RR_Budget_3_0:TotalFundForKeyPersons>
+    </RR_Budget_3_0:KeyPersons>
+    <RR_Budget_3_0:OtherPersonnel>
+      <RR_Budget_3_0:GraduateStudents>
+        <RR_Budget_3_0:NumberOfPersonnel>1</RR_Budget_3_0:NumberOfPersonnel>
+        <RR_Budget_3_0:ProjectRole>Graduate Students</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>0.75</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>2400.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>0.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>2400.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:GraduateStudents>
+      <RR_Budget_3_0:UndergraduateStudents>
+        <RR_Budget_3_0:NumberOfPersonnel>1</RR_Budget_3_0:NumberOfPersonnel>
+        <RR_Budget_3_0:ProjectRole>Undergraduate Students</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>2.50</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>6000.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>0.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>6000.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:UndergraduateStudents>
+      <RR_Budget_3_0:SecretarialClerical>
+        <RR_Budget_3_0:NumberOfPersonnel>1</RR_Budget_3_0:NumberOfPersonnel>
+        <RR_Budget_3_0:ProjectRole>Secretarial / Clerical</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>6.00</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>25000.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>10500.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>35500.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:SecretarialClerical>
+      <RR_Budget_3_0:OtherPersonnelTotalNumber>3</RR_Budget_3_0:OtherPersonnelTotalNumber>
+      <RR_Budget_3_0:TotalOtherPersonnelFund>43900.00</RR_Budget_3_0:TotalOtherPersonnelFund>
+    </RR_Budget_3_0:OtherPersonnel>
+    <RR_Budget_3_0:TotalCompensation>204497.00</RR_Budget_3_0:TotalCompensation>
+    <RR_Budget_3_0:Equipment>
+      <RR_Budget_3_0:EquipmentList>
+        <RR_Budget_3_0:EquipmentItem>Odyssey F (2-Laser) Imaging</RR_Budget_3_0:EquipmentItem>
+        <RR_Budget_3_0:FundsRequested>67890.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:EquipmentList>
+      <RR_Budget_3_0:EquipmentList>
+        <RR_Budget_3_0:EquipmentItem>Keyence BZX Fluorescence Microscope</RR_Budget_3_0:EquipmentItem>
+        <RR_Budget_3_0:FundsRequested>67441.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:EquipmentList>
+      <RR_Budget_3_0:TotalFund>135331.00</RR_Budget_3_0:TotalFund>
+    </RR_Budget_3_0:Equipment>
+    <RR_Budget_3_0:Travel>
+      <RR_Budget_3_0:DomesticTravelCost>44000.00</RR_Budget_3_0:DomesticTravelCost>
+      <RR_Budget_3_0:TotalTravelCost>44000.00</RR_Budget_3_0:TotalTravelCost>
+    </RR_Budget_3_0:Travel>
+    <RR_Budget_3_0:OtherDirectCosts>
+      <RR_Budget_3_0:OtherDirectCost1>
+        <RR_Budget_3_0:Description>Pilot Research Project Program</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>0.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost1>
+      <RR_Budget_3_0:OtherDirectCost2>
+        <RR_Budget_3_0:Description>Training courses - OSP staff</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>3400.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost2>
+      <RR_Budget_3_0:OtherDirectCost3>
+        <RR_Budget_3_0:Description>External Evaluator</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>12000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost3>
+      <RR_Budget_3_0:OtherDirectCost4>
+        <RR_Budget_3_0:Description>PD/PI Mentor Consulting Fees</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>25405.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost4>
+      <RR_Budget_3_0:OtherDirectCost5>
+        <RR_Budget_3_0:Description>Faculty Mentor Consulting Fees</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>40000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost5>
+      <RR_Budget_3_0:OtherDirectCost6>
+        <RR_Budget_3_0:Description>BREP &amp; IBR Activities</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>30000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost6>
+      <RR_Budget_3_0:TotalOtherDirectCost>110805.00</RR_Budget_3_0:TotalOtherDirectCost>
+    </RR_Budget_3_0:OtherDirectCosts>
+    <RR_Budget_3_0:DirectCosts>494633.00</RR_Budget_3_0:DirectCosts>
+    <RR_Budget_3_0:IndirectCosts>
+      <RR_Budget_3_0:IndirectCost>
+        <RR_Budget_3_0:CostType>MTDC</RR_Budget_3_0:CostType>
+        <RR_Budget_3_0:Rate>43.50</RR_Budget_3_0:Rate>
+        <RR_Budget_3_0:Base>359302.00</RR_Budget_3_0:Base>
+        <RR_Budget_3_0:FundRequested>156296.00</RR_Budget_3_0:FundRequested>
+      </RR_Budget_3_0:IndirectCost>
+      <RR_Budget_3_0:TotalIndirectCosts>156296.00</RR_Budget_3_0:TotalIndirectCosts>
+    </RR_Budget_3_0:IndirectCosts>
+    <RR_Budget_3_0:TotalCosts>650929.00</RR_Budget_3_0:TotalCosts>
+    <RR_Budget_3_0:TotalCostsFee>650929.00</RR_Budget_3_0:TotalCostsFee>
+  </RR_Budget_3_0:BudgetYear>
+  <RR_Budget_3_0:BudgetYear>
+    <RR_Budget_3_0:BudgetPeriodStartDate>2028-01-01</RR_Budget_3_0:BudgetPeriodStartDate>
+    <RR_Budget_3_0:BudgetPeriodEndDate>2028-12-31</RR_Budget_3_0:BudgetPeriodEndDate>
+    <RR_Budget_3_0:KeyPersons>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Dr.</globLib:PrefixName>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Steven</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Anton</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>PD/PI</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:AcademicMonths>3.50</RR_Budget_3_0:AcademicMonths>
+        <RR_Budget_3_0:SummerMonths>1.00</RR_Budget_3_0:SummerMonths>
+        <RR_Budget_3_0:RequestedSalary>80212.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>31199.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>111411.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">John</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Liu</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>Co-PD</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>1.00</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>0.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>0.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>0.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Xuanzhi</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Zhan</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>Co-PD</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:AcademicMonths>1.00</RR_Budget_3_0:AcademicMonths>
+        <RR_Budget_3_0:SummerMonths>2.00</RR_Budget_3_0:SummerMonths>
+        <RR_Budget_3_0:RequestedSalary>26952.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>8984.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>35936.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Neal</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Hunt</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>Co-PD</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>1.00</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>9331.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>3919.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>13250.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:TotalFundForKeyPersons>160597.00</RR_Budget_3_0:TotalFundForKeyPersons>
+    </RR_Budget_3_0:KeyPersons>
+    <RR_Budget_3_0:OtherPersonnel>
+      <RR_Budget_3_0:GraduateStudents>
+        <RR_Budget_3_0:NumberOfPersonnel>1</RR_Budget_3_0:NumberOfPersonnel>
+        <RR_Budget_3_0:ProjectRole>Graduate Students</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>0.75</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>2400.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>0.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>2400.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:GraduateStudents>
+      <RR_Budget_3_0:UndergraduateStudents>
+        <RR_Budget_3_0:NumberOfPersonnel>1</RR_Budget_3_0:NumberOfPersonnel>
+        <RR_Budget_3_0:ProjectRole>Undergraduate Students</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>2.50</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>6000.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>0.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>6000.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:UndergraduateStudents>
+      <RR_Budget_3_0:SecretarialClerical>
+        <RR_Budget_3_0:NumberOfPersonnel>1</RR_Budget_3_0:NumberOfPersonnel>
+        <RR_Budget_3_0:ProjectRole>Secretarial / Clerical</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>6.00</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>25000.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>10500.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>35500.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:SecretarialClerical>
+      <RR_Budget_3_0:OtherPersonnelTotalNumber>3</RR_Budget_3_0:OtherPersonnelTotalNumber>
+      <RR_Budget_3_0:TotalOtherPersonnelFund>43900.00</RR_Budget_3_0:TotalOtherPersonnelFund>
+    </RR_Budget_3_0:OtherPersonnel>
+    <RR_Budget_3_0:TotalCompensation>204497.00</RR_Budget_3_0:TotalCompensation>
+    <RR_Budget_3_0:Travel>
+      <RR_Budget_3_0:DomesticTravelCost>44000.00</RR_Budget_3_0:DomesticTravelCost>
+      <RR_Budget_3_0:TotalTravelCost>44000.00</RR_Budget_3_0:TotalTravelCost>
+    </RR_Budget_3_0:Travel>
+    <RR_Budget_3_0:OtherDirectCosts>
+      <RR_Budget_3_0:OtherDirectCost1>
+        <RR_Budget_3_0:Description>Pilot Research Project Program</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>140000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost1>
+      <RR_Budget_3_0:OtherDirectCost2>
+        <RR_Budget_3_0:Description>Training courses - OSP staff</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>3450.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost2>
+      <RR_Budget_3_0:OtherDirectCost3>
+        <RR_Budget_3_0:Description>External Evaluator</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>10000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost3>
+      <RR_Budget_3_0:OtherDirectCost4>
+        <RR_Budget_3_0:Description>PD/PI Mentor Consulting Fees</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>25405.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost4>
+      <RR_Budget_3_0:OtherDirectCost5>
+        <RR_Budget_3_0:Description>Faculty Mentor Consulting Fees</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>40000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost5>
+      <RR_Budget_3_0:OtherDirectCost6>
+        <RR_Budget_3_0:Description>BREP &amp; IBR Activities</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>27000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost6>
+      <RR_Budget_3_0:TotalOtherDirectCost>245855.00</RR_Budget_3_0:TotalOtherDirectCost>
+    </RR_Budget_3_0:OtherDirectCosts>
+    <RR_Budget_3_0:DirectCosts>494352.00</RR_Budget_3_0:DirectCosts>
+    <RR_Budget_3_0:IndirectCosts>
+      <RR_Budget_3_0:IndirectCost>
+        <RR_Budget_3_0:CostType>MTDC</RR_Budget_3_0:CostType>
+        <RR_Budget_3_0:Rate>43.50</RR_Budget_3_0:Rate>
+        <RR_Budget_3_0:Base>494352.00</RR_Budget_3_0:Base>
+        <RR_Budget_3_0:FundRequested>215043.00</RR_Budget_3_0:FundRequested>
+      </RR_Budget_3_0:IndirectCost>
+      <RR_Budget_3_0:TotalIndirectCosts>215043.00</RR_Budget_3_0:TotalIndirectCosts>
+    </RR_Budget_3_0:IndirectCosts>
+    <RR_Budget_3_0:TotalCosts>709395.00</RR_Budget_3_0:TotalCosts>
+    <RR_Budget_3_0:TotalCostsFee>709395.00</RR_Budget_3_0:TotalCostsFee>
+  </RR_Budget_3_0:BudgetYear>
+  <RR_Budget_3_0:BudgetYear>
+    <RR_Budget_3_0:BudgetPeriodStartDate>2029-01-01</RR_Budget_3_0:BudgetPeriodStartDate>
+    <RR_Budget_3_0:BudgetPeriodEndDate>2029-12-31</RR_Budget_3_0:BudgetPeriodEndDate>
+    <RR_Budget_3_0:KeyPersons>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Dr.</globLib:PrefixName>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Steven</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Anton</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>PD/PI</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:AcademicMonths>3.50</RR_Budget_3_0:AcademicMonths>
+        <RR_Budget_3_0:SummerMonths>1.00</RR_Budget_3_0:SummerMonths>
+        <RR_Budget_3_0:RequestedSalary>80212.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>31199.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>111411.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">John</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Liu</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>Co-PD</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>1.00</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>0.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>0.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>0.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Xuanzhi</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Zhan</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>Co-PD</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:AcademicMonths>1.00</RR_Budget_3_0:AcademicMonths>
+        <RR_Budget_3_0:SummerMonths>1.00</RR_Budget_3_0:SummerMonths>
+        <RR_Budget_3_0:RequestedSalary>17968.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>6379.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>24347.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:TotalFundForKeyPersons>135758.00</RR_Budget_3_0:TotalFundForKeyPersons>
+    </RR_Budget_3_0:KeyPersons>
+    <RR_Budget_3_0:OtherPersonnel>
+      <RR_Budget_3_0:GraduateStudents>
+        <RR_Budget_3_0:NumberOfPersonnel>1</RR_Budget_3_0:NumberOfPersonnel>
+        <RR_Budget_3_0:ProjectRole>Graduate Students</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>0.75</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>2400.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>0.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>2400.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:GraduateStudents>
+      <RR_Budget_3_0:UndergraduateStudents>
+        <RR_Budget_3_0:NumberOfPersonnel>1</RR_Budget_3_0:NumberOfPersonnel>
+        <RR_Budget_3_0:ProjectRole>Undergraduate Students</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>2.50</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>6000.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>0.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>6000.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:UndergraduateStudents>
+      <RR_Budget_3_0:SecretarialClerical>
+        <RR_Budget_3_0:NumberOfPersonnel>1</RR_Budget_3_0:NumberOfPersonnel>
+        <RR_Budget_3_0:ProjectRole>Secretarial / Clerical</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>6.00</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>25000.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>10500.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>35500.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:SecretarialClerical>
+      <RR_Budget_3_0:OtherPersonnelTotalNumber>3</RR_Budget_3_0:OtherPersonnelTotalNumber>
+      <RR_Budget_3_0:TotalOtherPersonnelFund>43900.00</RR_Budget_3_0:TotalOtherPersonnelFund>
+    </RR_Budget_3_0:OtherPersonnel>
+    <RR_Budget_3_0:TotalCompensation>179658.00</RR_Budget_3_0:TotalCompensation>
+    <RR_Budget_3_0:Travel>
+      <RR_Budget_3_0:DomesticTravelCost>34000.00</RR_Budget_3_0:DomesticTravelCost>
+      <RR_Budget_3_0:TotalTravelCost>34000.00</RR_Budget_3_0:TotalTravelCost>
+    </RR_Budget_3_0:Travel>
+    <RR_Budget_3_0:OtherDirectCosts>
+      <RR_Budget_3_0:OtherDirectCost1>
+        <RR_Budget_3_0:Description>Pilot Research Project Program</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>180000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost1>
+      <RR_Budget_3_0:OtherDirectCost2>
+        <RR_Budget_3_0:Description>Training courses - OSP staff</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>1500.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost2>
+      <RR_Budget_3_0:OtherDirectCost3>
+        <RR_Budget_3_0:Description>External Evaluator</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>10000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost3>
+      <RR_Budget_3_0:OtherDirectCost4>
+        <RR_Budget_3_0:Description>PD/PI Mentor Consulting Fees</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>25405.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost4>
+      <RR_Budget_3_0:OtherDirectCost5>
+        <RR_Budget_3_0:Description>Faculty Mentor Consulting Fees</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>40000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost5>
+      <RR_Budget_3_0:OtherDirectCost6>
+        <RR_Budget_3_0:Description>BREP &amp; IBR Activities</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>22000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost6>
+      <RR_Budget_3_0:TotalOtherDirectCost>278905.00</RR_Budget_3_0:TotalOtherDirectCost>
+    </RR_Budget_3_0:OtherDirectCosts>
+    <RR_Budget_3_0:DirectCosts>492563.00</RR_Budget_3_0:DirectCosts>
+    <RR_Budget_3_0:IndirectCosts>
+      <RR_Budget_3_0:IndirectCost>
+        <RR_Budget_3_0:CostType>MTDC</RR_Budget_3_0:CostType>
+        <RR_Budget_3_0:Rate>43.50</RR_Budget_3_0:Rate>
+        <RR_Budget_3_0:Base>492562.00</RR_Budget_3_0:Base>
+        <RR_Budget_3_0:FundRequested>214265.00</RR_Budget_3_0:FundRequested>
+      </RR_Budget_3_0:IndirectCost>
+      <RR_Budget_3_0:TotalIndirectCosts>214265.00</RR_Budget_3_0:TotalIndirectCosts>
+    </RR_Budget_3_0:IndirectCosts>
+    <RR_Budget_3_0:TotalCosts>706828.00</RR_Budget_3_0:TotalCosts>
+    <RR_Budget_3_0:TotalCostsFee>706828.00</RR_Budget_3_0:TotalCostsFee>
+  </RR_Budget_3_0:BudgetYear>
+  <RR_Budget_3_0:BudgetYear>
+    <RR_Budget_3_0:BudgetPeriodStartDate>2030-01-01</RR_Budget_3_0:BudgetPeriodStartDate>
+    <RR_Budget_3_0:BudgetPeriodEndDate>2030-12-31</RR_Budget_3_0:BudgetPeriodEndDate>
+    <RR_Budget_3_0:KeyPersons>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Dr.</globLib:PrefixName>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Steven</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Anton</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>PD/PI</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:AcademicMonths>3.50</RR_Budget_3_0:AcademicMonths>
+        <RR_Budget_3_0:SummerMonths>1.00</RR_Budget_3_0:SummerMonths>
+        <RR_Budget_3_0:RequestedSalary>80212.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>31199.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>111411.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">John</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Liu</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>Co-PD</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>1.00</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>0.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>0.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>0.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Xuanzhi</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Zhan</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>Co-PD</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:AcademicMonths>1.00</RR_Budget_3_0:AcademicMonths>
+        <RR_Budget_3_0:SummerMonths>1.00</RR_Budget_3_0:SummerMonths>
+        <RR_Budget_3_0:RequestedSalary>17968.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>6379.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>24347.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:TotalFundForKeyPersons>135758.00</RR_Budget_3_0:TotalFundForKeyPersons>
+    </RR_Budget_3_0:KeyPersons>
+    <RR_Budget_3_0:OtherPersonnel>
+      <RR_Budget_3_0:GraduateStudents>
+        <RR_Budget_3_0:NumberOfPersonnel>1</RR_Budget_3_0:NumberOfPersonnel>
+        <RR_Budget_3_0:ProjectRole>Graduate Students</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>0.75</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>2400.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>0.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>2400.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:GraduateStudents>
+      <RR_Budget_3_0:UndergraduateStudents>
+        <RR_Budget_3_0:NumberOfPersonnel>1</RR_Budget_3_0:NumberOfPersonnel>
+        <RR_Budget_3_0:ProjectRole>Undergraduate Students</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>2.50</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>6000.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>0.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>6000.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:UndergraduateStudents>
+      <RR_Budget_3_0:SecretarialClerical>
+        <RR_Budget_3_0:NumberOfPersonnel>1</RR_Budget_3_0:NumberOfPersonnel>
+        <RR_Budget_3_0:ProjectRole>Secretarial / Clerical</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>6.00</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>25000.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>10500.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>35500.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:SecretarialClerical>
+      <RR_Budget_3_0:OtherPersonnelTotalNumber>3</RR_Budget_3_0:OtherPersonnelTotalNumber>
+      <RR_Budget_3_0:TotalOtherPersonnelFund>43900.00</RR_Budget_3_0:TotalOtherPersonnelFund>
+    </RR_Budget_3_0:OtherPersonnel>
+    <RR_Budget_3_0:TotalCompensation>179658.00</RR_Budget_3_0:TotalCompensation>
+    <RR_Budget_3_0:Travel>
+      <RR_Budget_3_0:DomesticTravelCost>34000.00</RR_Budget_3_0:DomesticTravelCost>
+      <RR_Budget_3_0:TotalTravelCost>34000.00</RR_Budget_3_0:TotalTravelCost>
+    </RR_Budget_3_0:Travel>
+    <RR_Budget_3_0:OtherDirectCosts>
+      <RR_Budget_3_0:OtherDirectCost1>
+        <RR_Budget_3_0:Description>Pilot Research Project Program</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>180000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost1>
+      <RR_Budget_3_0:OtherDirectCost2>
+        <RR_Budget_3_0:Description>Training courses - OSP staff</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>1550.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost2>
+      <RR_Budget_3_0:OtherDirectCost3>
+        <RR_Budget_3_0:Description>External Evaluator</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>10000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost3>
+      <RR_Budget_3_0:OtherDirectCost4>
+        <RR_Budget_3_0:Description>PD/PI Mentor Consulting Fees</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>25405.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost4>
+      <RR_Budget_3_0:OtherDirectCost5>
+        <RR_Budget_3_0:Description>Faculty Mentor Consulting Fees</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>40000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost5>
+      <RR_Budget_3_0:OtherDirectCost6>
+        <RR_Budget_3_0:Description>BREP &amp; IBR Activities</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>19000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost6>
+      <RR_Budget_3_0:TotalOtherDirectCost>275955.00</RR_Budget_3_0:TotalOtherDirectCost>
+    </RR_Budget_3_0:OtherDirectCosts>
+    <RR_Budget_3_0:DirectCosts>489613.00</RR_Budget_3_0:DirectCosts>
+    <RR_Budget_3_0:IndirectCosts>
+      <RR_Budget_3_0:IndirectCost>
+        <RR_Budget_3_0:CostType>MTDC</RR_Budget_3_0:CostType>
+        <RR_Budget_3_0:Rate>43.50</RR_Budget_3_0:Rate>
+        <RR_Budget_3_0:Base>489612.00</RR_Budget_3_0:Base>
+        <RR_Budget_3_0:FundRequested>212981.00</RR_Budget_3_0:FundRequested>
+      </RR_Budget_3_0:IndirectCost>
+      <RR_Budget_3_0:TotalIndirectCosts>212981.00</RR_Budget_3_0:TotalIndirectCosts>
+    </RR_Budget_3_0:IndirectCosts>
+    <RR_Budget_3_0:TotalCosts>702594.00</RR_Budget_3_0:TotalCosts>
+    <RR_Budget_3_0:TotalCostsFee>702594.00</RR_Budget_3_0:TotalCostsFee>
+  </RR_Budget_3_0:BudgetYear>
+  <RR_Budget_3_0:BudgetYear>
+    <RR_Budget_3_0:BudgetPeriodStartDate>2027-01-01</RR_Budget_3_0:BudgetPeriodStartDate>
+    <RR_Budget_3_0:BudgetPeriodEndDate>2027-12-31</RR_Budget_3_0:BudgetPeriodEndDate>
+    <RR_Budget_3_0:KeyPersons>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Dr.</globLib:PrefixName>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Steven</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Anton</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>PD/PI</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:AcademicMonths>3.50</RR_Budget_3_0:AcademicMonths>
+        <RR_Budget_3_0:SummerMonths>1.00</RR_Budget_3_0:SummerMonths>
+        <RR_Budget_3_0:RequestedSalary>80212.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>31199.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>111411.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">John</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Liu</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>Co-PD</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>1.00</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>0.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>0.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>0.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:KeyPerson>
+        <RR_Budget_3_0:Name>
+          <globLib:PrefixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:FirstName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Xuanzhi</globLib:FirstName>
+          <globLib:MiddleName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+          <globLib:LastName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0">Zhan</globLib:LastName>
+          <globLib:SuffixName xmlns:globLib="http://apply.grants.gov/system/GlobalLibrary-V2.0"/>
+        </RR_Budget_3_0:Name>
+        <RR_Budget_3_0:ProjectRole>Co-PD</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:AcademicMonths>1.00</RR_Budget_3_0:AcademicMonths>
+        <RR_Budget_3_0:SummerMonths>1.00</RR_Budget_3_0:SummerMonths>
+        <RR_Budget_3_0:RequestedSalary>17968.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>6379.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>24347.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:KeyPerson>
+      <RR_Budget_3_0:TotalFundForKeyPersons>135758.00</RR_Budget_3_0:TotalFundForKeyPersons>
+    </RR_Budget_3_0:KeyPersons>
+    <RR_Budget_3_0:OtherPersonnel>
+      <RR_Budget_3_0:GraduateStudents>
+        <RR_Budget_3_0:NumberOfPersonnel>1</RR_Budget_3_0:NumberOfPersonnel>
+        <RR_Budget_3_0:ProjectRole>Graduate Students</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>0.75</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>2400.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>0.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>2400.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:GraduateStudents>
+      <RR_Budget_3_0:UndergraduateStudents>
+        <RR_Budget_3_0:NumberOfPersonnel>1</RR_Budget_3_0:NumberOfPersonnel>
+        <RR_Budget_3_0:ProjectRole>Undergraduate Students</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>2.50</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>6000.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>0.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>6000.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:UndergraduateStudents>
+      <RR_Budget_3_0:SecretarialClerical>
+        <RR_Budget_3_0:NumberOfPersonnel>1</RR_Budget_3_0:NumberOfPersonnel>
+        <RR_Budget_3_0:ProjectRole>Secretarial / Clerical</RR_Budget_3_0:ProjectRole>
+        <RR_Budget_3_0:CalendarMonths>6.00</RR_Budget_3_0:CalendarMonths>
+        <RR_Budget_3_0:RequestedSalary>25000.00</RR_Budget_3_0:RequestedSalary>
+        <RR_Budget_3_0:FringeBenefits>10500.00</RR_Budget_3_0:FringeBenefits>
+        <RR_Budget_3_0:FundsRequested>35500.00</RR_Budget_3_0:FundsRequested>
+      </RR_Budget_3_0:SecretarialClerical>
+      <RR_Budget_3_0:OtherPersonnelTotalNumber>3</RR_Budget_3_0:OtherPersonnelTotalNumber>
+      <RR_Budget_3_0:TotalOtherPersonnelFund>43900.00</RR_Budget_3_0:TotalOtherPersonnelFund>
+    </RR_Budget_3_0:OtherPersonnel>
+    <RR_Budget_3_0:TotalCompensation>179658.00</RR_Budget_3_0:TotalCompensation>
+    <RR_Budget_3_0:Travel>
+      <RR_Budget_3_0:DomesticTravelCost>34000.00</RR_Budget_3_0:DomesticTravelCost>
+      <RR_Budget_3_0:TotalTravelCost>34000.00</RR_Budget_3_0:TotalTravelCost>
+    </RR_Budget_3_0:Travel>
+    <RR_Budget_3_0:OtherDirectCosts>
+      <RR_Budget_3_0:OtherDirectCost1>
+        <RR_Budget_3_0:Description>Pilot Research Project Program</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>180000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost1>
+      <RR_Budget_3_0:OtherDirectCost2>
+        <RR_Budget_3_0:Description>Training courses - OSP staff</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>1550.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost2>
+      <RR_Budget_3_0:OtherDirectCost3>
+        <RR_Budget_3_0:Description>External Evaluator</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>10000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost3>
+      <RR_Budget_3_0:OtherDirectCost4>
+        <RR_Budget_3_0:Description>PD/PI Mentor Consulting Fees</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>25405.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost4>
+      <RR_Budget_3_0:OtherDirectCost5>
+        <RR_Budget_3_0:Description>Faculty Mentor Consulting Fees</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>40000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost5>
+      <RR_Budget_3_0:OtherDirectCost6>
+        <RR_Budget_3_0:Description>BREP &amp; IBR Activities</RR_Budget_3_0:Description>
+        <RR_Budget_3_0:Cost>19000.00</RR_Budget_3_0:Cost>
+      </RR_Budget_3_0:OtherDirectCost6>
+      <RR_Budget_3_0:TotalOtherDirectCost>275955.00</RR_Budget_3_0:TotalOtherDirectCost>
+    </RR_Budget_3_0:OtherDirectCosts>
+    <RR_Budget_3_0:DirectCosts>489613.00</RR_Budget_3_0:DirectCosts>
+    <RR_Budget_3_0:IndirectCosts>
+      <RR_Budget_3_0:IndirectCost>
+        <RR_Budget_3_0:CostType>MTDC</RR_Budget_3_0:CostType>
+        <RR_Budget_3_0:Rate>43.50</RR_Budget_3_0:Rate>
+        <RR_Budget_3_0:Base>489612.00</RR_Budget_3_0:Base>
+        <RR_Budget_3_0:FundRequested>212981.00</RR_Budget_3_0:FundRequested>
+      </RR_Budget_3_0:IndirectCost>
+      <RR_Budget_3_0:TotalIndirectCosts>212981.00</RR_Budget_3_0:TotalIndirectCosts>
+    </RR_Budget_3_0:IndirectCosts>
+    <RR_Budget_3_0:TotalCosts>702594.00</RR_Budget_3_0:TotalCosts>
+    <RR_Budget_3_0:TotalCostsFee>702594.00</RR_Budget_3_0:TotalCostsFee>
+  </RR_Budget_3_0:BudgetYear>
+  <RR_Budget_3_0:BudgetJustificationAttachment>
+    <att:FileName xmlns:att="http://apply.grants.gov/system/Attachments-V1.0">BRE_SPAD_Jan_2026 Budget Justification 715.pdf</att:FileName>
+    <att:MimeType xmlns:att="http://apply.grants.gov/system/Attachments-V1.0">application/pdf</att:MimeType>
+    <att:FileLocation xmlns:att="http://apply.grants.gov/system/Attachments-V1.0" att:href="RR_Budget_3_0_P4.optionalFile1769217350868"/>
+    <glob:HashValue glob:hashAlgorithm=""/>
+  </RR_Budget_3_0:BudgetJustificationAttachment>
+  <RR_Budget_3_0:BudgetSummary>
+    <RR_Budget_3_0:CumulativeTotalFundsRequestedSeniorKeyPerson>728468.00</RR_Budget_3_0:CumulativeTotalFundsRequestedSeniorKeyPerson>
+    <RR_Budget_3_0:CumulativeTotalFundsRequestedOtherPersonnel>219500.00</RR_Budget_3_0:CumulativeTotalFundsRequestedOtherPersonnel>
+    <RR_Budget_3_0:CumulativeTotalNoOtherPersonnel>15</RR_Budget_3_0:CumulativeTotalNoOtherPersonnel>
+    <RR_Budget_3_0:CumulativeTotalFundsRequestedPersonnel>947968.00</RR_Budget_3_0:CumulativeTotalFundsRequestedPersonnel>
+    <RR_Budget_3_0:CumulativeTotalFundsRequestedEquipment>135331.00</RR_Budget_3_0:CumulativeTotalFundsRequestedEquipment>
+    <RR_Budget_3_0:CumulativeTotalFundsRequestedTravel>190000.00</RR_Budget_3_0:CumulativeTotalFundsRequestedTravel>
+    <RR_Budget_3_0:CumulativeDomesticTravelCosts>190000.00</RR_Budget_3_0:CumulativeDomesticTravelCosts>
+    <RR_Budget_3_0:CumulativeTotalFundsRequestedOtherDirectCosts>1187475.00</RR_Budget_3_0:CumulativeTotalFundsRequestedOtherDirectCosts>
+    <RR_Budget_3_0:CumulativeOther1DirectCost>680000.00</RR_Budget_3_0:CumulativeOther1DirectCost>
+    <RR_Budget_3_0:CumulativeOther2DirectCost>11450.00</RR_Budget_3_0:CumulativeOther2DirectCost>
+    <RR_Budget_3_0:CumulativeOther3DirectCost>52000.00</RR_Budget_3_0:CumulativeOther3DirectCost>
+    <RR_Budget_3_0:CumulativeOther4DirectCost>127025.00</RR_Budget_3_0:CumulativeOther4DirectCost>
+    <RR_Budget_3_0:CumulativeOther5DirectCost>200000.00</RR_Budget_3_0:CumulativeOther5DirectCost>
+    <RR_Budget_3_0:CumulativeOther6DirectCost>117000.00</RR_Budget_3_0:CumulativeOther6DirectCost>
+    <RR_Budget_3_0:CumulativeTotalFundsRequestedDirectCosts>2460774.00</RR_Budget_3_0:CumulativeTotalFundsRequestedDirectCosts>
+    <RR_Budget_3_0:CumulativeTotalFundsRequestedIndirectCost>1011566.00</RR_Budget_3_0:CumulativeTotalFundsRequestedIndirectCost>
+    <RR_Budget_3_0:CumulativeTotalFundsRequestedDirectIndirectCosts>3472340.00</RR_Budget_3_0:CumulativeTotalFundsRequestedDirectIndirectCosts>
+    <RR_Budget_3_0:CumulativeTotalCostsFee>3472340.00</RR_Budget_3_0:CumulativeTotalCostsFee>
+  </RR_Budget_3_0:BudgetSummary>
+</RR_Budget_3_0:RR_Budget_3_0>

@@ -1,12 +1,12 @@
 # Chrome Extension
 
-This directory is the browser-native RRTAR workspace for Grants.gov-side automation.
+This directory is the browser-native RRTAR Dashboard for Grants.gov-side automation.
 
-Why it lives at the project root:
+How it works:
 
-- the dashboard and autofill runtime now live entirely inside Chrome
-- the browser automation runtime needs to be packaged independently from the Python app
-- keeping it buildless makes it easy to load unpacked during rapid iteration
+- the dashboard and autofill runtimes operate entirely inside Chrome
+- the browser runtimes are packaged independently from the Python process that run server-side
+- Updating the extension is only necessary for UI changes; backend changes are automatically pushed to the server. 
 
 ## Layout
 
@@ -24,6 +24,11 @@ Why it lives at the project root:
 2. Enable Developer mode
 3. Click `Load unpacked`
 4. Select this `chrome-extension/` directory
+5. Click on the icon to open the popup, then select the settings icon.
+6. On this screen you will enter the backend url if not present (https://150.230.162.179.sslip.io)
+7. Add the contents of API-key.txt that was provided to you in the API Key input.
+
+If you need to request an API-key, please email cabates@tntech.edu 
 
 ## Current scope
 
@@ -38,15 +43,15 @@ Current v1 behavior:
 - fills the current form without clicking Grants.gov Save
 - uploads supported attachments from clientside files stored by the extension
 
-The form fillers are now browser-side ports of:
+The form fillers are browser-side ports of:
 
 - `scripts/automate.py`
 - `scripts/automate_budget.py`
 - `scripts/automate_performance_site.py`
 
-Known v1 constraints:
+This project is still in development. Double check any automated inputs before saving. 
 
-- PDF parsing/normalization has not been ported yet; manifests are currently imported as JSON
-- the extension dashboard is the source of truth for manifest editing and pipeline state
-- contact-derived Key Person entries still require review for role, address, and attachments before automate
-- no auto-save is performed after fill
+## Known Constraints
+
+- Budgets currently do not enter dates for project periods
+- There will be an unused personnel in each period due that will need to be removed due to the default behavior of the webforms. Use this as an oportunity to confirm the accuracy of the manifest/automate step for each period. 
