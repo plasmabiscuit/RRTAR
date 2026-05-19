@@ -21,6 +21,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Configure git
         run: |
@@ -29,6 +30,15 @@ jobs:
 
       - name: Build filtered branch
         run: git subtree split --prefix=chrome-extension -b ext-publish
+
+      - name: Verify push token is present
+        env:
+          PUSH_TOKEN: ${{ secrets.ORG_EXTENSION_PUSH_TOKEN }}
+        run: |
+          if [ -z "${PUSH_TOKEN}" ]; then
+            echo "ORG_EXTENSION_PUSH_TOKEN is not set"
+            exit 1
+          fi
 
       - name: Push to org repo
         env:
