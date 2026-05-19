@@ -1,0 +1,40 @@
+name: Publish Extension Repo
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "chrome-extension/**"
+      - ".github/workflows/publish-extension.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out source repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Build filtered branch
+        run: git subtree split --prefix=chrome-extension -b ext-publish
+
+      - name: Push to org repo
+        env:
+          PUSH_TOKEN: ${{ secrets.ORG_EXTENSION_PUSH_TOKEN }}
+          TARGET_REPO: github.com/TN-Tech-Research/RRTAR-extension.git
+          TARGET_BRANCH: main
+        run: |
+          git remote add extension "https://x-access-token:${PUSH_TOKEN}@${TARGET_REPO}"
+          git push extension ext-publish:${TARGET_BRANCH} --force
