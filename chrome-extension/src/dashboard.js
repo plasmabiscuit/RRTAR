@@ -106,7 +106,7 @@ const TAB_DEFS = {
     dropIcon: "pdfschip",
     manifestIcon: "manifestchip",
     uploadHint: "Drop Budget PDFs here",
-    referenceTitle: "Hosted Reference",
+    referenceTitle: "Hosted Schema",
     steps: [
       ["extract", "Extract", "Parse staged budget PDFs and any Streamlyne sidecars into reviewable data.", true],
       ["validate", "Validate", "Dedicated budget validation is not automated yet; review extracted data after pipeline output loads.", false],
@@ -124,7 +124,7 @@ const TAB_DEFS = {
     dropIcon: "pdfschip",
     manifestIcon: "manifestchip",
     uploadHint: "Drop Performance Site PDFs here",
-    referenceTitle: "Hosted Reference",
+    referenceTitle: "Hosted Schema",
     steps: [
       ["extract", "Extract", "Parse staged Performance Site PDFs into reviewable site data.", true],
       ["validate", "Validate", "Dedicated Performance Site validation is not automated yet; review generated site rows after extraction.", false],
@@ -248,11 +248,11 @@ function renderPage() {
       <h2>${icon(def.manifestIcon, "icon-chip")}${escapeHtml(def.manifestTitle)} ${renderManifestBadge(manifest, preview)}</h2>
       <form id="manifest-import-form" class="manifest-save-bar">
         <span class="manifest-save-actions">
-          <label class="btn-primary btn-sm" style="cursor:pointer">
-            ${icon("file", "icon-btn")}Import Manifest JSON
+          ${activeTab === "keyperson" ? `<button id="add-contact-btn" class="btn-primary btn-sm" type="button">${icon("addressbook", "icon-btn")}Add From Contacts</button>` : ""}
+          <label class="btn btn-success btn-sm" style="cursor:pointer">
+            ${icon("file", "icon-btn")}Import Manifest
             <input id="manifest-file-input" type="file" accept=".json,application/json" style="display:none">
           </label>
-          ${activeTab === "keyperson" ? `<button id="add-contact-btn" class="btn-primary btn-sm" type="button">${icon("addressbook", "icon-btn")}Add From Contacts</button>` : ""}
           <button id="export-manifest-btn" class="btn-success btn-sm" type="button">${icon("save", "icon-btn")}Export Manifest</button>
           <button id="clear-manifest-btn" class="btn-warn btn-sm" type="button">${icon("trash", "icon-btn")}Clear Manifest</button>
         </span>
@@ -1052,10 +1052,16 @@ function uploadAcceptValue(formType) {
 }
 
 function uploadHintCopy(formType) {
-  if (formType === "budget") {
-    return "Budget PDFs and optional same-stem Streamlyne .budget.json sidecars staged here will appear below.";
+  if (formType === "keyperson") {
+    return "Supported formats: RR Key Person workspace PDFs with embedded attachments, or individual CPOS/Biosketch attachments.";
   }
-  return "PDFs staged here will appear below for this tab.";
+  if (formType === "budget") {
+    return "Supported formats: RR Budget forms from a workspace or Streamlyne budget exports.";
+  }
+  if (formType === "performance-site") {
+    return "Supported formats: Project/Performance Site workspace PDFs.";
+  }
+  return "Supported formats: Grants.gov workspace PDFs for this form.";
 }
 
 function classifyDroppedFiles(formType, fileList) {

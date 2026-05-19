@@ -21,6 +21,8 @@ __pycache__/
 *.py[cod]
 
 # Local backups and editor artifacts
+.local-backups/
+*.bak
 *.bak-*
 *.swp
 *.swo
