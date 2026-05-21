@@ -29,6 +29,7 @@ const DEFAULT_SETTINGS = {
   apiKey: "",
   agency: "default",
   useRetroFonts: true,
+  fontScale: 1,
 };
 
 chrome.runtime.onInstalled.addListener(async () => {
@@ -607,8 +608,19 @@ function mergeSettings(settings) {
     if (Object.prototype.hasOwnProperty.call(settings, "useRetroFonts")) {
       merged.useRetroFonts = Boolean(settings.useRetroFonts);
     }
+    if (Object.prototype.hasOwnProperty.call(settings, "fontScale")) {
+      merged.fontScale = normalizeFontScale(settings.fontScale);
+    }
   }
   return merged;
+}
+
+function normalizeFontScale(value) {
+  const numeric = Number(value);
+  if (!Number.isFinite(numeric)) {
+    return DEFAULT_SETTINGS.fontScale;
+  }
+  return Math.min(1.4, Math.max(0.85, Math.round(numeric * 100) / 100));
 }
 
 function getBackendJobEndpoint(formType) {

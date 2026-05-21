@@ -194,6 +194,15 @@ async function refreshState() {
 
 function applyFontMode(settings) {
   document.body.classList.toggle("fonts-plain", settings?.useRetroFonts === false);
+  document.body.style.setProperty("--content-font-scale", String(normalizeFontScale(settings?.fontScale)));
+}
+
+function normalizeFontScale(value) {
+  const numeric = Number(value);
+  if (!Number.isFinite(numeric)) {
+    return 1;
+  }
+  return Math.min(1.4, Math.max(0.85, Math.round(numeric * 100) / 100));
 }
 
 function renderTabs() {
@@ -238,7 +247,7 @@ function renderPage() {
           <div class="dz-icon">${icon("upload")}</div>
           <div class="drop-zone-copy">
             <p><strong>${escapeHtml(def.uploadHint)}</strong> or click to browse</p>
-            <p style="font-size:.8rem">${escapeHtml(uploadHintCopy(activeTab))}</p>
+            <p class="sub-dim">${escapeHtml(uploadHintCopy(activeTab))}</p>
           </div>
         </label>
         ${renderFileTable(files)}
@@ -337,7 +346,7 @@ function renderFileTable(files) {
   const rows = pipelineFiles.map((file) => {
     const remove = `<button type="button" class="btn-danger btn-sm" data-remove-file="${escapeAttr(file.id)}">${icon("close", "icon-btn")}Remove</button>`;
     const kind = pipelineFileKindLabel(file);
-    return `<tr><td><strong style="font-size:.83rem">${escapeHtml(file.name)}</strong></td><td class="sub-dim">${formatSize(file.size)}</td><td><span class="badge ok">staged</span> <span class="sub-info">${escapeHtml(kind)}</span></td><td style="text-align:right">${remove}</td></tr>`;
+    return `<tr><td><strong>${escapeHtml(file.name)}</strong></td><td class="sub-dim">${formatSize(file.size)}</td><td><span class="badge ok">staged</span> <span class="sub-info">${escapeHtml(kind)}</span></td><td style="text-align:right">${remove}</td></tr>`;
   }).join("");
   return `<div class="upload-list"><div class="upload-list-head"><span class="upload-list-title">Staged Files</span><span class="sub-dim">${pipelineFiles.length} file${pipelineFiles.length === 1 ? "" : "s"}</span></div><table><thead><tr><th>File</th><th>Size</th><th>Status</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>`;
 }
@@ -616,8 +625,8 @@ function renderBudgetManifest(manifest) {
 
     return `<div class="card budget-row-card">
       <div class="budget-org">${escapeHtml(org.name || `Budget source ${index + 1}`)}</div>
-      <div class="sub-dim" style="font-size:.8rem">${escapeHtml(org.budget_type || "")}${org.uei ? ` &nbsp;|&nbsp; UEI: ${escapeHtml(org.uei)}` : ""}</div>
-      ${just.path ? `<div class="sub-info" style="font-size:.8rem;margin:.45rem 0">${icon("file", "icon-status")} Budget Justification: ${escapeHtml(justName)}</div>` : ""}
+      <div class="sub-dim">${escapeHtml(org.budget_type || "")}${org.uei ? ` &nbsp;|&nbsp; UEI: ${escapeHtml(org.uei)}` : ""}</div>
+      ${just.path ? `<div class="sub-info" style="margin:.45rem 0">${icon("file", "icon-status")} Budget Justification: ${escapeHtml(justName)}</div>` : ""}
       <div class="file-link-btn">${renderAttachmentCell(index, "budget_justification", just.path || "", false)}</div>
       ${periods}
     </div>`;

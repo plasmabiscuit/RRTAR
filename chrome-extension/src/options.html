@@ -26,6 +26,7 @@
       :root {
         color-scheme: light;
         font-family: "PixeloidSans", "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+        --content-font-scale: 1;
         --primary: #582c83;
         --primary-strong: #45236a;
         --primary-deep: #2a133f;
@@ -297,7 +298,7 @@
         margin: 0 0 1rem;
         font-family: "PixeloidSans", "Trebuchet MS", "Segoe UI", Arial, sans-serif;
         color: var(--muted);
-        font-size: 0.84rem;
+        font-size: calc(0.84rem * var(--content-font-scale));
         line-height: 1.6;
       }
 
@@ -350,7 +351,7 @@
       .field-note {
         margin: 0;
         font-family: "PixeloidSans", "Trebuchet MS", "Segoe UI", Arial, sans-serif;
-        font-size: 0.76rem;
+        font-size: calc(0.76rem * var(--content-font-scale));
         line-height: 1.55;
         color: var(--muted);
       }
@@ -365,6 +366,7 @@
           linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 239, 249, 0.94)),
           repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0 2px, transparent 2px 12px);
         color: var(--primary-deep);
+        font-size: calc(0.82rem * var(--content-font-scale));
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.82), 0 2px 0 rgba(88, 44, 131, 0.06);
         transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.12s ease;
       }
@@ -513,9 +515,43 @@
 
       .toggle-note {
         font-family: "PixeloidSans", "Trebuchet MS", "Segoe UI", Arial, sans-serif;
-        font-size: 0.7rem;
+        font-size: calc(0.7rem * var(--content-font-scale));
         line-height: 1.45;
         color: var(--muted);
+      }
+
+      .range-stack {
+        display: grid;
+        gap: 0.45rem;
+        margin-top: 0.8rem;
+      }
+
+      .range-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.7rem;
+      }
+
+      .range-value {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 3.8rem;
+        padding: 0.24rem 0.5rem;
+        border-radius: 999px;
+        border: 2px solid rgba(88, 44, 131, 0.16);
+        background: rgba(255, 255, 255, 0.7);
+        color: var(--primary-deep);
+        font-family: "NineteenNinety", "PixeloidSans", sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .range-input {
+        width: 100%;
+        accent-color: var(--primary);
       }
 
       .toggle-chip input {
@@ -608,7 +644,7 @@
 
       #status {
         font-family: "PixeloidSans", "Trebuchet MS", "Segoe UI", Arial, sans-serif;
-        font-size: 0.78rem;
+        font-size: calc(0.78rem * var(--content-font-scale));
         line-height: 1.62;
         color: var(--primary-deep);
       }
@@ -616,7 +652,7 @@
       .status-help {
         margin: 0.8rem 0 0;
         font-family: "PixeloidSans", "Trebuchet MS", "Segoe UI", Arial, sans-serif;
-        font-size: 0.77rem;
+        font-size: calc(0.77rem * var(--content-font-scale));
         line-height: 1.55;
         color: var(--muted);
       }
@@ -706,6 +742,14 @@
                   <span class="toggle-note">Turn off to use Arial.</span>
                 </span>
               </label>
+            </div>
+            <div class="range-stack">
+              <div class="range-head">
+                <label for="font-scale">Content Size</label>
+                <span id="font-scale-value" class="range-value">100%</span>
+              </div>
+              <input id="font-scale" class="range-input" type="range" min="0.85" max="1.4" step="0.05" value="1">
+              <p class="field-note">Scales body copy and form text without changing page headers, card headings, badges, or buttons.</p>
             </div>
           </section>
         </div>
